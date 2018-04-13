@@ -1,0 +1,62 @@
+sudo apt-get install git -y
+cd /var/www/html/
+sudo git clone https://github.com/clearwaterbrewer/database.git
+
+
+
+we populated the database with the username and salt for this:
+Username: test_user
+Email: test@example.com
+Password: 6ZaxN2Vzm9NUJT2y
+
+
+
+
+// FOR DEVELOPMENT ONLY!!!!   Allow simpler passwords:
+sudo vi /var/www/html/database/js/forms.js
+  Change
+     var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+     var re = /(?=.*\d)(?=.*[a-z]).{6,}/;
+
+
+
+
+
+enter real password and database name here:
+
+/var/www/html/database/includes/psl-config.php
+****************************************************
+
+<?php
+define("HOST", "localhost");
+define("USER", "DBadmin"); 
+define("PASSWORD", "qwer1234"); 
+define("DATABASE", "CDCtest");
+ 
+define("CAN_REGISTER", "any");
+define("DEFAULT_ROLE", "member");
+ 
+define("SECURE", FALSE);    // FOR DEVELOPMENT ONLY!!!!
+?>
+
+
+
+
+
+
+
+
+
+To Remove what was don on this page:
+cd /var/www/html/
+sudo find database/ -mindepth 1 -delete
+sudo rmdir database
+
+
+
+sudo mysql -u DBadmin -pqwer1234
+USE CDCtest;
+DROP TABLE IF EXISTS members;
+quit
+
+
