@@ -17,7 +17,7 @@ sec_session_start();
             <p>
                 Database
                 <p><a href="CDCbatches.php">BATCHES</a></p>
-		<br>*****WASH RUNS BUTTON*****
+                <p><a href="CDCWashRuns.php">BATCHES</a></p>
 		<br>******REPORTS BUTTON******
             </p>
 	    <p><a href="includes/logout.php">logout</a></p>
