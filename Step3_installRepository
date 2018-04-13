@@ -2,6 +2,11 @@ cd /var/www/html/
 sudo git clone https://github.com/clearwaterbrewer/database.git
 
 
+set up git global info:
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+
 
 Nore - in part 2, we populated the database with the username and salt for this:
 Username: test_user
