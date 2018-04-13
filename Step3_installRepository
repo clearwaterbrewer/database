@@ -43,12 +43,14 @@ define("SECURE", FALSE);    // FOR DEVELOPMENT ONLY!!!!
 
 
 
+To update server after making changes on github.com
+ CD /var/www/html/database
+ sudo git fetch
+ sudo git checkout origin/master -- <filename>
 
 
 
-
-
-To Remove what was don on this page:
+To Remove what was done on this page:
 cd /var/www/html/
 sudo find database/ -mindepth 1 -delete
 sudo rmdir database
