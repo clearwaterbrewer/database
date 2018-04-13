@@ -1,22 +1,4 @@
 <?php
-
-/* 
- * Copyright (C) 2013 peter
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 include_once 'db_connect.php';
 include_once 'psl-config.php';
 
@@ -60,11 +42,6 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
         $error_msg .= '<p class="error">Database error</p>';
     }
     
-    // TODO: 
-    // We'll also have to account for the situation where the user doesn't have
-    // rights to do registration, by checking what type of user is attempting to
-    // perform the operation.
-
     if (empty($error_msg)) {
         // Create a random salt
         $random_salt = hash('sha512', uniqid(openssl_random_pseudo_bytes(16), TRUE));
