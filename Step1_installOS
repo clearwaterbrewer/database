@@ -105,6 +105,7 @@ sudo sed -i  's/#ServerSignature Off/ServerSignature Off/' /etc/apache2/conf-ena
 
 sudo apt-get install php7.0 libapache2-mod-php7.0 -y
 sudo apt-get install mysql-server  php7.0-mysql -y
+sudo apt-get install git -y
 
 sudo service apache2 restart
 
