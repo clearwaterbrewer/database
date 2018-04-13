@@ -4,12 +4,10 @@ sudo git clone https://github.com/clearwaterbrewer/database.git
 
 
 
-we populated the database with the username and salt for this:
+Nore - in part 2, we populated the database with the username and salt for this:
 Username: test_user
 Email: test@example.com
 Password: 6ZaxN2Vzm9NUJT2y
-
-
 
 
 // FOR DEVELOPMENT ONLY!!!!   Allow simpler passwords:
@@ -22,16 +20,15 @@ sudo vi /var/www/html/database/js/forms.js
 
 
 
-enter real password and database name here:
+Enter the real password and database name here:
 
-/var/www/html/database/includes/psl-config.php
-****************************************************
+sudo vi /var/www/html/database/includes/psl-config.php
 
 <?php
 define("HOST", "localhost");
 define("USER", "DBadmin"); 
-define("PASSWORD", "qwer1234"); 
-define("DATABASE", "CDCtest");
+define("PASSWORD", "<insert password here>"); 
+define("DATABASE", "<insert Database name here>");
  
 define("CAN_REGISTER", "any");
 define("DEFAULT_ROLE", "member");
