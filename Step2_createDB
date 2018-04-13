@@ -218,3 +218,26 @@ Command line:
 sudo mysql -u DBadmin -pqwer1234 -e 'show databases;'
 
 
+*********************
+PHPadmin Installation
+*********************
+
+sudo apt-get install phpmyadmin -y
+ choose apache2  ****** carefully******  
+   ****it appears to be selected, but it is not!    ****
+   ****pressing spacebar will place an asterisk     ****
+   ****in the brackets, then tab and spacebar again)****	
+ 
+ choose yes to the dbcommon question
+
+//password for the admin account with which this package should create its MYSQL database and user:
+// qwer1234
+password for phpmyadmin to register with the database server. If blank, a random password will be selected.
+ qwer1234
+confirm
+ qwer1234
+
+
+http://192.168.2.67/phpmyadmin
+
+log in with phpmyadmin/qwer1234
