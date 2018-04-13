@@ -14,17 +14,20 @@ GRANT ALL PRIVILEGES ON *.* TO 'phpmyadmin'@'localhost' WITH GRANT OPTION;
 CREATE USER 'phpmyadmin'@'%' IDENTIFIED BY 'qwer1234';
 GRANT ALL PRIVILEGES ON *.* TO 'phpmyadmin'@'%' WITH GRANT OPTION;
 
+CREATE USER 'CDCadmin'@'localhost' IDENTIFIED BY 'qwer1234';
+GRANT SELECT, INSERT, UPDATE ON CDCtest.* TO 'CDCadmin'@'localhost' WITH GRANT OPTION;
+CREATE USER 'CDCadmin'@'%' IDENTIFIED BY 'qwer1234';
+GRANT SELECT, INSERT, UPDATE ON CDCtest.* TO 'CDCadmin'@'%' WITH GRANT OPTION;
+
 CREATE USER 'distiller'@'localhost' IDENTIFIED BY 'qwer1234';
-GRANT SELECT ON *.* TO 'distiller'@'localhost';
-GRANT INSERT ON *.* TO 'distiller'@'localhost';
+GRANT SELECT, INSERT ON CDCtest.* TO 'distiller'@'localhost';
 CREATE USER 'distiller'@'%' IDENTIFIED BY 'qwer1234';
-GRANT SELECT ON *.* TO 'distiller'@'%';
-GRANT INSERT ON *.* TO 'distiller'@'%';
+GRANT SELECT, INSERT ON CDCtest.* TO 'distiller'@'%';
 
 CREATE USER 'viewer'@'localhost' IDENTIFIED BY 'qwer1234';
-GRANT SELECT ON *.* TO 'viewer'@'localhost';
+GRANT SELECT ON CDCtest.* TO 'viewer'@'localhost';
 CREATE USER 'viewer'@'%' IDENTIFIED BY 'qwer1234';
-GRANT SELECT ON *.* TO 'viewer'@'%';
+GRANT SELECT ON CDCtest.* TO 'viewer'@'%';
 
 FLUSH PRIVILEGES;
 exit
