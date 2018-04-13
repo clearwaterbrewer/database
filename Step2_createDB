@@ -231,16 +231,9 @@ sudo apt-get install phpmyadmin -y
    ****pressing spacebar will place an asterisk     ****
    ****in the brackets, then tab and spacebar again)****	
  
- choose NO to the dbcommon question
-
-//password for the admin account with which this package should create its MYSQL database and user:
-// qwer1234
-password for phpmyadmin to register with the database server. If blank, a random password will be selected.
- qwer1234
-confirm
- qwer1234
+Choose NO to the dbcommon question
 
 
+//Verify login:
 http://<ip-address>/phpmyadmin
-
 log in with phpmyadmin/qwer1234
