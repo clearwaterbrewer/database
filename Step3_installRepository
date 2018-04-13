@@ -47,12 +47,5 @@ To Remove what was don on this page:
 cd /var/www/html/
 sudo find database/ -mindepth 1 -delete
 sudo rmdir database
-
-
-
-sudo mysql -u DBadmin -pqwer1234
-USE CDCtest;
-DROP TABLE IF EXISTS members;
-quit
-
+sudo shutdown -r now
 
