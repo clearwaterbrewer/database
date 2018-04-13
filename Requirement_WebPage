@@ -1,0 +1,58 @@
+Web Page (Should work on Safari 5.0... not joking):
+	Login - 
+		user enters username and password
+		once logged in, shows username and logout button 
+    directs to home page
+    
+	Home Page - 4 buttons - 'Logout', 'Batches', and 'Wash Runs', 'Reports'
+    buttons take you to that page
+
+	Batches Page-  displays last 5 batches and has 'add new' or a '+', Button and a 'Home' button
+		Pressing '+' on page takes user to Form to add new batch:
+			Form pre-fills next batch number
+			Cursor is placed in field BatchName for user to type the name in
+			Field Class/Type - Choose from: Neutral,Vodka, Gin, Whiskey, Malt Whiskey, Rye Whiskey, Rum
+			Source Product - short text - form the product came to the distillery as (Such as malt wort or Molasses)
+			Source Ingredient - short text, the initial fermentable (Malted barley or Molasses)
+			'Submit New Batch' button brings up "Are you sure", and yes/cancel options but does not hide data!
+				'yes' enters data to table batches and takes user back to displaying batches 
+				'cancel' just cancels the save and allows editing of batch
+			'Cancel' just takes user back
+		Pressing 'Home' takes user to home screen
+
+	Wash Runs Page-  Page that displays last 5 wash runs and has a '+', Button and a 'Home' button
+		Pressing '+' on page takes user to Form to add new Wash Run:
+			Form pre-fills current DateTimeCode, Date, and time, user can edit
+			Drop-down for last 5 batch numbers in reverse numerical order
+			Source Product - auto filled from table lookup
+			Source Ingredient - auto filled from table lookup
+			SourceAmount - field to enter a number 0-1000
+			SourceContainer - field to enter a 5 character entry
+			ABV - field to enter a number 0.0-99.9
+			GallonsDistilled - field to enter a number 0-1000 
+			GallonsRemaining - field to enter a number 0-1000
+			StartTime - digital clock prefilled to current time
+			StopTime - digital clock prefilled to current time
+			StartProof - field to enter a number 0-199
+			StopProof - field to enter a number 0-199
+			WG_Collected - field to enter a number 0.0-999.9
+			ProofCollected -  field to enter a number 0.0-99.9
+			PG_Collected - calculated as ROUND(WG_Collected *  ProofCollected / 100,1)
+			DestinationContainer - field to enter a 5 character entry
+			WG_Existing - field to enter a number 0.0-9999.9
+			WG_Resulting - calculated as WG_Collected + WG_Existing
+			PG_Resulting - calculated as PG_Collected + PG_Existing
+			notes - field to enter notes
+			'Submit Wash Run' button brings up "Are you sure", and yes/cancel options but does not hide data!
+				'yes' enters data to table and takes user back to displaying Wash Runs 
+				'cancel' just cancels the save and allows editing of Wash Run
+			'Cancel' just takes user back
+		Pressing 'Home' takes user to home screen
+
+	Reports Page-  Page titled 'Reports' that displays 6 report buttons (only 1 used) and a home button 
+		Pressing 'Wash Runs' Button runs the WashRunsQuery
+			Displays it how it would look on an 8.5x11 page in portrait mode
+			'Print' - Print on an Ethernet connected Brother HL-2070N with address 192.168.1.50
+			'Exit' just takes user back to 'Reports' screen.
+		Pressing 'Home' takes user to home screen
+
