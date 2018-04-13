@@ -1,4 +1,3 @@
-sudo apt-get install git -y
 cd /var/www/html/
 sudo git clone https://github.com/clearwaterbrewer/database.git
 
