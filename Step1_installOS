@@ -1,0 +1,110 @@
+Pi Zero W or 3b with power connection
+wifi information
+way to see the mac-addr (router access to dhcp table)
+
+
+etcher installed:
+https://etcher.io/
+
+
+pi image  (not the folders and files such as noobs, but an actual Raspbian image)
+in this case, 2018-03-13-raspbian-stretch-lite.zip
+https://www.raspberrypi.org/downloads/raspbian/   
+https://downloads.raspberrypi.org/raspbian_lite_latest
+
+This was built with help from:
+https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress
+
+Use Etcher to burn image to SD card, when complete, eject, wait a second or two, and reinsert SD card.
+
+Ignore errors and open the new drive "/boot" in file manager.
+
+
+Open a txt file such as issue.txt, delete all text in the file 
+
+'Save As' ssh.txt
+
+*****************
+wireless option
+*****************
+
+Add the following to the empty text file (update the SSID and password) 
+
+country=US
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    ssid="SSID"
+    psk="password"
+    key_mgmt=WPA-PSK
+    id_str="Home Wifi"
+} 
+
+network={
+    ssid="SSID2"
+    psk="password2"
+    key_mgmt=WPA-PSK
+    id_str="Work Wifi"
+} 
+
+'Save As' wpa_supplicant.conf.txt
+
+*****************
+End Wireless option
+*****************
+
+Close the .txt file 
+
+You now have a new files in the boot folder, ssh.txt (and wpa_supplicant.conf.txt (if using wireless)
+
+Remove the .txt from the filename of both files (you will get warnings, do it anyway)
+ *note - Raspbian will MOVE the files you added, but it did not delete them, it *used* them at boot.
+
+
+Eject the SD card properly from the windows machine
+
+Insert microSD into Pi Zero W and power up 
+
+
+
+Determine the IP address by looking in the router DHCP table...
+
+SSH to the IP address
+
+Log in with pi/raspberry
+
+Change Password:
+
+passwd    (change password)
+ raspberry
+ <new password>
+ <new password>
+
+
+
+
+//set keyboard to US:
+//**************************
+sudo sed -i  's/gb/us/' /etc/default/keyboard
+//****************************
+
+*question - will "sudo apt install apache2 phpmyadmin" do most of the below?
+
+sudo apt-get update
+sudo apt-get install apache2 -y
+
+sudo sed -i  's/ServerTokens OS/ServerTokens Prod/' /etc/apache2/conf-enabled/security.conf
+sudo sed -i  's/ServerSignature On/#ServerSignature On/' /etc/apache2/conf-enabled/security.conf
+sudo sed -i  's/#ServerSignature Off/ServerSignature Off/' /etc/apache2/conf-enabled/security.conf
+//ServerTokens Prod tells apache to only return Apache in the Server header, returned on every page request.
+//ServerSignature Off tells apache not to display the server version on error pages, or other pages it generates.
+//read more on this: https://websiteforstudents.com/install-apche2-php-phpmyadmin-ubuntu-17-04-17-10/
+
+
+
+sudo apt-get install php7.0 libapache2-mod-php7.0 -y
+sudo apt-get install mysql-server  php7.0-mysql -y
+
+sudo service apache2 restart
+
