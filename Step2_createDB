@@ -76,6 +76,10 @@ CREATE TABLE login_attempts (
     time varchar(30) NOT NULL 
 ) ENGINE = InnoDB;
 
+INSERT INTO login_attempts (user_id, time) VALUES
+(1, "1385995353"),
+(1, "1386011064");
+
 
 
 
