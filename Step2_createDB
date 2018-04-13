@@ -53,6 +53,32 @@ sudo mysql -u DBadmin -pqwer1234
 CREATE Database CDCtest;
 USE CDCtest;
 
+
+DROP TABLE IF EXISTS members;
+CREATE TABLE members (
+    id INT(9) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username varchar(30) NOT NULL UNIQUE,
+    email varchar(50) NOT NULL,
+    password varchar(128) NOT NULL,
+    salt varchar(128) NOT NULL
+) ENGINE = InnoDB;
+
+INSERT INTO members (id, username, email, password, salt) 
+VALUES
+(1, "test_user", "test@example.com", "00807432eae173f652f2064bdca1b61b290b52d40e429a7d295d76a71084aa96c0233b82f1feac45529e0726559645acaed6f3ae58a286b9f075916ebf66cacc", "f9aab579fc1b41ed0c44fe4ecdbfcdb4cb99b9023abb241a6db833288f4eea3c02f76e0d35204a8695077dcf81932aa59006423976224be0390395bae152d4ef");
+
+
+
+
+DROP TABLE IF EXISTS login_attempts;
+CREATE TABLE login_attempts (
+    user_id INT(11) NOT NULL,
+    time varchar(30) NOT NULL 
+) ENGINE = InnoDB;
+
+
+
+
 DROP TABLE IF EXISTS classtypes;
 CREATE TABLE classtypes (
     Class varchar(1) NOT NULL,
@@ -60,7 +86,6 @@ CREATE TABLE classtypes (
     PRIMARY KEY (Class),
     UNIQUE (ClassType)
 );
-
 
 INSERT INTO classtypes 
     (Class, ClassType) 
@@ -88,7 +113,6 @@ CREATE TABLE Batches (
     SourceIngredient varchar(30),
     PRIMARY KEY (BatchNum)
 );
-
 
 INSERT INTO Batches 
     (BatchNum, BatchName, Class, SourceProduct,SourceIngredient) 
@@ -136,7 +160,6 @@ CREATE TABLE WashRuns (
     Notes VARCHAR(512),
     PRIMARY KEY (DateTimeCode)
 );
-
 
 INSERT INTO WashRuns 
 VALUES 
