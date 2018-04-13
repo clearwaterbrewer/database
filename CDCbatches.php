@@ -52,7 +52,7 @@ sec_session_start();
 		<br>******NEW BATCH BUTTON******
             </p>
 	    <p><a href="includes/logout.php">logout</a></p>
-            <p>Return to <a href="protected_page.php">home page</a></p>
+            <p>Return to <a href="CDChome.php">home page</a></p>
         <?php else : ?>
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
