@@ -52,7 +52,6 @@ sec_session_start();
 </head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<p>Logged in as: <?php echo htmlentities($_SESSION['username']); ?></p>
 <form class="jotform-form" accept-charset="utf-8">
   <input type="hidden" name="formID" value="81033354119853" />
   <div class="form-all">
@@ -62,7 +61,8 @@ sec_session_start();
           <div class="header-text httal htvam">
             <h2 id="header_1" class="form-header" data-component="header">
               Batches
-            </h2>
+             </h2>
+              <label class="form-label form-label-top form-label-auto">Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
           </div>
         </div>
       </li>
