@@ -108,9 +108,7 @@ sec_session_start();
             <button id="input_2" type="submit" class="form-submit-button" data-component="button">
               Submit
             </button>
-            <button id="input_8" href="includes/logout.php" class="form-submit-button" data-component="button">
-              Submit
-            </button>
+              <a href="includes/logout.php" target="_parent"><button>Logout</button></a>
           </div>
         </div>
       </li>
