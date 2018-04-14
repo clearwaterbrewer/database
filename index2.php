@@ -68,7 +68,7 @@ if (login_check($mysqli) == true) {
       <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" > Username </label>
         <div class="form-input-wide">
-          <input type="text" name="username" class="input-textbox" style="width:60px" size="20" value="" data-component="input-textbox" />
+          <input type="text" name="username" class="input-textbox" size="20" value="" data-component="input-textbox" />
         </div>
       </li>
      <li class="form-line" data-type="control_textbox">
@@ -82,23 +82,6 @@ if (login_check($mysqli) == true) {
           <div style="margin-left:156px" class="form-buttons-wrapper">
             <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" />
         </div>
-      </li>
-         <li class="form-line" data-type="control_text" id="id_8">
-        <div id="cid_8" class="form-input-wide">
-          <div style="margin-left:156px" class="form-buttons-wrapper">
-            <a href="CDChome.php" >
-              <button type="button" class="form-submit-button" >
-                Home
-              </button>
-            </a>
-            <a href="includes/logout.php">
-              <button type="button" class="form-submit-button" >
-                Logout
-              </button>
-            </a>
-          </div>
-        </div>
-      </li>
 </div>
         </form>
     </body>
