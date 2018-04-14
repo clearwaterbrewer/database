@@ -51,6 +51,8 @@ sec_session_start();
 
 </head>
 <body>
+<?php if (login_check($mysqli) == true) : ?>
+<p>Logged in as: <?php echo htmlentities($_SESSION['username']); ?></p>
 <form class="jotform-form" accept-charset="utf-8">
   <input type="hidden" name="formID" value="81033354119853" />
   <div class="form-all">
@@ -108,10 +110,8 @@ sec_session_start();
             <button id="input_2" type="submit" class="form-submit-button" data-component="button">
               Submit
             </button>
-            <button id="input_8" href="includes/logout.php" class="form-submit-button" data-component="button">
-              Submit
-            </button>
-          </div>
+            <button formaction="includes/logout.php">Logout</button>
+            </div>
         </div>
       </li>
       <li style="display:none">
@@ -121,5 +121,11 @@ sec_session_start();
     </ul>
   </div>
   
- </form></body>
+ </form>
+<?php else : ?>
+<p>
+ <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+</p>
+<?php endif; ?>
+</body>
 </html>

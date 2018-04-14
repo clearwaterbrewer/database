@@ -48,9 +48,8 @@ sec_session_start();
 
 		echo "</table>";
 		?>
-
-		<br>******NEW BATCH BUTTON******
             </p>
+	    <p><a href="CDC_BatchForm.php">New Batch</a></p>
 	    <p><a href="includes/logout.php">logout</a></p>
             <p>Return to <a href="CDChome.php">home page</a></p>
         <?php else : ?>
