@@ -115,6 +115,11 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:156px" class="form-buttons-wrapper">
+            <a href="CDChome.php" >
+              <button type="button" class="form-submit-button" >
+                Home
+              </button>
+            </a>
             <a href="includes/logout.php">
               <button type="button" class="form-submit-button" >
                 Logout
