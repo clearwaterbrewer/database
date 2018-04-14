@@ -44,7 +44,7 @@ define("SECURE", FALSE);    // FOR DEVELOPMENT ONLY!!!!
 
 
 To update server after making changes on github.com
- CD /var/www/html/database
+ cd /var/www/html/database
  sudo git fetch
  sudo git checkout origin/master -- <filename>
 
