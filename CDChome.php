@@ -66,7 +66,7 @@ sec_session_start();
       </li>
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
-          <div style="margin-left:156px" class="form-buttons-wrapper">
+          <div style="margin-left:30px" class="form-buttons-wrapper">
             <a href="CDCbatches.php" >
               <button type="button" class="form-submit-button" >
                 Batches
