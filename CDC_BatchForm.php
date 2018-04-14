@@ -108,8 +108,8 @@ sec_session_start();
             <button id="input_2" type="submit" class="form-submit-button" data-component="button">
               Submit
             </button>
-          </div>
-              <a href="includes/logout.php"><button>Logout</button></a>
+            <button formaction="includes/logout.php">Logout</button>
+            </div>
         </div>
       </li>
       <li style="display:none">
