@@ -1,0 +1,13 @@
+ Critical: 
+ work on web forms for data entry for batches and wash runs
+ 
+ Important: 
+ set up printing to PDF on submit
+ set up print to printer option on submit
+ add 'remove from bond'
+ 
+ credential/role based record editing
+ move /includes out of document root directory
+ make host entry for dhcp for internal users to resolve database.cdc.com or something like that
+ 
+ 

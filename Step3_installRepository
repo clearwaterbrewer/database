@@ -1,6 +1,10 @@
-sudo apt-get install git -y
 cd /var/www/html/
 sudo git clone https://github.com/clearwaterbrewer/database.git
+
+
+set up git global info:
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
 
 
 
@@ -39,21 +43,16 @@ define("SECURE", FALSE);    // FOR DEVELOPMENT ONLY!!!!
 
 
 
+To update server after making changes on github.com
+ cd /var/www/html/database
+ sudo git fetch
+ sudo git checkout origin/master -- <filename>
 
 
 
-
-
-To Remove what was don on this page:
+To Remove what was done on this page:
 cd /var/www/html/
 sudo find database/ -mindepth 1 -delete
 sudo rmdir database
-
-
-
-sudo mysql -u DBadmin -pqwer1234
-USE CDCtest;
-DROP TABLE IF EXISTS members;
-quit
-
+sudo shutdown -r now
 
