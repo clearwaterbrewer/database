@@ -206,11 +206,11 @@
   background-position: center top;
 }
 .form-line {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .form-line {
-  padding: 12px 36px;
+  padding: 4px 20px;
 }
 .form-all .qq-upload-button,
 .form-all .form-submit-button,
@@ -259,8 +259,14 @@ h2 ~ .form-subHeader {
 .form-header-group {
   font-family: "Lucida Grande", sans-serif;
 }
-.form-section {
-  padding: 0px 0px 0px 0px;
+.form-section, .form-section-closed {
+    list-style:none;
+    list-style-position:outside;
+    margin:0px;
+    padding:0px;
+    position:relative;
+    zoom:1;
+    clear:both;
 }
 .form-header-group {
   margin: 12px 36px 12px 36px;
