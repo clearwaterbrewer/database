@@ -72,7 +72,7 @@ if (login_check($mysqli) == true) {
         </div>
       </li>
      <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" > Batch Name </label>
+        <label class="form-label form-label-top form-label-auto" > Password </label>
         <div class="form-input-wide">
           <input type="password" id="password" name="password" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
         </div>
@@ -83,10 +83,23 @@ if (login_check($mysqli) == true) {
             <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" />
         </div>
       </li>
-   </div>
+         <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:156px" class="form-buttons-wrapper">
+            <a href="CDChome.php" >
+              <button type="button" class="form-submit-button" >
+                Home
+              </button>
+            </a>
+            <a href="includes/logout.php">
+              <button type="button" class="form-submit-button" >
+                Logout
+              </button>
+            </a>
+          </div>
+        </div>
+      </li>
+</div>
         </form>
-        <p>If you don't have a login, please <a href="register.php">register</a></p>
-        <p>If you are done, please <a href="includes/logout.php">log out</a>.</p>
-        <p>You are currently logged <?php echo $logged ?>.</p>
     </body>
 </html>
