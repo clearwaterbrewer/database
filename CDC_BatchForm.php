@@ -11,9 +11,9 @@ sec_session_start();
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="HandheldFriendly" content="true" />
 <title>Batches</title>
-<link href="styles/form.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="styles/form.css" />
 <link type="text/css" rel="stylesheet" href="styles/nova.css" />
-<link type="text/css" media="print" rel="stylesheet" href="styles/printForm.css" />
+<link type="text/css" rel="stylesheet" href="styles/printForm.css" media="print" />
 <link type="text/css" rel="stylesheet" href="styles/batches.css"/>
 <style type="text/css">
     .form-label-left{
