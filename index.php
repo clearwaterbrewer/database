@@ -9,53 +9,22 @@ if (login_check($mysqli) == true) {
 }
 ?>
 <!DOCTYPE html>
-<html class="supernova">
-    <head>
+<html class="supernova">    <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="Secure Login: Log In" >
 <meta property="og:description" content="Please log in to continue.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="HandheldFriendly" content="true" />
-        <title>Secure Login: Log In</title>
-        <link rel="stylesheet" href="styles/main.css" />
-<link type="text/css" rel="stylesheet" href="styles/form.css" />
-<link type="text/css" rel="stylesheet" href="styles/nova.css" />
-<link type="text/css" rel="stylesheet" href="styles/printForm.css" media="print" />
-<link type="text/css" rel="stylesheet" href="styles/batches.css"/>
+<title>Secure Login: Log In</title>
+<link type="text/css" rel="stylesheet" href="styles/main.css"/>
         <script type="text/JavaScript" src="js/sha512.js"></script> 
         <script type="text/JavaScript" src="js/forms.js"></script> 
-<style type="text/css">
-    .form-label-left{
-        width:150px;
-    }
-    .form-line{
-        padding-top:12px;
-        padding-bottom:12px;
-    }
-    .form-label-right{
-        width:150px;
-    }
-    body, html{
-        margin:0;
-        padding:0;
-        background:#fff;
-    }
-    .form-all{
-        margin:0px auto;
-        padding-top:0px;
-        width:690px;
-        color:#555 !important;
-        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
-        font-size:14px;
-    }
-</style>
-
 <style type="text/css" id="form-designer-style">
     /* Injected CSS Code */
 .form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } /*__INSPECT_SEPERATOR__*/
     /* Injected CSS Code */
 </style>
-    </head>
+</head>
     <body>
         <?php
         if (isset($_GET['error'])) {
