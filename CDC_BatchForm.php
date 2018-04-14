@@ -1,145 +1,117 @@
-<HTML>
-<HEAD>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=windows-1252">
-<TITLE>action07 Wash Runs</TITLE>
-</HEAD>
-<BODY>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=34 >
-<TD WIDTH=143  ALIGN=LEFT > <BR></TD><TD WIDTH=433  ALIGN=CENTER  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:20pt FACE="Calibri" COLOR=#7f7f7f>Wash Run</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=48  ALIGN=LEFT > <BR></TD><TD WIDTH=96  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>DateTimeCode</FONT></TD>
-<TD WIDTH=96  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>20150813110</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=340  ALIGN=LEFT > <BR></TD><TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Batch </FONT></TD>
-<TD WIDTH=129  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Batch </FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=23 >
-<TD WIDTH=48  ALIGN=LEFT > <BR></TD><TD WIDTH=48  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Date</FONT></TD>
-<TD WIDTH=87  ALIGN=RIGHT  BGCOLOR=#D8D8D8 ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>8/13/2015</FONT></TD>
-<TD WIDTH=69  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Time</FONT></TD>
-<TD WIDTH=153  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>number</FONT></TD>
-<TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#222a35>4</FONT></TD>
-<TD WIDTH=105  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Name</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=48  ALIGN=LEFT > <BR></TD><TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Source </FONT></TD>
-<TD WIDTH=230  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Source </FONT></TD>
-<TD WIDTH=274  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Source </FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=17 >
-<TD WIDTH=48  ALIGN=LEFT > <BR></TD><TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Product</FONT></TD>
-<TD WIDTH=230  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Ingredient</FONT></TD>
-<TD WIDTH=274  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Amount</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=48  ALIGN=LEFT > <BR></TD><TD WIDTH=72  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Source </FONT></TD>
-<TD WIDTH=303  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Source </FONT></TD>
-<TD WIDTH=189  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Volume </FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=23 >
-<TD WIDTH=48  ALIGN=LEFT > <BR></TD><TD WIDTH=72  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Container</FONT></TD>
-<TD WIDTH=76  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#222a35>F1</FONT></TD>
-<TD WIDTH=120  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Alc/Vol</FONT></TD>
-<TD WIDTH=48  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>6.0</FONT></TD>
-<TD WIDTH=111  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Volume</FONT></TD>
-<TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>90.0</FONT></TD>
-<TD WIDTH=132  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Remaining</FONT></TD>
-<TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>0.0</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=56  ALIGN=LEFT > <BR></TD><TD WIDTH=72  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Gallons </FONT></TD>
-<TD WIDTH=322  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Collection </FONT></TD>
-<TD WIDTH=170  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Starting </FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=23 >
-<TD WIDTH=56  ALIGN=LEFT > <BR></TD><TD WIDTH=72  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Distilled</FONT></TD>
-<TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>15.0</FONT></TD>
-<TD WIDTH=104  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>% Proof</FONT></TD>
-<TD WIDTH=48  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>76.0</FONT></TD>
-<TD WIDTH=120  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Start</FONT></TD>
-<TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>11:00</FONT></TD>
-<TD WIDTH=123  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Proof</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=216  ALIGN=LEFT > <BR></TD><TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Proof </FONT></TD>
-<TD WIDTH=130  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Collection </FONT></TD>
-<TD WIDTH=200  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Ending </FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=23 >
-<TD WIDTH=48  ALIGN=LEFT > <BR></TD><TD WIDTH=72  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>temp C</FONT></TD>
-<TD WIDTH=169  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Gallons</FONT></TD>
-<TD WIDTH=53  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>11.40</FONT></TD>
-<TD WIDTH=77  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Stop</FONT></TD>
-<TD WIDTH=200  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Proof</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=48  ALIGN=LEFT > <BR></TD><TD WIDTH=72  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>pH</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=268  ALIGN=LEFT > <BR></TD><TD WIDTH=80  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Destination </FONT></TD>
-<TD WIDTH=117  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>WG </FONT></TD>
-<TD WIDTH=136  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>PG </FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=23 >
-<TD WIDTH=268  ALIGN=LEFT > <BR></TD><TD WIDTH=80  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>Container</FONT></TD>
-<TD WIDTH=46  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>f5</FONT></TD>
-<TD WIDTH=91  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>existing</FONT></TD>
-<TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>0.0</FONT></TD>
-<TD WIDTH=98  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>existing</FONT></TD>
-<TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>0.0</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=412  ALIGN=LEFT > <BR></TD><TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>WG </FONT></TD>
-<TD WIDTH=136  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>PG </FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=23 >
-<TD WIDTH=412  ALIGN=LEFT > <BR></TD><TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>resulting</FONT></TD>
-<TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#D8D8D8 ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>15.0</FONT></TD>
-<TD WIDTH=97  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>resulting</FONT></TD>
-<TD WIDTH=60  ALIGN=RIGHT  BGCOLOR=#D8D8D8 ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>11.4</FONT></TD>
-</TR>
-</TABLE>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 >
-<TR HEIGHT=19 >
-<TD WIDTH=48  ALIGN=LEFT > <BR></TD><TD WIDTH=96  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#7f7f7f>DateTimeCode</FONT></TD>
-<TD WIDTH=96  ALIGN=RIGHT  BGCOLOR=#FFFFFF ><FONT style=FONT-SIZE:11pt FACE="Calibri" COLOR=#404040>20150814110</FONT></TD>
-</TR>
-</TABLE>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html class="supernova"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="Batches" >
+<meta property="og:description" content="Please click the link to complete this form.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="HandheldFriendly" content="true" />
+<title>Batches</title>
+<link href="css/styles/form.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="css/styles/nova.css" />
+<link type="text/css" media="print" rel="stylesheet" href="css/styles/printForm.css" />
+<link type="text/css" rel="stylesheet" href="css/styles/batches.css"/>
+<style type="text/css">
+    .form-label-left{
+        width:150px;
+    }
+    .form-line{
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+    .form-label-right{
+        width:150px;
+    }
+    body, html{
+        margin:0;
+        padding:0;
+        background:#fff;
+    }
 
-<A HREF="#">First</A> <A HREF="#">Previous</A> <A HREF="action07 Wash Runs reportPage2.html">Next</A> <A HREF="action07 Wash Runs reportPage112.html">Last</A></BODY>
-</HTML>
+    .form-all{
+        margin:0px auto;
+        padding-top:0px;
+        width:690px;
+        color:#555 !important;
+        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+        font-size:14px;
+    }
+</style>
+
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+.form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } /*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+
+
+</head>
+<body>
+<form class="jotform-form" accept-charset="utf-8">
+  <input type="hidden" name="formID" value="81033354119853" />
+  <div class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group ">
+          <div class="header-text httal htvam">
+            <h2 id="header_1" class="form-header" data-component="header">
+              Batches
+            </h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_number" id="id_3">
+        <label class="form-label form-label-top form-label-auto" id="label_3" for="input_3"> Batch Number </label>
+        <div id="cid_3" class="form-input-wide">
+          <input type="number" id="input_3" name="q3_batchNumber" data-type="input-number" class=" form-number-input form-textbox" style="width:60px" size="5" value="" placeholder="ex: 23" data-component="number" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_4">
+        <label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> Batch Name </label>
+        <div id="cid_4" class="form-input-wide">
+          <input type="text" id="input_4" name="q4_batchName" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_5">
+        <label class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Class </label>
+        <div id="cid_5" class="form-input-wide">
+          <select class="form-dropdown" id="input_5" name="q5_class" style="width:150px" data-component="dropdown">
+            <option value="">  </option>
+            <option value="Whisky 160 and under"> Whisky 160 and under </option>
+            <option value="Rum"> Rum </option>
+            <option value="Gin"> Gin </option>
+            <option value="Vodka"> Vodka </option>
+            <option value="Spirits 190"> Spirits 190 </option>
+            <option value="Other"> Other </option>
+          </select>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_6">
+        <label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> Source Product </label>
+        <div id="cid_6" class="form-input-wide">
+          <input type="text" id="input_6" name="q6_sourceProduct" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_7">
+        <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7"> Source Ingredient </label>
+        <div id="cid_7" class="form-input-wide">
+          <input type="text" id="input_7" name="q7_sourceIngredient" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide">
+          <div style="margin-left:156px" class="form-buttons-wrapper">
+            <button id="input_2" type="submit" class="form-submit-button" data-component="button">
+              Submit
+            </button>
+          </div>
+        </div>
+      </li>
+      <li style="display:none">
+        Should be Empty:
+        <input type="text" name="website" value="" />
+      </li>
+    </ul>
+  </div>
+  
+ </form></body>
+</html>
