@@ -1,4 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<?php
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+sec_session_start();
+?>
+<!DOCTYPE HTML>
 <html class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="Batches" >
@@ -101,6 +106,9 @@
         <div id="cid_2" class="form-input-wide">
           <div style="margin-left:156px" class="form-buttons-wrapper">
             <button id="input_2" type="submit" class="form-submit-button" data-component="button">
+              Submit
+            </button>
+            <button id="input_8" type="submit" href="includes/logout.php" class="form-submit-button" data-component="button">
               Submit
             </button>
           </div>
