@@ -48,10 +48,11 @@ if (login_check($mysqli) == true) {
       </li>
      <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
-          <div style="margin-left:156px" class="form-buttons-wrapper">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
             <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" />
+          </div>
         </div>
-</div>
-        </form>
-    </body>
+     </li>
+    </form>
+  </body>
 </html>
