@@ -78,6 +78,50 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:156px" class="form-buttons-wrapper">
+            <a href="CDCRecFermentables.php" >
+              <button type="button" class="form-submit-button" >
+                Receive Fermantables
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:156px" class="form-buttons-wrapper">
+            <a href="CDCFermantations.php" >
+              <button type="button" class="form-submit-button" >
+                Fermentations
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:156px" class="form-buttons-wrapper">
+            <a href="CDCWashRuns.php" >
+              <button type="button" class="form-submit-button" >
+                Wash Runs
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:156px" class="form-buttons-wrapper">
+            <a href="CDCSpiritRuns.php" >
+              <button type="button" class="form-submit-button" >
+                Spirit Runs
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:156px" class="form-buttons-wrapper">
             <a href="CDCWashRuns.php" >
               <button type="button" class="form-submit-button" >
                 Wash Runs
