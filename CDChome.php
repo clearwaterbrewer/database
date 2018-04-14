@@ -94,9 +94,42 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCWashRuns.php" >
+            <a href="CDCBotanicalRuns.php" >
               <button type="button" class="form-submit-button" >
-                Wash Runs
+                Botanical Runs
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+            <a href="CDCGauging.php" >
+              <button type="button" class="form-submit-button" >
+                Production Gauging
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+            <a href="CDCBottling.php" >
+              <button type="button" class="form-submit-button" >
+                Bottling
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+            <a href="CDCRemoveFromBond.php" >
+              <button type="button" class="form-submit-button" >
+                Removed From Bond
               </button>
             </a>
            </div>
