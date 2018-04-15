@@ -29,7 +29,7 @@ sec_session_start();
           <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
         </div>
       </div>
-      <label><br><center>Last 5 Batches </center></label>
+	    <label><br><center><b>Last 5 Batches</b></center></label>
     </li
     <li>
       <div class="container">
