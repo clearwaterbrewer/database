@@ -47,13 +47,17 @@ sec_session_start();
 		        <div class="column">Class</div>
 		        <div class="column">Source Product</div>
 		    </div>
-		    <div class="row">
-		        <div class="column">Batch</div>
-		        <div class="column">Name</div>
-		        <div class="column">Class</div>
-		        <div class="column">Source Product</div>
-		    </div>
-		</div>
+		if ($result->num_rows > 0) {
+		  while ($row = $result->fetch_assoc()) {
+		    echo '<div class="row">';
+		        echo '<div class="column">'.$row['BatchNum'].'</div>';
+		        echo '<div class="column">'.$row['BatchName'].'</div>';
+		        echo '<div class="column">'.$row['Class'].'</div>';
+		        echo '<div class="column">'.$row['SourceProduct'].'</div>';
+		    echo '</div>';
+		  }
+		}
+	      </div>
       </li>
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
