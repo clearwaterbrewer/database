@@ -35,7 +35,7 @@ sec_session_start();
           </div>
         </div>
       </li
-      <li class="form-line" data-type="control_text" id="id_8">
+      <li>
 	<div class="container">
 	  <div class="row">
 		<div class="column">Batch</div>
