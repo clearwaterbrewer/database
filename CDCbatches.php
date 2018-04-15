@@ -27,18 +27,17 @@ sec_session_start();
       <li id="cid_1" class="form-input-wide" data-type="control_head">
         <div class="form-header-group ">
           <div class="header-text httal htvam">
-            <h2 id="header_1" class="form-header" data-component="header">
+            <h1 id="header_1" class="form-header" data-component="header">
               CDC Batches
-             </h2>
+             </h1>
               <label class="form-label form-label-top form-label-auto">Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
+              <h2>Last 5 Batches </h2>
           </div>
         </div>
       </li
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
-           <h1>Cotherman Distilling Co.</h1>
-		<h2>Last 5 Batches </h2>
-
+		
 		<?php
 		$sql="SELECT * FROM (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 5) sub ORDER BY BatchNum ASC";
 		$result = $mysqli->query($sql);
