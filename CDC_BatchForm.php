@@ -68,6 +68,7 @@ sec_session_start();
               Submit
             </button>
         </div>
+       </div>
     </li>
     <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
@@ -77,6 +78,12 @@ sec_session_start();
                 Home
               </button>
             </a>
+        </div>
+       </div>
+    </li>
+    <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
             <a href="includes/logout.php">
               <button type="button" class="form-submit-button" >
                 Logout
