@@ -1,5 +1,9 @@
 .error { color: red; }
 
+.nav-table {
+  display: table;
+  margin: auto
+}
 .form-all:after {
   content: "";
   display: table;
