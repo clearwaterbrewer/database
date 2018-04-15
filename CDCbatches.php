@@ -36,22 +36,6 @@ sec_session_start();
         </div>
       </li
       <li class="form-line" data-type="control_text" id="id_8">
-		<?php
-		$sql="SELECT * FROM (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 5) sub ORDER BY BatchNum ASC";
-		$result = $mysqli->query($sql);
-		<div class="container">
-		    <div class="row">
-		        <div class="column">Batch</div>
-		        <div class="column">Name</div>
-		        <div class="column">Class</div>
-		        <div class="column">Source Product</div>
-		    </div>
-		if ($result->num_rows > 0) {
-		  while ($row = $result->fetch_assoc()) {
-		  }
-		}
-	      </div>
-	      ?>
       </li>
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
