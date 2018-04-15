@@ -37,9 +37,9 @@ sec_session_start();
       </li
       <li class="form-line" data-type="control_text" id="id_8">
 	<div class="container">
-	  <div class="row\">
+	  <div class="row">
 		<div class="column">Batch</div>
-		<div class="colum\">Name</div>
+		<div class="colum">Name</div>
 		<div class="column">Class</div>
 		<div class="column">Source Product</div>
 	</div>
