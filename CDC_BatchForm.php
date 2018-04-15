@@ -94,7 +94,7 @@ sec_session_start();
     </li>
   </ul>
 </div>
-  
+</form>          
 <?php else : ?>
 <form class="jotform-form" accept-charset="utf-8">
   <div class="form-all">
