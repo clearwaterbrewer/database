@@ -28,8 +28,8 @@ sec_session_start();
           <h1>CDC Batches</h1>
           <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
         </div>
-		<label><br><center>Last 5 Batches </center></label>
       </div>
+      <label><br><center>Last 5 Batches </center></label>
     </li
     <li>
       <div class="container">
