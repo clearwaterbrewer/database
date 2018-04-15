@@ -39,7 +39,7 @@ sec_session_start();
 	<div class="container">
 	  <div class="row">
 		<div class="column">Batch</div>
-		<div class="colum">Name</div>
+		<div class="column">Name</div>
 		<div class="column">Class</div>
 		<div class="column">Source Product</div>
 	</div>
