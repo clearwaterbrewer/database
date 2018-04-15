@@ -34,38 +34,36 @@ sec_session_start();
           </div>
         </div>
       </li
-
-                Cotherman Distilling Co. <br>
-		Last 5 Batches 
-
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+           <h1>Cotherman Distilling Co.</h1>
+		<h2>Last 5 Batches </h2>
 
 		<?php
 		$sql="SELECT * FROM (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 5) sub ORDER BY BatchNum ASC";
 		$result = $mysqli->query($sql);
-		echo "<table>
-		<tr>
-		<th>Batch</th>
-		<th>Name</th>
-		<th>Class</th>
-		<th>Source Product</th>
-		<th>Source Ingredient</th>
-		</tr>";
+		echo "
+		<nav role='navigation' class="nav-table">
+		  <ul>
+		    <li><a>Batch</a></li>
+		    <li><a>Name</a></li>
+		    <li><a>Class</a></li>
+		    <li><a>Source Product</a></li>
+		  </ul>;
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
-		    echo "<tr>";
-		    echo "<td>" . $row['BatchNum'] . "</td>";
-		    echo "<td>" . $row['BatchName'] . "</td>";
-		    echo "<td>" . $row['Class'] . "</td>";
-		    echo "<td>" . $row['SourceProduct'] . "</td>";
-		    echo "<td>" . $row['SourceIngredient'] . "</td>";
-		    echo "</tr>";
+		    echo "<ul>";
+		    echo "<li>" . $row['BatchNum'] . "</li>";
+		    echo "<li>" . $row['BatchName'] . "</li>";
+		    echo "<li>" . $row['Class'] . "</li>";
+		    echo "<li>" . $row['SourceProduct'] . "</li>";
+		    echo "</ul>";
 		  }
 		}
-		echo "</table>";
+		echo "</nav>";
 		?>
-            </p>
-
-
+        </div>
+      </li>
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
@@ -76,7 +74,8 @@ sec_session_start();
             </a>
            </div>
         </div>
-      </li>      <li class="form-line" data-type="control_text" id="id_8">
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
            <a href="includes/logout.php">
