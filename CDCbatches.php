@@ -5,7 +5,7 @@ sec_session_start();
 ?>
 <!DOCTYPE html>
 <html class="supernova">
-    <head>
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="CDC Batches" >
 <meta property="og:description" content="View recent batches.">
@@ -14,36 +14,32 @@ sec_session_start();
 <title>CDC Batches</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css"/>
 <style type="text/css" id="form-designer-style">
-    /* Injected CSS Code */
-.form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } /*__INSPECT_SEPERATOR__*/
-    /* Injected CSS Code */
+.form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
 </style>
 </head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
 <form class="jotform-form" accept-charset="utf-8">
-  <div class="form-all">
-    <ul class="form-section page-section">        
-      <li id="cid_1" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group ">
-          <div class="header-text httal htvam">
-            <h1 id="header_1" class="form-header" data-component="header">
-              CDC Batches
-             </h1>
-              <label class="form-label form-label-top form-label-auto">Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
-              <h2>Last 5 Batches </h2>
-          </div>
+ <h1>CDC Batches</h1>
+ <label >Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
+<div class="form-all">
+  <ul class="form-section page-section">        
+    <li id="cid_1" class="form-input-wide" data-type="control_head">
+      <div class="form-header-group ">
+        <div class="header-text httal htvam">
+          <h2>Last 5 Batches </h2>
         </div>
-      </li
-      <li>
-	<div class="container">
-	  <div class="row">
-		<div class="column">Batch</div>
-		<div class="column">Name</div>
-		<div class="column">Class</div>
-		<div class="column">Source Product</div>
+      </div>
+    </li
+    <li>
+      <div class="container">
+	<div class="row">
+	  <div class="column">Batch</div>
+	  <div class="column">Name</div>
+	  <div class="column">Class</div>
+	  <div class="column">Source Product</div>
 	</div>
-	<?php 
+<?php 
       	  $sql="SELECT * FROM 
 		 (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 5) 
 		  sub ORDER BY BatchNum ASC";
@@ -54,38 +50,29 @@ sec_session_start();
       			echo "<br />";
 		  }
 		}
-	?>
-      </li>	
-      <li class="form-line" data-type="control_text" id="id_8">
-        <div id="cid_8" class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDC_BatchForm.php" >
-              <button type="button" class="form-submit-button" >
-                New Batch
-              </button>
-            </a>
-           </div>
+?>
+    </li>	
+  </ul>
+  <ul class="form-section page-section" >
+    <li class="form-line" data-type="control_text" id="id_8">
+      <div id="cid_8" class="form-input-wide">
+        <div style="margin-left:10px" class="form-buttons-wrapper">
+          <a href="CDC_BatchForm.php" >
+            <button type="button" class="form-submit-button" >
+              New Batch
+            </button>
+          </a>
+          <a href="includes/logout.php">
+            <button type="button" class="form-submit-button" >
+              Logout
+            </button>
+          </a>
         </div>
-      </li>
-      <li class="form-line" data-type="control_text" id="id_8">
-        <div id="cid_8" class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
-           <a href="includes/logout.php">
-              <button type="button" class="form-submit-button" >
-                Logout
-              </button>
-            </a>
-          </div>
-        </div>
-      </li>
-      <li style="display:none">
-        Should be Empty:
-        <input type="text" name="website" value="" />
-      </li>
-    </ul>
-  </div>
-  
- </form>        
+      </div>
+    </li>
+  </ul>
+</div>
+</form>        
 <?php else : ?>
 <form class="jotform-form" accept-charset="utf-8">
   <div class="form-all">
@@ -100,8 +87,10 @@ sec_session_start();
           </div>
         </div>
       </li
-      <li class="form-line" data-type="control_text" id="id_8">
-        <div id="cid_8" class="form-input-wide">
+    </ul>
+    <ul class="form-section page-section">        
+      <li class="form-line" data-type="control_text">
+        <div class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
            <a href="index.php">
               <button type="button" class="form-submit-button" >
@@ -117,3 +106,5 @@ sec_session_start();
 <?php endif; ?>
 </body>
 </html>
+	
+	
