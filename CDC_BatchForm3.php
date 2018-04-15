@@ -14,15 +14,14 @@ sec_session_start();
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
 <style type="text/css" id="form-designer-style">
 .form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
-
 #loading-img{display:none;}
 .response_msg { margin-top:10px; font-size:13px; background:#E5D669; color:#ffffff; width:250px; padding:3px; display:none; }
 </style>
+</head>
 
-  </head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8">
+<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="batchform" action="" method="post">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
