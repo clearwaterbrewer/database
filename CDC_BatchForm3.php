@@ -38,10 +38,10 @@ sec_session_start();
           <input type="text" class="form-control" name="BatchName" Placeholder="Rum 13" required>
         </div>
     </li>
-    <li class="form-line" data-type="control_dropdown" id="id_5">
-        <label class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Class </label>
+    <li class="form-line" data-type="control_dropdown">
+        <label class="form-label form-label-top form-label-auto" for="Class">Class</label>
         <div id="cid_5" class="form-input-wide">
-          <select class="form-dropdown" id="input_5" name="q5_class" style="width:150px" data-component="dropdown">
+          <select required class="form-dropdown" name="Class" style="width:150px" data-component="dropdown">
             <option value="">  </option>
             <option value="Whisky 160 and under"> Whisky 160 and under </option>
             <option value="Rum"> Rum </option>
@@ -52,16 +52,16 @@ sec_session_start();
           </select>
         </div>
     </li>
-    <li class="form-line" data-type="control_textbox" id="id_6">
-        <label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> Source Product </label>
-        <div id="cid_6" class="form-input-wide">
-          <input type="text" id="input_6" name="q6_sourceProduct" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" id="label_6" for="SourceProduct">Source Product</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" name="SourceProduct" Placeholder="Molasses" required>
         </div>
     </li>
-    <li class="form-line" data-type="control_textbox" id="id_7">
-        <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7"> Source Ingredient </label>
-        <div id="cid_7" class="form-input-wide">
-          <input type="text" id="input_7" name="q7_sourceIngredient" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" id="label_7" for="SourceIngredient">Source Ingredient</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" name="SourceIngredient" Placeholder="Molasses" required>
         </div>
     </li>
     <li class="form-line" data-type="control_button" id="id_2">
