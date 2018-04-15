@@ -42,14 +42,14 @@ sec_session_start();
 		$sql="SELECT * FROM (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 5) sub ORDER BY BatchNum ASC";
 		$result = $mysqli->query($sql);
 		echo "
-		<table>
+		<div>
 		  <ul>
-		    <li><a>Batch</a></li>
-		    <li><a>Name</a></li>
-		    <li><a>Class</a></li>
-		    <li><a>Source Product</a></li>
+		    <li>Batch</li>
+		    <li>Name</li>
+		    <li>Class</li>
+		    <li>Source Product</li>
 		  </ul>;
-		echo "</table>";
+		echo "</div>";
 		?>
         </div>
       </li>
