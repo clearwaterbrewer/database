@@ -100,33 +100,6 @@ sec_session_start();
   </ul>
 </div>
        
-<div class="response_msg"></div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-<script>
-  $(document).ready(function(){
-    $("#contact-form").on("submit",function(e){
-      e.preventDefault();
-      if($("#contact-form [name='BatchName']").val() === '')
-        {$("#contact-form [name='BatchName']").css("border","1px solid red");}
-      else
-        {$("#loading-img").css("display","block");
-        var sendData = $( this ).serialize();
-        $.ajax({type: "POST", url: "includes/get_response.php", data: sendData, success: function(data){
-          $("#loading-img").css("display","none");
-          $(".response_msg").text(data);
-          $(".response_msg").slideDown().fadeOut(3000);
-          $("#contact-form").find("input[type=text], input[type=email], textarea").val("");
-          }
-        });
-      }
-    });
-  $("#contact-form input").blur(function(){
-    var checkValue = $(this).val();
-    if(checkValue != '')
-      {$(this).css("border","1px solid #eeeeee");}
-    });
-</script>
 
 </form> 
 
