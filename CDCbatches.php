@@ -43,7 +43,7 @@ sec_session_start();
 		$sql="SELECT * FROM (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 5) sub ORDER BY BatchNum ASC";
 		$result = $mysqli->query($sql);
 		echo "
-		<nav role='navigation' class="nav-table">
+		<table>
 		  <ul>
 		    <li><a>Batch</a></li>
 		    <li><a>Name</a></li>
@@ -60,7 +60,7 @@ sec_session_start();
 		    echo "</ul>";
 		  }
 		}
-		echo "</nav>";
+		echo "</table>";
 		?>
         </div>
       </li>
