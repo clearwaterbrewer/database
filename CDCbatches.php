@@ -49,10 +49,10 @@ sec_session_start();
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
 		    echo '<div class="row">';
-		        echo '<div class="column">'.$row['BatchNum'].'</div>';
-		        echo '<div class="column">'.$row['BatchName'].'</div>';
-		        echo '<div class="column">'.$row['Class'].'</div>';
-		        echo '<div class="column">'.$row['SourceProduct'].'</div>';
+		        echo "<div class=\"column\">".$row['BatchNum']."</div>";
+		        echo "<div class=\"column\">".$row['BatchName']."</div>";
+		        echo "<div class=\"column\">".$row['Class']."</div>";
+		        echo "<div class=\"column\">".$row['SourceProduct']."</div>";
 		    echo '</div>';
 		  }
 		}
