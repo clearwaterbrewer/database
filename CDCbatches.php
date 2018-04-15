@@ -46,8 +46,8 @@ sec_session_start();
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
-    			echo "<div class=/"container/"/>";
-			echo $row['BatchNum'] . " " . $row['BatchName'] . " " . $row['Class'] . " " . $row['SourceProduct'];
+    			echo "<div class=/"row/"/>";
+			echo $row['BatchNum'];
       			echo "<//div />";
 		  }
 		}
