@@ -48,12 +48,6 @@ sec_session_start();
 		    </div>
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
-		    echo '<div class="row">';
-		        echo '<div>BatchNum</div>';
-		        echo '<div>BatchName</div>';
-		        echo '<div>Class</div>';
-		        echo '<div>SourceProduct</div>';
-		    echo '</div>';
 		  }
 		}
 	      </div>
