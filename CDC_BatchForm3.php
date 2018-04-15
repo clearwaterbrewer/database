@@ -64,13 +64,11 @@ sec_session_start();
           <input type="text" class="form-control" name="SourceIngredient" Placeholder="Molasses" required>
         </div>
     </li>
-    <li class="form-line" data-type="control_button" id="id_2">
-        <div id="cid_2" class="form-input-wide">
+    <li class="form-line" data-type="control_button">
+        <div class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <button id="input_2" type="submit" class="form-submit-button" data-component="button">
-              Submit
-            </button>
-        </div>
+            <button type="submit" name="submit" value="Submit" id="submit_form">Submit</button>
+          </div>
        </div>
     </li>
     <li class="form-line" data-type="control_text" id="id_8">
