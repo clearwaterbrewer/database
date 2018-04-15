@@ -26,13 +26,13 @@ sec_session_start();
       <div class="form-header-group ">
         <div class="header-text httal htvam">
           <h1>CDC Batches</h1>
-          <label >Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
+          <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
+          <label>Last 5 Batches </label>
         </div>
       </div>
     </li
     <li>
       <div class="container">
-          <h2>Last 5 Batches </h2>
 	<div class="row">
 	  <div class="column">Batch</div>
 	  <div class="column">Name</div>
