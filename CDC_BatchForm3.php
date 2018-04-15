@@ -4,8 +4,7 @@ include_once 'includes/functions.php';
 sec_session_start();
 ?>
 <!DOCTYPE HTML>
-<html>
-<head>
+<html class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="CDC Batch Entry" >
 <meta property="og:description" content="Please click the link to complete this form.">
@@ -19,8 +18,7 @@ sec_session_start();
 </head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="batchform" action="" method="post">
-
+<form class="jotform-form" accept-charset="utf-8">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
@@ -31,20 +29,18 @@ sec_session_start();
         </div>
       </div>
     </li>
-
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
-        <div class="form-input-wide">
-          <input type="text" class="form-control" name="BatchName" Placeholder="Rum 13" required>
+    <li class="form-line" data-type="control_textbox" id="id_4">
+        <label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> Batch Name </label>
+        <div id="cid_4" class="form-input-wide">
+          <input type="text" id="input_4" name="q4_batchName" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
         </div>
     </li>
- 
-    <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="Class">Class</label>
-        <div class="form-input-wide">
-          <select required class="form-dropdown" name="Class" style="width:150px" data-component="dropdown">
+    <li class="form-line" data-type="control_dropdown" id="id_5">
+        <label class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Class </label>
+        <div id="cid_5" class="form-input-wide">
+          <select class="form-dropdown" id="input_5" name="q5_class" style="width:150px" data-component="dropdown">
             <option value="">  </option>
-            <option value="Whiskey 160"> Whiskey 160</option>
+            <option value="Whisky 160 and under"> Whisky 160 and under </option>
             <option value="Rum"> Rum </option>
             <option value="Gin"> Gin </option>
             <option value="Vodka"> Vodka </option>
@@ -53,26 +49,25 @@ sec_session_start();
           </select>
         </div>
     </li>
-  
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
-        <div class="form-input-wide">
-          <input type="text" class="form-control" name="SourceProduct" Placeholder="Molasses" required>
+    <li class="form-line" data-type="control_textbox" id="id_6">
+        <label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> Source Product </label>
+        <div id="cid_6" class="form-input-wide">
+          <input type="text" id="input_6" name="q6_sourceProduct" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
         </div>
     </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
-        <div class="form-input-wide">
-          <input type="text" class="form-control" name="SourceIngredient" Placeholder="Molasses" required>
+    <li class="form-line" data-type="control_textbox" id="id_7">
+        <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7"> Source Ingredient </label>
+        <div id="cid_7" class="form-input-wide">
+          <input type="text" id="input_7" name="q7_sourceIngredient" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
         </div>
     </li>
-
-
-    <li class="form-line" data-type="control_button">
-        <div class="form-input-wide">
+    <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <button type="submit" class="btn btn-primary" name="submit" value="Submit" id="submit_form">Submit</button>
-          </div>
+            <button id="input_2" type="submit" class="form-submit-button" data-component="button">
+              Submit
+            </button>
+        </div>
        </div>
     </li>
     <li class="form-line" data-type="control_text" id="id_8">
@@ -99,11 +94,7 @@ sec_session_start();
     </li>
   </ul>
 </div>
-       
-
-</form> 
-
-  
+</form>          
 <?php else : ?>
 <form class="jotform-form" accept-charset="utf-8">
   <div class="form-all">
