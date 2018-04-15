@@ -1,20 +1,40 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
-
 sec_session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html class="supernova">
     <head>
-        <meta charset="UTF-8">
-        <title>Batches</title>
-        <link rel="stylesheet" href="styles/main.css" />
-    </head>
-    <body>
-        <?php if (login_check($mysqli) == true) : ?>
-        <p>Logged in as: <?php echo htmlentities($_SESSION['username']); ?></p>
-            <p>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="CDC Batches" >
+<meta property="og:description" content="View recent batches.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="HandheldFriendly" content="true" />
+<title>CDC Batches</title>
+<link type="text/css" rel="stylesheet" href="styles/main.css"/>
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+.form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } /*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+</head>
+<body>
+<?php if (login_check($mysqli) == true) : ?>
+<form class="jotform-form" accept-charset="utf-8">
+  <div class="form-all">
+    <ul class="form-section page-section">        
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group ">
+          <div class="header-text httal htvam">
+            <h2 id="header_1" class="form-header" data-component="header">
+              CDC Batches
+             </h2>
+              <label class="form-label form-label-top form-label-auto">Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
+          </div>
+        </div>
+      </li
+
                 Cotherman Distilling Co. <br>
 		Last 5 Batches 
 
@@ -22,7 +42,6 @@ sec_session_start();
 		<?php
 		$sql="SELECT * FROM (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 5) sub ORDER BY BatchNum ASC";
 		$result = $mysqli->query($sql);
-
 		echo "<table>
 		<tr>
 		<th>Batch</th>
@@ -31,9 +50,7 @@ sec_session_start();
 		<th>Source Product</th>
 		<th>Source Ingredient</th>
 		</tr>";
-
 		if ($result->num_rows > 0) {
-
 		  while ($row = $result->fetch_assoc()) {
 		    echo "<tr>";
 		    echo "<td>" . $row['BatchNum'] . "</td>";
@@ -44,18 +61,68 @@ sec_session_start();
 		    echo "</tr>";
 		  }
 		}
-
-
 		echo "</table>";
 		?>
             </p>
-	    <p><a href="CDC_BatchForm.php">New Batch</a></p>
-	    <p><a href="includes/logout.php">logout</a></p>
-            <p>Return to <a href="CDChome.php">home page</a></p>
-        <?php else : ?>
-            <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
-            </p>
-        <?php endif; ?>
-    </body>
+
+
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+            <a href="CDC_BatchForm.php" >
+              <button type="button" class="form-submit-button" >
+                New Batch
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+           <a href="includes/logout.php">
+              <button type="button" class="form-submit-button" >
+                Logout
+              </button>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li style="display:none">
+        Should be Empty:
+        <input type="text" name="website" value="" />
+      </li>
+    </ul>
+  </div>
+  
+ </form>        
+<?php else : ?>
+<form class="jotform-form" accept-charset="utf-8">
+  <div class="form-all">
+    <ul class="form-section page-section">        
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group ">
+          <div class="header-text httal htvam">
+            <h2 id="header_1" class="form-header" data-component="header">
+              NOT AUTHORIZED
+             </h2>
+              <label class="form-label form-label-top form-label-auto">You must be an authorized user. </label>
+          </div>
+        </div>
+      </li
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+           <a href="index.php">
+              <button type="button" class="form-submit-button" >
+                Login
+              </button>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+ </form>        
+<?php endif; ?>
+</body>
 </html>
