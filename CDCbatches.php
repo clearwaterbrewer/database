@@ -52,6 +52,8 @@ sec_session_start();
 		  while ($row = $result->fetch_assoc()) {
 			echo $row['BatchNum'] . " " . $row['BatchName'] . " " . $row['Class'] . " " . $row['SourceProduct'];
       			echo "<br />";
+		  }
+		}
 	?>
       </li>	
       <li class="form-line" data-type="control_text" id="id_8">
