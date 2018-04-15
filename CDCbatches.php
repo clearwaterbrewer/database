@@ -20,13 +20,13 @@ sec_session_start();
 <body>
 <?php if (login_check($mysqli) == true) : ?>
 <form class="jotform-form" accept-charset="utf-8">
- <h1>CDC Batches</h1>
- <label >Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
 <div class="form-all">
   <ul class="form-section page-section">        
     <li id="cid_1" class="form-input-wide" data-type="control_head">
       <div class="form-header-group ">
         <div class="header-text httal htvam">
+          <h1>CDC Batches</h1>
+          <label >Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
           <h2>Last 5 Batches </h2>
         </div>
       </div>
