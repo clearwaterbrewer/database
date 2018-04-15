@@ -29,12 +29,6 @@ sec_session_start();
         </div>
       </div>
     </li>
-    <li class="form-line" data-type="control_number" id="id_3">
-        <label class="form-label form-label-top form-label-auto" id="label_3" for="input_3"> Batch Number </label>
-        <div id="cid_3" class="form-input-wide">
-          <input type="number" id="input_3" name="q3_batchNumber" data-type="input-number" class=" form-number-input form-textbox" style="width:60px" size="5" value="" placeholder="ex: 23" data-component="number" />
-        </div>
-    </li>
     <li class="form-line" data-type="control_textbox" id="id_4">
         <label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> Batch Name </label>
         <div id="cid_4" class="form-input-wide">
