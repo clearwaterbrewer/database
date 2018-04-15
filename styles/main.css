@@ -1,9 +1,15 @@
 .error { color: red; }
 
-.nav-table {
+.container {
   display: table;
-  margin: auto
 }
+.row {
+  display: table-row;
+}
+.column {
+  display: table-cell;
+}
+
 .form-all:after {
   content: "";
   display: table;
