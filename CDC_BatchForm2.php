@@ -57,7 +57,7 @@ display:none;
     <li class="form-line" data-type="control_dropdown">
         <label class="form-label form-label-top form-label-auto" for="Class">Class</label>
         <div class="form-input-wide">
-          <select class="form-dropdown" name="Class" style="width:150px" data-component="dropdown">
+          <select class="form-dropdown" name="Class" style="width:150px" data-component="dropdown" required>
             <option value="">  </option>
             <option value="Whiskey 160"> Whiskey 160</option>
             <option value="Rum"> Rum </option>
