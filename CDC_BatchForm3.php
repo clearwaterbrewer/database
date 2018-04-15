@@ -32,10 +32,10 @@ sec_session_start();
         </div>
       </div>
     </li>
-    <li class="form-line" data-type="control_textbox" id="id_4">
-        <label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> Batch Name </label>
-        <div id="cid_4" class="form-input-wide">
-          <input type="text" id="input_4" name="q4_batchName" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" name="BatchName" Placeholder="Rum 13" required>
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown" id="id_5">
