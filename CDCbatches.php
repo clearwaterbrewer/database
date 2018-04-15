@@ -58,21 +58,38 @@ sec_session_start();
     </li>	
   </ul>
   <ul class="form-section page-section" >
-    <li class="form-line" data-type="control_text" id="id_8">
-      <div id="cid_8" class="form-input-wide">
+    <li class="form-line" data-type="control_text" >
+      <div class="form-input-wide">
         <div style="margin-left:10px" class="form-buttons-wrapper">
           <a href="CDC_BatchForm.php" >
             <button type="button" class="form-submit-button" >
               New Batch
             </button>
           </a>
-          <a href="includes/logout.php">
-            <button type="button" class="form-submit-button" >
-              Logout
-            </button>
-          </a>
+         </div>
+       </div>
+    </li>
+    <li class="form-line" data-type="control_text">
+        <div class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+            <a href="CDChome.php" >
+              <button type="button" class="form-submit-button" >
+                Home
+              </button>
+            </a>
         </div>
-      </div>
+       </div>
+    </li>
+    <li class="form-line" data-type="control_text">
+        <div class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+            <a href="includes/logout.php">
+              <button type="button" class="form-submit-button" >
+                Logout
+              </button>
+            </a>
+          </div>
+        </div>
     </li>
   </ul>
 </div>
