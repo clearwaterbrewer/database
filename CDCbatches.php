@@ -49,16 +49,6 @@ sec_session_start();
 		    <li><a>Class</a></li>
 		    <li><a>Source Product</a></li>
 		  </ul>;
-		if ($result->num_rows > 0) {
-		  while ($row = $result->fetch_assoc()) {
-		    echo "<ul>";
-		    echo "<li>" . $row['BatchNum'] . "</li>";
-		    echo "<li>" . $row['BatchName'] . "</li>";
-		    echo "<li>" . $row['Class'] . "</li>";
-		    echo "<li>" . $row['SourceProduct'] . "</li>";
-		    echo "</ul>";
-		  }
-		}
 		echo "</table>";
 		?>
         </div>
