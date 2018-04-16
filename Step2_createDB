@@ -108,6 +108,53 @@ SELECT *FROM classtypes;
 
 
 
+
+DROP TABLE IF EXISTS Products;
+CREATE TABLE Products (
+    id INT(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ProductName varchar(18) NOT NULL UNIQUE,
+    ProductDescription varchar(50),
+    ProductValue1 varchar(30),
+    ProductValue2 varchar(30),
+    ProductValue3 DECIMAL(4.1)
+);
+
+INSERT INTO Products 
+    (ProductName, ProductDescription) 
+VALUES 
+    ("Malt Barley Wort","Wort that is over 50% Malted Barley"),
+    ("Malted Rye Wort","Wort that is over 50% Malted Barley"),
+    ("Molasses43","Molasses with 43% sugar"),
+    ("Panela Sugar","Panela Sugar");
+
+SELECT *FROM Products;
+
+
+
+
+DROP TABLE IF EXISTS Ingredients;
+CREATE TABLE Ingredients (
+    id INT(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    IngredientName varchar(18) NOT NULL UNIQUE,
+    IngredientDescription varchar(50),
+    IngredientValue1 varchar(30),
+    IngredientValue2 varchar(30),
+    IngredientValue3 DECIMAL(4.1)
+);
+
+INSERT INTO Ingredients 
+    (IngredientName, IngredientDescription) 
+VALUES 
+    ("Malted Barley","Grain that is over 50% Malted Barley"),
+    ("Malted Rye","Grain thatis over 50% Malted Rye"),
+    ("Molasses43","Molasses with 43% sugar"),
+    ("Panela Sugar","Panela Sugar");
+
+SELECT *FROM Ingredients;
+
+
+
+
 DROP TABLE IF EXISTS Batches;
 CREATE TABLE Batches (
     BatchNum INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
