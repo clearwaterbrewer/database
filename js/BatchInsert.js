@@ -12,7 +12,7 @@ $(document).ready(function() {
       },
     function(data) {
       alert(data);
-      $('#form')[0].reset(); // To reset form fields
+      $('#BatchForm')[0].reset(); // To reset form fields
       });
   });
 });
