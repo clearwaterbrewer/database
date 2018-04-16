@@ -49,7 +49,7 @@ sec_session_start();
     			echo '<div class=row>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
 			echo '<div class=column>'.$row['BatchName'].'</div>';
-			echo '<div class=column>'.$row['Class'].'</div>';
+			echo '<div class=column>'.$row['ClassType'].'</div>';
 			echo '<div class=column>'.$row['SourceProduct'].'</div>';
       			echo "</div>";
 		  }
