@@ -37,7 +37,7 @@ div.ex3 {
 	    <label><br><center><b>Last 5 Batches</b></center></label>
     </li
     <li>
-      <div class="container">
+      <div class="ex3">
 	      <div class="row">
 	        <div class="column">Batch</div>
 	        <div class="column">Name</div>
