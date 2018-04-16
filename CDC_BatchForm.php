@@ -1,6 +1,5 @@
 <?php
 include_once 'db_connect.php';
-include_once 'includes/BatchInsert.php';
 include_once 'includes/functions.php';
 sec_session_start();
 ?>
