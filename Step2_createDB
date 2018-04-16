@@ -110,12 +110,11 @@ VALUES
 
 DROP TABLE IF EXISTS Batches;
 CREATE TABLE Batches (
-    BatchNum INT UNSIGNED NOT NULL,
+    BatchNum INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     BatchName varchar(30) NOT NULL,
     Class varchar(30),
     SourceProduct varchar(30),
-    SourceIngredient varchar(30),
-    PRIMARY KEY (BatchNum)
+    SourceIngredient varchar(30)
 );
 
 INSERT INTO Batches 
@@ -127,6 +126,45 @@ VALUES
     (67,"Rum 19","Whiskey","Rye Malt wort","Malted Rye"),
     (68,"Rum 19","Whiskey","Malt wort","Malted Barley"),
     (69,"Rum 19","Whiskey","Malt wort","Malted Barley");
+
+SELECT *FROM Batches;
+
+
+MariaDB [CDCtest]> SELECT *FROM Batches;
++----------+-----------+---------+---------------+------------------+
+| BatchNum | BatchName | Class   | SourceProduct | SourceIngredient |
++----------+-----------+---------+---------------+------------------+
+|       67 | Rum 19    | Whiskey | Rye Malt wort | Malted Rye       |
+|       68 | Rum 19    | Whiskey | Malt wort     | Malted Barley    |
+|       69 | Rum 19    | Whiskey | Malt wort     | Malted Barley    |
+|       76 | Rum 19    | Rum     | Molasses      | Molasses         |
+|       77 | Rum 20    | Rum     | Molasses      | Molasses         |
+|       78 | Rum 19    | Rum     | Molasses      | Molasses         |
++----------+-----------+---------+---------------+------------------+
+6 rows in set (0.00 sec)
+
+MariaDB [CDCtest]> INSERT INTO Batches
+    ->     (BatchName, Class, SourceProduct,SourceIngredient)
+    -> VALUES
+    ->     ("Rum 21","Rum","Molasses","Molasses");
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [CDCtest]> SELECT *FROM Batches;
++----------+-----------+---------+---------------+------------------+
+| BatchNum | BatchName | Class   | SourceProduct | SourceIngredient |
++----------+-----------+---------+---------------+------------------+
+|       67 | Rum 19    | Whiskey | Rye Malt wort | Malted Rye       |
+|       68 | Rum 19    | Whiskey | Malt wort     | Malted Barley    |
+|       69 | Rum 19    | Whiskey | Malt wort     | Malted Barley    |
+|       76 | Rum 19    | Rum     | Molasses      | Molasses         |
+|       77 | Rum 20    | Rum     | Molasses      | Molasses         |
+|       78 | Rum 19    | Rum     | Molasses      | Molasses         |
+|       79 | Rum 21    | Rum     | Molasses      | Molasses         |
++----------+-----------+---------+---------------+------------------+
+7 rows in set (0.00 sec)
+
+MariaDB [CDCtest]>
+
 
 
 
