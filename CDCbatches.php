@@ -16,6 +16,12 @@ sec_session_start();
 <style type="text/css" id="form-designer-style">
 .form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
 </style>
+<style>
+div.ex3 {
+    overflow: auto;
+    max-height: 35vh;
+	}
+</style>
 </head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
@@ -29,19 +35,19 @@ sec_session_start();
           <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
         </div>
       </div>
-	    <label><br><center><b>Last 5 Batches</b></center></label>
+	    <label><br><center><b>Last 100 Batches</b></center></label>
     </li
     <li>
-      <div class="container">
-	<div class="row">
-	  <div class="column">Batch</div>
-	  <div class="column">Name</div>
-	  <div class="column">Class</div>
-	  <div class="column">Source Product</div>
-	</div>
+      <div class="ex3">
+	      <div class="row">
+	        <div class="column">Batch</div>
+	        <div class="column">Name</div>
+	        <div class="column">Class</div>
+	        <div class="column">Source Product</div>
+      	</div>
 <?php 
       	  $sql="SELECT * FROM 
-		 (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 5) 
+		 (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 100) 
 		  sub ORDER BY BatchNum ASC";
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
@@ -127,5 +133,3 @@ sec_session_start();
 <?php endif; ?>
 </body>
 </html>
-	
-	
