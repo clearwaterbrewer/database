@@ -35,7 +35,7 @@ div.ex3 {
           <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
         </div>
       </div>
-	    <label><br><center><b>Last 5 Batches</b></center></label>
+	    <label><br><center><b>Last 100 Batches</b></center></label>
     </li
     <li>
       <div class="ex3">
@@ -47,7 +47,7 @@ div.ex3 {
       	</div>
 <?php 
       	  $sql="SELECT * FROM 
-		 (SELECT * FROM Batches ORDER BY BatchNum DESC ) 
+		 (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 100) 
 		  sub ORDER BY BatchNum ASC";
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
