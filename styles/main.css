@@ -305,8 +305,8 @@ h2 ~ .form-subHeader {
 .form-spinner input {
   background-color: #ffffff;
 }
-[data-type="control_dropdown"] .form-input,
-[data-type="control_dropdown"] .form-input-wide {
+[data-type="control_dropdown"] .form-input/* ,
+[data-type="control_dropdown"] .form-input-wide| */ {
   width: 150px;
 }
 .form-label {
