@@ -59,8 +59,8 @@ sec_session_start();
           <input type="text" class="form-control" size="20" name="SourceIngredient" value="" Placeholder="Molasses" required>
         </div>
     </li>
-    <li class="form-line" data-type="control_button">
-        <div class="form-input-wide">
+    <li class="form-line" data-type="control_button" id="id_8">
+        <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
             <button type="submit" name="submit" value="Submit" id="submit_form">Submit</button>
           </div>
