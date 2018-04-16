@@ -43,6 +43,7 @@ $sql = " SELECT ClassType FROM classtypes ORDER by ClassLetter";
 $result = $mysqli->query($sql);
 
 echo "<select class='form-dropdown' required name='ClassType' data-component='dropdown'>";
+echo "<option value=''>  </option>";
 while ($row = $result->fetch_assoc()) {
     echo "<option value='" . $row['ClassType'] . "'>" . $row['ClassType'] . "</option>";
 }
