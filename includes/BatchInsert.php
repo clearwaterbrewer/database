@@ -14,11 +14,11 @@ if (isset($_POST['BatchName'], $_POST['Class'], $_POST['SourceProduct'], $_POST[
         $insert_stmt->bind_param($BatchName, $Class, $SourceProduct, $SourceIngredient);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
-                echo "Error at BatchInsert.php";
+                header('Location: ../error.php?err=Batch addition failure: INSERT');
                 exit();
             }
         }
-        echo "Data Submitted succesfully";
+        header('Location: ./CDCbatches.php');
         exit();
     }
 }
