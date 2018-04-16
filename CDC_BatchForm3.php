@@ -12,11 +12,6 @@ sec_session_start();
 <meta name="HandheldFriendly" content="true" />
 <title>CDC Batch Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
-<style type="text/css" id="form-designer-style">
-.form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
-#loading-img{display:none;}
-.response_msg { margin-top:10px; font-size:13px; background:#E5D669; color:#ffffff; width:250px; padding:3px; display:none; }
-</style>
 </head>
 
 <body>
