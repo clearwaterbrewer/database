@@ -30,13 +30,13 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" name="BatchName" value="" Placeholder="Rum 13" required>
+          <input type="text" class="form-control" size="20" name="BatchName" value="" Placeholder="Rum 13" required>
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
         <label class="form-label form-label-top form-label-auto" for="Class">Class</label>
         <div class="form-input-wide">
-          <select required class="form-dropdown" name="Class" data-component="dropdown">
+          <select required class="form-dropdown" size="20" name="Class" data-component="dropdown">
             <option value="">  </option>
             <option value="Whisky 160 and under"> Whisky 160 and under </option>
             <option value="Rum"> Rum </option>
@@ -50,13 +50,13 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" id="label_6" for="SourceProduct">Source Product</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" name="SourceProduct" value="" Placeholder="Molasses" required>
+          <input type="text" class="form-control" size="20" name="SourceProduct" value="" Placeholder="Molasses" required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" id="label_7" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" name="SourceIngredient" value="" Placeholder="Molasses" required>
+          <input type="text" class="form-control" size="20" name="SourceIngredient" value="" Placeholder="Molasses" required>
         </div>
     </li>
     <li class="form-line" data-type="control_button">
