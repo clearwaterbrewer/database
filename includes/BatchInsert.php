@@ -1,7 +1,6 @@
 <?php
 include_once 'db_connect.php';
 include_once 'psl-config.php';
-$error_msg = "";
 if (isset($_POST['BatchName'], $_POST['Class'], $_POST['SourceProduct'], $_POST['SourceIngredient'])) {
     // Sanitize and validate the data passed in
     $BatchName = filter_input(INPUT_POST, 'BatchName', FILTER_SANITIZE_STRING);
