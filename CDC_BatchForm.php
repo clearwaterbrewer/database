@@ -12,13 +12,11 @@ sec_session_start();
 <meta name="HandheldFriendly" content="true" />
 <title>CDC Batch Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
-<style type="text/css" id="form-designer-style">
-.form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
-</style>
 </head>
+
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8">
+<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="batchform" action="CDC_BatchForm3.php" method="post">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
@@ -29,16 +27,16 @@ sec_session_start();
         </div>
       </div>
     </li>
-    <li class="form-line" data-type="control_textbox" id="id_4">
-        <label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> Batch Name </label>
-        <div id="cid_4" class="form-input-wide">
-          <input type="text" id="input_4" name="q4_batchName" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="BatchName" value="" Placeholder="Rum 13" required>
         </div>
     </li>
-    <li class="form-line" data-type="control_dropdown" id="id_5">
-        <label class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Class </label>
-        <div id="cid_5" class="form-input-wide">
-          <select class="form-dropdown" id="input_5" name="q5_class" style="width:150px" data-component="dropdown">
+    <li class="form-line" data-type="control_dropdown">
+        <label class="form-label form-label-top form-label-auto" for="Class">Class</label>
+        <div class="form-input-wide">
+          <select required class="form-dropdown" name="Class" data-component="dropdown">
             <option value="">  </option>
             <option value="Whisky 160 and under"> Whisky 160 and under </option>
             <option value="Rum"> Rum </option>
@@ -49,25 +47,23 @@ sec_session_start();
           </select>
         </div>
     </li>
-    <li class="form-line" data-type="control_textbox" id="id_6">
-        <label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> Source Product </label>
-        <div id="cid_6" class="form-input-wide">
-          <input type="text" id="input_6" name="q6_sourceProduct" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" id="label_6" for="SourceProduct">Source Product</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="SourceProduct" value="" Placeholder="Molasses" required>
         </div>
     </li>
-    <li class="form-line" data-type="control_textbox" id="id_7">
-        <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7"> Source Ingredient </label>
-        <div id="cid_7" class="form-input-wide">
-          <input type="text" id="input_7" name="q7_sourceIngredient" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" />
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" id="label_7" for="SourceIngredient">Source Ingredient</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="SourceIngredient" value="" Placeholder="Molasses" required>
         </div>
     </li>
-    <li class="form-line" data-type="control_button" id="id_2">
-        <div id="cid_2" class="form-input-wide">
+    <li class="form-line" data-type="control_button" id="id_8">
+        <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <button id="input_2" type="submit" class="form-submit-button" data-component="button">
-              Submit
-            </button>
-        </div>
+            <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
+          </div>
        </div>
     </li>
     <li class="form-line" data-type="control_text" id="id_8">
@@ -128,4 +124,3 @@ sec_session_start();
 <?php endif; ?>
 </body>
 </html>
-
