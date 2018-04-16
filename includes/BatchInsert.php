@@ -11,7 +11,7 @@ if (isset($_POST['BatchName1'], $_POST['Class1'], $_POST['SourceProduct1'], $_PO
 
     // Insert the new Batch into the database 
     if ($insert_stmt = $mysqli->prepare("INSERT INTO Batches (BatchName, Class, SourceProduct, SourceIngredient) VALUES (?, ?, ?, ?)")) {
-        $insert_stmt->bind_param('ssss', $BatchName, $Class, $SourceProduct, $SourceIngredient);
+        $insert_stmt->bind_param($BatchName, $Class, $SourceProduct, $SourceIngredient);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 echo "Error at BatchInsert.php";
