@@ -36,10 +36,10 @@
   white-space: normal;
 }
 .form-label.form-label-auto {
-  display: inline-block;
-  float: left;
+  display: block;
+  float: none;
   text-align: left;
-  width: 150px;
+  width: inhereit;
 }
 .form-label-left {
   display: inline-block;
