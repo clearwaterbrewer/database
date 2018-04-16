@@ -1,4 +1,5 @@
 <?php
+include_once 'includes/BatchInsert.php';
 include_once 'db_connect.php';
 include_once 'includes/functions.php';
 sec_session_start();
@@ -13,9 +14,9 @@ sec_session_start();
 <title>CDC Batch Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
 
-// <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <link href="css/refreshform.css" rel="stylesheet">
-// <script src="js/BatchInsert.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/BatchInsert.js"></script>
 
   
 </head>
