@@ -35,7 +35,7 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_dropdown">
         <label class="form-label form-label-top form-label-auto" for="Class">Class</label>
-        <div id="cid_5" class="form-input-wide">
+        <div class="form-input-wide">
           <select required class="form-dropdown" name="Class" style="width:150px" data-component="dropdown">
             <option value="">  </option>
             <option value="Whisky 160 and under"> Whisky 160 and under </option>
