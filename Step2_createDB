@@ -94,15 +94,15 @@ CREATE TABLE classtypes (
 INSERT INTO classtypes 
     (Class, ClassType) 
 VALUES 
-    ("b","Whisky 160 and under"),
-    ("c","Whisky Over 160"),
-    ("d","Brandy 170 and under"),
-    ("e","Brandy over 170"),
+    ("b","Whisky -160"),
+    ("c","Whisky 160+"),
+    ("d","Brandy -170"),
+    ("e","Brandy 170+"),
     ("f","Rum"),
     ("g","Gin"),
     ("h","Vodka"),
-    ("i","Spirits 190 and over"),
-    ("j","Spirits under 190"),
+    ("i","Spirits 190+"),
+    ("j","Spirits -190"),
     ("k","Other");
 
 
