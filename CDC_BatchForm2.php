@@ -36,33 +36,46 @@ sec_session_start();
     <li class="form-line" data-type="control_dropdown">
         <label class="form-label form-label-top form-label-auto" for="ClassType">ClassType</label>
         <div class="form-input-wide">
-
-<?php
-
-$sql = " SELECT ClassType FROM classtypes ORDER by ClassLetter";
-$result = $mysqli->query($sql);
-
-echo "<select class='form-dropdown' required name='ClassType' data-component='dropdown'>";
-echo "<option value=''>  </option>";
-while ($row = $result->fetch_assoc()) {
-    echo "<option value='" . $row['ClassType'] . "'>" . $row['ClassType'] . "</option>";
-}
-echo "</select>";
-
-?>
-
+        <?php
+          $sql = " SELECT ClassType FROM classtypes ORDER by ClassLetter";
+          $result = $mysqli->query($sql);
+          echo "<select class='form-dropdown' required name='ClassType' data-component='dropdown'>";
+          echo "<option value=''>  </option>";
+          while ($row = $result->fetch_assoc()) {
+            echo "<option value='" . $row['ClassType'] . "'>" . $row['ClassType'] . "</option>";
+          }
+          echo "</select>";
+        ?>
         </div>
     </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" id="label_6" for="SourceProduct">Source Product</label>
+    <li class="form-line" data-type="control_dropdown">
+        <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="SourceProduct" value="" Placeholder="Molasses" required>
+        <?php
+          $sql = " SELECT ProductName FROM Products ORDER by ProductName";
+          $result = $mysqli->query($sql);
+          echo "<select class='form-dropdown' required name='SourceProduct' data-component='dropdown'>";
+          echo "<option value=''>  </option>";
+          while ($row = $result->fetch_assoc()) {
+            echo "<option value='" . $row['ProductName'] . "'>" . $row['ProductName'] . "</option>";
+          }
+          echo "</select>";
+        ?>
         </div>
     </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" id="label_7" for="SourceIngredient">Source Ingredient</label>
+    <li class="form-line" data-type="control_dropdown">
+        <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="SourceIngredient" value="" Placeholder="Molasses" required>
+        <?php
+          $sql = " SELECT IngredientName FROM Ingredients ORDER by IngredientName";
+          $result = $mysqli->query($sql);
+          echo "<select class='form-dropdown' required name='SourceIngredient' data-component='dropdown'>";
+          echo "<option value=''>  </option>";
+          while ($row = $result->fetch_assoc()) {
+            echo "<option value='" . $row['IngredientName'] . "'>" . $row['IngredientName'] . "</option>";
+          }
+          echo "</select>";
+        ?>
         </div>
     </li>
     <li class="form-line" data-type="control_button" id="id_8">
