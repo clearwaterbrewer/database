@@ -1,5 +1,5 @@
 <?php
-include_once 'db_connect.php';
+include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 sec_session_start();
 ?>
@@ -12,17 +12,11 @@ sec_session_start();
 <meta name="HandheldFriendly" content="true" />
 <title>CDC Batch Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
-
-<link href="css/refreshform.css" rel="stylesheet">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/BatchInsert.js"></script>
-
-  
 </head>
 
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="BatchForm" action="" method="post">
+<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="batchform" action="CDC_BatchForm3.php" method="post">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
@@ -68,7 +62,7 @@ sec_session_start();
     <li class="form-line" data-type="control_button" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit">Submit</button>
+            <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
           </div>
        </div>
     </li>
