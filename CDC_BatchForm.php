@@ -13,16 +13,16 @@ sec_session_start();
 <title>CDC Batch Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+//<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <link href="css/refreshform.css" rel="stylesheet">
-<script src="js/BatchInsert.js"></script>
+//<script src="js/BatchInsert.js"></script>
 
   
 </head>
 
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="BatchForm" action="CDCbatches.php" method="post">
+<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="BatchForm" action="includes/BatchInsert.php" method="post">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
