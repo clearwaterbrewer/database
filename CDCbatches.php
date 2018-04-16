@@ -32,8 +32,10 @@ div.ex3 {
       <div class="form-header-group ">
         <div class="header-text httal htvam">
           <label>CDC Batches</label>
-          <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
         </div>
+        <div>
+          <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
+	</div>
       </div>
 	    <label><br><center><b>Last 100 Batches</b></center></label>
     </li
