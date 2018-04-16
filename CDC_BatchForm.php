@@ -22,7 +22,7 @@ sec_session_start();
 
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="BatchForm" action="" method="post">
+<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="BatchForm" action="CDCbatches.php" method="post">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
