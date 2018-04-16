@@ -8,3 +8,4 @@ if (isset($_POST['submit'])) {
   $insert_stmt->bind_param('ssss', $BatchName, $ClassType, $SourceProduct, $SourceIngredient);
   $insert_stmt->execute());
 }
+?>
