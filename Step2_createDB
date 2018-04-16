@@ -85,26 +85,26 @@ INSERT INTO login_attempts (user_id, time) VALUES
 
 DROP TABLE IF EXISTS classtypes;
 CREATE TABLE classtypes (
-    Class varchar(1) NOT NULL,
-    ClassType varchar(30) NOT NULL,
-    PRIMARY KEY (Class),
-    UNIQUE (ClassType)
+    ClassLetter varchar(1) NOT NULL PRIMARY KEY,
+    ClassType varchar(15) NOT NULL UNIQUE,
+    ClassDescription varchar(30) NOT NULL UNIQUE
 );
 
 INSERT INTO classtypes 
-    (Class, ClassType) 
+    (ClassLetter, ClassType, ClassDescription) 
 VALUES 
-    ("b","Whisky -160"),
-    ("c","Whisky 160+"),
-    ("d","Brandy -170"),
-    ("e","Brandy 170+"),
-    ("f","Rum"),
-    ("g","Gin"),
-    ("h","Vodka"),
-    ("i","Spirits 190+"),
-    ("j","Spirits -190"),
-    ("k","Other");
+    ("b","Whisky -160","WHISKY 160° AND UNDER"),
+    ("c","Whisky 160+","WHISKY OVER 160°"),
+    ("d","Brandy -170","BRANDY 170° AND UNDER"),
+    ("e","Brandy 170+","BRANDY OVER 170°"),
+    ("f","Rum","RUM"),
+    ("g","Gin","GIN"),
+    ("h","Vodka","VODKA"),
+    ("i","Spirits 190+","ALCOHOL AND SPIRITS 190° AND OVER"),
+    ("j","Spirits -190","ALCOHOL AND SPIRITS UNDER 190°"),
+    ("k","Other","Identify");
 
+SELECT *FROM classtypes;
 
 
 
@@ -112,13 +112,13 @@ DROP TABLE IF EXISTS Batches;
 CREATE TABLE Batches (
     BatchNum INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     BatchName varchar(30) NOT NULL,
-    Class varchar(30),
+    ClassType varchar(30),
     SourceProduct varchar(30),
     SourceIngredient varchar(30)
 );
 
 INSERT INTO Batches 
-    (BatchNum, BatchName, Class, SourceProduct,SourceIngredient) 
+    (BatchNum, BatchName, ClassType, SourceProduct,SourceIngredient) 
 VALUES 
     (76,"Rum 19","Rum","Molasses","Molasses"),
     (77,"Rum 20","Rum","Molasses","Molasses"),
@@ -131,39 +131,40 @@ SELECT *FROM Batches;
 
 
 MariaDB [CDCtest]> SELECT *FROM Batches;
-+----------+-----------+---------+---------------+------------------+
-| BatchNum | BatchName | Class   | SourceProduct | SourceIngredient |
-+----------+-----------+---------+---------------+------------------+
-|       67 | Rum 19    | Whiskey | Rye Malt wort | Malted Rye       |
-|       68 | Rum 19    | Whiskey | Malt wort     | Malted Barley    |
-|       69 | Rum 19    | Whiskey | Malt wort     | Malted Barley    |
-|       76 | Rum 19    | Rum     | Molasses      | Molasses         |
-|       77 | Rum 20    | Rum     | Molasses      | Molasses         |
-|       78 | Rum 19    | Rum     | Molasses      | Molasses         |
-+----------+-----------+---------+---------------+------------------+
++----------+-----------+-----------+---------------+------------------+
+| BatchNum | BatchName | ClassType | SourceProduct | SourceIngredient |
++----------+-----------+-----------+---------------+------------------+
+|       67 | Rum 19    | Whiskey   | Rye Malt wort | Malted Rye       |
+|       68 | Rum 19    | Whiskey   | Malt wort     | Malted Barley    |
+|       69 | Rum 19    | Whiskey   | Malt wort     | Malted Barley    |
+|       76 | Rum 19    | Rum       | Molasses      | Molasses         |
+|       77 | Rum 20    | Rum       | Molasses      | Molasses         |
+|       78 | Rum 19    | Rum       | Molasses      | Molasses         |
++----------+-----------+-----------+---------------+------------------+
 6 rows in set (0.00 sec)
 
-MariaDB [CDCtest]> INSERT INTO Batches
-    ->     (BatchName, Class, SourceProduct,SourceIngredient)
-    -> VALUES
-    ->     ("Rum 21","Rum","Molasses","Molasses");
-Query OK, 1 row affected (0.01 sec)
 
-MariaDB [CDCtest]> SELECT *FROM Batches;
-+----------+-----------+---------+---------------+------------------+
-| BatchNum | BatchName | Class   | SourceProduct | SourceIngredient |
-+----------+-----------+---------+---------------+------------------+
-|       67 | Rum 19    | Whiskey | Rye Malt wort | Malted Rye       |
-|       68 | Rum 19    | Whiskey | Malt wort     | Malted Barley    |
-|       69 | Rum 19    | Whiskey | Malt wort     | Malted Barley    |
-|       76 | Rum 19    | Rum     | Molasses      | Molasses         |
-|       77 | Rum 20    | Rum     | Molasses      | Molasses         |
-|       78 | Rum 19    | Rum     | Molasses      | Molasses         |
-|       79 | Rum 21    | Rum     | Molasses      | Molasses         |
-+----------+-----------+---------+---------------+------------------+
+
+INSERT INTO Batches
+ (BatchName, ClassType, SourceProduct,SourceIngredient)
+VALUES
+ ("Rum 21","Rum","Molasses","Molasses");
+
+SELECT *FROM Batches;
+
++----------+-----------+-----------+---------------+------------------+
+| BatchNum | BatchName | ClassType | SourceProduct | SourceIngredient |
++----------+-----------+-----------+---------------+------------------+
+|       67 | Rum 19    | Whiskey   | Rye Malt wort | Malted Rye       |
+|       68 | Rum 19    | Whiskey   | Malt wort     | Malted Barley    |
+|       69 | Rum 19    | Whiskey   | Malt wort     | Malted Barley    |
+|       76 | Rum 19    | Rum       | Molasses      | Molasses         |
+|       77 | Rum 20    | Rum       | Molasses      | Molasses         |
+|       78 | Rum 19    | Rum       | Molasses      | Molasses         |
+|       79 | Rum 21    | Rum       | Molasses      | Molasses         |
++----------+-----------+-----------+---------------+------------------+
 7 rows in set (0.00 sec)
 
-MariaDB [CDCtest]>
 
 
 
