@@ -12,7 +12,7 @@ if($stmt = $mysqli->prepare($sql)){
     $SourceIngredient = $_POST['SourceIngredient'];
     $stmt->execute();
         
-    header('Location: ./CDCbatches.php');
+    header('Location: ../CDCbatches.php');
     } 
 else{
     echo "ERROR: Could not prepare query: $sql. " . $mysqli->error;
