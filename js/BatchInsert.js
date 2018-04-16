@@ -4,11 +4,6 @@ $(document).ready(function() {
   var Class = $("#Class").val();
   var SourceProduct = $("#SourceProduct").val();
   var SourceIngredient = $("#SourceIngredient").val();
-  if (BatchName == '' || Class == '' || SourceProduct == '' || SourceIngredient == '') {
-    alert("Insertion Failed Some Fields are Blank....!!");
-    } 
-  else {
-    // Returns successful data submission message when the entered information is stored in database.
     $.post("../includes/BatchInsert.php", {
       BatchName1: BatchName,
       Class1: Class,
@@ -19,6 +14,5 @@ $(document).ready(function() {
       alert(data);
       $('#form')[0].reset(); // To reset form fields
       });
-    }
   });
 });
