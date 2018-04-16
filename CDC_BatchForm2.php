@@ -36,15 +36,19 @@ sec_session_start();
     <li class="form-line" data-type="control_dropdown">
         <label class="form-label form-label-top form-label-auto" for="ClassType">ClassType</label>
         <div class="form-input-wide">
-          <select required class="form-dropdown" name="ClassType" data-component="dropdown">
-            <option value="">  </option>
-            <option value="Whisky 160 and under"> Whisky 160 and under </option>
-            <option value="Rum"> Rum </option>
-            <option value="Gin"> Gin </option>
-            <option value="Vodka"> Vodka </option>
-            <option value="Spirits 190"> Spirits 190 </option>
-            <option value="Other"> Other </option>
-          </select>
+
+<?php
+
+$sql = " SELECT ClassType FROM classtypes ORDER by ClassLetter";
+$result = mysql_query($sql);
+
+echo "<select class='form-dropdown' required name='ClassType' data-component='dropdown'>";
+while ($row = mysql_fetch_array($result)) {
+    echo "<option value='" . $row['classtype'] . "'>" . $row['classtype'] . "</option>";
+}
+echo "</select>";
+
+?>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
