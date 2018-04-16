@@ -292,6 +292,7 @@ h2 ~ .form-subHeader {
   padding: 24px 0px 24px 0px;
 }
 .form-textbox,
+.form-control
 .form-textarea {
   padding: 4px 3px 2px 3px;
 }
