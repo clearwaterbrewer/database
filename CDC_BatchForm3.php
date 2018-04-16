@@ -21,7 +21,7 @@ sec_session_start();
 
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="batchform" action="" method="post">
+<form class="jotform-form" accept-charset="utf-8" id="BatchForm" name="batchform" action="CDC_BatchForm3.php" method="post">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
@@ -35,7 +35,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" name="BatchName" Placeholder="Rum 13" required>
+          <input type="text" class="form-control" name="BatchName" value="" Placeholder="Rum 13" required>
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
@@ -55,13 +55,13 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" id="label_6" for="SourceProduct">Source Product</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" name="SourceProduct" Placeholder="Molasses" required>
+          <input type="text" class="form-control" name="SourceProduct" value="" Placeholder="Molasses" required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" id="label_7" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" name="SourceIngredient" Placeholder="Molasses" required>
+          <input type="text" class="form-control" name="SourceIngredient" value="" Placeholder="Molasses" required>
         </div>
     </li>
     <li class="form-line" data-type="control_button">
