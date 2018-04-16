@@ -44,7 +44,7 @@ $result = mysql_query($sql);
 
 echo "<select class='form-dropdown' required name='ClassType' data-component='dropdown'>";
 while ($row = mysql_fetch_array($result)) {
-    echo "<option value='" . $row['classtype'] . "'>" . $row['classtype'] . "</option>";
+    echo "<option value='" . $row['ClassType'] . "'>" . $row['ClassType'] . "</option>";
 }
 echo "</select>";
 
