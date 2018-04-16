@@ -12,6 +12,12 @@ sec_session_start();
 <meta name="HandheldFriendly" content="true" />
 <title>CDC Batch Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link href="css/refreshform.css" rel="stylesheet">
+<script src="js/BatchInsert.js"></script>
+
+  
 </head>
 
 <body>
