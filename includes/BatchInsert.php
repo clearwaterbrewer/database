@@ -18,7 +18,7 @@ if (isset($_POST['BatchName'], $_POST['Class'], $_POST['SourceProduct'], $_POST[
                 exit();
             }
         }
-        header('Location: ./CDCbatches.php');
+        header('Location: ../CDCbatches.php');
         exit();
     }
 }
