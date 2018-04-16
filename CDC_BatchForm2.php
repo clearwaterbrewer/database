@@ -40,15 +40,16 @@ sec_session_start();
 <?php
 
 $sql = " SELECT ClassType FROM classtypes ORDER by ClassLetter";
-$result = mysql_query($sql);
+$result = $mysqli->query($sql);
 
 echo "<select class='form-dropdown' required name='ClassType' data-component='dropdown'>";
-while ($row = mysql_fetch_array($result)) {
+while ($row = $result->fetch_assoc()) {
     echo "<option value='" . $row['ClassType'] . "'>" . $row['ClassType'] . "</option>";
 }
 echo "</select>";
 
 ?>
+
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
