@@ -40,7 +40,7 @@ div.ex3 {
     <li>
       <div class="ex3">
 	      <div class="row">
-	        <div class="column">Batch</div>
+	        <div class="column">#</div>
 	        <div class="column">Name</div>
 	        <div class="column">Class</div>
 	        <div class="column">Source Product</div>
