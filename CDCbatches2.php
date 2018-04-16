@@ -19,7 +19,8 @@ sec_session_start();
 <style>
 div.ex3 {
     overflow: auto;
-}
+    max-height: 100vh;
+	}
 </style>
 </head>
 <body>
