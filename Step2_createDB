@@ -124,9 +124,9 @@ VALUES
     (76,"Rum 19","Rum","Molasses","Molasses"),
     (77,"Rum 20","Rum","Molasses","Molasses"),
     (78,"Rum 19","Rum","Molasses","Molasses"),
-    (67,"Rum 19","Whisky 160 and under","Rye Malt wort","Malted Rye and Barley"),
-    (68,"Rum 19","Whisky 160 and under","Malt wort","Malted Barley"),
-    (69,"Rum 19","Whisky 160 and under","Malt wort","Malted Barley and Wheat");
+    (67,"Rum 19","Whiskey","Rye Malt wort","Malted Rye"),
+    (68,"Rum 19","Whiskey","Malt wort","Malted Barley"),
+    (69,"Rum 19","Whiskey","Malt wort","Malted Barley");
 
 
 
