@@ -9,7 +9,7 @@ $(document).ready(function() {
     } 
   else {
     // Returns successful data submission message when the entered information is stored in database.
-    $.post("BatchInsert.php", {
+    $.post("../includes/BatchInsert.php", {
       BatchName1: BatchName,
       Class1: Class,
       SourceProduct1: SourceProduct,
