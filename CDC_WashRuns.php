@@ -7,7 +7,7 @@ sec_session_start();
 <html class="supernova">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta property="og:title" content="CDC Batches" >
+<meta property="og:title" content="CDC Wash Runs" >
 <meta property="og:description" content="View Wash Runs.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="HandheldFriendly" content="true" />
@@ -15,6 +15,12 @@ sec_session_start();
 <link type="text/css" rel="stylesheet" href="styles/main.css"/>
 <style type="text/css" id="form-designer-style">
 .form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
+</style>
+<style>
+div.ex3 {
+    overflow: auto;
+    max-height: 40vh;
+	}
 </style>
 </head>
 <body>
@@ -25,14 +31,16 @@ sec_session_start();
     <li id="cid_1" class="form-input-wide" data-type="control_head">
       <div class="form-header-group ">
         <div class="header-text httal htvam">
-          <h1>CDC Wash Runs</h1>
+         <label style="font-weight:bold; font-size:28px;">CDC Wash Runs</label>
+        </div>
+        <div>
           <label >Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
-          <h2>Last 5 Wash Runs </h2>
         </div>
       </div>
+	<label><center><b>Last 100 Wash Runs</b></center></label>
     </li
     <li>
-      <div class="container">
+      <div class="ex3">
 	<div class="row">
 	  <div class="column">Date</div>
 	  <div class="column">Batch</div>
@@ -41,7 +49,7 @@ sec_session_start();
 	</div>
 <?php 
       	  $sql="SELECT * FROM 
-		 (SELECT * FROM WashRuns ORDER BY BatchNum DESC LIMIT 5) 
+		 (SELECT * FROM WashRuns ORDER BY BatchNum DESC LIMIT 100) 
 		  sub ORDER BY BatchNum ASC";
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
