@@ -37,7 +37,7 @@ div.ex3 {
           <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
 	</div>
       </div>
-	    <label><br><center><b>Last 100 Batches</b></center></label>
+	    <label><center><b>Last 100 Batches</b></center></label>
     </li
     <li>
       <div class="ex3">
