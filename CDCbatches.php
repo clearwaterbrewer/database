@@ -29,15 +29,13 @@ div.ex3 {
 <div class="form-all">
   <ul class="form-section page-section">        
     <li id="cid_1" class="form-input-wide" data-type="control_head">
-      <div class="form-header-group ">
         <div class="header-text httal htvam">
-          <label style="font-weight:bold; font-size:24px;">CDC Batches</label>
+          <label style="font-weight:bold; font-size:28px;">CDC Batches</label>
         </div>
         <div>
           <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
 	</div>
-      </div>
-	    <label><center><b>Last 100 Batches</b></center></label>
+	<label><center><b>Last 100 Batches</b></center></label>
     </li
     <li>
       <div class="ex3">
