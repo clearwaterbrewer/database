@@ -39,7 +39,7 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCbatches.php" >
+            <a href="CDC_Batches.php" >
               <button type="button" class="form-submit-button" >
                 Batches
               </button>
@@ -50,7 +50,7 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCRecFermentables.php" >
+            <a href="CDC_RecFermentables.php" >
               <button type="button" class="form-submit-button" >
                 Receive Fermantables
               </button>
@@ -61,7 +61,7 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCFermantations.php" >
+            <a href="CDC_Fermantations.php" >
               <button type="button" class="form-submit-button" >
                 Fermentations
               </button>
@@ -72,7 +72,7 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCWashRuns.php" >
+            <a href="CDC_WashRuns.php" >
               <button type="button" class="form-submit-button" >
                 Wash Runs
               </button>
@@ -83,7 +83,7 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCSpiritRuns.php" >
+            <a href="CDC_SpiritRuns.php" >
               <button type="button" class="form-submit-button" >
                 Spirit Runs
               </button>
@@ -94,7 +94,7 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCBotanicalRuns.php" >
+            <a href="CDC_BotanicalRuns.php" >
               <button type="button" class="form-submit-button" >
                 Botanical Runs
               </button>
@@ -105,7 +105,7 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCGauging.php" >
+            <a href="CDC_Gauging.php" >
               <button type="button" class="form-submit-button" >
                 Production Gauging
               </button>
@@ -116,7 +116,7 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCBottling.php" >
+            <a href="CDC_Bottling.php" >
               <button type="button" class="form-submit-button" >
                 Bottling
               </button>
@@ -127,9 +127,31 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDCRemoveFromBond.php" >
+            <a href="CDC_RemoveFromBond.php" >
               <button type="button" class="form-submit-button" >
                 Removed From Bond
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+            <a href="CDC_Ingredients.php" >
+              <button type="button" class="form-submit-button" >
+                Fermentable Ingredients
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div style="margin-left:40px" class="form-buttons-wrapper">
+            <a href="CDC_Products.php" >
+              <button type="button" class="form-submit-button" >
+                Fermentable Products
               </button>
             </a>
            </div>
