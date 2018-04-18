@@ -87,33 +87,29 @@ sec_session_start();
        </div>
     </li>	
   </ul>
-  <ul class="form-section page-section" >
-    <li class="form-line" data-type="control_text">
       <div class="buttonrow">
-        <div class="col-1 form-buttons-wrapper">
+        <div class="col-1 ">
           <a href="CDC_WashForm.php" >
-            <button type="button" class="form-submit-button" >
+            <button type="button" " >
               New Wash Run
             </button>
           </a>
          </div>
-         <div class="col-1 form-buttons-wrapper">
+         <div class="col-1 ">
 	      <a href="CDChome.php" >
-              <button type="button" class="form-submit-button" >
+              <button type="button" " >
                 Home
               </button>
             </a>
          </div>
-         <div class="col-1 form-buttons-wrapper">
+         <div class="col-1 ">
             <a href="includes/logout.php">
-              <button type="button" class="form-submit-button" >
+              <button type="button"" >
                 Logout
               </button>
             </a>
           </div>
         </div>
-    </li>
-  </ul>
 </div>
 </form>        
 <?php else : ?>
