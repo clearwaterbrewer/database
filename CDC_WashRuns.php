@@ -90,21 +90,21 @@ sec_session_start();
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text">
       <div class="form-input-wide">
-        <div class="col-a">
+        <div class="col-1 form-buttons-wrapper">
           <a href="CDC_WashForm.php" >
             <button type="button" class="form-submit-button" >
               New Wash Run
             </button>
           </a>
          </div>
-         <div class="col-1">
+         <div class="col-1 form-buttons-wrapper">
 	      <a href="CDChome.php" >
               <button type="button" class="form-submit-button" >
                 Home
               </button>
             </a>
          </div>
-         <div class="col-1">
+         <div class="col-1 form-buttons-wrapper">
             <a href="includes/logout.php">
               <button type="button" class="form-submit-button" >
                 Logout
