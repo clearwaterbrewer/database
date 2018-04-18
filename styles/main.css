@@ -1,4 +1,7 @@
 .error { color: red; }
+* {
+    box-sizing: border-box;
+}
 
 [class*="col-"] {
     width: 100%;
