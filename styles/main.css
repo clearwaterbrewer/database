@@ -128,20 +128,24 @@
   .form-buttons-wrapper button {
     width: 40%;
   }
+	
+@media screen and (max-width: 768px)
+	and (max-device-width: 1023px)
+	and (orientation: portrait) {
   div.ex3 {
     overflow: auto;
-    max-height: 65vh;
+    max-height: 50vh;
   }
 }
-	
-	
-	
+@media screen and (max-width: 768px)
+	and (max-device-width: 1023px)
+	and (orientation: landscape) {
+  div.ex3 {
+    overflow: auto;
+    max-height: 30vh;
+  }
+}
 
-@media screen and (max-width: 689px) {
-  .jotform-form {
-    padding: 12px;
-  }
-}
 /* | */
 .supernova .form-all,
 .form-all {
@@ -391,7 +395,7 @@ li[data-type="control_image"] img {
 	and (orientation: portrait) {
   div.ex3 {
     overflow: auto;
-    max-height: 65vh;
+    max-height: 50vh;
   }
 }
 @media screen and (max-width: 480px)
