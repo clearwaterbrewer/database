@@ -4,6 +4,10 @@
   display: table;
   width: 100%;
 }
+div.ex3 {
+    overflow: auto;
+    max-height: 65vh;
+  }
 .row {
   display: table-row;
 }
@@ -81,6 +85,12 @@
 }
 /* | */
 /* | */
+@media screen and (orientation: landscape) {
+  div.ex3 {
+    max-height: 30vh;
+  }
+}
+/* | */
 @media screen and (min-width: 400px) {
   .supernova .form-all {
 /*    border: 1px solid #dcdcdc;
@@ -89,18 +99,6 @@
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);*/
   background-color: #ffffff;
   border: 1px solid transparent;
-  }
-}
-/* | */
-@media screen and (orientation: landscape) {
-  div.ex3 {
-    max-height: 30vh;
-  }
-}
-/* | */
-@media screen and (orientation: portrait) {
-  div.ex3 {
-    max-height: 50vh;
   }
 }
 /* | */
@@ -114,17 +112,7 @@
   .form-buttons-wrapper button {
     width: 40%;
   }
-  div.ex3 {
-    overflow: auto;
-    max-height: 50vh;
-  }
 }	
-/* | */
-@media screen and (min-width: 768px and orientation: landscape) {
-  div.ex3 {
-    max-height: 30vh;
-  }
-}
 /* | */
 /* | */
 .supernova .form-all,
