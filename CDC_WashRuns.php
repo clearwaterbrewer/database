@@ -40,6 +40,7 @@ div.ex3 {
 	<label><center><b>Last 100 Wash Runs</b></center></label>
     </li
     <li>
+      <div class="ex3">
 	<div class="row">
 	  <div class="column">Date</div>
 	  <div class="column">Time</div>
@@ -89,6 +90,7 @@ div.ex3 {
 		}
 ?>
 
+       </div>
     </li>	
   </ul>
   <ul class="form-section page-section" >
