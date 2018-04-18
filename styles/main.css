@@ -17,7 +17,7 @@
   width: 100%;
 }
 div.ex2 {
-    overflow-x: hidden;
+    overflow: auto;
   }
 div.ex3 {
     overflow: auto;
