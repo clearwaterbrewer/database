@@ -32,7 +32,7 @@ sec_session_start();
         </div>
       </div>
 	<label><center><b>Last 100 Wash Runs</b></center></label>
-    </li
+    </li>
     <li>
       <div class="ex3">
 	<div class="row">
