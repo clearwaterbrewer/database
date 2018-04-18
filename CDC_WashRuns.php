@@ -87,6 +87,7 @@ sec_session_start();
        </div>
     </li>	
   </ul>
+<ul class="form-section page-section" >
     <li class="form-line" data-type="control_text">
       <div class="buttonrow">
         <div class="col-1 form-buttons-wrapper">
@@ -112,6 +113,7 @@ sec_session_start();
           </div>
         </div>
     </li>	
+  </ul>
 </div>
 </form>        
 <?php else : ?>
