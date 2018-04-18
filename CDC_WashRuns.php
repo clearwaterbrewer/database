@@ -89,7 +89,7 @@ sec_session_start();
   </ul>
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text">
-      <div class="row">
+      <div class="buttonrow">
         <div class="col-1 form-buttons-wrapper">
           <a href="CDC_WashForm.php" >
             <button type="button" class="form-submit-button" >
