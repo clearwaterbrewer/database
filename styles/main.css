@@ -81,7 +81,7 @@
 }
 /* | */
 /* | */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 400px) {
   .supernova .form-all {
 /*    border: 1px solid #dcdcdc;
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
@@ -90,15 +90,17 @@
   background-color: #ffffff;
   border: 1px solid transparent;
   }
+}
+/* | */
+@media screen and (min-width: 400px and orientation: landscape) {
   div.ex3 {
-    overflow: auto;
-    max-height: 50vh;
+    max-height: 30vh;
   }
 }
 /* | */
-@media screen and (min-width: 480px and orientation: landscape) {
+@media screen and (min-width: 400px and orientation: portrait) {
   div.ex3 {
-    max-height: 30vh;
+    max-height: 50vh;
   }
 }
 /* | */
