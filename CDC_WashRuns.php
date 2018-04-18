@@ -16,12 +16,6 @@ sec_session_start();
 <style type="text/css" id="form-designer-style">
 .form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
 </style>
-<style>
-div.ex3 {
-    overflow: auto;
-    max-height: 40vh;
-	}
-</style>
 </head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
