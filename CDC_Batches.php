@@ -68,7 +68,7 @@ div.ex3 {
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text" >
       <div class="form-input-wide">
-        <div style="margin-left:10px" class="form-buttons-wrapper">
+        <div class="form-buttons-wrapper">
           <a href="CDC_BatchForm.php" >
             <button type="button" class="form-submit-button" >
               New Batch
@@ -79,7 +79,7 @@ div.ex3 {
     </li>
     <li class="form-line" data-type="control_text">
         <div class="form-input-wide">
-          <div style="margin-left:10px" class="form-buttons-wrapper">
+          <div class="form-buttons-wrapper">
             <a href="CDChome.php" >
               <button type="button" class="form-submit-button" >
                 Home
@@ -90,7 +90,7 @@ div.ex3 {
     </li>
     <li class="form-line" data-type="control_text">
         <div class="form-input-wide">
-          <div style="margin-left:10px" class="form-buttons-wrapper">
+          <div class="form-buttons-wrapper">
             <a href="includes/logout.php">
               <button type="button" class="form-submit-button" >
                 Logout
@@ -120,7 +120,7 @@ div.ex3 {
     <ul class="form-section page-section">        
       <li class="form-line" data-type="control_text">
         <div class="form-input-wide">
-          <div style="margin-left:10px" class="form-buttons-wrapper">
+          <div class="form-buttons-wrapper">
            <a href="index.php">
               <button type="button" class="form-submit-button" >
                 Login
