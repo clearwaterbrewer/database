@@ -293,8 +293,8 @@ h2 ~ .form-subHeader {
 .form-header-group {
   margin: 12px 36px 12px 36px;
 }
-.form-header-group {
-  padding: 24px 0px 24px 0px;
+/*.form-header-group {
+  padding: 24px 0px 24px 0px;*/
 }
 .form-textbox,
 .form-control,
