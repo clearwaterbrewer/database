@@ -146,13 +146,15 @@
   }
 }*/
 	
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 767px)
+	and (orientation: portrait) {
   div.ex3 {
     overflow: auto;
     max-height: 50vh;
   }
 }
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 767px)
+	and (orientation: landscape) {
   div.ex3 {
     overflow: auto;
     max-height: 30vh;
