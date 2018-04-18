@@ -40,12 +40,24 @@ div.ex3 {
 	<label><center><b>Last 100 Wash Runs</b></center></label>
     </li
     <li>
-      <div class="ex3">
 	<div class="row">
 	  <div class="column">Date</div>
+	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
 	  <div class="column">Name</div>
 	  <div class="column">Source Product</div>
+	  <div class="column">Source Ingredient</div>
+	  <div class="column">Source Container</div>
+	  <div class="column">AlcByVol</div>
+	  <div class="column">Wash_pH</div>
+	  <div class="column">Gallons</div>
+	  <div class="column">WG_Collected</div>
+	  <div class="column">Proof</div>
+	  <div class="column">PG_Collected</div>
+	  <div class="column">Product</div>
+	  <div class="column">Container</div>
+	  <div class="column">WG_resulting</div>
+	  <div class="column">PG_resulting</div>
 	</div>
 <?php 
       	  $sql="SELECT * FROM 
@@ -56,13 +68,27 @@ div.ex3 {
 		  while ($row = $result->fetch_assoc()) {
     			echo '<div class=row>';
 			echo '<div class=column>'.$row['Date1'].'</div>';
+			echo '<div class=column>'.$row['Time1'].'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
 			echo '<div class=column>'.$row['BatchName'].'</div>';
 			echo '<div class=column>'.$row['SourceProduct'].'</div>';
+			echo '<div class=column>'.$row['SourceIngredient'].'</div>';
+			echo '<div class=column>'.$row['SourceContainer'].'</div>';
+			echo '<div class=column>'.$row['AlcByVol'].'</div>';
+			echo '<div class=column>'.$row['Wash_pH'].'</div>';
+			echo '<div class=column>'.$row['GallonsDistilled'].'</div>';
+			echo '<div class=column>'.$row['WG_Collected'].'</div>';
+			echo '<div class=column>'.$row['ProofCollected'].'</div>';
+			echo '<div class=column>'.$row['PG_Collected'].'</div>';
+			echo '<div class=column>'.$row['DestinationProduct'].'</div>';
+			echo '<div class=column>'.$row['DesitnationContainer'].'</div>';
+			echo '<div class=column>'.$row['WG_resulting'].'</div>';
+			echo '<div class=column>'.$row['PG_resulting'].'</div>';
       			echo "</div>";
 		  }
 		}
 ?>
+
     </li>	
   </ul>
   <ul class="form-section page-section" >
