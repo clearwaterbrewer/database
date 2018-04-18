@@ -34,8 +34,7 @@ sec_session_start();
 	<label><center><b>Last 100 Wash Runs</b></center></label>
     </li
     <li>
-      <div class="ex2">
-	<div class="row">
+	<div class="row ex2">
 	  <div class="column">Date</div>
 	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
