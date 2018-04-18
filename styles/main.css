@@ -118,8 +118,11 @@
 /* | */
 @media screen and (min-width: 768px) {
   .jotform-form {
-    padding: 60px 0;
+    padding: 0px 0;
   }
+  .form-header-group {
+    padding: 0;
+}
 }
 /* | */
 /* | */
