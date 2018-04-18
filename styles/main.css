@@ -104,14 +104,14 @@
 }
 /* | */
 /* | */
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px and max-width: 767px) {
   .jotform-form {
     padding: 30px 0;
   }
 }
 /* | */
 /* | */
-@media screen and (min-width: 480px) and (max-width: 689px) {
+@media screen and (min-width: 480px and max-width: 689px) {
   .jotform-form {
     padding: 30px 0;
   }
@@ -146,15 +146,15 @@
   }
 }*/
 	
-@media screen and (max-width: 767px)
-	and (orientation: portrait) {
+@media screen and (max-width: 767px
+	and orientation: portrait) {
   div.ex3 {
     overflow: auto;
     max-height: 50vh;
   }
 }
-@media screen and (max-width: 767px)
-	and (orientation: landscape) {
+@media screen and (max-width: 767px
+	and orientation: landscape) {
   div.ex3 {
     overflow: auto;
     max-height: 30vh;
@@ -405,17 +405,17 @@ li[data-type="control_image"] img {
   display: none;
 }
 /* | */
-@media screen and (max-width: 480px)
-	and (max-device-width: 767px)
-	and (orientation: portrait) {
+@media screen and (max-width: 480px
+	and max-device-width: 767px
+	and orientation: portrait) {
   div.ex3 {
     overflow: auto;
     max-height: 65vh;
   }
 }
-@media screen and (max-width: 480px)
-	and (max-device-width: 767px)
-	and (orientation: landscape) {
+@media screen and (max-width: 480px
+	and max-device-width: 767px
+	and orientation: landscape) {
   div.ex3 {
     overflow: auto;
     max-height: 30vh;
