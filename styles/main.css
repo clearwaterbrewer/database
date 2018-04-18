@@ -400,7 +400,9 @@ li[data-type="control_image"] img {
     padding:0;
   }
   .form-all {
-    border: 0;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+/*    border: 0;*/
     width: 96%!important;
     max-width: initial;
   }
