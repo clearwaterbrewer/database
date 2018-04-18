@@ -383,6 +383,15 @@ li[data-type="control_image"] img {
   .jotform-form {
     padding: 12px 0 0 0;
   }
+  .form-section, .form-section-closed {
+    list-style:none;
+    list-style-position:outside;
+    margin:0px;
+    padding:0px;
+    position:relative;
+    zoom:1;
+    clear:both;
+  }
   .form-all {
     border: 0;
     width: 96%!important;
