@@ -387,8 +387,7 @@ li[data-type="control_image"] img {
 }
 /* | */
 @media screen and (max-width: 480px), 
-	screen and (max-device-width: 767px) and (orientation: portrait), 
-	screen and (max-device-width: 767px) and (orientation: landscape) {
+	screen and (max-device-width: 767px) and (orientation: portrait) {
   .testOne {
     letter-spacing: 0;
   }
@@ -396,12 +395,28 @@ li[data-type="control_image"] img {
     letter-spacing: 1;
   }
   .jotform-form {
-    padding: 12px 0 0 0;
+    padding: 0 0 0 0;
   }
   div.ex3 {
     overflow: auto;
-    max-height: 30vh;
+    max-height: 65vh;
+  }
 }
+@media screen and (max-width: 480px), 
+        screen and (max-device-width: 767px) and (orientation: landscape) {
+  .testOne {
+    letter-spacing: 0;
+  }
+  .testTwo {
+    letter-spacing: 1;
+  }
+  .jotform-form {
+    padding: 0 0 0 0;
+  }
+  div.ex3 {
+    overflow: auto;
+    max-height: 35vh;
+  }
   .form-section, .form-section-closed {
     list-style:none;
     list-style-position:outside;
