@@ -23,6 +23,9 @@ div.ex3 {
     overflow: auto;
     max-height: 58vh;
   }
+.headrow {
+  display: table-row;
+}
 .row {
   display: table-row;
 }
