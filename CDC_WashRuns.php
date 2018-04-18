@@ -90,21 +90,21 @@ sec_session_start();
       <div class="buttonrow">
         <div class="col-1 ">
           <a href="CDC_WashForm.php" >
-            <button type="button" " >
+            <button type="button" class="form-submit-button" >
               New Wash Run
             </button>
           </a>
          </div>
          <div class="col-1 ">
 	      <a href="CDChome.php" >
-              <button type="button" " >
+              <button type="button" class="form-submit-button" >
                 Home
               </button>
             </a>
          </div>
          <div class="col-1 ">
             <a href="includes/logout.php">
-              <button type="button"" >
+              <button type="button" class="form-submit-button" >
                 Logout
               </button>
             </a>
