@@ -87,6 +87,7 @@ sec_session_start();
        </div>
     </li>	
   </ul>
+    <li class="form-line" data-type="control_text">
       <div class="buttonrow">
         <div class="col-1 form-buttons-wrapper">
           <a href="CDC_WashForm.php" >
@@ -110,6 +111,7 @@ sec_session_start();
             </a>
           </div>
         </div>
+    </li>	
 </div>
 </form>        
 <?php else : ?>
