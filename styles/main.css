@@ -505,6 +505,9 @@ li[data-type="control_image"] img {
   div.form-header-group.hasImage img {
     max-width: 100%;
   }
+  div.form-input-wide {
+        width: 100%;
+  }
   [data-type="control_button"] {
     margin-bottom: 0 !important;
   }
