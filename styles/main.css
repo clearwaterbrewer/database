@@ -27,7 +27,7 @@ div.ex3 {
   display: table-row;
 }
 .column {
-  display: table-cell;
+  display: table-column;
   padding: 0px 10px;
 }
 
