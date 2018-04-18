@@ -386,8 +386,6 @@ li[data-type="control_image"] img {
   .form-section, .form-section-closed {
     list-style:none;
     list-style-position:outside;
-    margin:0px;
-    padding:0px;
     position:relative;
     zoom:1;
     clear:both;
@@ -583,8 +581,6 @@ li[data-type="control_image"] img {
     margin: 0 auto;
   }
   .form-buttons-wrapper {
-    margin: 0!important;
-    margin-left: 0!important;
     text-align: center;
   }
   .form-buttons-wrapper button {
