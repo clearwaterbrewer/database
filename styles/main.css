@@ -389,6 +389,7 @@ li[data-type="control_image"] img {
     position:relative;
     zoom:1;
     clear:both;
+    padding:0;
   }
   .form-all {
     border: 0;
