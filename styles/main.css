@@ -122,7 +122,9 @@
   }
   .form-header-group {
     padding: 0;
-}
+  }
+  .form-buttons-wrapper button {
+    width: 40%;
 }
 /* | */
 /* | */
