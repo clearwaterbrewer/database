@@ -1,5 +1,9 @@
 .error { color: red; }
 
+[class*="col-"] {
+    width: 100%;
+}
+
 .container {
   display: table;
   width: 100%;
@@ -86,6 +90,9 @@ div.ex3 {
 /* | */
 /* | */
 @media screen and (orientation: landscape) {
+  .col-1 {width: 33.33%;}
+  .col-2 {width: 33.33%;}
+  .col-3 {width: 33.33%;}
   div.ex3 {
     max-height: 30vh;
   }
