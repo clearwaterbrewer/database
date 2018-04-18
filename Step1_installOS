@@ -109,3 +109,27 @@ sudo apt-get install git -y
 
 sudo service apache2 restart
 
+
+//To make A-Record go directly to folder:
+
+cd /etc/apache2/sites-available/
+
+sudo vi database.cothermandistilling.com.conf
+
+<VirtualHost *:80>
+      ServerAdmin michael@cothermandistilling.com
+      ServerName database.cothermandistilling.com
+      DocumentRoot /var/www/html/database
+      ErrorLog ${APACHE_LOG_DIR}/error.log
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
+sudo a2ensite database.cothermandistilling.com.conf
+
+
+sudo systemctl reload apache2
+
+
+
+
