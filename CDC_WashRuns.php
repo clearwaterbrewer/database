@@ -96,7 +96,7 @@ div.ex3 {
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text">
       <div class="form-input-wide">
-        <div style="margin-left:10px" class="form-buttons-wrapper">
+        <div class="form-buttons-wrapper">
           <a href="CDC_WashForm.php" >
             <button type="button" class="form-submit-button" >
               New Wash Run
