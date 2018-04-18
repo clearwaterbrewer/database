@@ -34,6 +34,7 @@ sec_session_start();
 	<label><center><b>Last 100 Wash Runs</b></center></label>
     </li
     <li>
+      <div class="ex3">
 	<div class="row">
 	  <div class="column">Date</div>
 	  <div class="column">Time</div>
@@ -53,7 +54,6 @@ sec_session_start();
 	  <div class="column">WG_resulting</div>
 	  <div class="column">PG_resulting</div>
 	</div>
-      <div class="ex3">
 <?php 
       	  $sql="SELECT * FROM 
 		 (SELECT * FROM WashRuns ORDER BY BatchNum DESC LIMIT 100) 
