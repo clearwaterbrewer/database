@@ -4,6 +4,7 @@
 }
 
 [class*="col-"] {
+    float: left;
     width: 100%;
 }
 .buttonrow::after {
