@@ -386,15 +386,17 @@ li[data-type="control_image"] img {
   display: none;
 }
 /* | */
-@media screen and (max-width: 480px), 
-	screen and (max-device-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 480px)
+	and (max-device-width: 767px)
+	and (orientation: portrait) {
   div.ex3 {
     overflow: auto;
     max-height: 65vh;
   }
 }
-@media screen and (max-width: 480px), 
-	screen and (max-device-width: 767px) and (orientation: landscape) {
+@media screen and (max-width: 480px)
+	and (max-device-width: 767px)
+	and (orientation: landscape) {
   div.ex3 {
     overflow: auto;
     max-height: 35vh;
