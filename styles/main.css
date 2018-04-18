@@ -136,8 +136,12 @@
 /* | */
 .supernova .form-all,
 .form-all {
-  background-color: #ffffff;
-  border: 1px solid transparent;
+    border: 1px solid #dcdcdc;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+/*  background-color: #ffffff;
+  border: 1px solid transparent;*/
 }
 .form-header-group {
   border-color: #e6e6e6;
