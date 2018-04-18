@@ -3,7 +3,11 @@
 [class*="col-"] {
     width: 100%;
 }
-
+.buttonrow::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 .container {
   display: table;
   width: 100%;
@@ -12,13 +16,8 @@ div.ex3 {
     overflow: auto;
     max-height: 65vh;
   }
-/*.row {
+.row {
   display: table-row;
-}
-*/.row::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 .column {
   display: table-cell;
