@@ -568,6 +568,7 @@ li[data-type="control_image"] img {
   .form-buttons-wrapper {
     margin: 0!important;
     margin-left: 0!important;
+    text-align: center;
   }
   .form-buttons-wrapper button {
     width: 100%;
