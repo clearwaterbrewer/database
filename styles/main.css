@@ -92,13 +92,13 @@
   }
 }
 /* | */
-@media screen and (min-width: 400px and orientation: landscape) {
+@media screen and (orientation: landscape) {
   div.ex3 {
     max-height: 30vh;
   }
 }
 /* | */
-@media screen and (min-width: 400px and orientation: portrait) {
+@media screen and (orientation: portrait) {
   div.ex3 {
     max-height: 50vh;
   }
