@@ -373,7 +373,9 @@ li[data-type="control_image"] img {
   display: none;
 }
 /* | */
-@media screen and (max-width: 480px), screen and (max-device-width: 767px) and (orientation: portrait), screen and (max-device-width: 415px) and (orientation: landscape) {
+@media screen and (max-width: 480px), 
+	screen and (max-device-width: 767px) and (orientation: portrait), 
+	screen and (max-device-width: 767px) and (orientation: landscape) {
   .testOne {
     letter-spacing: 0;
   }
