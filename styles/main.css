@@ -127,9 +127,16 @@
   }
   .form-buttons-wrapper button {
     width: 40%;
+  }
+  div.ex3 {
+    overflow: auto;
+    max-height: 65vh;
+  }
 }
-/* | */
-/* | */
+	
+	
+	
+
 @media screen and (max-width: 689px) {
   .jotform-form {
     padding: 12px;
@@ -391,6 +398,10 @@ li[data-type="control_image"] img {
   .jotform-form {
     padding: 12px 0 0 0;
   }
+  div.ex3 {
+    overflow: auto;
+    max-height: 30vh;
+}
   .form-section, .form-section-closed {
     list-style:none;
     list-style-position:outside;
