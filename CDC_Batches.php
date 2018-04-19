@@ -40,6 +40,7 @@ sec_session_start();
 	        <div class="column">Name</div>
 	        <div class="column">Class</div>
 	        <div class="column">Source Product</div>
+	        <div class="column">Source Ingredient</div>
       	</div>
 <?php 
       	  $sql="SELECT * FROM 
@@ -53,6 +54,7 @@ sec_session_start();
 			echo '<div class=column>'.$row['BatchName'].'</div>';
 			echo '<div class=column>'.$row['ClassType'].'</div>';
 			echo '<div class=column>'.$row['SourceProduct'].'</div>';
+			echo '<div class=column>'.$row['SourceIngredient'].'</div>';
       			echo "</div>";
 		  }
 		}
