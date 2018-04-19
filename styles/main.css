@@ -147,6 +147,15 @@ div.ex3 {
     width: 40%;
   }
 }	
+@media screen and (min-width: 768px and orientation: landscape) {
+  .col-1 {width: 33.33%;}
+  .col-2 {width: 33.33%;}
+  .col-3 {width: 33.33%;}
+  div.ex3 {
+    max-height: 62vh;
+  }
+}
+/* | */
 /* | */
 /* | */
 .supernova .form-all,
