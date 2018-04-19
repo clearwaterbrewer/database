@@ -25,6 +25,7 @@ div.ex3 {
   }
 .headrow {
   display: table-row;
+  font-weight: bold;
 }
 .row {
   display: table-row;
