@@ -16,12 +16,6 @@ sec_session_start();
 <style type="text/css" id="form-designer-style">
 .form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
 </style>
-<style>
-div.ex3 {
-    overflow: auto;
-    max-height: 40vh;
-	}
-</style>
 </head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
@@ -38,59 +32,78 @@ div.ex3 {
         </div>
       </div>
 	<label><center><b>Last 100 Wash Runs</b></center></label>
-    </li
+    </li>
     <li>
       <div class="ex3">
-	<div class="row">
+	<div class="headrow">
 	  <div class="column">Date</div>
+	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
 	  <div class="column">Name</div>
 	  <div class="column">Source Product</div>
+	  <div class="column">Source Ingredient</div>
+	  <div class="column">Source Container</div>
+	  <div class="column">AlcByVol</div>
+	  <div class="column">Wash_pH</div>
+	  <div class="column">Gallons</div>
+	  <div class="column">WG_Collected</div>
+	  <div class="column">Proof</div>
+	  <div class="column">PG_Collected</div>
+	  <div class="column">Product</div>
+	  <div class="column">Container</div>
+	  <div class="column">WG_resulting</div>
+	  <div class="column">PG_resulting</div>
 	</div>
 <?php 
       	  $sql="SELECT * FROM 
 		 (SELECT * FROM WashRuns ORDER BY BatchNum DESC LIMIT 100) 
-		  sub ORDER BY BatchNum ASC";
+		  sub ORDER BY BatchNum DESC";
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
     			echo '<div class=row>';
 			echo '<div class=column>'.$row['Date1'].'</div>';
+			echo '<div class=column>'.$row['Time1'].'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
 			echo '<div class=column>'.$row['BatchName'].'</div>';
 			echo '<div class=column>'.$row['SourceProduct'].'</div>';
+			echo '<div class=column>'.$row['SourceIngredient'].'</div>';
+			echo '<div class=column>'.$row['SourceContainer'].'</div>';
+			echo '<div class=column>'.$row['AlcByVol'].'</div>';
+			echo '<div class=column>'.$row['Wash_pH'].'</div>';
+			echo '<div class=column>'.$row['GallonsDistilled'].'</div>';
+			echo '<div class=column>'.$row['WG_Collected'].'</div>';
+			echo '<div class=column>'.$row['ProofCollected'].'</div>';
+			echo '<div class=column>'.$row['PG_Collected'].'</div>';
+			echo '<div class=column>'.$row['DestinationProduct'].'</div>';
+			echo '<div class=column>'.$row['DesitnationContainer'].'</div>';
+			echo '<div class=column>'.$row['WG_resulting'].'</div>';
+			echo '<div class=column>'.$row['PG_resulting'].'</div>';
       			echo "</div>";
 		  }
 		}
 ?>
+       </div>
     </li>	
   </ul>
-  <ul class="form-section page-section" >
+<ul class="form-section page-section" >
     <li class="form-line" data-type="control_text">
-      <div class="form-input-wide">
-        <div style="margin-left:10px" class="form-buttons-wrapper">
+      <div class="buttonrow">
+        <div class="col-1 form-buttons-wrapper">
           <a href="CDC_WashForm.php" >
             <button type="button" class="form-submit-button" >
               New Wash Run
             </button>
           </a>
          </div>
-       </div>
-    </li>
-    <li class="form-line" data-type="control_text">
-        <div class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDChome.php" >
+         <div class="col-1 form-buttons-wrapper">
+	      <a href="CDChome.php" >
               <button type="button" class="form-submit-button" >
                 Home
               </button>
             </a>
-        </div>
-       </div>
-    </li>
-    <li class="form-line" data-type="control_text">
-        <div class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
+         </div>
+         <div class="col-1 form-buttons-wrapper">
             <a href="includes/logout.php">
               <button type="button" class="form-submit-button" >
                 Logout
@@ -98,7 +111,7 @@ div.ex3 {
             </a>
           </div>
         </div>
-    </li>
+    </li>	
   </ul>
 </div>
 </form>        
@@ -120,7 +133,7 @@ div.ex3 {
     <ul class="form-section page-section">        
       <li class="form-line" data-type="control_text">
         <div class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
+          <div class="form-buttons-wrapper">
            <a href="index.php">
               <button type="button" class="form-submit-button" >
                 Login
