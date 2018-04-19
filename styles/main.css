@@ -136,6 +136,18 @@ div.ex3 {
   }
 }	
 /* | */
+@media screen and (min-width: 1024px) {
+  .jotform-form {
+    padding: 20px 0;
+  }
+  .form-header-group {
+    padding: 0;
+  }
+  .form-buttons-wrapper button {
+    width: 40%;
+  }
+}	
+/* | */
 /* | */
 .supernova .form-all,
 .form-all {
