@@ -46,6 +46,7 @@ sec_session_start();
                          " - <value='" . $row['BatchName'] . "'>" . $row['BatchName'] . "</option>";
           }
           echo "</select>";
+          echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] ."</option>";
         ?>
         </div>
     </li>
