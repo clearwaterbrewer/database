@@ -78,38 +78,31 @@ sec_session_start();
         ?>
         </div>
     </li>
-    <li class="form-line" data-type="control_button" id="id_8">
-        <div id="cid_8" class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
+  <ul class="form-section page-section" >
+    <li class="form-line" data-type="control_text" >
+      <div class="buttonrow">
+        <div class="col-1 form-buttons-wrapper">
             <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
-          </div>
-       </div>
-    </li>
-    <li class="form-line" data-type="control_text" id="id_8">
-        <div id="cid_8" class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDChome.php" >
-              <button type="button" class="form-submit-button" >
-                Home
-              </button>
-            </a>
         </div>
+      <div class="col-1 form-buttons-wrapper">
+         <a href="CDChome.php" >
+           <button type="button" class="form-submit-button" >
+             Home
+           </button>
+         </a>
        </div>
-    </li>
-    <li class="form-line" data-type="control_text" id="id_8">
-        <div id="cid_8" class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="includes/logout.php">
-              <button type="button" class="form-submit-button" >
-                Logout
-              </button>
-            </a>
-          </div>
+       <div class="col-1 form-buttons-wrapper">
+          <a href="includes/logout.php">
+            <button type="button" class="form-submit-button" >
+              Logout
+            </button>
+          </a>
         </div>
+      </div>
     </li>
   </ul>
 </div>
-</form>          
+</form>        
 <?php else : ?>
 <form class="jotform-form" accept-charset="utf-8">
   <div class="form-all">
