@@ -36,7 +36,7 @@ sec_session_start();
     <li>
       <div class="ex3">
 	<div class="headrow">
-	  <div class="column">Date</div>
+	  <div class="column"style="padding: 0px 40px;">Date</div>
 	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
 	  <div class="column">Name</div>
