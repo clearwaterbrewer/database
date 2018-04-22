@@ -29,6 +29,7 @@ div.ex3 {
 }
 .row {
   display: table-row;
+  white-space: nowrap;
 }
 .column {
   display: table-cell;
