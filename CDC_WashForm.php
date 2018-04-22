@@ -7,20 +7,11 @@ sec_session_start();
 <html class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="CDC Wash Run Entry" >
-<meta property="og:description" content="Please click the link to complete this form.">
+<meta property="og:description" content="Please click submit to complete this form.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="HandheldFriendly" content="true" />
 <title>CDC Wash Run Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
-
-<script type="text/javascript">
-    $(".form_datetime").datetimepicker({
-        format: "dd MM yyyy - hh:ii",
-        autoclose: true,
-        todayBtn: true,
-        pickerPosition: "bottom-left"
-    });
-</script></head>
 
 <body>
 <?php if (login_check($mysqli) == true) : ?>
@@ -35,15 +26,13 @@ sec_session_start();
         </div>
       </div>
     </li>
+
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="DateTimeCode">DateTimeCode</label>
-
-<div class="input-append DateTimeCode form_datetime">
-    <input size="14" type="text" value="" readonly>
-    <span class="add-on"><i class="icon-th"></i></span>
-</div>
-
-   </li>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="DateTimeCode" value="" Placeholder="201804010900" required>
+        </div>
+    </li>
    <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="BatchNum">Batch</label>
         <div class="form-input-wide">
