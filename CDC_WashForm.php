@@ -43,9 +43,9 @@ sec_session_start();
           echo "<option value=''>  </option>";
           while ($row = $result->fetch_assoc()) {
             echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
+          $SourceIngredient = $row['SourceIngredient'];
           }
           echo "</select>";
-          $SourceIngredient = $row['SourceIngredient']
         ?>
         </div>
     </li>
