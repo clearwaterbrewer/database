@@ -55,7 +55,7 @@ sec_session_start();
           $data = "SELECT * FROM Batches WHERE SourceIngredient = $BatchNum"; 
           $query = $mysqli->query($data);
           $data2 = $query->fetch_assoc(); 
-          echo "<input type=text class='form-control' name='SourceIngredient' value=" . $data2[SourceIngredient] >;
+          echo "<input type=text class='form-control' name='SourceIngredient' value=" . $data2[SourceIngredient]  . ">";
         ?>
         </div>
     </li>
