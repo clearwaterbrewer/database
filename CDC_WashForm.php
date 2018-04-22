@@ -42,17 +42,17 @@ sec_session_start();
           echo "<select required class='form-dropdown' name='BatchNum' data-component='dropdown'>";
           echo "<option value=''>  </option>";
           while ($row = $result->fetch_assoc()) {
-            echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . 
-                         " - " . $row['BatchName'] . "</option>";
+            echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
           }
           echo "</select>";
+          $SourceIngredient = $row['SourceIngredient']
         ?>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="SourceIngredient" value="" Placeholder="xxxx" required>
+          <input type="text" class="form-control" size="20" name="SourceIngredient" value=$SourceIngredient required>
         </div>
     </li>
   </ul>
