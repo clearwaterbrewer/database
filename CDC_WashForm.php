@@ -14,7 +14,11 @@ sec_session_start();
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
 
 <body>
-<?php if (login_check($mysqli) == true) : ?>
+<?php if (login_check($mysqli) == true) : 
+  $data = 'SELECT * FROM Batches WHERE SourceIngredient = "'.$BatchNum.'"'; 
+          $query = $mysqli->query($data);
+          $data2 = $query->fetch_assoc(); 
+?>
 <form class="jotform-form" accept-charset="utf-8" id="WashForm" name="washform" action="includes/WashInsert.php" method="post">
 <div class="form-all">
   <ul class="form-section page-section">
@@ -51,7 +55,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
-          <input type='text' class='form-control' name='SourceIngredient' value="<?php echo $row[SourceIngredient]?>">
+          <input type='text' class='form-control' name='SourceIngredient' value="<?php echo $data2[SourceIngredient]?>">
         </div>
     </li>
   </ul>
