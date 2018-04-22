@@ -51,7 +51,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="SourceIngredient" value=<?php echo $row['Source Ingredient'] ?> required>
+          <input type="text" class="form-control" size="20" name="SourceIngredient" value=<?php echo $row['SourceIngredient'] ?> required>
         </div>
     </li>
   </ul>
