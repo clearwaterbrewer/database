@@ -41,7 +41,7 @@ sec_session_start();
 	  <div class="column">Batch</div>
 	  <div class="column">Name</div>
 	  <div class="column">Source Product</div>
-	  <div class="column">Source Ingredient</div>
+	  <div class="column"style="padding: 0px 40px;">Source Ingredient</div>
 	  <div class="column">Source Container</div>
 	  <div class="column">AlcByVol</div>
 	  <div class="column">Wash_pH</div>
