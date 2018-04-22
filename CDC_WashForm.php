@@ -52,7 +52,7 @@ sec_session_start();
         <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
         <?php
-          $sql = " SELECT SourceIngredient FROM Batches WHERE BatchNum=$BatchNum";
+          $sql = " SELECT SourceIngredient FROM Batches WHERE BatchNum=.$BatchNum";
           $result = $mysqli->query($sql);
           $row = $result->fetch_assoc(); 
           echo "<input type='text' class='form-control' name='SourceIngredient' value='" . $row['BatchNum'] . "'>";
