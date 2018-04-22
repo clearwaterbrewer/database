@@ -39,20 +39,20 @@ sec_session_start();
 	  <div class="column"style="padding: 0px 40px;">Date</div>
 	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
-	  <div class="column">Name</div>
-	  <div class="column"style="padding: 0px 40px;">Source Product</div>
-	  <div class="column"style="padding: 0px 40px;">Source Ingredient</div>
+	  <div class="column"style="padding: 0px 60px;">Name</div>
+	  <div class="column"style="padding: 0px 20px;">Source Product</div>
+	  <div class="column"style="padding: 0px 50px;">Source Ingredient</div>
 	  <div class="column">Source Container</div>
-	  <div class="column">AlcByVol</div>
-	  <div class="column">Wash_pH</div>
+	  <div class="column">Alc ByVol</div>
+	  <div class="column">Wash pH</div>
 	  <div class="column">Gallons</div>
-	  <div class="column">WG_Collected</div>
+	  <div class="column">WG Collected</div>
 	  <div class="column">Proof</div>
-	  <div class="column">PG_Collected</div>
+	  <div class="column">PG Collected</div>
 	  <div class="column">Product</div>
 	  <div class="column">Container</div>
-	  <div class="column">WG_resulting</div>
-	  <div class="column">PG_resulting</div>
+	  <div class="column">WG Resulting</div>
+	  <div class="column">PG Resulting</div>
 	</div>
 <?php 
       	  $sql="SELECT * FROM 
