@@ -62,7 +62,7 @@ sec_session_start();
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
     			echo '<div class=row>';
-			echo '<div class=column>'.$row['Date1'].'</div>';
+			echo '<div class=column>'.date_format($row['Date1'],"Ymd").'</div>';
 			echo '<div class=column>'.$row['Time1'].'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
 			echo '<div class=column>'.$row['BatchName'].'</div>';
