@@ -16,12 +16,6 @@ sec_session_start();
 <style type="text/css" id="form-designer-style">
 .form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
 </style>
-<style>
-div.ex3 {
-    overflow: auto;
-    max-height: 40vh;
-	}
-</style>
 </head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
@@ -41,16 +35,17 @@ div.ex3 {
     </li
     <li>
       <div class="ex3">
-	      <div class="row">
+	      <div class="headrow">
 	        <div class="column">#</div>
 	        <div class="column">Name</div>
 	        <div class="column">Class</div>
 	        <div class="column">Source Product</div>
+	        <div class="column">Source Ingredient</div>
       	</div>
 <?php 
       	  $sql="SELECT * FROM 
 		 (SELECT * FROM Batches ORDER BY BatchNum DESC LIMIT 100) 
-		  sub ORDER BY BatchNum ASC";
+		  sub ORDER BY BatchNum DESC";
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
@@ -59,6 +54,7 @@ div.ex3 {
 			echo '<div class=column>'.$row['BatchName'].'</div>';
 			echo '<div class=column>'.$row['ClassType'].'</div>';
 			echo '<div class=column>'.$row['SourceProduct'].'</div>';
+			echo '<div class=column>'.$row['SourceIngredient'].'</div>';
       			echo "</div>";
 		  }
 		}
@@ -67,37 +63,29 @@ div.ex3 {
   </ul>
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text" >
-      <div class="form-input-wide">
-        <div class="form-buttons-wrapper">
+      <div class="buttonrow">
+        <div class="col-1 form-buttons-wrapper">
           <a href="CDC_BatchForm.php" >
             <button type="button" class="form-submit-button" >
               New Batch
             </button>
           </a>
-         </div>
-       </div>
-    </li>
-    <li class="form-line" data-type="control_text">
-        <div class="form-input-wide">
-          <div class="form-buttons-wrapper">
-            <a href="CDChome.php" >
-              <button type="button" class="form-submit-button" >
-                Home
-              </button>
-            </a>
         </div>
+      <div class="col-1 form-buttons-wrapper">
+         <a href="CDChome.php" >
+           <button type="button" class="form-submit-button" >
+             Home
+           </button>
+         </a>
        </div>
-    </li>
-    <li class="form-line" data-type="control_text">
-        <div class="form-input-wide">
-          <div class="form-buttons-wrapper">
-            <a href="includes/logout.php">
-              <button type="button" class="form-submit-button" >
-                Logout
-              </button>
-            </a>
-          </div>
+       <div class="col-1 form-buttons-wrapper">
+          <a href="includes/logout.php">
+            <button type="button" class="form-submit-button" >
+              Logout
+            </button>
+          </a>
         </div>
+      </div>
     </li>
   </ul>
 </div>

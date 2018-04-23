@@ -29,6 +29,7 @@ div.ex3 {
 }
 .row {
   display: table-row;
+  white-space: nowrap;
 }
 .column {
   display: table-cell;
@@ -135,6 +136,27 @@ div.ex3 {
     width: 40%;
   }
 }	
+/* | */
+@media screen and (min-width: 1024px) {
+  .jotform-form {
+    padding: 0px 40px;
+  }
+  .form-header-group {
+    padding: 0;
+  }
+  .form-buttons-wrapper button {
+    width: 40%;
+  }
+}	
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .col-1 {width: 33.33%;}
+  .col-2 {width: 33.33%;}
+  .col-3 {width: 33.33%;}
+  div.ex3 {
+    max-height: 62vh;
+  }
+}
+/* | */
 /* | */
 /* | */
 .supernova .form-all,
