@@ -15,7 +15,7 @@ sec_session_start();
 
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8" id="WashForm" name="washform" action="includes/WashInsert.php" method="post">
+<form class="jotform-form" accept-charset="utf-8" id="WashForm" name="washform" action="includes/WashInsert.php" method="POST">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
@@ -39,14 +39,24 @@ sec_session_start();
         <?php
           $sql = " SELECT * FROM Batches ORDER by BatchNum DESC";
           $result = $mysqli->query($sql);
-          echo "<select required class='form-dropdown' name='BatchNum' data-component='dropdown'>";
+
+          if(isset($_POST['search_batch']))
+            {
+              $batch = mysql_real_escape_string($_POST['BatchNum']);
+              echo $batch;
+            }
+                    
+          echo "<select required class='form-dropdown' name='BatchNum' data-component='dropdown' 
+                onchange='document.getElementById(selected_batch).value=this.options[this.selectedIndex].text'> ";
           echo "<option value=''>  </option>";
           while ($row = $result->fetch_assoc()) {
             echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
           }
           echo "</select>";
         ?>
-        </div>
+        <input type="hidden" name="selected_batch" id ="selected_batch" value="">
+        <input type="submit" name="search_batch" value="Search_Batch"/>
+       </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
