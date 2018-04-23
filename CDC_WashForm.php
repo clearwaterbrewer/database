@@ -15,7 +15,7 @@ sec_session_start();
 
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8" id="WashForm" name="washform" action="includes/WashInsert.php" method="POST">
+<form class="jotform-form" accept-charset="utf-8" id="WashForm" name="washform" method="POST">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
