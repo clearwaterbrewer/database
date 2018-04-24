@@ -2,6 +2,17 @@
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 sec_session_start();
+
+if(isset($_POST['search']))
+{
+
+    $makerValue = $_POST['BatchNum']; // BatchNum value
+
+    $BatchNum = mysqli_real_escape_string($_POST['selected_text']); // get the selected text
+    echo $BatchNum;
+}
+
+
 ?>
 <!DOCTYPE HTML>
 <html class="supernova"><head>
@@ -27,55 +38,33 @@ sec_session_start();
       </div>
     </li>
 
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="DateTimeCode">DateTimeCode</label>
-        <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="DateTimeCode" value="" Placeholder="201804010900" required>
-        </div>
-    </li>
-    <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="BatchNum">BatchNum</label>
-        <div class="form-input-wide">
-        <?php
-          $sql = " SELECT * FROM Batches ORDER by BatchNum DESC";
-          $result = $mysqli->query($sql);
-          if(isset($_POST['search_batch']))
-            {
-              $batch = mysql_real_escape_string($_POST['BatchNum']);
-              echo $batch;
-            }
-                    
-          echo "<select required class='form-dropdown' name='BatchNum' data-component='dropdown' 
-                onchange='document.getElementById(selected_batch).value=this.options[this.selectedIndex].text'> ";
-          echo "<option value=''>  </option>";
-          while ($row = $result->fetch_assoc()) {
-            echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
-          }
-          echo "</select>";
-        ?>
-        <input type="hidden" name="selected_batch" id ="selected_batch" value="">
-        <input type="submit" name="search_batch" value="Search_Batch"/>
+<li>
+  
+<label for="BatchNum"> BatchNum : </label>
+<select id="batchnum" name="BatchNum" >
+ <option value="">Select BatchNum</option>
+  <?php 
+    $sql= "SELECT * FROM Batches"; 
+    $result = $mysqli->query($sql);
+    while ($row = $result->fetch_assoc()) { 
+  ?>
+  <option value="<?php echo $row['BatchNum']; ?>"><?php echo $row['BatchName']; ?></option><?php } ?>
+</select>
+<input type="hidden" name="selected_text" id="selected_text" value="" />
+<input type="submit" name="search" value="Search"/>
+    
+    
+ </li>
+    
+   
+ </ul>
+ <ul class="form-section page-section" >
+   <li class="form-line" data-type="control_text" >
+     <div class="buttonrow">
+       <div class="col-1 form-buttons-wrapper">
+           <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
-        <div class="form-input-wide">
-        <?php
-          $data = "SELECT * FROM Batches WHERE SourceIngredient = $BatchNum"; 
-          $query = $mysqli->query($data);
-          $data2 = $query->fetch_assoc(); 
-          echo "<input type=text class='form-control' name='SourceIngredient' value=" . $data2[SourceIngredient]  . ">";
-        ?>
-        </div>
-    </li>
-  </ul>
-    <ul class="form-section page-section" >
-    <li class="form-line" data-type="control_text" >
-      <div class="buttonrow">
-        <div class="col-1 form-buttons-wrapper">
-            <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
-        </div>
-      <div class="col-1 form-buttons-wrapper">
+       <div class="col-1 form-buttons-wrapper">
          <a href="CDChome.php" >
            <button type="button" class="form-submit-button" >
              Home
