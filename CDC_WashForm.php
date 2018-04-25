@@ -42,7 +42,7 @@ sec_session_start();
 
           if(isset($_POST['search_batch']))
             {
-              $batch = mysql_real_escape_string($_POST['BatchNum']);
+              $batch = mysqli_real_escape_string($_POST['BatchNum']);
               echo $batch;
             }
                     
