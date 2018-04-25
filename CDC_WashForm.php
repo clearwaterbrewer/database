@@ -37,7 +37,7 @@ sec_session_start();
         <label class="form-label form-label-top form-label-auto" for="BatchNum">BatchNum</label>
         <div class="form-input-wide">
         <?php
-          $sql = " SELECT BatchNum FROM Batches";
+          $sql = " SELECT BatchNum FROM Batches ORDER by BatchNum DESC";
           $result = $mysqli->query($sql);
           echo "<select class='form-dropdown' required name='BatchNum' data-component='dropdown'>";
           echo "<option value=''> Select BatchNum </option>";
@@ -45,7 +45,7 @@ sec_session_start();
             echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
           }
           echo "</select>";
-          $batchinfo = "SELECT * FROM Batches WHERE $BatchNum = "..$BatchNum;
+          $batchinfo = "SELECT * FROM Batches Limit 1;
           $batchresult = $mysqli->query($batchinfo);
           $batchrow = $batchresult->fetch_assoc();
           $ThisBatchName = $batchrow['BatchName'];
