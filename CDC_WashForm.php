@@ -53,20 +53,32 @@ sec_session_start();
             echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
           }
           echo "</select>";
-        ?>
-        <input type="hidden" name="selected_batch" id ="selected_batch" value="">
-        <input type="submit" name="search_batch" value="Search_Batch"/>
-       </div>
+          $batchinfo = "SELECT * FROM Batches WHERE BatchNum = "..$BatchNum;
+          $batchresult = $mysqli->query($batchinfo);
+          $batchrow = $batchresult->fetch_assoc();
+          $ThisBatchName = $batchrow['BatchName'];
+          $ThisBatchSP = $batchrow['SourceProduct'];
+          $ThisBatchSI = $batchrow['SourceIngredient'];
+          
+          ?>
+      </div>
+    </li>
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="BatchName" value=$ThisBatchName Placeholder="Rum 13" required>
+        </div>
+    </li>
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="SourceProduct" value=$batchrow['SourceProduct'] required>
+        </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
-        <?php
-          $data = "SELECT * FROM Batches WHERE SourceIngredient = $BatchNum"; 
-          $query = $mysqli->query($data);
-          $data2 = $query->fetch_assoc(); 
-          echo "<input type=text class='form-control' name='SourceIngredient' value=" . $data2[SourceIngredient]  . ">";
-        ?>
+          <input type="text" class="form-control" size="20" name="SourceIngredient" value=$batchrow['SourceIngredient'] required>
         </div>
     </li>
   </ul>
