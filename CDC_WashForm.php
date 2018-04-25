@@ -37,18 +37,10 @@ sec_session_start();
         <label class="form-label form-label-top form-label-auto" for="BatchNum">BatchNum</label>
         <div class="form-input-wide">
         <?php
-          $sql = " SELECT * FROM Batches ORDER by BatchNum DESC";
+          $sql = " SELECT BatchNum FROM Batches";
           $result = $mysqli->query($sql);
-
-          if(isset($_POST['search_batch']))
-            {
-              $batch = mysqli_real_escape_string($_POST['BatchNum']);
-              echo $batch;
-            }
-                    
-          echo "<select required class='form-dropdown' name='BatchNum' data-component='dropdown' 
-                onchange='document.getElementById(selected_batch).value=this.options[this.selectedIndex].text'> ";
-          echo "<option value=''>  </option>";
+          echo "<select class='form-dropdown' required name='BatchNum' data-component='dropdown'>";
+          echo "<option value=''> Select BatchNum </option>";
           while ($row = $result->fetch_assoc()) {
             echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
           }
@@ -66,19 +58,19 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="BatchName" value=$ThisBatchName Placeholder="Rum 13" required>
+          <input type="text" class="form-control" size="20" name="BatchName" value="" Placeholder="Rum 13" required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="SourceProduct" value=$batchrow['SourceProduct'] required>
+          <input type="text" class="form-control" size="20" name="SourceProduct" value="" required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="SourceIngredient" value=$batchrow['SourceIngredient'] required>
+          <input type="text" class="form-control" size="20" name="SourceIngredient" value="" required>
         </div>
     </li>
   </ul>
