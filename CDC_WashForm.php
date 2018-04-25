@@ -49,7 +49,9 @@ sec_session_start();
           $batchresult = $mysqli->query($batchinfo);
           $batchrow = $batchresult->fetch_assoc();
           $ThisBatchName = $batchrow['BatchName'];
-        
+          $ThisBatchSP = $batchrow['SourceProduct'];
+          $ThisBatchSI = $batchrow['SourceIngredient'];
+       
           ?>
       </div>
     </li>
