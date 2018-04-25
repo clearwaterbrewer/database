@@ -45,12 +45,8 @@ sec_session_start();
             echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
           }
           echo "</select>";
-          $batchinfo = "SELECT * FROM Batches Limit 1;
+          $batchinfo = "SELECT * FROM Batches Limit 1";
           $batchresult = $mysqli->query($batchinfo);
-          $batchrow = $batchresult->fetch_assoc();
-          $ThisBatchName = $batchrow['BatchName'];
-          $ThisBatchSP = $batchrow['SourceProduct'];
-          $ThisBatchSI = $batchrow['SourceIngredient'];
           
           ?>
       </div>
