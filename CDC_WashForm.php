@@ -52,7 +52,7 @@ sec_session_start();
           $ThisBatchSP = $batchrow['SourceProduct'];
           $ThisBatchSI = $batchrow['SourceIngredient'];
 
-          echo </n>;
+          echo "/n";
           echo $ThisBatchName;
           echo $ThisBatchSP;
           echo $ThisBatchSI;
