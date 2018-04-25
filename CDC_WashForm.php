@@ -48,7 +48,8 @@ sec_session_start();
           $batchinfo = "SELECT * FROM Batches Limit 1";
           $batchresult = $mysqli->query($batchinfo);
           $batchrow = $batchresult->fetch_assoc();
-         
+          $ThisBatchName = $batchrow['BatchName'];
+        
           ?>
       </div>
     </li>
