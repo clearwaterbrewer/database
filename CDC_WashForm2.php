@@ -2,17 +2,6 @@
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 sec_session_start();
-
-if(isset($_POST['search']))
-{
-
-    $makerValue = $_POST['BatchNum']; // BatchNum value
-
-    $BatchNum = mysqli_real_escape_string($_POST['selected_text']); // get the selected text
-    echo $BatchNum;
-}
-
-
 ?>
 <!DOCTYPE HTML>
 <html class="supernova"><head>
@@ -38,33 +27,65 @@ if(isset($_POST['search']))
       </div>
     </li>
 
-<li>
-  
-<label for="BatchNum"> BatchNum : </label>
-<select id="batchnum" name="BatchNum" >
- <option value="">Select BatchNum</option>
-  <?php 
-    $sql= "SELECT * FROM Batches"; 
-    $result = $mysqli->query($sql);
-    while ($row = $result->fetch_assoc()) { 
-  ?>
-  <option value="<?php echo $row['BatchNum']; ?>"><?php echo $row['BatchName']; ?></option><?php } ?>
-</select>
-<input type="hidden" name="selected_text" id="selected_text" value="" />
-<input type="submit" name="search" value="Search"/>
-    
-    
- </li>
-    
-   
- </ul>
- <ul class="form-section page-section" >
-   <li class="form-line" data-type="control_text" >
-     <div class="buttonrow">
-       <div class="col-1 form-buttons-wrapper">
-           <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
-       </div>
-       <div class="col-1 form-buttons-wrapper">
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" for="DateTimeCode">DateTimeCode</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="DateTimeCode" value="" Placeholder="201804010900" required>
+        </div>
+    </li>
+    <li class="form-line" data-type="control_dropdown">
+        <label class="form-label form-label-top form-label-auto" for="BatchNum">BatchNum</label>
+        <div class="form-input-wide">
+        <?php
+          $sql = " SELECT BatchNum FROM Batches ORDER by BatchNum DESC";
+          $result = $mysqli->query($sql);
+          echo "<select class='form-dropdown' required name='BatchNum' data-component='dropdown'>";
+          echo "<option value=''> Select BatchNum </option>";
+          while ($row = $result->fetch_assoc()) {
+            echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
+          }
+          echo "</select>";
+          $batchinfo = "SELECT * FROM Batches " . $BatchNum;
+          $batchresult = $mysqli->query($batchinfo);
+          $batchrow = $batchresult->fetch_assoc();
+          $ThisBatchName = $batchrow['BatchName'];
+          $ThisBatchSP = $batchrow['SourceProduct'];
+          $ThisBatchSI = $batchrow['SourceIngredient'];
+          echo PHP_EOL;
+          echo $ThisBatchName,PHP_EOL;
+          echo $ThisBatchSP,PHP_EOL;
+          echo $ThisBatchSI,PHP_EOL;
+          echo "this is doing query right away, not after selecting...";
+       
+          ?>
+      </div>
+    </li>
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="BatchName" value="" Placeholder="Rum 13" required>
+        </div>
+    </li>
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="SourceProduct" value="" required>
+        </div>
+    </li>
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
+        <div class="form-input-wide">
+          <input type="text" class="form-control" size="20" name="SourceIngredient" value="" required>
+        </div>
+    </li>
+  </ul>
+    <ul class="form-section page-section" >
+    <li class="form-line" data-type="control_text" >
+      <div class="buttonrow">
+        <div class="col-1 form-buttons-wrapper">
+            <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
+        </div>
+      <div class="col-1 form-buttons-wrapper">
          <a href="CDChome.php" >
            <button type="button" class="form-submit-button" >
              Home
