@@ -51,9 +51,12 @@ sec_session_start();
           $ThisBatchName = $batchrow['BatchName'];
           $ThisBatchSP = $batchrow['SourceProduct'];
           $ThisBatchSI = $batchrow['SourceIngredient'];
+
+          echo </n>;
           echo $ThisBatchName;
           echo $ThisBatchSP;
           echo $ThisBatchSI;
+          echo "this is doing query right away, not after selecting...";
        
           ?>
       </div>
