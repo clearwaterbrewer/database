@@ -87,7 +87,7 @@ DROP TABLE IF EXISTS classtypes;
 CREATE TABLE classtypes (
     ClassLetter varchar(1) NOT NULL PRIMARY KEY,
     ClassType varchar(15) NOT NULL UNIQUE,
-    ClassDescription varchar(30) NOT NULL UNIQUE
+    ClassDescription varchar(35) NOT NULL UNIQUE
 );
 
 INSERT INTO classtypes 
@@ -105,6 +105,40 @@ VALUES
     ("k","Other","Identify");
 
 SELECT *FROM classtypes;
+
+
+
+
+DROP TABLE IF EXISTS ABTgroups;
+CREATE TABLE ABTgroups 
+(
+ID INT, 
+ABTGroup varchar(30), 
+ABTgrpMin DECIMAL(8,4), 
+ABTgrpMax DECIMAL(8,4),
+ABTtaxRate DECIMAL(4,2),
+PRIMARY KEY (ID)
+);
+
+INSERT INTO ABTgroups 
+    (ID, ABTGroup, ABTgrpMin, ABTgrpMax, ABTtaxRate) 
+VALUES 
+    (1,"Under 17",0,34.5179,2.25),
+    (2,"17-55",34.518,111.56,6.50),
+    (3,"over 55",111.561,200,9.53);
+
+SELECT * from ABTgroups;
+
+MariaDB [CDCtest]> SELECT * from ABTgroups;
++----+----------+-----------+-----------+------------+
+| ID | ABTGroup | ABTgrpMin | ABTgrpMax | ABTtaxRate |
++----+----------+-----------+-----------+------------+
+|  1 | Under 17 |    0.0000 |   34.5179 |       2.25 |
+|  2 | 17-55    |   34.5180 |  111.5600 |       6.50 |
+|  3 | over 55  |  111.5610 |  200.0000 |       9.53 |
++----+----------+-----------+-----------+------------+
+3 rows in set (0.004 sec)
+
 
 
 
