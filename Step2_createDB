@@ -267,23 +267,125 @@ SELECT * FROM Containers;
 
 
 DROP TABLE IF EXISTS Batches;
+
 CREATE TABLE Batches (
+
     BatchNum INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     BatchName varchar(30) NOT NULL,
     ClassType varchar(30),
     SourceProduct varchar(30),
-    SourceIngredient varchar(30)
+    SourceIngredient varchar(30),
+    BottleProof DECIMAL(4.1),
+    BarrelProof DECIMAL(4.1),
+    PreviousBatch varchar(30),
+    UPC varchar(30),
+    CurrentBatch DECIMAL(1)
 );
 
 INSERT INTO Batches 
-    (BatchNum, BatchName, ClassType, SourceProduct,SourceIngredient) 
-VALUES 
-    (76,"Rum 19","Rum","Molasses","Molasses"),
-    (77,"Rum 20","Rum","Molasses","Molasses"),
-    (78,"Rum 19","Rum","Molasses","Molasses"),
-    (67,"Rum 19","Whiskey","Rye Malt wort","Malted Rye"),
-    (68,"Rum 19","Whiskey","Malt wort","Malted Barley"),
-    (69,"Rum 19","Whiskey","Malt wort","Malted Barley");
+(BatchNum, BatchName, ClassType, SourceProduct, SourceIngredient, BottleProof, BarrelProof, PreviousBatch, UPC, CurrentBatch)
+
+VALUES
+(1,"n/a","Neutral","Malt Wort","Malted Barley",0,0,"","",0),
+(2,"n/a","Neutral","Malt Wort","Malted Barley",0,0,"","",0),
+(3,"n/a","Neutral","Malt Wort","Malted Barley",0,0,"","",0),
+(4,"TBBC Whiskey","Malt Whiskey","Malt Wort","Malted Barley",80,120,"",1505,1),
+(5,"n/a","Malt Whiskey","Malt Wort","Malted Barley",0,0,"","",0),
+(6,"n/a","Malt Whiskey","Malt Wort","Malted Barley",0,0,"","",0),
+(7,"CT Whiskey","Malt Whiskey","Malt Wort","Malted Barley",80,120,"",1506,1),
+(8,"BMBC Whiskey","Malt Whiskey","Malt Wort","Malted Barley",80,120,"","",0),
+(9,"n/a","Neutral","Malt Wort","Malted Barley",0,0,"","",0),
+(10,"n/a","Neutral","Malt Wort","Malted Barley",0,0,"","",0),
+(11,"deBine Whiskey","Malt Whiskey","Malt Wort","Malted Barley",80,120,"",15042,0),
+(12,"deBine Whiskey","Malt Whiskey","Malt Wort","Malted Barley",80,120,"",15042,0),
+(13,"Half-Mine #3","Gin","Grain Neutral","Malted Barley",80,120,"","",0),
+(14,"deBine Whiskey","Malt Whiskey","Malt Wort","Malted Barley",80,120,"",15042,1),
+(15,"Half Mine #4","Gin","Grain Neutral","Malted Barley",87,0,"",656727995732,0),
+(16,"Hello Pena #1","Vodka","Grain Neutral","Malted Barley",80,0,"","",0),
+(17,"n/a","Neutral","Malt Wort","Malted Barley",0,0,"","",0),
+(18,"Cotherman's SMW","Malt Whiskey","Malt Wort","Malted Barley",90,120,"",656727996166,1),
+(19,"n/a","Neutral","Malt Wort","Malted Barley",0,0,"","",0),
+(20,"CBC Whiskey","Malt Whiskey","Malt Wort","Malted Barley",80,120,"",1509,0),
+(21,"CBC Whiskey","Malt Whiskey","Malt Wort","Malted Barley",80,120,"",1509,0),
+(22,"BMBC Whiskey","Malt Whiskey","Malt Wort","Malted Barley",80,120,"",656727996166,1),
+(23,"n/a","Neutral","Malt Wort","Malted Barley",0,0,"","",0),
+(24,"TBBC Whiskey","Malt Whiskey","Malt Wort","Malted Barley",90,120,"",656727996166,1),
+(25,"TBWS Rye","Malt Whiskey","Rye Malt Wort","Malted Barley and Rye",100,120,"",1512,0),
+(26,"HoB Whiskey","Malt Whiskey","Malt Wort","Malted Barley",90,120,"",656727996166,1),
+(27,"Cothermans Rye","Malt Whiskey","Rye Malt Wort","Malted Barley and Rye",90,120,"",656727996197,1),
+(28,"PT Silver Rum","Rum","Molasses","Molasses",80,0,"",656727996685,0),
+(29,"Cotherman's WTF","Malt Whiskey","Stout Malt Wort","Malted Barley",90,120,"",656727996166,1),
+(30,"PT Gold Rum","Rum","Molasses","Molasses",80,0,"",656727996661,0),
+(31,"PT Gold Rum","Rum","Molasses","Molasses",80,0,"",656727996661,0),
+(32,"PT Silver Rum","Rum","Molasses","Molasses",80,0,"",656727996685,0),
+(33,"PT Gold Rum","Rum","Molasses","Molasses",80,0,"",656727996661,1),
+(34,"PT Cane Vodka","Rum","Molasses","Molasses",80,0,"",656727996708,0),
+(35,"727","Vodka","Grain Neutral","Malted Barley",80,0,"",656727995725,0),
+(36,"Nuetral","Nuetral","Malt Wort","Malted Barley",0,0,"","",0),
+(37,"Hello Pena","Vodka","Grain Neutral","Malted Barley",80,0,"",656727995961,0),
+(38,"Half Mine","Gin","Grain Neutral","Malted Barley",87,0,"",656727995732,0),
+(39,"PT Silver Rum","Rum","Molasses","Molasses",80,0,"",656727996685,1),
+(40,"Neutral","Neutral","Malt Wort","Malted Barley",0,0,"","",0),
+(41,"PT Spiced","Rum","PT Rum","Molasses",80,0,"",656727996678,0),
+(42,"Half Mine","Gin","Grain Neutral","Malted Barley",87,0,"",656727995732,0),
+(43,"HoB Whiskey","Malt Whiskey","Malt Wort","Malted Barley",90,120,"",656727996166,1),
+(44,"PT Spiced Rum","Rum","PT Rum","Molasses",80,0,"",656727996678,1),
+(45,"HoB Whiskey","Malt Whiskey","Malt Wort","Malted Barley",90,120,"",656727996166,1),
+(46,"TBWS Rye #2","Malt Whiskey","Rye Malt Wort","Malted Rye and Barley",90,120,"",656727996197,1),
+(47,"Graffiti","Malt Whiskey","7th Sun wort","Malted Barley and Wheat",90,120,"",656727996166,1),
+(48,"PT Rum 18","Rum","Molasses","Molasses",80,0,"","",0),
+(49,"PT Rum 19","Rum","Molasses","Molasses",80,0,"","",0),
+(50,"PT Rum 20","Rum","Molasses","Molasses",80,0,"","",0),
+(51,"Hello Pena","Vodka","Grain Neutral","Malted Barley",80,0,67,656727995961,0),
+(52,"PT Citrus Rum","Rum","PT Rum","Molasses",80,0,"",656727996715,0),
+(53,"HoB Rye","Malt Whiskey","Rye Malt Wort","Malted Rye and Barley",90,120,"",656727996197,1),
+(54,"Half Mine Oak Barrel","Gin","Gin","Malted Barley",87,120,"",656727996074,1),
+(55,"Half Mine ATS","Gin","Grain Neutral","Malted Barley",100,0,"",656727995992,1),
+(56,"PT Cane Vodka","Vodka","Molasses","Molasses",80,0,50,656727996708,1),
+(57,"PT Rum 21","Rum","Molasses","Molasses",80,0,"","",0),
+(58,"PT Rum 22","Rum","Molasses","Molasses",80,0,"","",0),
+(59,"PT Dark Rum","Rum","PT Rum 20","Molasses",80,0,"",656727996654,0),
+(60,"Hello Pena","Vodka","Grain Neutral","Wheat",80,0,67,656727995961,0),
+(61,"Gin Base","Gin","Grain Neutral","Malted Barley",0,0,40,"",0),
+(62,"PT Citrus Rum","Rum","PT Rum","Molasses",80,0,"",656727996715,0),
+(63,"PT Rum 23","Rum","Molasses","Molasses",80,0,"","",0),
+(64,"PT Rum 24","Rum","Molasses","Molasses",0,0,"","",0),
+(65,"PT Rum 25","Rum","Molasses","Molasses",0,0,"","",0),
+(66,"PT Rum 26","Rum","Molasses","Molasses",0,0,"","",0),
+(67,"Wheat Neutral","neutral","Wheat Low wines","Wheat",0,0,"","",1),
+(68,"PT Crockett's","Rum","Molasses","Molasses",80,120,31,656727996692,0),
+(69,"727 Wheat","Vodka","Grain Neutral","Wheat",80,0,67,656727995725,0),
+(70,"The Osprey","Vodka","Grain Neutral","Wheat",80,0,"",656727995831,0),
+(71,"PT Rum 27","Rum","Molasses","Molasses",80,0,"","",0),
+(72,"PT Rum 28","Rum","Molasses","Molasses",80,0,"","",0),
+(73,"7venth graffiti wort","Malt Whiskey","7th Sun wort","Malted Barley and Wheat",90,0,"",656727996166,1),
+(74,"PT Rum 29","Rum","Molasses","Molasses",0,0,"","",0),
+(75,"PT Rum 30","Rum","Molasses","Molasses",0,0,"","",0),
+(76,"PT Rum 31","Rum","Molasses","Molasses",0,0,"","",0),
+(77,"PT Rum 32","Rum","Molasses","Molasses",0,120,"","",0),
+(78,"Half Mine","Gin","Grain Neutral","Malted Barley",87,0,61,656727995732,0),
+(79,"PT Dark Rum","Rum","Molasses","Molasses",80,0,72,656727996654,1),
+(80,"HoB Hoppy","Malt Whiskey","Beer","Malted Barley",0,0,"","",1),
+(81,"Distiller's Reserve","Malt Whiskey","Malt Wort","Malted Barley",120.3,0,"",656727996203,1),
+(82,"727 Batch 11","Vodka","Grain Neutral","Malted Barley",80,0,"",656727995725,1),
+(83,"Half Mine","Gin","Grain Neutral","Malted Barley",87,90,"",656727995732,1),
+(84,"TBBC","Malt Whiskey","Malt Wort","Malted Barley",0,0,"","",1),
+(85,"PT Crockett's","Rum","Molasses","Molasses",80,120,"",656727996692,1),
+(86,"PT Citrus Rum","Rum","Molasses","Molasses",80,0,"",656727996715,1),
+(87,"Malt Neutral","neutral","malted barley and wheat","Malted Barley and Wheat",80,0,40,"",1),
+(88,"High Rye Malt Neutral","neutral","Malted barley wheat rye","Malted barley wheat rye",80,0,46,"",0),
+(89,"Wheat Neutral","neutral","Wheat Low wines","Wheat",80,0,"","",0),
+(90,"The Osprey","Vodka","Grain Neutral","Wheat",80,0,"",656727995831,1),
+(91,"PT Dark Rum","Rum","Molasses","Molasses",80,0,72,656727996654,1),
+(92,"PT Rum D022","Rum","Molasses","Molasses",0,120,"","",1),
+(93,"HoB Red","Malt Whiskey","Malt Wort","Malted Barley",90,120,"",656727996166,1),
+(94,"Hello Pena","Vodka","Grain Neutral","Wheat",80,0,89,656727995961,1),
+(95,"PT Spiced Rum","Rum","PT Rum","Molasses",80,0,"",656727996678,1),
+(96,"PT Crockett's 3","Rum","Molasses","Molasses",80,120,"",656727996692,1),
+(97,"PT Rum D022","Rum","Molasses","Molasses",0,0,"","",1),
+(98,"PT Rum D022","Rum","Molasses","Molasses",0,0,"","",1),
+(99,"TBD 99","","","",0,0,"","",1),
+(100,"TBD 100","","","",0,0,"","",1);
 
 SELECT *FROM Batches;
 
@@ -300,29 +402,6 @@ MariaDB [CDCtest]> SELECT *FROM Batches;
 |       78 | Rum 19    | Rum       | Molasses      | Molasses         |
 +----------+-----------+-----------+---------------+------------------+
 6 rows in set (0.00 sec)
-
-
-
-INSERT INTO Batches
- (BatchName, ClassType, SourceProduct,SourceIngredient)
-VALUES
- ("Rum 21","Rum","Molasses","Molasses");
-
-SELECT *FROM Batches;
-
-+----------+-----------+-----------+---------------+------------------+
-| BatchNum | BatchName | ClassType | SourceProduct | SourceIngredient |
-+----------+-----------+-----------+---------------+------------------+
-|       67 | Rum 19    | Whiskey   | Rye Malt wort | Malted Rye       |
-|       68 | Rum 19    | Whiskey   | Malt wort     | Malted Barley    |
-|       69 | Rum 19    | Whiskey   | Malt wort     | Malted Barley    |
-|       76 | Rum 19    | Rum       | Molasses      | Molasses         |
-|       77 | Rum 20    | Rum       | Molasses      | Molasses         |
-|       78 | Rum 19    | Rum       | Molasses      | Molasses         |
-|       79 | Rum 21    | Rum       | Molasses      | Molasses         |
-+----------+-----------+-----------+---------------+------------------+
-7 rows in set (0.00 sec)
-
 
 
 
