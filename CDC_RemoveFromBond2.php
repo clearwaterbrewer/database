@@ -58,8 +58,8 @@ sec_session_start();
 			  $rowBatchName = "product placeholder";
                           //
 			  //attempt1
-			  $sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
-			  $result2 = $mysqli->query($sql2);
+			  //$sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
+			  //$result2 = $mysqli->query($sql2);
 			  //$rowBatchName = array();
 			  //
 			  //
