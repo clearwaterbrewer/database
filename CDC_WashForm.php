@@ -39,12 +39,12 @@ sec_session_start();
 
           
           <?php
-          $sql = "SELECT BatchNum FROM Batches ORDER by BatchNum DESC";
+          $sql = "SELECT * FROM Batches ORDER by BatchNum DESC";
           $result = $mysqli->query($sql);
           echo "<select class='form-dropdown' required name='BatchNum' data-component='dropdown'>";
           echo "<option value=''> Select BatchNum </option>";
           while ($row = $result->fetch_assoc()) {
-            echo "<option value='" . $row['BatchNum'] . $row['BatchName'] . "'>" . $row['BatchName'] . "</option>";
+            echo "<option value='" . $row['BatchNum'] . $row['BatchName'] . "'>" . $row['BatchNum'] . "</option>";
           }
           echo "</select>";
           ?>
