@@ -54,11 +54,12 @@ sec_session_start();
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
+			$rowBatchName="SELECT BatchName From Batches where BatchNum = $row['BatchNum']";
     			echo '<div class=row>';
 			echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
-			echo '<div class=column>'.(SELECT BatchName From Batches where BatchNum = $row['BatchNum']).'</div>';
+			echo '<div class=column>'.$rowBatchName.'</div>';
 			echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
 			echo '<div class=column>'.$row['CaseNumbers'].'</div>';
