@@ -61,8 +61,8 @@ sec_session_start();
 			  //$rowBatchName = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
 			  //
 			  //attempt3
-			  $sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = 96";
-			  $result2 = $mysqli->query($sql2);
+			  $sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
+			  $rowBatchName = $mysqli->query($sql2);
 			  //
 			  //attempt4
 			  //$rowBatchName = mysqli_query($con,"SELECT BatchName FROM Batches WHERE BatchNum = $row['BatchNum']");
