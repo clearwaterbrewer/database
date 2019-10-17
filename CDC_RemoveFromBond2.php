@@ -53,7 +53,7 @@ sec_session_start();
 //$sql="SELECT * FROM (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
 //	sub ORDER BY DateTimeCode DESC";
 $sql="SELECT * FROM RemovedFromBond INNER JOIN Batches ON RemovedFromBond.BatchNum=Batches.BatchNum
-	WHERE DateTimeCode LIKE '2019-09%'";
+	WHERE DateTimeCode between (CURDATE() - INTERVAL 1 MONTH ) and CURDATE()";
 	      $result = $mysqli->query($sql);
 	if ($result->num_rows > 0) {
 	  while ($row = $result->fetch_assoc()) {
