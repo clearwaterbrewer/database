@@ -52,6 +52,7 @@ sec_session_start();
 		 (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
 		  sub ORDER BY DateTimeCode DESC";
 		$result = $mysqli->query($sql);
+		echo $result;
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
                           //attempt 1
@@ -61,13 +62,13 @@ sec_session_start();
 			  //$rowBatchName = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
 			  //
 			  //attempt3
-			  $sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
-			  $rowBatchName = $mysqli->query($sql2);
+			  //$sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
+			  //$rowBatchName = $mysqli->query($sql2);
 			  //
 			  //attempt4
 			  //$rowBatchName = mysqli_query($con,"SELECT BatchName FROM Batches WHERE BatchNum = $row['BatchNum']");
 			  //placeholder
-			  //$rowBatchName = "product placeholder";
+			  $rowBatchName = "product placeholder";
     			echo '<div class=row>';
 			echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
