@@ -55,7 +55,7 @@ sec_session_start();
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
     			echo '<div class=row>';
-			echo '<div class=column>'.DATE('Ymd', strtotime($row['DateTimeCode'])).'</div>';
+			echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
 			echo '<div class=column>'."product".'</div>';
