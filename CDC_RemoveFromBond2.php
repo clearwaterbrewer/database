@@ -52,7 +52,6 @@ sec_session_start();
 		 (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
 		  sub ORDER BY DateTimeCode DESC";
 		$result = $mysqli->query($sql);
-		echo $result;
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
                           //attempt 1
