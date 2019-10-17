@@ -46,7 +46,7 @@ sec_session_start();
 	</div>
 <?php 
       	  $sql="SELECT * FROM 
-		 (SELECT * FROM WashRuns ORDER BY DateTimeCode DESC LIMIT 30) 
+		 (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
 		  sub ORDER BY DateTimeCode DESC";
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
