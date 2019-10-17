@@ -8,7 +8,7 @@ set up git global info:
 
 
 
-Nore - in part 2, we populated the database with the username and salt for this:
+Note - in part 2, we populated the database with the username and salt for this:
 Username: test_user
 Email: test@example.com
 Password: 6ZaxN2Vzm9NUJT2y
