@@ -47,6 +47,12 @@ sec_session_start();
             echo "<option value='" . $row['BatchNum'] .  "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
           }
           echo "</select>";
+          
+          $batchinfo = "SELECT * FROM Batches " . $BatchNum;
+          $batchresult = $mysqli->query($batchinfo);
+          $batchrow = $batchresult->fetch_assoc();
+          $ThisBatchName = $batchrow['BatchName'];
+
           ?>
 
 
