@@ -48,16 +48,18 @@ sec_session_start();
 	  <div class="column">Notes</div>
 	</div>
 <?php 
-$sql="SELECT * FROM (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
-	INNER JOIN Batches ON RemovedFromBond.BatchNum=Batches.BatchNum 
-	sub ORDER BY DateTimeCode DESC";
-	$result = $mysqli->query($sql);
+//$sql="SELECT * FROM (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
+//	sub ORDER BY DateTimeCode DESC";
+$sql="SELECT * FROM RemovedFromBond INNER JOIN Batches ON RemovedFromBond.BatchNum=Batches.BatchNum
+	WHERE DateTimeCode LIKE '201909______'";
+	      $result = $mysqli->query($sql);
 	if ($result->num_rows > 0) {
 	  while ($row = $result->fetch_assoc()) {
 		echo '<div class=row>';
 		echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
 		echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
 		echo '<div class=column>'.$row['BatchNum'].'</div>';
+		echo '<div class=column>'.$row['BatchName'].'</div>';
 		echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 		echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
 		echo '<div class=column>'.$row['CaseNumbers'].'</div>';
