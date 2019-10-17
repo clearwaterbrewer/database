@@ -36,10 +36,10 @@ sec_session_start();
     <li>
       <div class="ex3">
 	<div class="headrow">
-	  <div class="column">DateTimeCode</div>
 	  <div class="column">Date</div>
 	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
+	  <div class="column">Product</div>
 	  <div class="column">Bottles Removed</div>
 	  <div class="column">Bottles Remain</div>
 	  <div class="column">Case Numbers</div>
@@ -58,6 +58,7 @@ sec_session_start();
 			echo '<div class=column>'.DATE('Ymd', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
+			echo '<div class=column>'."product".'</div>';
 			echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
 			echo '<div class=column>'.$row['CaseNumbers'].'</div>';
