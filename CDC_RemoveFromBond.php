@@ -45,7 +45,9 @@ sec_session_start();
 	  <div class="column">Notes</div>
 	</div>
 <?php 
-      	  $sql="SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30)";
+      	  $sql="SELECT * FROM 
+		 (SELECT * FROM WashRuns ORDER BY DateTimeCode DESC LIMIT 30) 
+		  sub ORDER BY DateTimeCode DESC";
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
