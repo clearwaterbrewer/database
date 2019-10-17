@@ -48,7 +48,8 @@ sec_session_start();
 	  <div class="column">Notes</div>
 	</div>
 <?php 
-$sql="SELECT * FROM (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30 INNER JOIN Batches ON RemovedFromBond.BatchNum=Batches.BatchNum) 
+$sql="SELECT * FROM (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
+	INNER JOIN Batches ON RemovedFromBond.BatchNum=Batches.BatchNum 
 	sub ORDER BY DateTimeCode DESC";
 	$result = $mysqli->query($sql);
 	if ($result->num_rows > 0) {
