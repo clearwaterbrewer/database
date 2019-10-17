@@ -36,28 +36,16 @@ sec_session_start();
     <li class="form-line" data-type="control_dropdown">
         <label class="form-label form-label-top form-label-auto" for="BatchNum">BatchNum</label>
         <div class="form-input-wide">
-        <?php
-          $sql = " SELECT BatchNum FROM Batches ORDER by BatchNum DESC";
-          $result = $mysqli->query($sql);
-          echo "<select class='form-dropdown' required name='BatchNum' data-component='dropdown'>";
-          echo "<option value=''> Select BatchNum </option>";
-          while ($row = $result->fetch_assoc()) {
-            echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] . "</option>";
-          }
-          echo "</select>";
-          $batchinfo = "SELECT * FROM Batches " . $BatchNum;
-          $batchresult = $mysqli->query($batchinfo);
-          $batchrow = $batchresult->fetch_assoc();
-          $ThisBatchName = $batchrow['BatchName'];
-          $ThisBatchSP = $batchrow['SourceProduct'];
-          $ThisBatchSI = $batchrow['SourceIngredient'];
-          echo PHP_EOL;
-          echo $ThisBatchName,PHP_EOL;
-          echo $ThisBatchSP,PHP_EOL;
-          echo $ThisBatchSI,PHP_EOL;
-          echo "this is doing query right away, not after selecting...";
-       
-          ?>
+<select name="batch">
+<?php 
+$sql = "SELECT BatchNum FROM Batches ORDER by BatchNum DESC";
+while ($row = $sql->fetch_assoc()){
+echo "<option value=\"owner1\">" . $row['BatchNum'] . "</option>";
+}
+?>
+</select>
+
+
           
       </div>
     </li>
