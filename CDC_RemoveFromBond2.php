@@ -40,6 +40,8 @@ sec_session_start();
 	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
 	  <div class="column">Product</div>
+	  <div class="column">Class/Type</div>
+	  <div class="column">Proof</div>
 	  <div class="column">Bottles Removed</div>
 	  <div class="column">Bottles Remain</div>
 	  <div class="column">Case Numbers</div>
@@ -60,6 +62,8 @@ $sql="SELECT * FROM RemovedFromBond INNER JOIN Batches ON RemovedFromBond.BatchN
 		echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
 		echo '<div class=column>'.$row['BatchNum'].'</div>';
 		echo '<div class=column>'.$row['BatchName'].'</div>';
+		echo '<div class=column>'.$row['ClassType'].'</div>';
+		echo '<div class=column>'.$row['BottleProof'].'</div>';
 		echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 		echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
 		echo '<div class=column>'.$row['CaseNumbers'].'</div>';
