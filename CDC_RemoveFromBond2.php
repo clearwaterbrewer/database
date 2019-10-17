@@ -31,7 +31,7 @@ sec_session_start();
           <label >Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
         </div>
       </div>
-	<label><center><b>Last 30 Removals from Bond</b></center></label>
+	<label><center><b>Last 30 Days Removals from Bond</b></center></label>
     </li>
     <li>
       <div class="ex3">
