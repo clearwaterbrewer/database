@@ -53,7 +53,7 @@ sec_session_start();
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
-			  $sqldate = date("M",$row['DateTimeCode']);
+			  $sqldate = DATE("M");
     			echo '<div class=row>';
 			echo '<div class=column>'.$row['DateTimeCode'].'</div>';
 			echo '<div class=column>'.$sqldate.'</div>';
