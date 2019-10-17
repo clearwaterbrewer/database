@@ -42,6 +42,7 @@ sec_session_start();
 	  <div class="column">Bottles Remain</div>
 	  <div class="column">Case Numbers</div>
 	  <div class="column">Destination</div>
+	  <div class="column">Invoice</div>
 	  <div class="column">Notes</div>
 	</div>
 <?php 
@@ -56,6 +57,7 @@ sec_session_start();
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
+			echo '<div class=column>'.$row['CaseNumbers'].'</div>';
 			echo '<div class=column>'.$row['Destination'].'</div>';
 			echo '<div class=column>'.$row['InvoiceNumber'].'</div>';
 			echo '<div class=column>'.$row['Notes'].'</div>';
