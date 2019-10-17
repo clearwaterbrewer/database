@@ -54,8 +54,8 @@ sec_session_start();
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
-			  $row_date = DATE("Ymd");
-			  $row_time = DATE("H:i:s");
+			  $row_date = DATE('Ymd', strtotime($row['DateTimeCode']));
+			  $row_time = DATE('H:i:s', strtotime($row['DateTimeCode']));
     			echo '<div class=row>';
 			echo '<div class=column>'.$row['DateTimeCode'].'</div>';
 			echo '<div class=column>'.$row_date.'</div>';
