@@ -30,7 +30,8 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="DateTimeCode">DateTimeCode</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="DateTimeCode" value="" Placeholder="201804010900" required>
+//          <input type="text" class="form-control" size="20" name="DateTimeCode" value="" Placeholder="201804010900" required>
+          <input type="text" class="form-control" size="20" name="DateTimeCode" value="<?php echo date('Y-m-d'); ?>" required>
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
