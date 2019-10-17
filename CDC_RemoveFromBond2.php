@@ -54,7 +54,19 @@ sec_session_start();
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
-                          $rowBatchName = "SELECT BatchName FROM Batches WHERE BatchNum = $row['BatchNum']";
+                          //attempt 1
+			  //$rowBatchName = "SELECT 'BatchName' FROM Batches WHERE BatchNum = $row['BatchNum']";
+			  //
+			  //attempt 2
+			  $rowBatchName = "SELECT BatchName as '' FROM Batches WHERE BatchNum = 96";
+			  //
+			  //attempt3
+			  //$sql2 = "SELECT BatchName FROM Batches WHERE BatchNum = $row['BatchNum']";
+			  //$result2 = $mysqli->query($sql2);
+			  //
+			  //attempt4
+			  //$rowBatchName = mysqli_query($con,"SELECT BatchName FROM Batches WHERE BatchNum = $row['BatchNum']");
+			  //placeholder
 			  //$rowBatchName = "product placeholder";
     			echo '<div class=row>';
 			echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
