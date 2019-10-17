@@ -58,7 +58,7 @@ sec_session_start();
 			echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
-			echo '<div class=column>'."product".'</div>';
+			echo '<div class=column>'.(SELECT BatchName From Batches where BatchNum = $row['BatchNum']).'</div>';
 			echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
 			echo '<div class=column>'.$row['CaseNumbers'].'</div>';
