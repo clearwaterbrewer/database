@@ -58,7 +58,7 @@ sec_session_start();
 			  //$rowBatchName = "SELECT 'BatchName' FROM Batches WHERE BatchNum = $row['BatchNum']";
 			  //
 			  //attempt 2
-			  //$rowBatchName = "SELECT BatchName as '' FROM Batches WHERE BatchNum = 96";
+			  //$rowBatchName = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
 			  //
 			  //attempt3
 			  $sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = 96";
