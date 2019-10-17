@@ -55,8 +55,7 @@ sec_session_start();
 		  while ($row = $result->fetch_assoc()) {
     			echo '<div class=row>';
 			echo '<div class=column>'.$row['DateTimeCode'].'</div>';
-			  $date1 = DATE(DateTimeCode);
-			echo '<div class=column>'.$row['date1'].'</div>';
+			echo '<div class=column>'.$row[DATE(DateTimeCode)].'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
