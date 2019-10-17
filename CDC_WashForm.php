@@ -44,7 +44,7 @@ sec_session_start();
           echo "<select class='form-dropdown' required name='BatchNum' data-component='dropdown'>";
           echo "<option value=''> Select BatchNum </option>";
           while ($row = $result->fetch_assoc()) {
-            echo "<option value='" . $row['BatchNum'] . $row['BatchName'] . "'>" . $row['BatchNum'] . "</option>";
+            echo "<option value='" . $row['BatchNum'] . $row['BatchName'] . "'>" . $row['BatchName'] . "</option>";
           }
           echo "</select>";
           ?>
