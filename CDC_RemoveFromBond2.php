@@ -54,6 +54,8 @@ sec_session_start();
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
+			  //placeholder - this works, comment out to try other things
+			  //$rowBatchName = "product placeholder";
                           //attempt 1
 			  //$rowBatchName = "SELECT 'BatchName' FROM Batches WHERE BatchNum = $row['BatchNum']";
 			  //
@@ -65,14 +67,18 @@ sec_session_start();
 			  //$rowBatchName = $mysqli->query($sql2);
 			  //
 			  //attempt4
-			  //$rowBatchName = mysqli_query($con,"SELECT BatchName FROM Batches WHERE BatchNum = $row['BatchNum']");
-			  //placeholder
-			  $rowBatchName = "product placeholder";
+			  $sql2 = "SELECT * FROM Batches WHERE BatchNum = $row['BatchNum']";
+			  $result2 = $mysqli->query($sql2);
+			  $row2 = $result2->fetch_assoc();
+			  //
     			echo '<div class=row>';
 			echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
-			echo '<div class=column>'.$rowBatchName.'</div>';
+			//echo '<div class=column>'.$rowBatchName.'</div>';
+			//
+			//attempt5
+			echo '<div class=column>'.$row2['BatchName'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
 			echo '<div class=column>'.$row['CaseNumbers'].'</div>';
