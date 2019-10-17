@@ -48,34 +48,33 @@ sec_session_start();
 	  <div class="column">Notes</div>
 	</div>
 <?php 
-      	  $sql="SELECT * FROM 
-		 (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
-		  sub ORDER BY DateTimeCode DESC";
-		$result = $mysqli->query($sql);
-		if ($result->num_rows > 0) {
-		  while ($row = $result->fetch_assoc()) {
-			  //placeholder - this works, comment out to try other things
-			  $rowBatchName = "product placeholder";
-                          //
-			  //attempt1
-			  //$sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
-			  //$result2 = $mysqli->query($sql2);
-			  //$rowBatchName = array();
-			  //
-			  //
-    			echo '<div class=row>';
-			echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
-			echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
-			echo '<div class=column>'.$row['BatchNum'].'</div>';
-			echo '<div class=column>'.$rowBatchName.'</div>';
-			echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
-			echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
-			echo '<div class=column>'.$row['CaseNumbers'].'</div>';
-			echo '<div class=column>'.$row['Destination'].'</div>';
-			echo '<div class=column>'.$row['InvoiceNumber'].'</div>';
-			echo '<div class=column>'.$row['Notes'].'</div>';
-      			echo "</div>";
-		  }
+$sql="SELECT * FROM (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
+	sub ORDER BY DateTimeCode DESC";
+	$result = $mysqli->query($sql);
+	if ($result->num_rows > 0) {
+	  while ($row = $result->fetch_assoc()) {
+		  //placeholder - this works, comment out to try other things
+		  $rowBatchName = "product placeholder";
+		  //
+		  //attempt1
+		  //$sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
+		  //$result2 = $mysqli->query($sql2);
+		  //$rowBatchName = array();
+		  //
+		  //
+		echo '<div class=row>';
+		echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
+		echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
+		echo '<div class=column>'.$row['BatchNum'].'</div>';
+		echo '<div class=column>'.$rowBatchName.'</div>';
+		echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
+		echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
+		echo '<div class=column>'.$row['CaseNumbers'].'</div>';
+		echo '<div class=column>'.$row['Destination'].'</div>';
+		echo '<div class=column>'.$row['InvoiceNumber'].'</div>';
+		echo '<div class=column>'.$row['Notes'].'</div>';
+		echo "</div>";
+	  }
 		}
 ?>
        </div>
