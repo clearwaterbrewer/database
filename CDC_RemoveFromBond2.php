@@ -55,12 +55,12 @@ sec_session_start();
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
 			  //placeholder - this works, comment out to try other things
-			  //$rowBatchName = "product placeholder";
+			  $rowBatchName = "product placeholder";
                           //
 			  //attempt1
 			  $sql2 = "SELECT BatchName as '' FROM Batches WHERE BatchNum = $row['BatchNum']";
 			  $result2 = $mysqli->query($sql2);
-			  $rowBatchName = array();
+			  //$rowBatchName = array();
 			  //
 			  //
     			echo '<div class=row>';
