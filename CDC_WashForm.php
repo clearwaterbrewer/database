@@ -40,7 +40,7 @@ sec_session_start();
 <?php 
 $sql = "SELECT BatchNum FROM Batches ORDER by BatchNum DESC";
 while ($row = $sql->fetch_assoc()){
-echo "<option value=\"owner1\">" . $row['BatchNum'] . "</option>";
+echo '<option value=" '.$row['BatchNum'].' "> '.$row['BatchNum'].' </option>';
 }
 ?>
 </select>
