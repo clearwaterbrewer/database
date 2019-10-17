@@ -38,6 +38,7 @@ sec_session_start();
 	<div class="headrow">
 	  <div class="column">DateTimeCode</div>
 	  <div class="column">Date</div>
+	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
 	  <div class="column">Bottles Removed</div>
 	  <div class="column">Bottles Remain</div>
@@ -53,10 +54,12 @@ sec_session_start();
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 		  while ($row = $result->fetch_assoc()) {
-			  $sqldate = DATE("M");
+			  $row_date = DATE("Ymd");
+			  $row_time = DATE("H:i:s");
     			echo '<div class=row>';
 			echo '<div class=column>'.$row['DateTimeCode'].'</div>';
-			echo '<div class=column>'.$sqldate.'</div>';
+			echo '<div class=column>'.$row_date.'</div>';
+			echo '<div class=column>'.$row_time.'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 			echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
