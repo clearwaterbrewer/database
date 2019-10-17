@@ -37,18 +37,12 @@ sec_session_start();
         <label class="form-label form-label-top form-label-auto" for="BatchNum">BatchNum</label>
         <div class="form-input-wide">
 <?php 
-
 $sql = "SELECT BatchNum FROM Batches ORDER by BatchNum DESC");
-
-while ($row = $sql->fetch_assoc()){
-
+ while ($row = $sql->fetch_assoc()){
 ?>
+
 <option value=''><?php echo $row['BatchNum']; ?></option>
-
-<?php
-// close while loop 
-}
-?>
+<?php } ?>
       </div>
     </li>
     <li class="form-line" data-type="control_textbox">
