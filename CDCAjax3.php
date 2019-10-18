@@ -38,12 +38,12 @@ while ($row = mysqli_fetch_array($result)) {
     echo "</tr>";
 
 }
+echo "</table>";
 ?>
   
   
 <?php
 $q = intval($_GET['q']);
- 
 $sql="SELECT * FROM Containers WHERE ID = '".$q."'";
 $result = $mysqli->query($sql);
 echo "<table>
