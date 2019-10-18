@@ -67,15 +67,17 @@ sec_session_start();
           }
           echo "</select>";
           echo $curBatchName=$row['BatchName'];
-          ?>
+          
 
           
-      </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
-        <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" name="BatchName" value="<?php echo $curBatchName; ?>" >
+      echo "</div>";
+    echo "</li>";
+    echo "<li class='form-line' data-type='control_textbox'>";
+        echo "<label class='form-label form-label-top form-label-auto' for='BatchName'>Batch Name</label>";
+        echo "<div class='form-input-wide'>";
+          echo "<input type='text' class='form-control' size='20' name='BatchName' value='".$row['BatchName']."'>";
+         ?>
+          
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
