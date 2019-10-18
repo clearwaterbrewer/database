@@ -28,22 +28,10 @@ $b = intval($_GET['b']);
  
 $sql="SELECT * FROM Batches WHERE ID = '".$b."'";
 $result = $mysqli->query($sql);
-echo "<table>
-<tr>
-<th>BatchNum</th>
-<th>BatchName</th>
-<th>SourceProduct</th>
-<th>SourceIngredient</th>
-</tr>";
+
 while ($row = mysqli_fetch_array($result)) {
-    echo "<tr>";
-    echo "<td>" . $row['BatchNum'] . "</td>";
-    echo "<td>" . $row['BatchName'] . "</td>";
-    echo "<td>" . $row['SourceProduct'] . "</td>";
-    echo "<td>" . $row['SourceIngredient'] . "</td>";
-    echo "</tr>";
+
 }
-echo "</table>";
 ?>
   
   
@@ -71,47 +59,6 @@ echo "</table>";
 ?>
 
   
-<?php
-$r = intval($_GET['r']);
-$a[] = "C1";
-$a[] = "C2";
-$a[] = "C3";
-$a[] = "C4";
-$a[] = "C5";
-$a[] = "C6";
-$a[] = "C7";
-$a[] = "C8";
-$a[] = "C9";
-$a[] = "C10";
-$a[] = "C11";
-$a[] = "C12";
-$a[] = "C13";
-$a[] = "C14";
-$a[] = "C15";
-$a[] = "C16";
-$a[] = "C17";
-$a[] = "C18";
-$a[] = "C19";
-// get the r parameter from URL
-$r = $_REQUEST["r"];
-$hint = "";
-// lookup all hints from array if $q is different from "" 
-if ($r !== "") {
-    $r = strtolower($r);
-    $len=strlen($r);
-    foreach($a as $name) {
-        if (stristr($r, substr($name, 0, $len))) {
-            if ($hint === "") {
-                $hint = $name;
-            } else {
-                $hint .= ", $name";
-            }
-        }
-    }
-}
-// Output "no suggestion" if no hint was found or output correct values 
-//echo $hint === "" ? "no suggestion" : $hint;
-?>
 
 <?php else : ?>
 <form class="jotform-form" accept-charset="utf-8">
