@@ -26,7 +26,7 @@ sec_session_start();
                 document.getElementById("txtMessage").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","CDCAjax2.php?b="+str,true);
+        xmlhttp.open("GET","CDCAjax3.php?b="+str,true);
         xmlhttp.send();
     }
 }
@@ -66,10 +66,15 @@ sec_session_start();
             echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
           }
           echo "</select>";
-
-          echo "</div></li><li class='form-line' data-type='control_textbox'>";
-          echo " <label class='form-label form-label-top form-label-auto' for='BatchName'>Batch Name</label>";
-          echo " <div class='form-input-wide'>";
+         ?>
+ 
+       </div>
+    </li>
+    <li class="form-line" data-type="control_textbox">
+        <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
+        <div class="form-input-wide">
+          
+       <?php   
 
           echo "<input type='text' class='form-control' size='20' name='BatchName' value='" . $row['BatchName'] . "'>";
        ?>
