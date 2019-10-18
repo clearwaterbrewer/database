@@ -67,14 +67,7 @@ sec_session_start();
           }
           echo "</select>";
           
-          $batchinfo = "SELECT * FROM Batches " . $BatchNum;
-          $batchresult = $mysqli->query($batchinfo);
-          $batchrow = $batchresult->fetch_assoc();
-          $ThisBatchName = $batchrow['BatchName'];
-
           ?>
-
-
 
           
       </div>
