@@ -1,7 +1,5 @@
 <?php
 include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
-sec_session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,17 +18,10 @@ sec_session_start();
  </head>
  <body>
 
-<?php if (login_check($mysqli) == true) : ?>
-
-
-<?php
 $b = intval($_GET['b']);
- 
 $sql="SELECT * FROM Batches WHERE ID = '".$b."'";
 $result = $mysqli->query($sql);
-
 while ($row = mysqli_fetch_array($result)) {
-
 }
 ?>
   
@@ -58,38 +49,5 @@ while ($row = mysqli_fetch_array($result)) {
 echo "</table>";
 ?>
 
-  
-
-<?php else : ?>
-<form class="jotform-form" accept-charset="utf-8">
-  <div class="form-all">
-    <ul class="form-section page-section">        
-      <li id="cid_1" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group ">
-          <div class="header-text httal htvam">
-            <h2 id="header_1" class="form-header" data-component="header">
-              NOT AUTHORIZED
-             </h2>
-              <label class="form-label form-label-top form-label-auto">You must be an authorized user. </label>
-          </div>
-        </div>
-      </li
-    </ul>
-    <ul class="form-section page-section">        
-      <li class="form-line" data-type="control_text">
-        <div class="form-input-wide">
-          <div class="form-buttons-wrapper">
-           <a href="index.php">
-              <button type="button" class="form-submit-button" >
-                Login
-              </button>
-            </a>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
- </form>        
-<?php endif; ?>
  </body>
 </html>
