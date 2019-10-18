@@ -18,6 +18,7 @@ include_once 'includes/db_connect.php';
  </head>
  <body>
 
+<?php
 $b = intval($_GET['b']);
 $sql="SELECT * FROM Batches WHERE ID = '".$b."'";
 $result = $mysqli->query($sql);
