@@ -51,7 +51,8 @@ function showContainer(str) {
           }
           echo "</select>";
     ?>
-
+</form>
+<form>
     <?php
           $sql = "SELECT * FROM Batches ORDER by BatchNum DESC";
           $result = $mysqli->query($sql);
