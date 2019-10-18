@@ -22,7 +22,20 @@ include_once 'includes/db_connect.php';
 $b = intval($_GET['b']);
 $sql="SELECT * FROM Batches WHERE ID = '".$b."'";
 $result = $mysqli->query($sql);
+echo "<table>
+<tr>
+<th>BatchNum</th>
+<th>BatchName</th>
+<th>SourceProduct</th>
+<th>SourceIngredient</th>
+</tr>";
 while ($row = mysqli_fetch_array($result)) {
+    echo "<tr>";
+    echo "<td>" . $row['BatchNum'] . "</td>";
+    echo "<td>" . $row['BatchName'] . "</td>";
+    echo "<td>" . $row['SourceProduct'] . "</td>";
+    echo "<td>" . $row['SourceIngredient'] . "</td>";
+    echo "</tr>";
 
 }
 ?>
