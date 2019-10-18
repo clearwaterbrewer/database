@@ -1,7 +1,5 @@
 <?php
 include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
-sec_session_start();
 ?>
 <!DOCTYPE HTML>
 <html><head>
@@ -31,7 +29,6 @@ sec_session_start();
   </script>
 </head>
 <body>
-<?php if (login_check($mysqli) == true) : ?>
 <form id="WashForm" name="washform" method="POST">
 <h1>CDC Wash Run Entry</h2>
 <label Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
@@ -60,30 +57,12 @@ sec_session_start();
           <input type="text" name="SourceIngredient" value="" required><br>
 
 <button type="submit" name="submit" value="Submit" id="submit_form">Submit</button>
-<a href="CDChome.php" >
-	<button type="button" class="form-submit-button" >Home</button>
-</a>
-
-<a href="includes/logout.php">
-	<button type="button" class="form-submit-button" >Logout</button>
-</a>
+<a href="CDChome.php" ><button type="button" >Home</button></a>
+<a href="includes/logout.php"><button type="button" >Logout</button></a>
 
 
 
 </form>        
-<?php else : ?>
-
-
-<form>
- <h2 id="header_1" class="form-header" data-component="header">NOT AUTHORIZED</h2>
- <label class="form-label form-label-top form-label-auto">You must be an authorized user. </label>
-
- <a href="index.php">
-	<button type="button" class="form-submit-button" >Login</button>
- </a>
-
-</form>        
-<?php endif; ?>
 </body>
 </html>
 
