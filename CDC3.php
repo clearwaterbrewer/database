@@ -69,6 +69,7 @@ function showContainer(str) {
 
 
 </form>
+<div id="txtMessage"><b>Batch info will be listed here...</b></div>
 <br>
 
 <br>
