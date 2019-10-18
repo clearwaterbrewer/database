@@ -39,7 +39,12 @@
 		echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
     }
     echo "</select><br>";
-    ?>
+	echo $row['BatchNum'].<br>;
+	echo $row['BatchName'].<br>;
+	echo $row['SourceProduct'].<br>;
+	echo $row['SourceIngredient'].<br>;
+
+	?>
 <label for="BatchName">Batch Name</label>
        <?php echo "<input name='BatchName' value='" . $row['BatchName'] . "'><br>"; ?>
 <label for="SourceProduct">Source Product</label>
