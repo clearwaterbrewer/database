@@ -51,11 +51,8 @@ function showContainer(str) {
           }
           echo "</select>";
     ?>
-</form>
 <div id="txtMessage"><b>Container info will be listed here...</b></div>
-   
     
-<form>
     <?php
           $sql = "SELECT * FROM Batches ORDER by BatchNum DESC";
           $result = $mysqli->query($sql);
