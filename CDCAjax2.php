@@ -28,7 +28,7 @@ sec_session_start();
 <?php
 $b = intval($_GET['b']);
  
-$sql="SELECT * FROM Batches WHERE ID = '".$b."'";
+$sql="SELECT * FROM Batches WHERE BatchNum = '".$b."'";
 $result = $mysqli->query($sql);
 
 echo "<table>
