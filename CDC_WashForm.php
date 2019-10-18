@@ -63,7 +63,7 @@ sec_session_start();
           echo "<select class='form-dropdown' required name='BatchNum' onchange='showBatch(this.value)>";
           echo "<option value=''> Select BatchNum        </option>";
           while ($row = $result->fetch_assoc()) {
-            echo "<option value='" . $row['BatchNum'] .  "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
+            echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
           }
           echo "</select>";
          ?>
@@ -75,7 +75,7 @@ sec_session_start();
         <div class="form-input-wide">
           
        <?php   
-          echo "<input type='text' class='form-control' size='20' name='BatchName'  >";
+          echo "<input type='text' class='form-control' size='20' name='BatchName' value='" . $row['BatchName'] . "'>";
        ?>
       
       </div>
