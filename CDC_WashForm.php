@@ -71,7 +71,7 @@ sec_session_start();
        </div>
     </li>
     <li class='form-line' data-type='control_textbox'>
-        <label class='form-label form-label-top form-label-auto' for="BatchName'>Batch Name</label>
+        <label class='form-label form-label-top form-label-auto' for='BatchName'>Batch Name</label>
         <div class='form-input-wide'>
           
           
