@@ -70,13 +70,15 @@ sec_session_start();
  
        </div>
     </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
-        <div class="form-input-wide">
+    <li class='form-line' data-type='control_textbox'>
+        <label class='form-label form-label-top form-label-auto' for="BatchName'>Batch Name</label>
+        <div class='form-input-wide'>
           
           
           <input type="text" class="form-control" size="20" name="BatchName"  >
-        </div>
+   
+      
+      </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
