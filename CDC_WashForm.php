@@ -74,10 +74,7 @@ sec_session_start();
         <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
         <div class="form-input-wide">
           
-       <?php   
-
-          echo "<input type='text' class='form-control' size='20' name='BatchName' value='" . $row['BatchName'] . "'>";
-       ?>
+          <input type='text' class='form-control' size='20' name='BatchName' id='BatchName' value="<?php echo $row['BatchName'];?>" />;
       
       </div>
     </li>
