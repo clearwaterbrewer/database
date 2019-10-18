@@ -39,7 +39,7 @@ echo "<table>
 
 while ($row = mysqli_fetch_array($result)) {
     echo "<tr>";
-    echo "<td>" . $row['ID'] . "</td>";
+    echo "<td>" . $row['id'] . "</td>";
     echo "<td>" . $row['ContainerName'] . "</td>";
     echo "<td>" . $row['ContainerVolume'] . "</td>";
     echo "<td>" . $row['Description'] . "</td>";
