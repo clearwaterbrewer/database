@@ -36,7 +36,7 @@ sec_session_start();
 <h1>CDC Wash Run Entry</h2>
 <label Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
 <label for="DateTimeCode">DateTimeCode</label>
- <input name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
+ <input name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required><br>
 <label for="BatchNum">BatchNum</label>
          
 	<?php
@@ -47,7 +47,7 @@ sec_session_start();
 	while ($row = $result->fetch_assoc()) {
 		echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
     }
-    echo "</select>";
+    echo "</select><br>";
     ?>
 <label for="BatchName">Batch Name</label>
        <?php   
