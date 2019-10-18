@@ -33,10 +33,10 @@ $result = $mysqli->query($sql);
 
 echo "<table>
 <tr>
-<th>ID</th>
-<th>ContainerName</th>
-<th>ContainerVolume</th>
-<th>Description</th>
+<th>BatchNum</th>
+<th>BatchName</th>
+<th>SourceProduct</th>
+<th>SourceIngredient</th>
 </tr>";
 
 while ($row = mysqli_fetch_array($result)) {
