@@ -28,7 +28,7 @@ function showContainer(str) {
     <?php
           $sql = "SELECT * FROM Containers ORDER by ContainerName DESC";
           $result = $mysqli->query($sql);
-          echo "<select class='form-dropdown' required name='id' onchange='showContainer(this.value)'>";
+          echo "<select id='id' name='id' onchange='showContainer(this.value)'>";
           echo "<option value=''> Select a Container        </option>";
           while ($row = $result->fetch_assoc()) {
             echo "<option value='" . $row['id'] .  "'>" . $row['ContainerName'] .' - '. $row['ContainerVolume'] . "</option>";
