@@ -1,3 +1,6 @@
+<?php
+include_once 'includes/db_connect.php';
+?>
 <!DOCTYPE html>
 <html>
  <head>
@@ -21,14 +24,8 @@
   $q = intval($_GET['q']);
 
  
-$con = mysqli_connect('localhost','yellowje_DBadmin','qwer1234','yellowje_CDCtestDB');
-if (!$con) {
-    die('Could not connect: ' . mysqli_error($con));
-}
-
-mysqli_select_db($con,"yellowje_CDCtestDB");
 $sql="SELECT * FROM Containers WHERE ID = '".$q."'";
-$result = mysqli_query($con,$sql);
+$result = $mysqli->query($sql);
  
 
 echo "<table>
@@ -49,7 +46,6 @@ while ($row = mysqli_fetch_array($result)) {
     echo "</tr>";
 }
 echo "</table>";
-mysqli_close($con);
 ?>
 
   <?php
