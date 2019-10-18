@@ -156,10 +156,23 @@ CREATE TABLE Products (
 INSERT INTO Products 
     (ProductName, ProductDescription) 
 VALUES 
-    ("Malt Barley Wort","Wort that is over 50% Malted Barley"),
-    ("Malted Rye Wort","Wort that is over 50% Malted Barley"),
+    ("Malted Barley Wort","Wort that is over 50% Malted Barley"),
+    ("Malted Rye Wort","Wort that is over 50% Malted Rye"),
+    ("Malted Wheat Wort","Wort that is over 50% Malted Wheat"),
+    ("Finished Beer","Beer received as -other in-"),
     ("Molasses43","Molasses with 43% sugar"),
-    ("Panela Sugar","Panela Sugar");
+    ("Panela Sugar","Panela Sugar"),
+    ("Spirits","Spirits for Redistillation"),
+    ("Whisky -160","WHISKY 160° AND UNDER"),
+    ("Whisky 160+","WHISKY OVER 160°"),
+    ("Brandy -170","BRANDY 170° AND UNDER"),
+    ("Brandy 170+","BRANDY OVER 170°"),
+    ("Rum","RUM"),
+    ("Gin","GIN"),
+    ("Vodka","VODKA"),
+    ("Spirits 190+","ALCOHOL AND SPIRITS 190° AND OVER"),
+    ("Spirits -190","ALCOHOL AND SPIRITS UNDER 190°"),
+    ("Other","Identify");
 
 SELECT *FROM Products;
 
@@ -261,6 +274,37 @@ VALUES
 (60,"UK-3",15.5);
 
 SELECT * FROM Containers;
+
+
+
+
+
+DROP TABLE IF EXISTS Vendors;
+CREATE TABLE Vendors (
+    VendorID INT UNSIGNED NOT NULL,
+    VendorName varchar(30) NOT NULL,
+    VendorAddress varchar(60),
+    VendorPhone varchar(30),
+    PRIMARY KEY (VendorID)
+);
+
+
+INSERT INTO Vendors 
+    (VendorID, VendorName, VendorAddress, VendorPhone) 
+VALUES 
+    (1,"Tampa Bay Brewing Co","",""),
+    (2,"Yeastman","",""),
+    (3,"GFS","",""),
+    (4,"Cueni Brewing Co","",""),
+    (5,"de Bine Brewing","",""),
+    (6,"Barley Mow Brewing Co","",""),
+    (7,"Crooked Thumb","",""),
+    (8,"Caledonia Brewing","",""),
+    (9,"HoB Brewing Co","",""),
+    (10,"SugarDaddy","",""),
+    (11,"Quality Liquid Feeds","",""),
+    (12,"Dry Hills Distilling","",""),
+    (13,"7venth Sun Brewing","","");
 
 
 
