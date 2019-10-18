@@ -15,7 +15,7 @@ function showContainer(str) {
                 document.getElementById("txtMessage").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","CDCAjax2.php?q="+str,true);
+        xmlhttp.open("GET","CDCAjax3.php?q="+str,true);
         xmlhttp.send();
     }
 }
