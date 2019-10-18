@@ -1,14 +1,8 @@
-<?php
-include_once 'includes/db_connect.php';
-?>
+<?php include_once 'includes/db_connect.php'; ?>
 <!DOCTYPE HTML>
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta property="og:title" content="CDC Wash Run Entry" >
-<meta property="og:description" content="Please click submit to complete this form.">
-<title>CDC Wash Run Entry</title>
-<link type="text/css" rel="stylesheet" href="styles/main.css" />
+<html>
 <head>
+<title>CDC Wash Run Entry</title>
   <script>
   function showBatch(str) {
     if (str == "") {
@@ -47,22 +41,12 @@ include_once 'includes/db_connect.php';
     echo "</select><br>";
     ?>
 <label for="BatchName">Batch Name</label>
-       <?php   
-          echo "<input name='BatchName' value='" . $row['BatchName'] . "'><br>";
-       ?>
+       <?php echo "<input name='BatchName' value='" . $row['BatchName'] . "'><br>"; ?>
 <label for="SourceProduct">Source Product</label>
-          <input type="text" name="SourceProduct" value="" required><br>
-
+       <?php echo "<input name='BatchName' value='" . $row['SourceProduct'] . "'><br>"; ?>
 <label for="SourceIngredient">Source Ingredient</label>
-          <input type="text" name="SourceIngredient" value="" required><br>
-
-<button type="submit" name="submit" value="Submit" id="submit_form">Submit</button>
-<a href="CDChome.php" ><button type="button" >Home</button></a>
-<a href="includes/logout.php"><button type="button" >Logout</button></a>
-
-
+       <?php echo "<input name='BatchName' value='" . $row['SourceIngredient'] . "'><br>"; ?>
 
 </form>        
 </body>
 </html>
-
