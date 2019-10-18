@@ -37,7 +37,6 @@
 	echo "<option value=''> Select BatchNum        </option>";
 	while ($row = $result->fetch_assoc()) {
 		echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
-	}
 	echo "</select><br><br>";
 	echo "<label for='BatchName'>Batch Name</label>";
 	echo " <input name='BatchName' value='".$row['BatchName']."'><br>";
@@ -46,6 +45,7 @@
 	echo "<label for='SourceIngredient'>Source Ingredient</label>";
 	echo "<input name='SourceIngredient' value='".$row['SourceIngredient']."'><br>";
 	?>
+	}
 
        
 </form>        
