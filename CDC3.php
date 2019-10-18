@@ -20,24 +20,6 @@ function showContainer(str) {
     }
 }
 </script>
-
-<script>
-function showHint(str_showHint) {
-    if (str_showHint.length == 0) { 
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "CDCAjax2.php?r=" + str_showHint, true);
-        xmlhttp.send();
-    }
-}
-</script>
 </head>
 <body>
 
@@ -60,11 +42,6 @@ function showHint(str_showHint) {
 <br>
 <div id="txtMessage"><b>Container info will be listed here...</b></div>
 
-<br><br>
-<p><b>Start typing a name in the input field below:</b></p>
-<form> 
-Container name: <input type="text" onkeyup="showHint(this.value)">
-</form>
-<p>Suggestions: <span id="txtHint"></span></p>
+<br>
 </body>
 </html>
