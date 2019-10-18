@@ -37,7 +37,7 @@ sec_session_start();
 <label Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
 <label for="DateTimeCode">DateTimeCode</label>
  <input name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
-<label class="form-label form-label-top form-label-auto" for="BatchNum">BatchNum</label>
+<label for="BatchNum">BatchNum</label>
          
 	<?php
 	$sql = "SELECT BatchNum, BatchName, SourceProduct, SourceIngredient FROM Batches ORDER by BatchNum DESC";
@@ -51,15 +51,15 @@ sec_session_start();
     ?>
 <label for="BatchName">Batch Name</label>
        <?php   
-          echo "<input name='BatchName' value='" . $row['BatchName'] . "'>";
+          echo "<input name='BatchName' value='" . $row['BatchName'] . "'><br>";
        ?>
 <label for="SourceProduct">Source Product</label>
-          <input type="text" class="form-control" size="20" name="SourceProduct" value="" required>
+          <input type="text" name="SourceProduct" value="" required><br>
 
-<label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
-          <input type="text" class="form-control" size="20" name="SourceIngredient" value="" required>
+<label for="SourceIngredient">Source Ingredient</label>
+          <input type="text" name="SourceIngredient" value="" required><br>
 
-<button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
+<button type="submit" name="submit" value="Submit" id="submit_form">Submit</button>
 <a href="CDChome.php" >
 	<button type="button" class="form-submit-button" >Home</button>
 </a>
@@ -86,6 +86,4 @@ sec_session_start();
 <?php endif; ?>
 </body>
 </html>
-
-
 
