@@ -12,7 +12,26 @@ sec_session_start();
 <meta name="HandheldFriendly" content="true" />
 <title>CDC Wash Run Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
-
+<head>
+  <script>
+  function showBatch(str) {
+    if (str == "") {
+        document.getElementById("txtMessage").innerHTML = "";
+        return;
+    } 
+    else { 
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtMessage").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","CDCAjax2.php?b="+str,true);
+        xmlhttp.send();
+    }
+}
+  </script>
+</head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
 <form class="jotform-form" accept-charset="utf-8" id="WashForm" name="washform" method="POST">
@@ -41,7 +60,7 @@ sec_session_start();
           <?php
           $sql = "SELECT * FROM Batches ORDER by BatchNum DESC";
           $result = $mysqli->query($sql);
-          echo "<select class='form-dropdown' required name='BatchNum' data-component='dropdown'>";
+          echo "<select class='form-dropdown' required name='BatchNum' onchange='showBatch(this.value)>";
           echo "<option value=''> Select BatchNum        </option>";
           while ($row = $result->fetch_assoc()) {
             echo "<option value='" . $row['BatchNum'] .  "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
