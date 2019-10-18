@@ -53,14 +53,14 @@ sec_session_start();
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="BatchNum">BatchNum</label>
+        <label class="form-label form-label-top form-label-auto" for="BatchNumid">BatchNum</label>
         <div class="form-input-wide">
 
           
           <?php
           $sql = "SELECT BatchNum, BatchName, SourceProduct, SourceIngredient FROM Batches ORDER by BatchNum DESC";
           $result = $mysqli->query($sql);
-          echo "<select class='form-dropdown' required name='BatchNum' onchange='showBatch(this.value)>";
+          echo "<select class='form-dropdown' required name='BatchNum' id='BatchNumid' onchange='showBatch(this.value)>";
           echo "<option value=''> Select BatchNum        </option>";
           while ($row = $result->fetch_assoc()) {
             echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
