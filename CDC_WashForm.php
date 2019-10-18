@@ -58,7 +58,7 @@ sec_session_start();
 
           
           <?php
-          $sql = "SELECT * FROM Batches ORDER by BatchNum DESC";
+          $sql = "SELECT BatchNum, BatchName, SourceProduct, SourceIngredient FROM Batches ORDER by BatchNum DESC";
           $result = $mysqli->query($sql);
           echo "<select class='form-dropdown' required name='BatchNum' onchange='showBatch(this.value)>";
           echo "<option value=''> Select BatchNum        </option>";
