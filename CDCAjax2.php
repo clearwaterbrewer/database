@@ -22,14 +22,14 @@ sec_session_start();
  </head>
  <body>
 
-  <?php if (login_check($mysqli) == true) : ?>
-  <?php
-  $q = intval($_GET['q']);
+<?php if (login_check($mysqli) == true) : ?>
 
+
+<?php
+$b = intval($_GET['b']);
  
-$sql="SELECT * FROM Containers WHERE ID = '".$q."'";
+$sql="SELECT * FROM Batches WHERE ID = '".$b."'";
 $result = $mysqli->query($sql);
- 
 
 echo "<table>
 <tr>
@@ -39,6 +39,31 @@ echo "<table>
 <th>Description</th>
 </tr>";
 
+while ($row = mysqli_fetch_array($result)) {
+    echo "<tr>";
+    echo "<td>" . $row['BatchNum'] . "</td>";
+    echo "<td>" . $row['BatchName'] . "</td>";
+    echo "<td>" . $row['SourceProduct'] . "</td>";
+    echo "<td>" . $row['SourceIngredient'] . "</td>";
+    echo "</tr>";
+}
+echo "</table>";
+?>
+  
+  
+<?php
+$q = intval($_GET['q']);
+ 
+$sql="SELECT * FROM Containers WHERE ID = '".$q."'";
+$result = $mysqli->query($sql);
+
+echo "<table>
+<tr>
+<th>ID</th>
+<th>ContainerName</th>
+<th>ContainerVolume</th>
+<th>Description</th>
+</tr>";
 
 while ($row = mysqli_fetch_array($result)) {
     echo "<tr>";
@@ -51,8 +76,9 @@ while ($row = mysqli_fetch_array($result)) {
 echo "</table>";
 ?>
 
-  <?php
-  $r = intval($_GET['r']);
+  
+<?php
+$r = intval($_GET['r']);
 
 $a[] = "C1";
 $a[] = "C2";
@@ -78,6 +104,8 @@ $a[] = "C19";
 // get the r parameter from URL
 $r = $_REQUEST["r"];
 
+
+
 $hint = "";
 
 // lookup all hints from array if $q is different from "" 
@@ -94,9 +122,8 @@ if ($r !== "") {
         }
     }
 }
-
 // Output "no suggestion" if no hint was found or output correct values 
-echo $hint === "" ? "no suggestion" : $hint;
+//echo $hint === "" ? "no suggestion" : $hint;
 ?>
 
 <?php else : ?>
