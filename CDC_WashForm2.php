@@ -33,7 +33,7 @@
 	<?php
 	$sql = "SELECT BatchNum, BatchName, SourceProduct, SourceIngredient FROM Batches ORDER by BatchNum DESC";
 	$result = $mysqli->query($sql);
-	echo "<select name='BatchNum' id='BatchNum' onchange='showBatch(this.value)>";
+	echo "<select name='BatchNum' id='BatchNum' onchange='showBatch(this.value)'>";
 	echo "<option value=''> Select BatchNum        </option>";
 	while ($row = $result->fetch_assoc()) {
 		echo "<option value='" . $row['BatchNum'] . "'>" . $row['BatchNum'] .' - '. $row['BatchName'] . "</option>";
