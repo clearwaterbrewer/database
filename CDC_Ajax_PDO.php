@@ -14,7 +14,7 @@ $status = 'failed';
 if ($row = $db->fetchObject() ) {
     $data = $row;
     $status = 'success';
-}
+    }
 
 header('Content-Type: application/json');
 echo json_encode([
