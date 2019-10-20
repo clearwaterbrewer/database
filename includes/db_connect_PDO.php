@@ -11,7 +11,7 @@ try{
     die(json_encode(array('outcome' => true)));
 }
 catch(PDOException $ex){
-    die(json_encode(array('outcome' => false, 'message' => 'Unable to connect')));
+    die(json_encode(array('outcome' => false, 'message' => 'Unable to connect'.'test')));
 }
 $dbh = null;
 ?>
