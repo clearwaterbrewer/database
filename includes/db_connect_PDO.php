@@ -4,7 +4,7 @@ $strDbname = "CDCtest";
 $strUsername = "DBadmin";
 $strPassword = "qwer1234"; 
 try{
-    $dbh = new PDO('mysql:host='.$strServername.';dbname='$strDbname,$strUsername,$strPassword);
+    $dbh = new PDO('mysql:host='.$strServername.';dbname='.$strDbname,$strUsername,$strPassword);
                     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     die(json_encode(array('outcome' => true)));
 }
