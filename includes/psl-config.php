@@ -10,3 +10,4 @@ define("DEFAULT_ROLE", "member");
 
 define("SECURE", FALSE);    // For development purposes only!!!!
 
+?>
