@@ -1,8 +1,6 @@
 <?php
-$strServername = "localhost";
-$strDbname = "CDCtest";
-$strUsername = "DBadmin";
-$strPassword = "qwer1234"; 
+require_once('psl-configPDO.php');
+
 try{
     $dbh = new PDO('mysql:host='.$strServername.';dbname='.$strDbname,$strUsername,$strPassword);
                     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
