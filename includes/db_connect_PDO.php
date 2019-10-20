@@ -1,17 +1,16 @@
 <?php
-require_once('includes/psl-configPDO.php');
-
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT BatchNum, BatchName, SourceProduct, SourceIngredient FROM Batches");
-    $stmt->execute();
-    // set the resulting array to associative
-    }
-    catch(PDOException $e) {
-     echo "Error: " . $e->getMessage();
-    }
+try{
+    $dbh = new pdo( 'mysql:host=127.0.0.1:3308;dbname=CDCtest',
+                    'DBadmin',
+                    'qwer1234',
+                    array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    die(json_encode(array('outcome' => true)));
+}
+catch(PDOException $ex){
+    die(json_encode(array('outcome' => false, 'message' => 'Unable to connect')));
+}
 $conn = null;
+
 
 ?>
 
