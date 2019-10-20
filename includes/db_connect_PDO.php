@@ -1,6 +1,6 @@
 <?php
 try{
-    $dbh = new pdo( 'mysql:host=127.0.0.1:3308;dbname=CDCtest',
+    $dbh = new pdo( 'mysql:host=127.0.0.1;dbname=CDCtest',
                     'DBadmin',
                     'qwer1234',
                     array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
