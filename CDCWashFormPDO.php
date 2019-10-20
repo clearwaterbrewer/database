@@ -1,9 +1,10 @@
-<?php include_once 'includes/db_connect.php'; 
-
+<?php 
+include_once 'includes/db_connect.php'; 
 $db = new Database;
 $db->prepare("SELECT BatchNum, BatchName FROM Batches");
 $db->execute();
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -33,7 +34,6 @@ $db->execute();
 	
 	
 <script>
-
     // monitor for changes in drop-down
     $(document).ready(function() {  // technically not necessary if script is at the bottom, but I do it out of habit
 
@@ -46,7 +46,7 @@ $db->execute();
     function retrieveIngredient(batchNumber) {
 
       $.post(
-        "CDC3.php",               // where to send data
+        "CDC_PDO_Ajax.php",       // where to send data
         {batchNum: batchNumber},  // parameters to send {varname: value}
         function(result) {        // what to do with results
           if(result.message=='success') {
