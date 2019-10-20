@@ -1,6 +1,5 @@
 <?php
 require_once('includes/psl-configPDO.php');
-
 ?>
 <!DOCTYPE html>
 <html>
