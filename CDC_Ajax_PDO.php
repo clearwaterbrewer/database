@@ -1,6 +1,6 @@
 <?php
 //This is how I connect to my database, 
-include_once 'includes/db_connect.php';
+include_once 'includes/db_connect_PDO.php';
 ?>
 
 <!DOCTYPE html>
