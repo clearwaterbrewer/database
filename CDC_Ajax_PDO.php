@@ -1,11 +1,12 @@
 <?php
-include_once 'includes/db_connect_PDO.php';
+require_once('includes/psl-configPDO.php');
+
 ?>
 <!DOCTYPE html>
 <html>
  <body>
 <?php
-$db = new Database;
+$db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $db->prepare('SELECT BatchNum, BatchName, SourceProduct, SourceIngredient FROM Batches WHERE BatchNum = ?');
 $db->execute($_POST['batchNum']);
 
