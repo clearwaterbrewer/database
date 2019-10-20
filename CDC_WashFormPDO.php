@@ -1,5 +1,5 @@
 <?php 
-include_once 'includes/db_connect.php'; 
+include_once 'includes/db_connect_PDO.php'; 
 $db = new Database;
 $db->prepare("SELECT BatchNum, BatchName FROM Batches");
 $db->execute();
