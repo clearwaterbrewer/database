@@ -1,6 +1,6 @@
 <?php
 try{
-    $dbh = new PDO( 'mysql:host=localhost;dbname=CDCtest','DBadmin','qwer1234');
+    $dbh = new PDO('mysql:host=localhost;dbname=CDCtest','DBadmin','qwer1234');
                     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     die(json_encode(array('outcome' => true)));
 }
