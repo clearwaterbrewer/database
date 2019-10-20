@@ -1,12 +1,6 @@
 <?php
-
-$servername = "localhost";
-$dbname = "CDCtest";
-$username = "DBadmin";
-$password = "qwer1234"; 
-
 try{
-    $dbh = new PDO('mysql:host=$servername;dbname=$dbname",$username,$password');
+    $dbh = new PDO( 'mysql:host=127.0.0.1;dbname=CDCtest','DBadmin','qwer1234');
                     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     die(json_encode(array('outcome' => true)));
 }
