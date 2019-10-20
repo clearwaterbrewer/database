@@ -46,7 +46,7 @@ $db->execute();
     function retrieveIngredient(batchNumber) {
 
       $.post(
-        "CDC_PDO_Ajax.php",       // where to send data
+        "CDC_Ajax_PDO.php",       // where to send data
         {batchNum: batchNumber},  // parameters to send {varname: value}
         function(result) {        // what to do with results
           if(result.message=='success') {
