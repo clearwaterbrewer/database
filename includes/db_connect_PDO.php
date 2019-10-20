@@ -12,7 +12,7 @@ try{
 }
 catch(PDOException $ex){
     die(json_encode(array('outcome' => false, 
-                          'message' => 'Unable to connect to '.$strServername.':'.$strDbname.' with '.$strUsername.':'.$strPassword.'\r\n')));
+                          'message' => 'Unable to connect to '.$strServername.':'.$strDbname.' with '.$strUsername.':'.$strPassword)));
 }
 $dbh = null;
 ?>
