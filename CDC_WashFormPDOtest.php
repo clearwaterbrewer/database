@@ -1,5 +1,6 @@
 
 <?php
+require_once('includes/psl-configPDO.php');
 
 echo "<table style='border: solid 1px black;'>";
 echo "<tr><th>BatchNum</th><th>BatchName</th><th>SourceProduct</th><th>SourceIngredient</th></tr>";
@@ -21,11 +22,6 @@ class TableRows extends RecursiveIteratorIterator {
         echo "</tr>" . "\n";
     }
 }
-
-$servername = "localhost";
-$username = "DBadmin";
-$password = "qwer1234"; 
-$dbname = "CDCtest";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
