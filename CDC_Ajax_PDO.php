@@ -5,7 +5,7 @@ require_once('includes/psl-configPDO.php');
 <html>
  <body>
 <?php
-$db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+$db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $db->prepare('SELECT BatchNum, BatchName, SourceProduct, SourceIngredient FROM Batches WHERE BatchNum = ?');
 $db->execute($_POST['batchNum']);
 
@@ -21,7 +21,9 @@ echo json_encode([
     'status' => $status,
     'data' => $data
     ]);
-
+?>
+  
+  
  </body>
 </html>
 
