@@ -1,8 +1,9 @@
-<?php
-require_once('includes/psl-configPDO.php');
 
+<?php
 try{
-    $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password,
+    $dbh = new pdo( 'mysql:host=127.0.0.1;dbname=CDCtest',
+                    'DBadmin',
+                    'qwer1234',
                     array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     die(json_encode(array('outcome' => true)));
 }
@@ -10,7 +11,7 @@ catch(PDOException $ex){
     die(json_encode(array('outcome' => false, 'message' => 'Unable to connect')));
 }
 $dbh = null;
-?>
+
 
 
 
