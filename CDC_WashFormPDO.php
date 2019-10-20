@@ -1,5 +1,5 @@
 <?php 
-include_once 'includes/db_connect_PDO.php'; 
+require_once('includes/psl-configPDO.php');
 $db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $db->prepare("SELECT BatchNum, BatchName FROM Batches");
 $db->execute();
