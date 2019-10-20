@@ -1,6 +1,8 @@
 cd /var/www/html/
 sudo git clone https://github.com/clearwaterbrewer/database.git
 
+sudo wget -O jquery.min.js https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
+
 
 set up git global info:
   git config --global user.email "you@example.com"
