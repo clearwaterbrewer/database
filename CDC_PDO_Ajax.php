@@ -3,19 +3,6 @@ include_once 'includes/db_connect.php';
 ?>
 <!DOCTYPE html>
 <html>
- <head>
-  <style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  table, td, th {
-    border: 1px solid black;
-    padding: 5px;
-  }
-  th {text-align: left;}
-  </style>
- </head>
  <body>
 
 <?php
