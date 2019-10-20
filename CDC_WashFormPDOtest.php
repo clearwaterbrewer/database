@@ -1,6 +1,7 @@
 
 <?php
-include_once 'psl-configPDO.php';
+require_once('psl-configPDO.php');
+
 echo "<table style='border: solid 1px black;'>";
 echo "<tr><th>BatchNum</th><th>BatchName</th><th>SourceProduct</th><th>SourceIngredient</th></tr>";
 
