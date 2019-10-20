@@ -1,37 +1,46 @@
-<?php 
-define("HOST", "localhost"); 
-define("USER", "DBadmin"); 
-define("PASSWORD", "qwer1234"); 
-define("DATABASE", "CDCtest");
 
-try{
-    $dbh = new pdo( 'mysql:host='. HOST .';dbname='. DATABASE .', USER, PASSWORD,
-                    array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    die(json_encode(array('outcome' => true)));
+<?php
+echo "<table style='border: solid 1px black;'>";
+echo "<tr><th>BatchNum</th><th>BatchName</th><th>SourceProduct</th><th>SourceIngredient</th></tr>";
+
+class TableRows extends RecursiveIteratorIterator {
+    function __construct($it) {
+        parent::__construct($it, self::LEAVES_ONLY);
+    }
+
+    function current() {
+        return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
+    }
+
+    function beginChildren() {
+        echo "<tr>";
+    }
+
+    function endChildren() {
+        echo "</tr>" . "\n";
+    }
 }
-catch(PDOException $ex){
-    die(json_encode(array('outcome' => false, 'message' => 'Unable to connect')));
+
+$servername = "localhost";
+$username = "DBadmin";
+$password = "qwer1234";
+$dbname = "CDCtest";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $conn->prepare("SELECT BatchNum, BatchName, SourceProduct, SourceIngredient FROM Batches");
+    $stmt->execute();
+
+    // set the resulting array to associative
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+        echo $v;
+    }
 }
-
-
-
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+$conn = null;
+echo "</table>";
 ?>
-
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>CDC Wash Run Entry</title>
-      <script src = includes/jquery.min.js></script>
-</head>
-<body>
-	
-<form id="WashForm">
-<h1>CDC Wash Run Entry</h2>
-<label Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
-<label for="DateTimeCode">DateTimeCode</label>
-<input name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required><br>
-</form>
-	
-	
-</body>
-</html>
