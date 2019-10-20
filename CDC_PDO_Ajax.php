@@ -42,27 +42,24 @@ echo "</table>";
   
   
 <?php
-$q = intval($_GET['q']);
-$sql="SELECT * FROM Containers WHERE ID = '".$q."'";
-$result = $mysqli->query($sql);
-echo "<table>
-<tr>
-<th>ID</th>
-<th>ContainerName</th>
-<th>ContainerVolume</th>
-<th>Description</th>
-</tr>";
-while ($row = mysqli_fetch_array($result)) {
-    echo "<tr>";
-    echo "<td>" . $row['id'] . "</td>";
-    echo "<td>" . $row['ContainerName'] . "</td>";
-    echo "<td>" . $row['ContainerVolume'] . "</td>";
-    echo "<td>" . $row['Description'] . "</td>";
-    echo "</tr>";
+$db = new Database;
+
+$db->prepare('SELECT BatchNum, BatchName, SourceProduct, SourceIngredient FROM Batches WHERE BatchNum = ?');
+$db->execute($_POST['batchNum']);
+
+$data = new stdClass;
+$status = 'failed';
+if ($row = $db->fetchObject() ) {
+    $data = $row;
+    $status = 'success';
 }
-echo "</table>";
-?>
+
+header('Content-Type: application/json');
+echo json_encode([
+    'status' => $status,
+    'data' => $data
+    ]);
 
  </body>
 </html>
-© 2019 GitHub, Inc.
+
