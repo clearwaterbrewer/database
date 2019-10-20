@@ -1,7 +1,6 @@
 <?php 
-require_once('includes/psl-configPDO.php');
-
-$db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+include_once 'includes/db_connect_PDO.php'; 
+$db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $db->prepare("SELECT BatchNum, BatchName FROM Batches");
 $db->execute();
 ?>
@@ -37,15 +36,12 @@ $db->execute();
 <script>
     // monitor for changes in drop-down
     $(document).ready(function() {  // technically not necessary if script is at the bottom, but I do it out of habit
-
       $('#choose-batch').on('change', function() {
         retrieveIngredient( $(this).val() );
       })
     });
-
     // send batchNum via ajax
     function retrieveIngredient(batchNumber) {
-
       $.post(
         "CDC_Ajax_PDO.php",       // where to send data
         {batchNum: batchNumber},  // parameters to send {varname: value}
@@ -58,7 +54,6 @@ $db->execute();
         }
       );
     }
-
     // put results into page
     function populateForm(data) {
       $('#batch-name').val(data.BatchName);
