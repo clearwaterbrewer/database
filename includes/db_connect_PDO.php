@@ -9,11 +9,5 @@ catch(PDOException $ex){
     die(json_encode(array('outcome' => false, 'message' => 'Unable to connect')));
 }
 $dbh = null;
-
-
-
-
-
-
-
+?>
 
