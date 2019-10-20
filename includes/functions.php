@@ -1,5 +1,5 @@
 <?php
-
+// Gets "HOST", "USER", "PASSWORD", "DATABASE", "CAN_REGISTER", "DEFAULT_ROLE", and "SECURE" string values used below
 include_once 'psl-config.php';
 
 function sec_session_start() {
