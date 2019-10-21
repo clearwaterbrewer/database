@@ -21,4 +21,5 @@ if(!empty($_POST)){
       }
 exit;
 } 
+echo "$_POST Empty";
 ?>
