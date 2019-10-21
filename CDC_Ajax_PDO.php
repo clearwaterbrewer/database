@@ -5,7 +5,7 @@ $sth = $db->prepare('SELECT BatchName, SourceProduct, SourceIngredient FROM Batc
 
 $sth->bindParam(':BatchNum', $BatchNum, PDO::PARAM_INT);
 
-$sth->execute();
+$sth->execute($_POST['BatchNum']);
 
 $data = new stdClass;
 $status = 'failed';
