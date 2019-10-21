@@ -2,7 +2,7 @@
 require_once('includes/psl-configPDO.php');
 $db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $db->prepare("SELECT BatchNum, BatchName FROM Batches");
-$db->execute();
+//$db->execute();
 ?>
 <!DOCTYPE HTML>
 <html class="supernova"><head>
