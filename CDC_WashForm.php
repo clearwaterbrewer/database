@@ -45,7 +45,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
        <div class="form-input-wide">
        <label for="DateTimeCode">DateTimeCode</label>
-          <input type="text" class="form-control" size="20" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
+          <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
         <label for="choose-batch">Choose a Batch</label>
 	  <select class='form-dropdown' id='choose-batch'>
           <?php while($row = $getBatchNum->fetchObject()): ?>
@@ -89,25 +89,25 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
          <label for="StartColl">Collection Start Time</label>
-          <input type="text" class="form-control" size="20" id="StartColl" name="StartColl" value="" >
+          <input type="text" class="form-control" id="StartColl" name="StartColl" value="" >
          <label for="StopColl">Collection Stop Time</label>
-          <input type="text" class="form-control" size="20" id="StopColl" name="StopColl" value="" >
+          <input type="text" class="form-control" id="StopColl" name="StopColl" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="WGCollected">WG Collected</label>
-          <input type="text" class="form-control" size="20" id="WGCollected" name="WGCollected" value="" >
+          <input type="text" class="form-control" id="WGCollected" name="WGCollected" value="" >
         <label for="ProofCollected">Proof Collected</label>
-          <input type="text" class="form-control" size="20" id="ProofCollected" name="ProofCollected" value="" >
+          <input type="text" class="form-control" id="ProofCollected" name="ProofCollected" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="PGCollected">PG Collected</label>
-          <input type="text" class="form-control" size="20" id="PGCollected" name="PGCollected" value="" readonly>
+          <input type="text" class="form-control" id="PGCollected" name="PGCollected" value="" readonly>
         <label  for="PGEfficiency">PG Efficiency</label>
-          <input type="text" class="form-control" size="20" id="PGEfficiency" name="PGEfficiency" value="" readonly>
+          <input type="text" class="form-control" id="PGEfficiency" name="PGEfficiency" value="" readonly>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -121,9 +121,9 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="StartProof">Start Proof</label>
-          <input type="text" class="form-control" size="20" id="StartProof" name="StartProof" value="" >
+          <input type="text" class="form-control" id="StartProof" name="StartProof" value="" >
         <label for="StopProof">Stop Proof</label>
-          <input type="text" class="form-control" size="20" id="StopProof" name="StopProof" value="" >
+          <input type="text" class="form-control" id="StopProof" name="StopProof" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
@@ -145,17 +145,17 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="WG_existing">WG existing</label>
-          <input type="text" class="form-control" size="20" id="WG_existing" name="WG_existing" value="" >
+          <input type="text" class="form-control" id="WG_existing" name="WG_existing" value="" >
         <label for="WG_resulting">WG Resulting</label>
-          <input type="text" class="form-control" size="20" id="WG_resulting" name="WG_resulting" value="" >
+          <input type="text" class="form-control" id="WG_resulting" name="WG_resulting" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="PG_existing">PG Existing</label>
-          <input type="text" class="form-control" size="20" id="PG_existing" name="PG_existing" value="" >
+          <input type="text" class="form-control" id="PG_existing" name="PG_existing" value="" >
         <label for="PG_resulting">PG Resulting</label>
-          <input type="text" class="form-control" size="20" id="PG_resulting" name="PG_resulting" value="" >
+          <input type="text" class="form-control" id="PG_resulting" name="PG_resulting" value="" >
         </div>
     </li>
   </ul>
