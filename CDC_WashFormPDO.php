@@ -1,7 +1,6 @@
 <?php
 require_once('includes/psl-configPDO.php');
 include_once 'includes/functions.php';
-sec_session_start();
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
 $getBatchNum->execute();
@@ -11,6 +10,7 @@ $getDestinationContainer = $pdo->prepare("SELECT id, ContainerName FROM Containe
 $getDestinationContainer->execute();
 $getDestinationProduct = $pdo->prepare("SELECT id, ProductName FROM Products ORDER by id");
 $getDestinationProduct->execute();
+sec_session_start();
 ?>
 
 <!DOCTYPE HTML>
