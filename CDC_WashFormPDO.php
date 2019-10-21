@@ -113,21 +113,17 @@ $getDestinationProduct->execute();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-label form-label-top form-label-auto">
-        <label for="WGCollected">WG Collected</label>>
+        <label for="WGCollected">WG Collected</label>
           <input type="text" class="form-control" size="20" id="WGCollected" name="WGCollected" value="" >
         <label for="ProofCollected">Proof Collected</label>
           <input type="text" class="form-control" size="20" id="ProofCollected" name="ProofCollected" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="PGCollected">PG Collected</label>
-        <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" id="PGCollected" name="PGCollected" value="" >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="PGEfficiency">PG Efficiency</label>
-        <div class="form-input-wide">
+        <div class="form-label form-label-top form-label-auto">
+        <label for="PGCollected">PG Collected</label>
+          <input type="text" class="form-control" size="20" id="PGCollected" name="PGCollected" value="" readonly>
+        <label  for="PGEfficiency">PG Efficiency</label>
           <input type="text" class="form-control" size="20" id="PGEfficiency" name="PGEfficiency" value="" readonly>
         </div>
     </li>
