@@ -3,7 +3,7 @@ require_once('includes/psl-configPDO.php');
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $db = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
 $db->execute();
-$getContainers = $pdo->prepare("SELECT id, ContinerName FROM Containers ORDER by ContainerName DESC");
+$getContainers = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName DESC");
 $getContainers->execute();
 ?>
 
