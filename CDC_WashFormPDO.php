@@ -1,5 +1,6 @@
 <?php
 require_once('includes/psl-configPDO.php');
+include_once('includes/db_connect.php');
 require_once('includes/functions.php');
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
@@ -26,7 +27,10 @@ sec_session_start();
  <script src = includes/jquery.min.js></script>
 </head>
 <body>
+
 <?php if (login_check($mysqli) == true) : ?>
+
+	
 <form class="jotform-form" accept-charset="utf-8" id="WashForm" name="washform" method="POST">
 <div class="form-all">
   <ul class="form-section page-section">
