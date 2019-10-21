@@ -104,11 +104,9 @@ $db->execute();
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="StartColl">Collection Start Time</label>
-        <div class="form-input-wide">
           <input type="text" class="form-control" size="20" id="StartColl" name="StartColl" value="" >
          <label class="form-label form-label-top form-label-auto" for="StopColl">Collection Stop Time</label>
           <input type="text" class="form-control" size="20" id="StopColl" name="StopColl" value="" >
-        </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="WGCollected">WG Collected</label>
