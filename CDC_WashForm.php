@@ -66,8 +66,14 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
+        <label for="WashName">Wash Name</label>
+          <input type="text" class="form-control" id="WashName" name="WashName" value="">
         <label for="SourceAmount">Source Amount</label>
           <input type="text" class="form-control" id="SourceAmount" name="SourceAmount" value="">
+        </div>
+    </li>
+    <li class="form-line" data-type="control_textbox">
+        <div class="form-input-wide">
         <label for="SourceContainer">Source Container</label>
 	  <select class='form-dropdown' id='SourceContainer' name="SourceContainer" >
           <?php while($row = $getSourceContainer->fetchObject()): ?>
