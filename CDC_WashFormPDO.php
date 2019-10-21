@@ -112,14 +112,10 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="WGCollected">WG Collected</label>
-        <div class="form-input-wide">
+        <div class="form-label form-label-top form-label-auto">
+        <label for="WGCollected">WG Collected</label>>
           <input type="text" class="form-control" size="20" id="WGCollected" name="WGCollected" value="" >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="ProofCollected">Proof Collected</label>
-        <div class="form-input-wide">
+        <label for="ProofCollected">Proof Collected</label>
           <input type="text" class="form-control" size="20" id="ProofCollected" name="ProofCollected" value="" >
         </div>
     </li>
@@ -132,7 +128,7 @@ $getDestinationProduct->execute();
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="PGEfficiency">PG Efficiency</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" id="PGEfficiency" name="PGEfficiency" value="" >
+          <input type="text" class="form-control" size="20" id="PGEfficiency" name="PGEfficiency" value="" readonly>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
