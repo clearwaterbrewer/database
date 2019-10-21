@@ -113,7 +113,7 @@ $db->execute();
 
       $.post(
         "CDC_Ajax_PDO.php",               // where to send data
-        {BatchNum: batchNumber},  // parameters to send {varname: value}
+        {BatchNum: BatchNumber},  // parameters to send {varname: value}
         function(result) {        // what to do with results
           if(result.message=='success') {
             populateForm(result.data);
