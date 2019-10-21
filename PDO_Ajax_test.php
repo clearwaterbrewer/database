@@ -4,7 +4,7 @@ $db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $BatchNum = 4;
 $sth = $db->prepare('SELECT BatchName
     FROM Batches
-    WHERE Batchnum = :BatchNum');
+    WHERE BatchNum = :BatchNum');
 $sth->bindParam(':BatchNum', $BatchNum, PDO::PARAM_INT);
 $sth->execute();
 ?>
