@@ -5,7 +5,7 @@ $sth = $db->prepare('SELECT BatchNum, BatchName, SourceProduct, SourceIngredient
 
 $BatchNum = 4;
 
-$sth->bind_param(":BatchNum", $BatchNum);
+$sth->bindParam(':BatchNum', $BatchNum, PDO::PARAM_INT);
 
 $sth->execute();
 
