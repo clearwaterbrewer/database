@@ -56,20 +56,20 @@ $db->execute();
         <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
         <div class="form-input-wide">
           
-          <input type='text' class='form-control' size='20' id='BatchName' name='BatchName' value="<?php echo $row['BatchName'];?>" />
+          <input type='text' class='form-control' size='20' id='choose-batch' name='BatchName' value="<?php echo $row['BatchName'];?>" />
       
       </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" id="SourceProduct" name="SourceProduct" value="" required>
+          <input type="text" class="form-control" size="20" id='choose-batch' name="SourceProduct" value="" required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" id="SourceIngredient" name="SourceIngredient" value="" required>
+          <input type="text" class="form-control" size="20" id='choose-batch' name="SourceIngredient" value="" required>
         </div>
     </li>
   </ul>
