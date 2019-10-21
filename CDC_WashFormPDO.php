@@ -1,8 +1,8 @@
 <?php
 require_once('includes/psl-configPDO.php');
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
-$db = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
-$db->execute();
+$getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
+$getBatchNum->execute();
 $getContainers = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
 $getContainers->execute();
 ?>
@@ -44,7 +44,7 @@ $getContainers->execute();
 
 
 		<select class='form-dropdown' id='choose-batch'>
-          <?php while($row = $db->fetchObject()): ?>
+          <?php while($row = $getBatchNum->fetchObject()): ?>
 // show both name and number in drop-down
 		<option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
           <?php endwhile; ?>
