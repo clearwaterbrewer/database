@@ -3,7 +3,7 @@ include_once('db_connect.php');
 require_once('includes/psl-configPDO.php');
 
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
-$sql = "INSERT INTO WashRuns (DateTimeCode, BatchNum, WashName, SourceAmount) VALUES (?,?,?,?)";
+$sql = "INSERT INTO WashRuns (DateTimeCode, BatchNum, WashName, SourceAmount) VALUES (:DateTimeCode, :BatchNum, :WashName, :SourceAmount)";
 if($insertWashRun = $pdo->prepare($sql)){
 
     $form = $_POST;
@@ -21,4 +21,3 @@ else{
     }
  
 ?>
-
