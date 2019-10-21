@@ -46,21 +46,21 @@ $getDestinationProduct->execute();
           <?php endwhile; ?>
           </select>
         <label for="BatchName">Batch Name</label>
-          <input type='text' class='form-control' size='20' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
+          <input type='text' class='form-control' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
        </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="SourceProduct">Source Product</label>
-          <input type="text" class="form-control" size="20" id="SourceProduct" name="SourceProduct" value="" required>
+          <input type="text" class="form-control" id="SourceProduct" name="SourceProduct" value="" required>
         <label for="SourceIngredient">Source Ingredient</label>
-          <input type="text" class="form-control" size="20" id="SourceIngredient" name="SourceIngredient" value="" required>
+          <input type="text" class="form-control" id="SourceIngredient" name="SourceIngredient" value="" required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="SourceAmount">Source Amount</label>
-          <input type="text" class="form-control" size="20" id="SourceAmount" name="SourceAmount" value="">
+          <input type="text" class="form-control" id="SourceAmount" name="SourceAmount" value="">
         <label for="SourceContainer">Source Container</label>
 	  <select class='form-dropdown' id='SourceContainer' name="SourceContainer" >
           <?php while($row = $getSourceContainer->fetchObject()): ?>
@@ -68,15 +68,15 @@ $getDestinationProduct->execute();
           <?php endwhile; ?>
           </select>
         <label for="AlcByVol">AlcByVol</label>
-          <input type="text" class="form-control" size="20" id="AlcByVol" name="AlcByVol" value="">
+          <input type="text" class="form-control" id="AlcByVol" name="AlcByVol" value="">
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="GallonsDistilled">Gallons Distilled</label>
-          <input type="text" class="form-control" size="20" id="GallonsDistilled" name="GallonsDistilled" value="">
+          <input type="text" class="form-control" id="GallonsDistilled" name="GallonsDistilled" value="">
         <label for="GallonsRemaining">Gallons Remaining</label>
-          <input type="text" class="form-control" size="20" id="GallonsRemaining" name="GallonsRemaining" value="">
+          <input type="text" class="form-control" id="GallonsRemaining" name="GallonsRemaining" value="">
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
