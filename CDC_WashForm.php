@@ -166,6 +166,13 @@ sec_session_start();
             <button type="submit" class="form-submit-button" id="submit_form" name="submit" value="Submit">Submit</button>
         </div>
       <div class="col-1 form-buttons-wrapper">
+         <a href="CDC_WashRuns.php" >
+           <button type="button" class="form-submit-button" >
+             Back to Wash Runs
+           </button>
+         </a>
+       </div>
+      <div class="col-1 form-buttons-wrapper">
          <a href="CDChome.php" >
            <button type="button" class="form-submit-button" >
              Home
