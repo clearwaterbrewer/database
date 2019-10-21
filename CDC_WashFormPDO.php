@@ -5,6 +5,8 @@ $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by B
 $getBatchNum->execute();
 $getContainers = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
 $getContainers->execute();
+$getDestinationContainer = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
+$getDestinationContainer->execute();
 ?>
 
 <!DOCTYPE HTML>
@@ -180,7 +182,7 @@ $getContainers->execute();
         <label class="form-label form-label-top form-label-auto" for="DestinationContainer">Destination Container</label>
         <div class="form-input-wide">
 		<select class='form-dropdown' id='DestinationContainer' name="DestinationContainer" >
-          <?php while($row = $getContainers->fetchObject()): ?>
+          <?php while($row = $getDestinationContainer->fetchObject()): ?>
 		<option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ContainerName ?></option>
           <?php endwhile; ?>
           </select>
