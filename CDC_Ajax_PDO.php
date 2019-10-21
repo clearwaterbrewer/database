@@ -3,7 +3,7 @@ require_once('includes/psl-configPDO.php');
 $db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $db->prepare('SELECT BatchName, SourceProduct, SourceIngredient FROM Batches WHERE BatchNum = ?');
 
-$BatchNum = 4;
+$BatchNum = $_POST['BatchNum'];
 
 $db->bindParam(1, $BatchNum, PDO::PARAM_INT);
 
