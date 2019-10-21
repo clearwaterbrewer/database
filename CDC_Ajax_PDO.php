@@ -5,14 +5,7 @@ $db->prepare('SELECT BatchName, SourceProduct, SourceIngredient FROM Batches WHE
 
 $BatchNum = 4;
 
-
-
-
-$db->bindParam($BatchNum, PDO::PARAM_INT);
-
-
-
-
+$db->bindParam(1, $BatchNum, PDO::PARAM_INT);
 
 $db->execute();
 
