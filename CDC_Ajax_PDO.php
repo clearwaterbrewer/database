@@ -11,7 +11,7 @@ $sth->execute();
 
 $data = new stdClass;
 $status = 'failed';
-if ($row = $db->fetchObject() ) {
+if ($row = $sth->fetchObject() ) {
     $data = $row;
     $status = 'success';
     }
