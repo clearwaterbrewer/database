@@ -6,7 +6,7 @@ $db->prepare('SELECT BatchName, SourceProduct, SourceIngredient FROM Batches WHE
 $db->execute($_POST['BatchNum']);
 $data = new stdClass;
 $status = 'failed';
-if ($row = $db->fetch_assoc() ) {
+if ($row = $db->fetchObject() ) {
     $data = $row;
     $status = 'success';
     }
