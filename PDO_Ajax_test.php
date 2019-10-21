@@ -1,5 +1,6 @@
 <?php
-/* Execute a prepared statement by binding a variable and value */
+require_once('includes/psl-configPDO.php');
+$db = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $BatchNum = 4;
 $sth = $dbh->prepare('SELECT BatchName
     FROM Batches
