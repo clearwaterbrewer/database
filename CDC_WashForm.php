@@ -171,8 +171,6 @@ sec_session_start();
              Back to Wash Runs
            </button>
          </a>
-       </div>
-      <div class="col-1 form-buttons-wrapper">
          <a href="CDChome.php" >
            <button type="button" class="form-submit-button" >
              Home
