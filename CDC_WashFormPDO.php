@@ -128,26 +128,18 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="Temp_C">Temp_C</label>
-        <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" id="Temp_C" name="Temp_C" value="" >
+        <div class="form-label form-label-top form-label-auto">
+        <label for="Temp_C">Temp_C</label>
+          <input type="text" class="form-control" size="10" id="Temp_C" name="Temp_C" value="" >
+        <label for="Distilled_pH">Distilled pH</label>
+          <input type="text" class="form-control" size="7" id="Distilled_pH" name="Distilled_pH" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="Distilled_pH">Distilled pH</label>
-        <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" id="Distilled_pH" name="Distilled_pH" value="" >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="StartProof">Start Proof</label>
-        <div class="form-input-wide">
+        <div class="form-label form-label-top form-label-auto">
+        <label for="StartProof">Start Proof</label>
           <input type="text" class="form-control" size="20" id="StartProof" name="StartProof" value="" >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="StopProof">Stop Proof</label>
-        <div class="form-input-wide">
+        <label for="StopProof">Stop Proof</label>
           <input type="text" class="form-control" size="20" id="StopProof" name="StopProof" value="" >
         </div>
     </li>
@@ -172,26 +164,18 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="WG_existing">WG existing</label>
-        <div class="form-input-wide">
+        <div class="form-label form-label-top form-label-auto">
+        <label for="WG_existing">WG existing</label>
           <input type="text" class="form-control" size="20" id="WG_existing" name="WG_existing" value="" >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="WG_resulting">WG Resulting</label>
-        <div class="form-input-wide">
+        <label for="WG_resulting">WG Resulting</label>
           <input type="text" class="form-control" size="20" id="WG_resulting" name="WG_resulting" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="PG_existing">PG Existing</label>
-        <div class="form-input-wide">
+        <div class="form-label form-label-top form-label-auto">
+        <label for="PG_existing">PG Existing</label>
           <input type="text" class="form-control" size="20" id="PG_existing" name="PG_existing" value="" >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="PG_resulting">PG Resulting</label>
-        <div class="form-input-wide">
+        <label for="PG_resulting">PG Resulting</label>
           <input type="text" class="form-control" size="20" id="PG_resulting" name="PG_resulting" value="" >
         </div>
     </li>
