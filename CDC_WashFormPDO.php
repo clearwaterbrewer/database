@@ -92,14 +92,10 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="GallonsDistilled">Gallons Distilled</label>
         <div class="form-input-wide">
+        <label for="GallonsDistilled">Gallons Distilled</label>
           <input type="text" class="form-control" size="20" id="GallonsDistilled" name="GallonsDistilled" value="">
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="GallonsRemaining">Gallons Remaining</label>
-        <div class="form-input-wide">
+        <label for="GallonsRemaining">Gallons Remaining</label>
           <input type="text" class="form-control" size="20" id="GallonsRemaining" name="GallonsRemaining" value="">
         </div>
     </li>
@@ -112,7 +108,7 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <div class="form-label form-label-top form-label-auto">
+        <div class="form-input-wide">
         <label for="WGCollected">WG Collected</label>
           <input type="text" class="form-control" size="20" id="WGCollected" name="WGCollected" value="" >
         <label for="ProofCollected">Proof Collected</label>
@@ -120,7 +116,7 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <div class="form-label form-label-top form-label-auto">
+        <div class="form-input-wide">
         <label for="PGCollected">PG Collected</label>
           <input type="text" class="form-control" size="20" id="PGCollected" name="PGCollected" value="" readonly>
         <label  for="PGEfficiency">PG Efficiency</label>
@@ -128,7 +124,7 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <div class="form-label form-label-top form-label-auto">
+        <div class="form-input-wide">
         <label for="Temp_C">Temp_C</label>
           <input type="text" class="form-control" size="10" id="Temp_C" name="Temp_C" value="" >
         <label for="Distilled_pH">Distilled pH</label>
@@ -136,7 +132,7 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <div class="form-label form-label-top form-label-auto">
+        <div class="form-input-wide">
         <label for="StartProof">Start Proof</label>
           <input type="text" class="form-control" size="20" id="StartProof" name="StartProof" value="" >
         <label for="StopProof">Stop Proof</label>
@@ -144,7 +140,7 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
-        <div class="form-label form-label-top form-label-auto">
+        <div class="form-input-wide">
         <label for="DestinationProduct">Destination Product</label>
 		<select class='form-dropdown' id='DestinationProduct' name="DestinationProduct" >
           <?php while($row = $getDestinationProduct->fetchObject()): ?>
@@ -160,7 +156,7 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <div class="form-label form-label-top form-label-auto">
+        <div class="form-input-wide">
         <label for="WG_existing">WG existing</label>
           <input type="text" class="form-control" size="20" id="WG_existing" name="WG_existing" value="" >
         <label for="WG_resulting">WG Resulting</label>
@@ -168,7 +164,7 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <div class="form-label form-label-top form-label-auto">
+        <div class="form-input-wide">
         <label for="PG_existing">PG Existing</label>
           <input type="text" class="form-control" size="20" id="PG_existing" name="PG_existing" value="" >
         <label for="PG_resulting">PG Resulting</label>
