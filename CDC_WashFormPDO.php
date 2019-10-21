@@ -56,7 +56,7 @@ $db->execute();
         <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
         <div class="form-input-wide">
           
-          <input type='text' class='form-control' size='20' name='BatchName' id='BatchName' value="<?php echo $row['BatchName'];?>" />
+          <input type='text' class='form-control' size='20' id='BatchName' name='BatchName' value="<?php echo $row['BatchName'];?>" />
       
       </div>
     </li>
@@ -77,7 +77,7 @@ $db->execute();
     <li class="form-line" data-type="control_text" >
       <div class="buttonrow">
         <div class="col-1 form-buttons-wrapper">
-            <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
+            <button type="submit" class="form-submit-button" id="submit_form" name="submit" value="Submit">Submit</button>
         </div>
       <div class="col-1 form-buttons-wrapper">
          <a href="CDChome.php" >
