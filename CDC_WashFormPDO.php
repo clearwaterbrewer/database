@@ -144,18 +144,14 @@ $getDestinationProduct->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="DestinationProduct">Destination Product</label>
-        <div class="form-input-wide">
+        <div class="form-label form-label-top form-label-auto">
+        <label for="DestinationProduct">Destination Product</label>
 		<select class='form-dropdown' id='DestinationProduct' name="DestinationProduct" >
           <?php while($row = $getDestinationProduct->fetchObject()): ?>
 		<option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ProductName ?></option>
           <?php endwhile; ?>
           </select>
-        </div>
-    </li>
-    <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="DestinationContainer">Destination Container</label>
-        <div class="form-input-wide">
+        <label for="DestinationContainer">Destination Container</label>
 		<select class='form-dropdown' id='DestinationContainer' name="DestinationContainer" >
           <?php while($row = $getDestinationContainer->fetchObject()): ?>
 		<option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ContainerName ?></option>
