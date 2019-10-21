@@ -3,7 +3,7 @@ require_once('includes/psl-configPDO.php');
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $db = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
 $db->execute();
-$getContainers = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName DESC");
+$getContainers = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
 $getContainers->execute();
 ?>
 
@@ -87,9 +87,9 @@ $getContainers->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="Container">Source Container</label>
+        <label class="form-label form-label-top form-label-auto" for="SourceContainer">Source Container</label>
         <div class="form-input-wide">
-		<select class='form-dropdown' id='Container'>
+		<select class='form-dropdown' id='SourceContainer' name="SourceContainer" >
           <?php while($row = $getContainers->fetchObject()): ?>
 		<option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ContainerName ?></option>
           <?php endwhile; ?>
