@@ -1,11 +1,9 @@
 <?php
-include_once('db_connect.php');
-require_once('includes/psl-configPDO.php');
+require_once('db_connect_PDO.php');
 
 if(!empty($_POST)){
-  $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
   $sql = "INSERT INTO WashRuns (DateTimeCode, BatchNum, WashName, SourceAmount) VALUES (:DateTimeCode, :BatchNum, :WashName, :SourceAmount)";
-  if($insertWashRun = $pdo->prepare($sql)){
+  if($insertWashRun = $dbh->prepare($sql)){
   
       $DateTimeCode = $_POST[ 'DateTimeCode' ];                    
       $BatchNum= $_POST[ 'BatchNum' ];                   
