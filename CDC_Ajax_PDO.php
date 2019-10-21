@@ -16,8 +16,4 @@ echo json_encode([
     'data' => $data
     ]);
 ?>
-  
- <body>
- </body>
-</html>
 
