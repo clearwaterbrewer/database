@@ -103,10 +103,10 @@ $db->execute();
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <div class="form-input-wide">
-         <label class="form-label form-label-top form-label-auto" for="StartColl">Collection Start Time</label>
+        <div class="form-label form-label-top form-label-auto">
+         <label for="StartColl">Collection Start Time</label>
           <input type="text" class="form-control" size="20" id="StartColl" name="StartColl" value="" >
-         <label class="form-label form-label-top form-label-auto" for="StopColl">Collection Stop Time</label>
+         <label for="StopColl">Collection Stop Time</label>
           <input type="text" class="form-control" size="20" id="StopColl" name="StopColl" value="" >
         </div>
     </li>
