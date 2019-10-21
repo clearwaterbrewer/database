@@ -43,7 +43,8 @@ $db->execute();
 
 		<select class='form-dropdown' id='choose-batch'>
           <?php while($row = $db->fetchObject()): ?>
-            <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
+// show both name and number in drop-down
+		<option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
           <?php endwhile; ?>
           </select>
   
