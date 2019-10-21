@@ -36,49 +36,33 @@ $getDestinationProduct->execute();
       </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="DateTimeCode">DateTimeCode</label>
-        <div class="form-input-wide">
+       <div class="form-input-wide">
+       <label for="DateTimeCode">DateTimeCode</label>
           <input type="text" class="form-control" size="20" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
-        </div>
-    </li>
-    <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="choose-batch">Choose a Batch</label>
-        <div class="form-input-wide">
-	<select class='form-dropdown' id='choose-batch'>
-        <?php while($row = $getBatchNum->fetchObject()): ?>
-	<option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
-        <?php endwhile; ?>
-        </select>
+        <label for="choose-batch">Choose a Batch</label>
+	  <select class='form-dropdown' id='choose-batch'>
+          <?php while($row = $getBatchNum->fetchObject()): ?>
+	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
+          <?php endwhile; ?>
+          </select>
+        <label for="BatchName">Batch Name</label>
+          <input type='text' class='form-control' size='20' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
        </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
         <div class="form-input-wide">
-           <input type='text' class='form-control' size='20' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
-       </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
-        <div class="form-input-wide">
+        <label for="SourceProduct">Source Product</label>
           <input type="text" class="form-control" size="20" id="SourceProduct" name="SourceProduct" value="" required>
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
-        <div class="form-input-wide">
+        <label for="SourceIngredient">Source Ingredient</label>
           <input type="text" class="form-control" size="20" id="SourceIngredient" name="SourceIngredient" value="" required>
         </div>
     </li>
-        <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="SourceAmount">Source Amount</label>
+    <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
+        <label for="SourceAmount">Source Amount</label>
           <input type="text" class="form-control" size="20" id="SourceAmount" name="SourceAmount" value="">
-        </div>
-    </li>
-    <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="SourceContainer">Source Container</label>
-        <div class="form-input-wide">
-		<select class='form-dropdown' id='SourceContainer' name="SourceContainer" >
+        <label for="SourceContainer">Source Container</label>
+	  <select class='form-dropdown' id='SourceContainer' name="SourceContainer" >
           <?php while($row = $getSourceContainer->fetchObject()): ?>
 		<option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ContainerName ?></option>
           <?php endwhile; ?>
