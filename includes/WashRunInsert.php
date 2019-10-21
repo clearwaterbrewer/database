@@ -7,7 +7,7 @@ $sql = "INSERT INTO WashRuns (DateTimeCode) VALUES (?)";
 if($insertWashRun = $pdo->prepare($sql)){
     $insertWashRun->bindParam(':$DateTimeCode', $_POST['DateTimeCode'], PDO::PARAM_STR);
 
-    $insertWashRun->execute();
+    $data = $insertWashRun->execute();
         
     header('Location: ../CDC_WashRuns.php');
     } 
