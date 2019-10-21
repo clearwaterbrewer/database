@@ -67,11 +67,7 @@ $getDestinationProduct->execute();
 		<option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ContainerName ?></option>
           <?php endwhile; ?>
           </select>
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="AlcByVol">AlcByVol</label>
-        <div class="form-input-wide">
+        <label for="AlcByVol">AlcByVol</label>
           <input type="text" class="form-control" size="20" id="AlcByVol" name="AlcByVol" value="">
         </div>
     </li>
