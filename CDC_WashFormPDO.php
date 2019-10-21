@@ -176,10 +176,14 @@ $getContainers->execute();
           <input type="text" class="form-control" size="20" id="DestinationProduct" name="DestinationProduct" value="" >
         </div>
     </li>
-    <li class="form-line" data-type="control_textbox">
+    <li class="form-line" data-type="control_dropdown">
         <label class="form-label form-label-top form-label-auto" for="DestinationContainer">Destination Container</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" id="DestinationContainer" name="DestinationContainer" value="" >
+		<select class='form-dropdown' id='DestinationContainer' name="DestinationContainer" >
+          <?php while($row = $getContainers->fetchObject()): ?>
+		<option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ContainerName ?></option>
+          <?php endwhile; ?>
+          </select>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
