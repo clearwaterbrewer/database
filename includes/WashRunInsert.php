@@ -1,5 +1,5 @@
 <?php
-require_once('db_connect_PDO.php');
+require_once('db_connect.php');
 
 if(!empty($_POST)){
   $sql = "INSERT INTO WashRuns (DateTimeCode, BatchNum, WashName, SourceAmount) VALUES (:DateTimeCode, :BatchNum, :WashName, :SourceAmount)";
