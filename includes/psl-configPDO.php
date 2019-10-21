@@ -4,8 +4,8 @@ $username = "DBadmin";
 $password = "qwer1234"; 
 $dbname = "CDCtest";
 
-define("CAN_REGISTER", "any");
-define("DEFAULT_ROLE", "member");
-define("SECURE", FALSE);    // For development purposes only!!!!
+$CAN_REGISTER = "any";
+$DEFAULT_ROLE = "member";
+$SECURE = FALSE;    // For development purposes only!!!!
 
 ?>
