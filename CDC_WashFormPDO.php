@@ -44,27 +44,18 @@ $getDestinationProduct->execute();
     <li class="form-line" data-type="control_dropdown">
         <label class="form-label form-label-top form-label-auto" for="choose-batch">Choose a Batch</label>
         <div class="form-input-wide">
-
-
-
-		<select class='form-dropdown' id='choose-batch'>
-          <?php while($row = $getBatchNum->fetchObject()): ?>
-// show both name and number in drop-down
-		<option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
-          <?php endwhile; ?>
-          </select>
-  
-  
- 
+	<select class='form-dropdown' id='choose-batch'>
+        <?php while($row = $getBatchNum->fetchObject()): ?>
+	<option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
+        <?php endwhile; ?>
+        </select>
        </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="BatchName">Batch Name</label>
         <div class="form-input-wide">
-          
-          <input type='text' class='form-control' size='20' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
-      
-      </div>
+           <input type='text' class='form-control' size='20' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
+       </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
@@ -82,12 +73,6 @@ $getDestinationProduct->execute();
         <label class="form-label form-label-top form-label-auto" for="SourceAmount">Source Amount</label>
         <div class="form-input-wide">
           <input type="text" class="form-control" size="20" id="SourceAmount" name="SourceAmount" value="">
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <label class="form-label form-label-top form-label-auto" for="SourceContainer">Source Container</label>
-        <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" id="SourceContainer" name="SourceContainer" value="">
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
