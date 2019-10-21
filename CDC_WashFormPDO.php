@@ -7,6 +7,8 @@ $getSourceContainer = $pdo->prepare("SELECT id, ContainerName FROM Containers OR
 $getSourceContainer->execute();
 $getDestinationContainer = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
 $getDestinationContainer->execute();
+$getDestinationProduct = $pdo->prepare("SELECT id, ProductName FROM Products ORDER by id");
+$getDestinationProduct->execute();
 ?>
 
 <!DOCTYPE HTML>
@@ -172,10 +174,14 @@ $getDestinationContainer->execute();
           <input type="text" class="form-control" size="20" id="StopProof" name="StopProof" value="" >
         </div>
     </li>
-    <li class="form-line" data-type="control_textbox">
+    <li class="form-line" data-type="control_dropdown">
         <label class="form-label form-label-top form-label-auto" for="DestinationProduct">Destination Product</label>
         <div class="form-input-wide">
-          <input type="text" class="form-control" size="20" id="DestinationProduct" name="DestinationProduct" value="" >
+		<select class='form-dropdown' id='DestinationProduct' name="DestinationProduct" >
+          <?php while($row = $getDestinationProduct->fetchObject()): ?>
+		<option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ProductName ?></option>
+          <?php endwhile; ?>
+          </select>
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
