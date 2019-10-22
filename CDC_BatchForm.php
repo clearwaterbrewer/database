@@ -49,8 +49,8 @@ sec_session_start();
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="SourceProduct">Source Product</label>
         <div class="form-input-wide">
+        <label for="SourceProduct">Source Product</label>
         <?php
           $sql = " SELECT ProductName FROM Products ORDER by ProductName";
           $result = $mysqli->query($sql);
@@ -61,11 +61,7 @@ sec_session_start();
           }
           echo "</select>";
         ?>
-        </div>
-    </li>
-    <li class="form-line" data-type="control_dropdown">
-        <label class="form-label form-label-top form-label-auto" for="SourceIngredient">Source Ingredient</label>
-        <div class="form-input-wide">
+        <label for="SourceIngredient">Source Ingredient</label>
         <?php
           $sql = " SELECT IngredientName FROM Ingredients ORDER by IngredientName";
           $result = $mysqli->query($sql);
