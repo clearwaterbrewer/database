@@ -73,7 +73,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="BottleProof">Proof</label>
-          <input type="number" pattern="^\d*(\.\d{0,1})?$" size="5" class="form-control" id="BottleProof" name="BottleProof" value="">
+          <input input type="text" inputmode="numeric" pattern="^\d*(\.\d{0,1})?$" size="5" class="form-control" id="BottleProof" name="BottleProof" value="">
         <label for="BarrelProof">Barrel Proof</label>
           <input type="number" pattern="^\d*(\.\d{0,1})?$" size="5" class="form-control" id="BarrelProof" name="BarrelProof" value="">
         <label for="PreviousBatch">Previous Batch</label>
