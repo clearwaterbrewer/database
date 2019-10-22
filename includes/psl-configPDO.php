@@ -9,9 +9,8 @@ $DEFAULT_ROLE = "member";
 $SECURE = FALSE;    // For development purposes only!!!!
 
 $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// does not work with this-> $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-//$dbh = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 ?>
