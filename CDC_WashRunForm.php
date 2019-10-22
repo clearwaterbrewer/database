@@ -181,16 +181,23 @@ sec_session_start();
   <script>
 
     // monitor for changes in drop-down
-    $(document).ready(function() {  // technically not necessary if script is at the bottom, but I do it out of habit
+    $(document).ready(function() {  
 
       $('#choose-batch').on('change', function() {
         retrieveItem( $(this).val() );
       })
     });
 
+    // monitor for changes in ProofCollected
+    $(document).ready(function() {  
+
+      $('#ProofCollected').on('focusout', function() {
+        calculatePG();
+      })
+    });
+
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
-
       $.post(
         "CDC_Ajax_PDO.php",               // where to send data
         {BatchNum: BatchNumber},  // parameters to send {varname: value}
@@ -198,17 +205,29 @@ sec_session_start();
           if(result.status=='success') {
             populateForm(result.data);
           } else {
-            alert ('oops, failed');
+            alert ('oops, failed to retrieve batchinfo');
           }
         }
       );
     }
+
+    function calculatePG() {
+      var WGCollected = parseInt(document.getElementById('WGCollected').value);
+      var ProofCollected = parseInt(document.getElementById('ProofCollected').value);
+      var PGCollected = floatval(WGCollected) * floatval(ProofCollected) /100;
+      var PGCollected = num_format(PGCollected, 2);
+      document.getElementById('PGCollected').value = PGCollected;
+    }
+  
 
     // put results into page
     function populateForm(data) {
       $('#BatchName').val(data.BatchName);
       $('#SourceProduct').val(data.SourceProduct);
       $('#SourceIngredient').val(data.SourceIngredient);
+    }
+    function populatePG(data) {
+      $('#PGCollected').val(data.PGCollected);
     }
   </script>
 
