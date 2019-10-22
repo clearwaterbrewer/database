@@ -78,6 +78,18 @@ sec_session_start();
         ?>
         </div>
     </li>
+    <li class="form-line" data-type="control_textbox">
+        <div class="form-input-wide">
+        <label for="BottleProof">Proof</label>
+          <input type="text" class="form-control" id="BottleProof" name="BottleProof" value="" required >
+        <label for="BarrelProof">Barrel Proof</label>
+          <input type="text" class="form-control" id="BarrelProof" name="BarrelProof" value="" required >
+        <label for="PreviousBatch">Previous Batch</label>
+          <input type="text" class="form-control" id="PreviousBatch" name="PreviousBatch" value="" required >
+        <label for="UPC">UPC</label>
+          <input type="text" class="form-control" id="UPC" name="UPC" value="" required >
+        </div>
+    </li>
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text" >
       <div class="buttonrow">
