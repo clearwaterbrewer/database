@@ -345,7 +345,7 @@ CREATE TABLE Batches (
     BarrelProof DECIMAL(4.1),
     PreviousBatch varchar(30),
     UPC varchar(30),
-    CurrentBatch DECIMAL(1)
+    CurrentBatch DECIMAL(1) DEFAULT 1
 );
 
 INSERT INTO Batches 
