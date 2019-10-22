@@ -1,7 +1,6 @@
 <?php
 require_once('includes/psl-configPDO.php');
 require_once('includes/functions.php');
-$mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
 $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
 $getBatchNum->execute();
 $getSourceContainer = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
