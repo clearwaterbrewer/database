@@ -178,6 +178,25 @@ SELECT * from Vendors;
 
 
 
+DROP TABLE IF EXISTS Distributors;
+CREATE TABLE Distributors (
+    DistributorsID INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    DistributorsName varchar(30) NOT NULL,
+    DistributorsAddress varchar(60),
+    DistributorsPhone varchar(30)
+);
+
+
+INSERT INTO Distributors 
+    (DistributorsName, DistributorsAddress, DistributorsPhone) 
+VALUES 
+    ("Gift Shop","",""),
+    ("Trotta Wine and Spirits","","");
+
+
+
+
+
 DROP TABLE IF EXISTS Products;
 CREATE TABLE Products (
     id INT(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
