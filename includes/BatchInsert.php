@@ -18,7 +18,7 @@ if($insertBatch = $pdo->prepare($sql)){
     
     $result = $insertBatch->execute(array(':BatchName'=>$BatchName, ':ClassType'=>$ClassType, ':SourceProduct'=>$SourceProduct, ':SourceIngredient'=>$SourceIngredient, ':BottleProof'=>$BottleProof, ':BarrelProof'=>$BarrelProof, ':PreviousBatch'=>$PreviousBatch, ':UPC'=>$UPC));
         
-    header('Location: ../CDC_Batches.php');
+//    header('Location: ../CDC_Batches.php');
     $insertBatch = null;
 
     } 
