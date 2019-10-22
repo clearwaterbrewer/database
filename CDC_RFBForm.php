@@ -48,8 +48,6 @@ sec_session_start();
 	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
           <?php endwhile; ?>
           </select>
-        <label for="BatchNum">Batch Number</label>
-          <input type='text' class='form-control' id="BatchNum" name="BatchNum" value="" />
         <label for="BatchName">Batch Name</label>
           <input type='text' class='form-control' id="BatchName" name="BatchName" value="" />
        </div>
