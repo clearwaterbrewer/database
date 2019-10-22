@@ -1,6 +1,6 @@
 <?php
-require_once('includes/psl-configPDO.php');
-require_once('includes/functions.php');
+require_once('includes/psl-configPDO.php'); //db info
+require_once('includes/functions.php'); //security functions
 $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
 $getBatchNum->execute();
 $getSourceContainer = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
