@@ -17,11 +17,12 @@ if(!empty($_POST)){
       $result = $insertWashRun->execute(array(':DateTimeCode'=>$DateTimeCode, ':BatchNum'=>$BatchNum, ':BottlesRemoved'=>$BottlesRemoved, ':BottlesRemaining'=>$BottlesRemaining, ':CaseNumbers'=>$CaseNumbers, ':Destination'=>$Destination, ':InvoiceNumber'=>$InvoiceNumber));
           
     header('Location: ../CDC_RemoveFromBond.php');
-    } 
-else{
-    echo "ERROR: Could not prepare query: $sql. " . $mysqli->error;
-    }
- 
+      } 
+  else{
+      echo "ERROR: Could not prepare query: $sql. " . $pdo->error;
+      }
+exit;
+} 
+echo "$_POST Empty";
 ?>
-
 
