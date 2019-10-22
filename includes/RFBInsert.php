@@ -6,12 +6,12 @@ if(!empty($_POST)){
                                VALUES (:DateTimeCode, :BatchNum, :BottlesRemoved, :BottlesRemaining, :CaseNumbers, :Destination, :InvoiceNumber)";
   if($insertRFB = $pdo->prepare($sql)){
       $DateTimeCode = $_POST[ 'DateTimeCode' ];                    
-      $BatchNum= $_POST[ 'BatchNum' ];                   
-      $BottlesRemoved= $_POST[ 'BottlesRemoved' ];                 
-      $BottlesRemaining= $_POST[ 'BottlesRemaining' ];                 
-      $CaseNumbers= $_POST[ 'CaseNumbers' ];                 
-      $Destination= $_POST[ 'Destination' ];                 
-      $InvoiceNumber= $_POST[ 'InvoiceNumber' ];                 
+      $BatchNum = $_POST[ 'BatchNum' ];                   
+      $BottlesRemoved = $_POST[ 'BottlesRemoved' ];                 
+      $BottlesRemaining = $_POST[ 'BottlesRemaining' ];                 
+      $CaseNumbers = $_POST[ 'CaseNumbers' ];                 
+      $Destination = $_POST[ 'Destination' ];                 
+      $InvoiceNumber = $_POST[ 'InvoiceNumber' ];                 
   
       $result = $insertRFB->execute(array(':DateTimeCode'=>$DateTimeCode, ':BatchNum'=>$BatchNum, ':BottlesRemoved'=>$BottlesRemoved, ':BottlesRemaining'=>$BottlesRemaining, ':CaseNumbers'=>$CaseNumbers, ':Destination'=>$Destination, ':InvoiceNumber'=>$InvoiceNumber));
 
