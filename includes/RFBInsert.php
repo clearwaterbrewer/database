@@ -14,8 +14,8 @@ if(!empty($_POST)){
       $InvoiceNumber= $_POST[ 'InvoiceNumber' ];                 
   
       $result = $insertRFB->execute(array(':DateTimeCode'=>$DateTimeCode, ':BatchNum'=>$BatchNum, ':BottlesRemoved'=>$BottlesRemoved, ':BottlesRemaining'=>$BottlesRemaining, ':CaseNumbers'=>$CaseNumbers, ':Destination'=>$Destination, ':InvoiceNumber'=>$InvoiceNumber));
- 
-    header('Location: ../CDC_RemoveFromBond.php');
+      var_dump($result);
+    
       } 
   else{
       echo "ERROR: Could not prepare query: $sql. " . $pdo->error;
