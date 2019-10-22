@@ -204,7 +204,7 @@ CREATE TABLE Products (
     ProductDescription varchar(50),
     ProductValue1 varchar(30),
     ProductValue2 varchar(30),
-    ProductValue3 DECIMAL(4.1)
+    ProductValue3 DECIMAL(4,1)
 );
 
 INSERT INTO Products 
@@ -240,7 +240,7 @@ CREATE TABLE Ingredients (
     IngredientDescription varchar(50),
     IngredientValue1 varchar(30),
     IngredientValue2 varchar(30),
-    IngredientValue3 DECIMAL(4.1)
+    IngredientValue3 DECIMAL(4,1)
 );
 
 INSERT INTO Ingredients 
@@ -260,7 +260,7 @@ DROP TABLE IF EXISTS Containers;
 CREATE TABLE Containers (
     id INT(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     ContainerName varchar(18) NOT NULL UNIQUE,
-    ContainerVolume DECIMAL(4.0) NOT NULL
+    ContainerVolume DECIMAL(4,0) NOT NULL
 );
 
 INSERT INTO Containers 
@@ -341,8 +341,8 @@ CREATE TABLE Batches (
     ClassType varchar(30),
     SourceProduct varchar(30),
     SourceIngredient varchar(30),
-    BottleProof DECIMAL(4.1),
-    BarrelProof DECIMAL(4.1),
+    BottleProof DECIMAL(4,1),
+    BarrelProof DECIMAL(4,1),
     PreviousBatch varchar(30),
     UPC varchar(30),
     CurrentBatch DECIMAL(1) DEFAULT 1
