@@ -10,6 +10,11 @@ if($stmt = $mysqli->prepare($sql)){
     $ClassType = $_POST['ClassType'];
     $SourceProduct = $_POST['SourceProduct'];
     $SourceIngredient = $_POST['SourceIngredient'];
+    $BottleProof = $_POST['BottleProof'];
+    $BarrelProof = $_POST['BarrelProof'];
+    $PreviousBatch = $_POST['PreviousBatch'];
+    $UPC = $_POST['UPC'];
+    $CurrentBatch = '1';
     $stmt->execute();
         
     header('Location: ../CDC_Batches.php');
