@@ -55,19 +55,19 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="ClassType">Class Type</label>
-          <input type="text" class="form-control" id="ClassType" name="ClassType" value="" required>
+          <input type="text" class="form-control" id="ClassType" name="ClassType" value="" required >
         <label for="BottleProof">Proof</label>
-          <input type="text" class="form-control" id="BottleProof" name="BottleProof" value="" required>
+          <input type="text" class="form-control" id="BottleProof" name="BottleProof" value="" required >
         <label for="UPC">UPC</label>
-          <input type="text" class="form-control" id="UPC" name="UPC" value="" required>
+          <input type="text" class="form-control" id="UPC" name="UPC" value="" required >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="BottlesRemoved">Bottles Removed</label>
-          <input type="text" class="form-control" id="BottlesRemoved" name="BottlesRemoved" value="" required>
+          <input type="text" class="form-control" id="BottlesRemoved" name="BottlesRemoved" value="" required >
         <label for="BottlesRemaining">Bottles Remaining</label>
-          <input type="text" class="form-control" id="BottlesRemaining" name="BottlesRemaining" value="" required>
+          <input type="text" class="form-control" id="BottlesRemaining" name="BottlesRemaining" value="" required >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
