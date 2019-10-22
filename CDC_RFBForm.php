@@ -94,7 +94,7 @@ sec_session_start();
     <li class="form-line" data-type="control_text" >
       <div class="buttonrow">
             <button type="submit" class="form-submit-button" id="submit_form" name="submit" value="Submit">Submit</button>
-          <a href="CDC_RemoveFromBond.php"><button type="button" class="form-submit-button">Back to Wash Runs</button></a>
+          <a href="CDC_RemoveFromBond.php"><button type="button" class="form-submit-button">Back to RFB</button></a>
           <a href="CDChome.php"><button type="button" class="form-submit-button">Home</button></a>
           <a href="includes/logout.php"><button type="button" class="form-submit-button">Logout</button></a>
       </div>
