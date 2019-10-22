@@ -1,6 +1,7 @@
 <?php
 // Gets "HOST", "USER", "PASSWORD", "DATABASE", "CAN_REGISTER", "DEFAULT_ROLE", and "SECURE" string values used below from  includes/psl-config.php
 include_once 'psl-config.php';
+$mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
 
 function sec_session_start() {
     $session_name = 'sec_session_id';   // Set a custom session name 
