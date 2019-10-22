@@ -39,14 +39,19 @@ sec_session_start();
 	  <div class="column">Date</div>
 	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
+	  <div class="column">Product</div>
+	  <div class="column">Class/Type</div>
+	  <div class="column">Proof</div>
 	  <div class="column">Bottles Removed</div>
 	  <div class="column">Bottles Remain</div>
 	  <div class="column">Case Numbers</div>
 	  <div class="column">Destination</div>
 	  <div class="column">Invoice</div>
+	  <div class="column">Notes</div>
 	</div>
 <?php 
-$sql="SELECT * FROM RemovedFromBond WHERE DateTimeCode between (CURDATE() - INTERVAL 2 MONTH ) and CURDATE()";
+$sql="SELECT * FROM RemovedFromBond INNER JOIN Batches ON RemovedFromBond.BatchNum=Batches.BatchNum
+	WHERE DateTimeCode between (CURDATE() - INTERVAL 2 MONTH ) and NOW()";
 	      $result = $mysqli->query($sql);
 	if ($result->num_rows > 0) {
 	  while ($row = $result->fetch_assoc()) {
@@ -54,11 +59,15 @@ $sql="SELECT * FROM RemovedFromBond WHERE DateTimeCode between (CURDATE() - INTE
 		echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
 		echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
 		echo '<div class=column>'.$row['BatchNum'].'</div>';
+		echo '<div class=column>'.$row['BatchName'].'</div>';
+		echo '<div class=column>'.$row['ClassType'].'</div>';
+		echo '<div class=column>'.$row['BottleProof'].'</div>';
 		echo '<div class=column>'.$row['BottlesRemoved'].'</div>';
 		echo '<div class=column>'.$row['BottlesRemaining'].'</div>';
 		echo '<div class=column>'.$row['CaseNumbers'].'</div>';
 		echo '<div class=column>'.$row['Destination'].'</div>';
 		echo '<div class=column>'.$row['InvoiceNumber'].'</div>';
+		echo '<div class=column>'.$row['Notes'].'</div>';
 		echo "</div>";
 	  }
 		}
@@ -128,4 +137,3 @@ $sql="SELECT * FROM RemovedFromBond WHERE DateTimeCode between (CURDATE() - INTE
 <?php endif; ?>
 </body>
 </html>
-	
