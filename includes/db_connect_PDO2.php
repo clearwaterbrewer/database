@@ -1,16 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "DBadmin";
-$password = "qwer1234"; 
-$dbname = "CDCtest";
-$CAN_REGISTER = "any";
-$DEFAULT_ROLE = "member";
-$SECURE = FALSE;    // For development purposes only!!!!
+require_once('psl-configPDO.php');
    
 try{
     $dbh = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
                     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    die(json_encode(array('outcome' => true)));
+    die(json_encode(array()));
 }
 catch(PDOException $ex){
     die(json_encode(array('outcome' => false, 
