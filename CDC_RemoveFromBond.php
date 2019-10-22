@@ -47,7 +47,6 @@ sec_session_start();
 	  <div class="column">Case Numbers</div>
 	  <div class="column">Destination</div>
 	  <div class="column">Invoice</div>
-	  <div class="column">Notes</div>
 	</div>
 <?php 
 $sql="SELECT * FROM RemovedFromBond INNER JOIN Batches ON RemovedFromBond.BatchNum=Batches.BatchNum
@@ -67,7 +66,6 @@ $sql="SELECT * FROM RemovedFromBond INNER JOIN Batches ON RemovedFromBond.BatchN
 		echo '<div class=column>'.$row['CaseNumbers'].'</div>';
 		echo '<div class=column>'.$row['Destination'].'</div>';
 		echo '<div class=column>'.$row['InvoiceNumber'].'</div>';
-		echo '<div class=column>'.$row['Notes'].'</div>';
 		echo "</div>";
 	  }
 		}
