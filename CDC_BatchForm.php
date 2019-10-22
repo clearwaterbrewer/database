@@ -81,23 +81,10 @@ sec_session_start();
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text" >
       <div class="buttonrow">
-        <div class="col-1 form-buttons-wrapper">
-            <button type="submit" class="form-submit-button" name="submit" value="Submit" id="submit_form">Submit</button>
-        </div>
-      <div class="col-1 form-buttons-wrapper">
-         <a href="CDChome.php" >
-           <button type="button" class="form-submit-button" >
-             Home
-           </button>
-         </a>
-       </div>
-       <div class="col-1 form-buttons-wrapper">
-          <a href="includes/logout.php">
-            <button type="button" class="form-submit-button" >
-              Logout
-            </button>
-          </a>
-        </div>
+            <button type="submit" class="form-submit-button" id="submit_form" name="submit" value="Submit">Submit</button>
+          <a href="CDC_Batches.php"><button type="button" class="form-submit-button">Back to Batches</button></a>
+          <a href="CDChome.php"><button type="button" class="form-submit-button">Home</button></a>
+          <a href="includes/logout.php"><button type="button" class="form-submit-button">Logout</button></a>
       </div>
     </li>
   </ul>
