@@ -23,7 +23,7 @@ if($insertBatch = $pdo->prepare($sql)){
 
     } 
 else{
-    echo "ERROR: Could not prepare query: $sql. " . $mysqli->error;
+    echo "ERROR: Could not prepare query: $sql. " . $pdo->error;
     }
 exit;
 } 
