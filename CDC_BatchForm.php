@@ -1,6 +1,6 @@
 <?php
-include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
+require_once('includes/psl-configPDO.php'); //db info
+require_once('includes/functions.php'); //security functions
 sec_session_start();
 ?>
 <!DOCTYPE HTML>
