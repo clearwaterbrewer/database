@@ -81,7 +81,7 @@ $sql="SELECT * FROM RemovedFromBond INNER JOIN Batches ON RemovedFromBond.BatchN
     <li class="form-line" data-type="control_text">
       <div class="buttonrow">
         <div class="col-1 form-buttons-wrapper">
-          <a href="CDC_RFB_Form.php" >
+          <a href="CDC_RFBForm.php" >
             <button type="button" class="form-submit-button" >
               New Removal From Bond
             </button>
