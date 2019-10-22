@@ -51,7 +51,7 @@ sec_session_start();
         <label for="BatchNum">Batch Number</label>
           <input type='text' class='form-control' id="BatchNum" name="BatchNum" value="" />
         <label for="BatchName">Batch Name</label>
-          <input type='text' class='form-control' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
+          <input type='text' class='form-control' id="BatchName" name="BatchName" value="" />
        </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -83,7 +83,7 @@ sec_session_start();
         <label for="Destination">Destination</label>
 		<select class='form-dropdown' id='Destination' name="Destination" >
           <?php while($row = $getDestination->fetchObject()): ?>
-		<option value="<?= $row->DistributorsID ?>" ><?= $row->DistributorsName ?></option>
+		<option value="<?= $row->DistributorsName ?>" ><?= $row->DistributorsName ?></option>
           <?php endwhile; ?>
           </select>
         <label for="InvoiceNumber">InvoiceNumber</label>
