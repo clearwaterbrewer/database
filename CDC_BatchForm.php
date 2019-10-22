@@ -73,11 +73,11 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="BottleProof">Proof</label>
-          <input type="text" class="form-control" id="BottleProof" name="BottleProof" value="">
+          <input type="text" pattern="[0-9]*" size="5" class="form-control" id="BottleProof" name="BottleProof" value="">
         <label for="BarrelProof">Barrel Proof</label>
-          <input type="text" class="form-control" id="BarrelProof" name="BarrelProof" value="">
+          <input type="text" pattern="[0-9]*" size="5" class="form-control" id="BarrelProof" name="BarrelProof" value="">
         <label for="PreviousBatch">Previous Batch</label>
-          <input type="number" pattern="[0-9]*" size="5" class="form-control" id="PreviousBatch" name="PreviousBatch" value="" inputmode="numeric">
+          <input type="number" pattern="[0-9]*" size="5" class="form-control" id="PreviousBatch" name="PreviousBatch" value="">
         <label for="UPC">UPC</label>
           <input type="number" pattern="[0-9]*" size="12" class="form-control" id="UPC" name="UPC" value="">
         </div>
