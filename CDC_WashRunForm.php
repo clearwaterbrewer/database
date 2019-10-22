@@ -2,6 +2,7 @@
 require_once('includes/psl-configPDO.php');
 include_once('includes/db_connect.php');
 require_once('includes/functions.php');
+$mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
 $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
 $getBatchNum->execute();
