@@ -12,9 +12,9 @@ if(!empty($_POST)){
       $CaseNumbers= $_POST[ 'CaseNumbers' ];                 
       $Destination= $_POST[ 'Destination' ];                 
       $InvoiceNumber= $_POST[ 'InvoiceNumber' ];                 
+      var_dump($insertRFB);
   
       $result = $insertRFB->execute(array(':DateTimeCode'=>$DateTimeCode, ':BatchNum'=>$BatchNum, ':BottlesRemoved'=>$BottlesRemoved, ':BottlesRemaining'=>$BottlesRemaining, ':CaseNumbers'=>$CaseNumbers, ':Destination'=>$Destination, ':InvoiceNumber'=>$InvoiceNumber));
-      var_dump($insertRFB);
     
       } 
   else{
