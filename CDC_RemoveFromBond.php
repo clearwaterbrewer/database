@@ -31,7 +31,7 @@ sec_session_start();
           <label >Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
         </div>
       </div>
-	<label><center><b>Last 30 Days Removals from Bond</b></center></label>
+	<label><center><b>Last 60 Days Removals from Bond</b></center></label>
     </li>
     <li>
       <div class="ex3">
@@ -50,10 +50,8 @@ sec_session_start();
 	  <div class="column">Notes</div>
 	</div>
 <?php 
-//$sql="SELECT * FROM (SELECT * FROM RemovedFromBond ORDER BY DateTimeCode DESC LIMIT 30) 
-//	sub ORDER BY DateTimeCode DESC";
 $sql="SELECT * FROM RemovedFromBond INNER JOIN Batches ON RemovedFromBond.BatchNum=Batches.BatchNum
-	WHERE DateTimeCode between (CURDATE() - INTERVAL 1 MONTH ) and CURDATE()";
+	WHERE DateTimeCode between (CURDATE() - INTERVAL 2 MONTH ) and CURDATE()";
 	      $result = $mysqli->query($sql);
 	if ($result->num_rows > 0) {
 	  while ($row = $result->fetch_assoc()) {
