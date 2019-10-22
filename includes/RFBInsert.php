@@ -2,8 +2,8 @@
 require_once('psl-configPDO.php');
 if(!empty($_POST)){
   $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
-  $sql = "INSERT INTO RemovedFromBond (DateTimeCode, BatchNum, BottlesRemoved, BottlesRemaining, CaseNumbers, Destination, InvoiceNumber) 
-                          VALUES (:DateTimeCode, :BatchNum, :BottlesRemoved, :BottlesRemaining, :CaseNumbers, :Destination, :InvoiceNumber)";
+  $sql = "INSERT INTO RemovedFromBond ( DateTimeCode,  BatchNum,  BottlesRemoved,  BottlesRemaining,  CaseNumbers,  Destination,  InvoiceNumber) 
+                               VALUES (:DateTimeCode, :BatchNum, :BottlesRemoved, :BottlesRemaining, :CaseNumbers, :Destination, :InvoiceNumber)";
   if($insertRFB = $pdo->prepare($sql)){
       $DateTimeCode = $_POST[ 'DateTimeCode' ];                    
       $BatchNum= $_POST[ 'BatchNum' ];                   
