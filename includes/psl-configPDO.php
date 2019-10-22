@@ -8,7 +8,7 @@ $CAN_REGISTER = "any";
 $DEFAULT_ROLE = "member";
 $SECURE = FALSE;    // For development purposes only!!!!
 
-$mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
+// adds delay? $mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
 $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 // does not work with this-> $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
