@@ -49,7 +49,7 @@ sec_session_start();
           <?php endwhile; ?>
           </select>
         <label for="BatchNum">Batch Number</label>
-          <input type='text' class='form-control' id="BatchNum" name="BatchNum" value="<?php echo $row['BatchNum'];?>" />
+          <input type='text' class='form-control' id="BatchNum" name="BatchNum" value="" />
         <label for="BatchName">Batch Name</label>
           <input type='text' class='form-control' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
        </div>
