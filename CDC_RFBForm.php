@@ -48,6 +48,8 @@ sec_session_start();
 	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
           <?php endwhile; ?>
           </select>
+        <label for="BatchNum">Batch Number</label>
+          <input type='text' class='form-control' id="BatchNum" name="BatchNum" value="<?php echo $row['BatchNum'];?>" />
         <label for="BatchName">Batch Name</label>
           <input type='text' class='form-control' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
        </div>
@@ -126,6 +128,7 @@ sec_session_start();
     }
     // put results into page
     function populateForm(data) {
+      $('#BatchNum').val(data.BatchNum);
       $('#BatchName').val(data.BatchName);
       $('#ClassType').val(data.ClassType);
       $('#BottleProof').val(data.BottleProof);
