@@ -14,7 +14,7 @@ if(!empty($_POST)){
       $InvoiceNumber= $_POST[ 'InvoiceNumber' ];                 
   
       $result = $insertRFB->execute(array(':DateTimeCode'=>$DateTimeCode, ':BatchNum'=>$BatchNum, ':BottlesRemoved'=>$BottlesRemoved, ':BottlesRemaining'=>$BottlesRemaining, ':CaseNumbers'=>$CaseNumbers, ':Destination'=>$Destination, ':InvoiceNumber'=>$InvoiceNumber));
-      var_dump($result);
+      var_dump($insertRFB);
     
       } 
   else{
