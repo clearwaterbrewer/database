@@ -79,7 +79,7 @@ sec_session_start();
         <label for="PreviousBatch">Previous Batch</label>
           <input type="number" pattern="[0-9]*" class="form-control" id="PreviousBatch" name="PreviousBatch" value="" inputmode="numeric">
         <label for="UPC">UPC</label>
-          <input type="text" class="form-control" id="UPC" name="UPC" value="">
+          <input type="number" pattern="[0-9]*" class="form-control" id="UPC" name="UPC" value="">
         </div>
     </li>
   <ul class="form-section page-section" >
