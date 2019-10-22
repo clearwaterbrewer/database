@@ -41,6 +41,11 @@ sec_session_start();
 	        <div class="column">Class</div>
 	        <div class="column">Source Product</div>
 	        <div class="column">Source Ingredient</div>
+	        <div class="column">BottleProof</div>
+	        <div class="column">Barrel Proof</div>
+	        <div class="column">Previous Batch</div>
+	        <div class="column">UPC</div>
+	        <div class="column">Current Batch</div>
       	</div>
 <?php 
       	  $sql="SELECT * FROM 
@@ -55,6 +60,11 @@ sec_session_start();
 			echo '<div class=column>'.$row['ClassType'].'</div>';
 			echo '<div class=column>'.$row['SourceProduct'].'</div>';
 			echo '<div class=column>'.$row['SourceIngredient'].'</div>';
+			echo '<div class=column>'.$row['BottleProof'].'</div>';
+			echo '<div class=column>'.$row['BarrelProof'].'</div>';
+			echo '<div class=column>'.$row['PreviousBatch'].'</div>';
+			echo '<div class=column>'.$row['UPC'].'</div>';
+			echo '<div class=column>'.$row['CurrentBatch'].'</div>';
       			echo "</div>";
 		  }
 		}
