@@ -2,8 +2,8 @@
 require_once('psl-configPDO.php');
 if(!empty($_POST)){
   $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
-  $sql = "INSERT INTO RemovedFromBond ( BatchName,  ClassType,  SourceProduct,  SourceIngredient,  BottleProof,  BarrelProof,  PreviousBatch,  UPC,  CurrentBatch) 
-                               VALUES (:BatchName, :ClassType, :SourceProduct, :SourceIngredient, :BottleProof, :BarrelProof, :PreviousBatch, :UPC, :CurrentBatch)";
+  $sql = "INSERT INTO RemovedFromBond ( BatchName,  ClassType,  SourceProduct,  SourceIngredient,  BottleProof,  BarrelProof,  PreviousBatch,  UPC) 
+                               VALUES (:BatchName, :ClassType, :SourceProduct, :SourceIngredient, :BottleProof, :BarrelProof, :PreviousBatch, :UPC)";
 
 
 if($insertBatch = $pdo->prepare($sql)){
@@ -15,9 +15,8 @@ if($insertBatch = $pdo->prepare($sql)){
     $BarrelProof = $_POST['BarrelProof'];
     $PreviousBatch = $_POST['PreviousBatch'];
     $UPC = $_POST['UPC'];
-    $CurrentBatch = '1';
     
-    $result = $insertBatch->execute(array(':BatchName'=>BatchName, ':ClassType'=>ClassType, ':SourceProduct'=>SourceProduct, ':SourceIngredient'=>SourceIngredient, ':BottleProof'=>BottleProof, ':BarrelProof'=>BarrelProof, ':PreviousBatch'=>PreviousBatch, ':UPC'=>UPC, ':CurrentBatch'=>CurrentBatch));
+    $result = $insertBatch->execute(array(':BatchName'=>BatchName, ':ClassType'=>ClassType, ':SourceProduct'=>SourceProduct, ':SourceIngredient'=>SourceIngredient, ':BottleProof'=>BottleProof, ':BarrelProof'=>BarrelProof, ':PreviousBatch'=>PreviousBatch, ':UPC'=>UPC));
         
     header('Location: ../CDC_Batches.php');
     $insertBatch = null;
