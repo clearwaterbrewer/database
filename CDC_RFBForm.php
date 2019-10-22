@@ -65,9 +65,9 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="BottlesRemoved">Bottles Removed</label>
-          <input type="text" class="form-control" id="BottlesRemoved" name="BottlesRemoved" value="">
+          <input type="text" class="form-control" id="BottlesRemoved" name="BottlesRemoved" value="" required>
         <label for="BottlesRemaining">Bottles Remaining</label>
-          <input type="text" class="form-control" id="BottlesRemaining" name="BottlesRemaining" value="">
+          <input type="text" class="form-control" id="BottlesRemaining" name="BottlesRemaining" value="" required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
