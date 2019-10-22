@@ -1,7 +1,6 @@
 <?php
 require_once('psl-configPDO.php');
-$mysqli = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
-    
+   
 try{
     $dbh = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
                     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
