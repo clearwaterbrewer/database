@@ -3,7 +3,8 @@ include_once 'db_connect.php';
 include_once 'psl-config.php';
 
 
-$sql = "INSERT INTO Batches (BatchName, ClassType, SourceProduct, SourceIngredient) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO Batches (BatchName, ClassType, SourceProduct, SourceIngredient, BottleProof, BarrelProof, PreviousBatch, UPC, CurrentBatch)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 if($stmt = $mysqli->prepare($sql)){
     $stmt->bind_param("ssss", $BatchName, $ClassType, $SourceProduct, $SourceIngredient);
     $BatchName = $_POST['BatchName'];
