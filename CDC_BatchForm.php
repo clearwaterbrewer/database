@@ -77,9 +77,9 @@ sec_session_start();
         <label for="BarrelProof">Barrel Proof</label>
           <input type="text" class="form-control" id="BarrelProof" name="BarrelProof" value="">
         <label for="PreviousBatch">Previous Batch</label>
-          <input type="number" pattern="[0-9]*" class="form-control" id="PreviousBatch" name="PreviousBatch" value="" inputmode="numeric">
+          <input type="number" pattern="[0-9]*" size="5" class="form-control" id="PreviousBatch" name="PreviousBatch" value="" inputmode="numeric">
         <label for="UPC">UPC</label>
-          <input type="number" pattern="[0-9]*" class="form-control" id="UPC" name="UPC" value="">
+          <input type="number" pattern="[0-9]*" size="12" class="form-control" id="UPC" name="UPC" value="">
         </div>
     </li>
   <ul class="form-section page-section" >
