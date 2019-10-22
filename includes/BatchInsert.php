@@ -27,6 +27,6 @@ else{
     }
 exit;
 } 
-echo "$_POST Empty";
+echo "_POST Empty";
  
 ?>
