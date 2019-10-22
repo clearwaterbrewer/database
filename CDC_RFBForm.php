@@ -42,12 +42,14 @@ sec_session_start();
        <div class="form-input-wide">
        <label for="DateTimeCode">DateTimeCode</label>
           <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
-        <label for="BatchNum">Batch Number</label>
-	  <select class='form-dropdown' id='BatchNum' name='BatchNum'>
+        <label for="choose-batch">Choose a Batch</label>
+	  <select class='form-dropdown' id='choose-batch'>
           <?php while($row = $getBatchNum->fetchObject()): ?>
-	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum ?></option>
+	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
           <?php endwhile; ?>
           </select>
+        <label for="BatchNum">Batch Number</label>
+          <input type='text' class='form-control' id="BatchNum" name="BatchNum" value="<?php echo $row['BatchNum'];?>" />
         <label for="BatchName">Batch Name</label>
           <input type='text' class='form-control' id="BatchName" name="BatchName" value="<?php echo $row['BatchName'];?>" />
        </div>
@@ -106,7 +108,7 @@ sec_session_start();
   <script>
     // monitor for changes in drop-down
     $(document).ready(function() {  // technically not necessary if script is at the bottom, but I do it out of habit
-      $('#BatchNum').on('change', function() {
+      $('#choose-batch').on('change', function() {
         retrieveItem( $(this).val() );
       })
     });
