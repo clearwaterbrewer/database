@@ -45,7 +45,7 @@ sec_session_start();
         <label for="choose-batch">Choose a Batch</label>
 	  <select class='form-dropdown' id='choose-batch' name="BatchNum">
           <?php while($row = $getBatchNum->fetchObject()): ?>
-	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum ?></option>
+	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
           <?php endwhile; ?>
           </select>
         <label for="BatchName">Batch Name</label>
