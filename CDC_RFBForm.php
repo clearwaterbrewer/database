@@ -43,7 +43,7 @@ sec_session_start();
        <label for="DateTimeCode">DateTimeCode</label>
           <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
         <label for="choose-batch">Choose a Batch</label>
-	  <select class='form-dropdown' id='choose-batch'>
+	  <select class='form-dropdown' id='choose-batch' name="BatchNum">
           <?php while($row = $getBatchNum->fetchObject()): ?>
 	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum ?></option>
           <?php endwhile; ?>
