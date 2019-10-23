@@ -193,10 +193,6 @@ sec_session_start();
     });
 
    
-   // monitor for changes in StartColl and StopColl
-   StartColl.on("keyup", formatTime);
-   StopColl.on("keyup", formatTime);
-
    
     // insert colon for hh:mm into StartColl and StopColl
    var StartColl = $("#StartColl");
@@ -210,7 +206,11 @@ sec_session_start();
       e.target.value = str.slice(0, 5);
     };
 	  
- 
+    // monitor for changes in StartColl and StopColl
+   StartColl.on("keyup", formatTime);
+   StopColl.on("keyup", formatTime);
+
+
    
    
     // send batchNum via ajax
