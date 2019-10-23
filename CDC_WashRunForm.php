@@ -180,7 +180,6 @@ sec_session_start();
 
     // monitor for changes in drop-down
     $(document).ready(function() {
-
       $('#choose-batch').on('change', function() {
         retrieveItem( $(this).val() );
       })
@@ -188,12 +187,32 @@ sec_session_start();
 
     // monitor for changes in ProofCollected
     $(document).ready(function() {
-
       $('#ProofCollected').on('focusout', function() {
         calculatePG();
       })
     });
 
+   
+   // monitor for changes in StartColl and StopColl
+   StartColl.on("keyup", formatTime);
+   StopColl.on("keyup", formatTime);
+
+   
+    // insert colon for hh:mm into StartColl and StopColl
+  function formatTime(e) {
+      var r = /([a-f0-9]{2})([a-f0-9]{2})/i,
+          str = e.target.value.replace(/[^a-f0-9]/ig, "");
+      while (r.test(str)) {
+        str = str.replace(r, '$1' + ':' + '$2');
+      }
+      e.target.value = str.slice(0, 5);
+    };
+   var StartColl = $("#StartColl");
+   var StopColl = $("#StopColl");
+	  
+ 
+   
+   
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
       $.post(
