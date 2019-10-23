@@ -75,7 +75,7 @@ sec_session_start();
         <label for="SourceContainer">Source Container</label>
           <select class='form-dropdown' id='SourceContainer' name="SourceContainer" >
           <?php while($row = $getSourceContainer->fetchObject()): ?>
-                <option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ContainerName ?></option>
+                <option value="<?= $row->ContainerName ?>" ><?= $row->ContainerName ?></option>
           <?php endwhile; ?>
           </select>
         <label for="AlcByVol">AlcByVol</label>
@@ -135,7 +135,7 @@ sec_session_start();
         <label for="DestinationProduct">Destination Product</label>
                 <select class='form-dropdown' id='DestinationProduct' name="DestinationProduct" >
           <?php while($row = $getDestinationProduct->fetchObject()): ?>
-                <option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ProductName ?></option>
+                <option value="<?= $row->ProductName ?>" ><?= $row->ProductName ?></option>
           <?php endwhile; ?>
           </select>
         <label for="DestinationContainer">Destination Container</label>
@@ -243,6 +243,9 @@ sec_session_start();
       $('#BatchName').val(data.BatchName);
       $('#SourceProduct').val(data.SourceProduct);
       $('#SourceIngredient').val(data.SourceIngredient);
+      $('#SourceContainer').val(data.SourceContainer);
+      $('#DestinationProduct').val(data.DestinationProduct);
+      $('#DestinationContainer').val(data.DestinationContainer);
     }
     function populatePG(data) {
       $('#PGCollected').val(data.PGCollected);
