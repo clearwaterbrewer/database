@@ -72,7 +72,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="CaseNumbers">CaseNumbers</label>
-          <input type="text" class="form-control" id="CaseNumbers" name="CaseNumbers" value="" >
+          <input type="text" inputmode="numeric" class="form-control" id="CaseNumbers" name="CaseNumbers" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
