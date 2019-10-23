@@ -85,17 +85,17 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="GallonsDistilled">Gallons Distilled</label>
-          <input type="text" class="form-control" id="GallonsDistilled" name="GallonsDistilled" value="">
+          <input type="text" inputmode="numeric" pattern="^\d{0,4}(\.\d{0,1})?$" size="6" class="form-control" id="GallonsDistilled" name="GallonsDistilled" value="">
         <label for="GallonsRemaining">Gallons Remaining</label>
-          <input type="text" class="form-control" id="GallonsRemaining" name="GallonsRemaining" value="">
+          <input type="text" inputmode="numeric" pattern="^\d{0,4}(\.\d{0,1})?$" size="6" class="form-control" id="GallonsRemaining" name="GallonsRemaining" value="">
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
          <label for="StartColl">Collection Start Time</label>
-          <input type="text" class="form-control" id="StartColl" name="StartColl" value="" >
+          <input type="text" inputmode="numeric" pattern="(\d{2}:\d{2})" size="5" class="form-control" id="StartColl" name="StartColl" value="" >
          <label for="StopColl">Collection Stop Time</label>
-          <input type="text" class="form-control" id="StopColl" name="StopColl" value="" >
+          <input type="text" inputmode="numeric" pattern="(\d{2}:\d{2})" size="5" class="form-control" id="StopColl" name="StopColl" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -194,6 +194,26 @@ sec_session_start();
       })
     });
 
+	  
+    var StartColl = $("#StartColl");
+    var StopColl = $("#StopColl");
+    function formatTime(e) {
+      var r = /([a-f0-9]{2})([a-f0-9]{2})/i,
+          str = e.target.value.replace(/[^a-f0-9]/ig, "");
+      while (r.test(str)) {
+        str = str.replace(r, '$1' + ':' + '$2');
+      }
+
+      e.target.value = str.slice(0, 5);
+    };
+	  
+    // monitor for changes in StartColl and StopColl
+    StartColl.on("keyup", formatTime);
+    StopColl.on("keyup", formatTime);
+
+
+
+
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
       $.post(
@@ -227,6 +247,8 @@ sec_session_start();
     function populatePG(data) {
       $('#PGCollected').val(data.PGCollected);
     }
+	  
+	  
   </script>
 
 <?php else : ?>
