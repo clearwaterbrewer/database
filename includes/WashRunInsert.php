@@ -11,6 +11,7 @@ if(!empty($_POST)){
       $BatchNum= $_POST[ 'BatchNum' ];                   
       $WashName= $_POST[ 'WashName' ];                 
       $SourceAmount= $_POST[ 'SourceAmount' ];                 
+      $AlcByVol= $_POST[ 'AlcByVol' ];                 
       $GallonsDistilled= $_POST[ 'GallonsDistilled' ];                 
       $GallonsRemaining= $_POST[ 'GallonsRemaining' ];                 
       $StartColl= $_POST[ 'StartColl' ];                 
