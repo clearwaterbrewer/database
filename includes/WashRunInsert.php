@@ -14,7 +14,6 @@ if(!empty($_POST)){
       $AlcByVol= $_POST[ 'AlcByVol' ];                 
       $GallonsRemaining= $_POST[ 'GallonsRemaining' ];                 
       $StartColl= $_POST[ 'StartColl' ];                 
-      $StartColl= $_POST[ 'StartColl' ];                 
       $StopColl= $_POST[ 'StopColl' ];                 
       $WGCollected= $_POST[ 'WGCollected' ];                 
       $ProofCollected= $_POST[ 'ProofCollected' ];                 
