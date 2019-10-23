@@ -1,4 +1,3 @@
-pi@raspberrypi:/var/www/html/database $ more CDC_WashRunForm.php
 <?php
 require_once('includes/psl-configPDO.php'); //db info
 require_once('includes/functions.php'); //security functions
