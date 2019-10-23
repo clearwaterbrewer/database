@@ -93,25 +93,25 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
          <label for="StartColl">Collection Start Time</label>
-          <input type="text" inputmode="numeric" pattern="(\d{2}:\d{2})" size="5" class="form-control" id="StartColl" name="StartColl" value="" >
+          <input type="text" inputmode="numeric" pattern="(\d{2}:\d{2})" size="6" class="form-control" id="StartColl" name="StartColl" value="" >
          <label for="StopColl">Collection Stop Time</label>
-          <input type="text" inputmode="numeric" pattern="(\d{2}:\d{2})" size="5" class="form-control" id="StopColl" name="StopColl" value="" >
+          <input type="text" inputmode="numeric" pattern="(\d{2}:\d{2})" size="6" class="form-control" id="StopColl" name="StopColl" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="WGCollected">WG Collected</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}(\.\d{0,1})?$" size="5" class="form-control" id="WGCollected" name="WGCollected" value="" >
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}(\.\d{0,1})?$" size="6" class="form-control" id="WGCollected" name="WGCollected" value="" >
         <label for="ProofCollected">Proof Collected</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}(\.\d{0,1})?$" size="5" class="form-control" id="ProofCollected" name="ProofCollected" value="" >
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}(\.\d{0,1})?$" size="6" class="form-control" id="ProofCollected" name="ProofCollected" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="PGCollected">PG Collected</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}(\.\d{0,1})?$" size="5" class="form-control" id="PGCollected" name="PGCollected" value="" readonly>
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}(\.\d{0,1})?$" size="6" class="form-control" id="PGCollected" name="PGCollected" value="" readonly>
         <label  for="PGEfficiency">PG Efficiency</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}(\.\d{0,1})?$" size="5" class="form-control" id="PGEfficiency" name="PGEfficiency" value="" readonly>
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}(\.\d{0,1})?$" size="6" class="form-control" id="PGEfficiency" name="PGEfficiency" value="" readonly>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
