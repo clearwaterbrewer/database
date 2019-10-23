@@ -141,7 +141,7 @@ sec_session_start();
         <label for="DestinationContainer">Destination Container</label>
                 <select class='form-dropdown' id='DestinationContainer' name="DestinationContainer" >
           <?php while($row = $getDestinationContainer->fetchObject()): ?>
-                <option value="<?= $row->id ?>" ><?= $row->id." - ".$row->ContainerName ?></option>
+                <option value="<?= $row->ContainerName ?>" ><?= $row->ContainerName ?></option>
           <?php endwhile; ?>
           </select>
         </div>
