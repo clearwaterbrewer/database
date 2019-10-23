@@ -118,7 +118,7 @@ sec_session_start();
         <label for="Temp_C">Temp_C</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}(\.\d{0,1})?$" size="5" class="form-control" size="10" id="Temp_C" name="Temp_C" value="" >
         <label for="Distilled_pH">Distilled pH</label>
-          <input type="text" class="form-control" size="7" id="Distilled_pH" name="Distilled_pH" value="" >
+          <input type="text" inputmode="numeric" pattern="^\d(\.\d{1,2})?$" size="4" class="form-control" size="7" id="Distilled_pH" name="Distilled_pH" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
