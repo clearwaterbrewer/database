@@ -33,10 +33,11 @@ if(!empty($_POST)){
   
       $result = $insertWashRun->execute(array(':DateTimeCode'=>$DateTimeCode, ':BatchNum'=>$BatchNum, ':WashName'=>$WashName, ':SourceAmount'=>$SourceAmount, ':AlcByVol'=>$AlcByVol, ':GallonsDistilled'=>$GallonsDistilled, ':GallonsRemaining'=>$GallonsRemaining, ':StopColl'=>$StopColl, ':WGCollected'=>$WGCollected, ':ProofCollected'=>$ProofCollected, ':PGCollected'=>$PGCollected, ':PGEfficiency'=>$PGEfficiency, ':Temp_C'=>$Temp_C, ':Distilled_pH'=>$Distilled_pH, ':StartProof'=>$StartProof, ':StopProof'=>$StopProof, ':DestinationProduct'=>$DestinationProduct, ':DestinationContainer'=>$DestinationContainer, ':WG_existing'=>$WG_existing, ':WG_resulting'=>$WG_resulting, ':PG_existing'=>$PG_existing, ':PG_resulting'=>$PG_resulting, ':Notes'=>$Notes));
           
-      header('Location: ../CDC_WashRuns.php');
+      //header('Location: ../CDC_WashRuns.php');
       } 
   else{
-      echo "ERROR: Could not prepare query: $sql. " . $pdo->error;
+      //echo "ERROR: Could not prepare query: $sql. " . $pdo->error;
+      echo $pdo -> error;
       }
 exit;
 } 
