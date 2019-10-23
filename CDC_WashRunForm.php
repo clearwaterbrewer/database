@@ -199,6 +199,8 @@ sec_session_start();
 
    
     // insert colon for hh:mm into StartColl and StopColl
+   var StartColl = $("#StartColl");
+   var StopColl = $("#StopColl");
   function formatTime(e) {
       var r = /([a-f0-9]{2})([a-f0-9]{2})/i,
           str = e.target.value.replace(/[^a-f0-9]/ig, "");
@@ -207,8 +209,6 @@ sec_session_start();
       }
       e.target.value = str.slice(0, 5);
     };
-   var StartColl = $("#StartColl");
-   var StopColl = $("#StopColl");
 	  
  
    
