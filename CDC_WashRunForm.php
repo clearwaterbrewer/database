@@ -85,9 +85,9 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="GallonsDistilled">Gallons Distilled</label>
-          <input type="text" inputmode="numeric" pattern="^\d{0,4}(\.\d{0,1})?$" size="6" class="form-control" id="GallonsDistilled" name="GallonsDistilled" value="">
+          <input type="text" inputmode="numeric" pattern="^\d{0,5}(\.\d{0,1})?$" size="8" class="form-control" id="GallonsDistilled" name="GallonsDistilled" value="">
         <label for="GallonsRemaining">Gallons Remaining</label>
-          <input type="text" inputmode="numeric" pattern="^\d{0,4}(\.\d{0,1})?$" size="6" class="form-control" id="GallonsRemaining" name="GallonsRemaining" value="">
+          <input type="text" inputmode="numeric" pattern="^\d{0,5}(\.\d{0,1})?$" size="8" class="form-control" id="GallonsRemaining" name="GallonsRemaining" value="">
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
