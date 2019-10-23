@@ -47,7 +47,7 @@ sec_session_start();
         <label for="choose-batch">Choose a Batch</label>
           <select class='form-dropdown' id='choose-batch'>
           <?php while($row = $getBatchNum->fetchObject()): ?>
-          <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
+          <option value="<?= echo $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
           <?php endwhile; ?>
           </select>
         <label for="BatchName">Batch Name</label>
@@ -220,7 +220,7 @@ sec_session_start();
 
     // put results into page
     function populateForm(data) {
-      $('#BatchNum').val(data.BatchNum);
+     // $('#BatchNum').val(data.BatchNum);
       $('#BatchName').val(data.BatchName);
       $('#SourceProduct').val(data.SourceProduct);
       $('#SourceIngredient').val(data.SourceIngredient);
