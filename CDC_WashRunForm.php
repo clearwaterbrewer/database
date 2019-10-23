@@ -220,6 +220,7 @@ sec_session_start();
 
     // put results into page
     function populateForm(data) {
+      $('#BatchNum').val(data.BatchNum);
       $('#BatchName').val(data.BatchName);
       $('#SourceProduct').val(data.SourceProduct);
       $('#SourceIngredient').val(data.SourceIngredient);
