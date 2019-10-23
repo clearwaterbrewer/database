@@ -13,6 +13,7 @@ if(!empty($_POST)){
       $result = $insertWashRun->execute(array(':DateTimeCode'=>$DateTimeCode, ':BatchNum'=>$BatchNum, ':WashName'=>$WashName, ':SourceAmount'=>$SourceAmount));
 
       header('Location: ../CDC_WashRuns.php');
+      $insertWashRun = null;
       }
   else{
       echo "ERROR: Could not prepare query: $sql. " . $pdo->error;
