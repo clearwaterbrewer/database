@@ -40,5 +40,5 @@ if(!empty($_POST)){
       }
 exit;
 } 
-echo "$_POST Empty";
+echo "_POST Empty";
 ?>
