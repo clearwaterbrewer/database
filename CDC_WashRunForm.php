@@ -79,7 +79,7 @@ sec_session_start();
           <?php endwhile; ?>
           </select>
         <label for="AlcByVol">AlcByVol</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,2}(\.\d{0,1})?$" size="4" class="form-control" id="AlcByVol" name="AlcByVol" value="">
+          <input type="text" inputmode="numeric" size="4" class="form-control" id="AlcByVol" name="AlcByVol" value="">
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
