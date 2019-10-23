@@ -27,6 +27,8 @@ sec_session_start();
 <body>
 
 <?php if (login_check($mysqli) == true) : ?>
+    var StartColl = $("#StartColl");
+    var StopColl = $("#StopColl");
 
 	
 <form class="jotform-form" accept-charset="utf-8" id="WashForm" name="washform" action="includes/WashRunInsert.php" method="POST">
@@ -195,8 +197,6 @@ sec_session_start();
     });
 
 	  
-    var StartColl = $("#StartColl");
-    var StopColl = $("#StopColl");
     function formatTime(e) {
       var r = /([a-f0-9]{2})([a-f0-9]{2})/i,
           str = e.target.value.replace(/[^a-f0-9]/ig, "");
