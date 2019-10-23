@@ -73,13 +73,13 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="BottleProof">Proof</label>
-          <input type="text" inputmode="numeric" pattern="^\d*(\.\d{0,1})?$" size="5" class="form-control" id="BottleProof" name="BottleProof" value="">
+          <input type="text" inputmode="numeric" pattern="^\d{2,3}(\.\d{0,1})?$" size="5" class="form-control" id="BottleProof" name="BottleProof" value="">
         <label for="BarrelProof">Barrel Proof</label>
-          <input type="text" inputmode="numeric" pattern="^\d*(\.\d{0,1})?$" size="5" class="form-control" id="BarrelProof" name="BarrelProof" value="">
+          <input type="text" inputmode="numeric" pattern="^\d{2,3}(\.\d{0,1})?$" size="5" class="form-control" id="BarrelProof" name="BarrelProof" value="">
         <label for="PreviousBatch">Previous Batch</label>
-          <input type="text" inputmode="numeric" pattern="[0-9]*" size="5" class="form-control" id="PreviousBatch" name="PreviousBatch" value="">
+          <input type="text" inputmode="numeric" pattern="^\d{1,5}$" size="5" class="form-control" id="PreviousBatch" name="PreviousBatch" value="">
         <label for="UPC">UPC</label>
-          <input type="text" inputmode="numeric" pattern="[0-9]*" size="12" class="form-control" id="UPC" name="UPC" value="">
+          <input type="text" inputmode="numeric" pattern="^\d{4,12}$" size="12" class="form-control" id="UPC" name="UPC" value="">
         </div>
     </li>
   <ul class="form-section page-section" >
