@@ -5,7 +5,6 @@ if(!empty($_POST)){
   $sql = "INSERT INTO WashRuns ( DateTimeCode,  BatchNum,  WashName,  SourceAmount) 
                         VALUES (:DateTimeCode, :BatchNum, :WashName, :SourceAmount)";
   if($insertWashRun = $pdo->prepare($sql)){
-
       $DateTimeCode = $_POST[ 'DateTimeCode' ];
       $BatchNum= $_POST[ 'BatchNum' ];
       $WashName= $_POST[ 'WashName' ];
