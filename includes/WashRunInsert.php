@@ -13,6 +13,7 @@ if(!empty($_POST)){
       $SourceAmount= $_POST[ 'SourceAmount' ];
       $SourceContainer= $_POST[ 'SourceContainer' ];
       $AlcByVol= $_POST[ 'AlcByVol' ];                 
+      $GallonsDistilled= $_POST[ 'GallonsDistilled' ];                 
       $GallonsRemaining= $_POST[ 'GallonsRemaining' ];                 
       $StartColl= $_POST[ 'StartColl' ];                 
       $StopColl= $_POST[ 'StopColl' ];                 
