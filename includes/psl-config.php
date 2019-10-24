@@ -1,7 +1,7 @@
 <?php
 
 define("HOST", "localhost"); 			// The host you want to connect to. 
-define("USER", "DBadmin"); 			// The database username. 
+define("USER", "distiller"); 			// The database username. 
 define("PASSWORD", "qwer1234"); 	// The database password. 
 define("DATABASE", "CDCtest");             // The database name.
 
