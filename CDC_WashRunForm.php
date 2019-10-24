@@ -162,6 +162,12 @@ sec_session_start();
           <input type="text" inputmode="numeric" pattern="^\d{1,4}(\.\d{0,1})?$" size="6" class="form-control" id="PG_resulting" name="PG_resulting" value="" >
         </div>
     </li>
+    <li class="form-line" data-type="control_textbox">
+        <div class="form-input-wide">
+        <label for="Notes">Notes</label>
+          <textarea type="text" id="Notes" name="Notes" value="" >
+        </div>
+    </li>
   </ul>
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text" >
