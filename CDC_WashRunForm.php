@@ -138,8 +138,8 @@ sec_session_start();
                 <option value="<?= $row->ProductName ?>" ><?= $row->ProductName ?></option>
           <?php endwhile; ?>
           </select>
-        <label for="DestinationContainer">Destination Container</label>
-                <select class='form-dropdown' id='DestinationContainer' name="DestinationContainer" >
+        <label for="chooseDestinationContainer">Destination Container</label>
+                <select class='form-dropdown' id='chooseDestinationContainer' name="DestinationContainer" >
           <?php while($row = $getDestinationContainer->fetchObject()): ?>
                 <option value="<?= $row->ContainerName ?>" ><?= $row->ContainerName ?></option>
           <?php endwhile; ?>
