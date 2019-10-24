@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "DBadmin";
+$username = "distiller";
 $password = "qwer1234"; 
 $dbname = "CDCtest";
 
