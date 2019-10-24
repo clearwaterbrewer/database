@@ -3,11 +3,11 @@ require_once('includes/psl-configPDO.php'); //db info
 require_once('includes/functions.php'); //security functions
 $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by BatchNum DESC");
 $getBatchNum->execute();
-$getSourceContainer = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
+$getSourceContainer = $pdo->prepare("ContainerName FROM Containers ORDER by ContainerName");
 $getSourceContainer->execute();
 $getDestinationContainer = $pdo->prepare("ContainerName FROM Containers ORDER by ContainerName");
 $getDestinationContainer->execute();
-$getDestinationProduct = $pdo->prepare("ProductName FROM Products ORDER by id");
+$getDestinationProduct = $pdo->prepare("SELECT id, ProductName FROM Products ORDER by id");
 $getDestinationProduct->execute();
 sec_session_start();
 ?>
@@ -72,8 +72,8 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
-        <label for="SourceContainer">Source Container</label>
-          <select class='form-dropdown' id='SourceContainer' name="SourceContainer" >
+        <label for="chooseSourceContainer">Source Container</label>
+          <select class='form-dropdown' id='chooseSourceContainer' name="SourceContainer" >
           <?php while($row = $getSourceContainer->fetchObject()): ?>
                 <option value="<?= $row->ContainerName ?>" ><?= $row->ContainerName ?></option>
           <?php endwhile; ?>
@@ -186,11 +186,11 @@ sec_session_start();
     });
 
     // monitor for changes in SourceContainer
-    //$(document).ready(function() {  
-    //  $('#SourceContainer').on('change', function() {
-    //    retrieveContainer( $(this).val() );
-    //  })
-    //});
+    $(document).ready(function() {  
+      $('#chooseSourceContainer').on('change', function() {
+        retrieveContainer( $(this).val() );
+      })
+    });
 
 	  // monitor for changes in ProofCollected
     $(document).ready(function() {
