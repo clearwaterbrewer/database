@@ -74,7 +74,7 @@ sec_session_start();
 			echo '<div class=column>'.$row['ProofCollected'].'</div>';
 			echo '<div class=column>'.$row['PGCollected'].'</div>';
 			echo '<div class=column>'.$row['DestinationProduct'].'</div>';
-			echo '<div class=column>'.$row['DesitnationContainer'].'</div>';
+			echo '<div class=column>'.$row['DestinationContainer'].'</div>';
 			echo '<div class=column>'.$row['WG_resulting'].'</div>';
 			echo '<div class=column>'.$row['PG_resulting'].'</div>';
       			echo "</div>";
