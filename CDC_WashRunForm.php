@@ -5,9 +5,9 @@ $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches ORDER by B
 $getBatchNum->execute();
 $getSourceContainer = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
 $getSourceContainer->execute();
-$getDestinationContainer = $pdo->prepare("SELECT id, ContainerName FROM Containers ORDER by ContainerName");
+$getDestinationContainer = $pdo->prepare("ContainerName FROM Containers ORDER by ContainerName");
 $getDestinationContainer->execute();
-$getDestinationProduct = $pdo->prepare("SELECT id, ProductName FROM Products ORDER by id");
+$getDestinationProduct = $pdo->prepare("ProductName FROM Products ORDER by id");
 $getDestinationProduct->execute();
 sec_session_start();
 ?>
