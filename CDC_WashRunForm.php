@@ -7,7 +7,7 @@ $getSourceContainer = $pdo->prepare("SELECT ContainerName FROM Containers ORDER 
 $getSourceContainer->execute();
 $getDestinationContainer = $pdo->prepare("SELECT ContainerName FROM Containers ORDER by ContainerName");
 $getDestinationContainer->execute();
-$getDestinationProduct = $pdo->prepare("SELECT id, ProductName FROM Products ORDER by id");
+$getDestinationProduct = $pdo->prepare("SELECT ProductName FROM Products ORDER by ProductName");
 $getDestinationProduct->execute();
 sec_session_start();
 ?>
@@ -186,11 +186,11 @@ sec_session_start();
     });
 
     // monitor for changes in SourceContainer
-    $(document).ready(function() {  
-      $('#chooseSourceContainer').on('change', function() {
-        retrieveContainer( $(this).val() );
-      })
-    });
+    //$(document).ready(function() {  
+    //  $('#chooseSourceContainer').on('change', function() {
+    //    retrieveContainer( $(this).val() );
+    //  })
+    //});
 
 	  // monitor for changes in ProofCollected
     $(document).ready(function() {
@@ -222,6 +222,21 @@ sec_session_start();
    
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
+      $.post(
+        "CDC_Ajax_PDO.php",               // where to send data
+        {BatchNum: BatchNumber},  // parameters to send {varname: value}
+        function(result) {        // what to do with results
+          if(result.status=='success') {
+            populateForm(result.data);
+          } else {
+            alert ('oops, failed to retrieve batchinfo');
+          }
+        }
+      );
+    }
+
+
+    function retrieveContainer(BatchNumber) {
       $.post(
         "CDC_Ajax_PDO.php",               // where to send data
         {BatchNum: BatchNumber},  // parameters to send {varname: value}
