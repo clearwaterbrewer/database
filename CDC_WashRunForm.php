@@ -165,7 +165,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="Notes">Notes</label>
-          <textarea type="text" id="Notes" name="Notes" value="" >
+          <textarea type="text" id="Notes" name="Notes" value="" </textarea>
         </div>
     </li>
   </ul>
