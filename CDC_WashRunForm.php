@@ -236,19 +236,19 @@ sec_session_start();
     }
 
 
-    function retrieveContainer(BatchNumber) {
-      $.post(
-        "CDC_Ajax_PDO.php",               // where to send data
-        {BatchNum: BatchNumber},  // parameters to send {varname: value}
-        function(result) {        // what to do with results
-          if(result.status=='success') {
-            populateForm(result.data);
-          } else {
-            alert ('oops, failed to retrieve batchinfo');
-          }
-        }
-      );
-    }
+    //function retrieveContainer(BatchNumber) {
+    //  $.post(
+    //    "CDC_Ajax_PDO.php",               // where to send data
+    //    {BatchNum: BatchNumber},  // parameters to send {varname: value}
+    //    function(result) {        // what to do with results
+    //      if(result.status=='success') {
+    //        populateForm(result.data);
+    //      } else {
+    //        alert ('oops, failed to retrieve batchinfo');
+    //      }
+    //    }
+    //  );
+    //}
 
     function calculatePG() {
       var WGCollected = parseInt(document.getElementById('WGCollected').value);
