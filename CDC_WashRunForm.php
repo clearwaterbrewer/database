@@ -67,7 +67,7 @@ sec_session_start();
         <label for="WashName">Wash Name</label>
           <input type="text" class="form-control" id="WashName" name="WashName" value="">
         <label for="SourceAmount">Source Amount</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,5}$" size="5" class="form-control" id="SourceAmount" name="SourceAmount" value="">
+          <input type="text" inputmode="numeric" pattern="^\d{1,5}" size="6" class="form-control" id="SourceAmount" name="SourceAmount" value="">
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
