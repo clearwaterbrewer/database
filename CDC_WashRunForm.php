@@ -178,14 +178,21 @@ sec_session_start();
 
   <script>
 
-    // monitor for changes in drop-down
+    // monitor for changes in BatchNum
     $(document).ready(function() {
       $('#choose-batch').on('change', function() {
         retrieveItem( $(this).val() );
       })
     });
 
-    // monitor for changes in ProofCollected
+    // monitor for changes in SourceContainer
+    //$(document).ready(function() {  
+    //  $('#SourceContainer').on('change', function() {
+    //    retrieveContainer( $(this).val() );
+    //  })
+    //});
+
+	  // monitor for changes in ProofCollected
     $(document).ready(function() {
       $('#ProofCollected').on('focusout', function() {
         calculatePG();
@@ -243,9 +250,9 @@ sec_session_start();
       $('#BatchName').val(data.BatchName);
       $('#SourceProduct').val(data.SourceProduct);
       $('#SourceIngredient').val(data.SourceIngredient);
-      $('#SourceContainer').val(data.SourceContainer);
-      $('#DestinationProduct').val(data.DestinationProduct);
-      $('#DestinationContainer').val(data.DestinationContainer);
+      //$('#SourceContainer').val(data.SourceContainer);
+      //$('#DestinationProduct').val(data.DestinationProduct);
+      //$('#DestinationContainer').val(data.DestinationContainer);
     }
     function populatePG(data) {
       $('#PGCollected').val(data.PGCollected);
