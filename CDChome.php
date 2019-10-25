@@ -140,7 +140,7 @@ sec_session_start();
           <div class="form-buttons-wrapper">
             <a href="CDC_Ingredients.php" >
               <button type="button" class="form-submit-button" >
-                Fermentable Ingredients
+                Ingredients
               </button>
             </a>
            </div>
@@ -151,7 +151,7 @@ sec_session_start();
           <div class="form-buttons-wrapper">
             <a href="CDC_Products.php" >
               <button type="button" class="form-submit-button" >
-                Fermentable Products
+                Products
               </button>
             </a>
            </div>
