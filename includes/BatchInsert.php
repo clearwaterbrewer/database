@@ -1,7 +1,7 @@
 <?php
 require_once('psl-configPDO.php');
 if(!empty($_POST)){
-  $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
+  $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$dbusern,$dbpassw);
   $sql = "INSERT INTO Batches ( BatchName,  ClassType,  SourceProduct,  SourceIngredient,  BottleProof,  BarrelProof,  PreviousBatch,  UPC) 
                        VALUES (:BatchName, :ClassType, :SourceProduct, :SourceIngredient, :BottleProof, :BarrelProof, :PreviousBatch, :UPC)";
 
