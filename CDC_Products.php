@@ -31,13 +31,13 @@ div.ex3 {
     <li id="cid_1" class="form-input-wide" data-type="control_head">
       <div class="form-header-group ">
          <div class="header-text httal htvam">
-         <label style="font-weight:bold; font-size:28px;">CDC Products</label>
+         <label style="font-weight:bold; font-size:28px;">CDC Batches</label>
         </div>
         <div>
           <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
 	</div>
         </div>
-	<label><center><b>Fermentable Products</b></center></label>
+	<label><center><b>Products</b></center></label>
     </li
     <li>
       <div class="ex3">
@@ -65,41 +65,34 @@ div.ex3 {
   </ul>
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text" >
-      <div class="form-input-wide">
-        <div style="margin-left:10px" class="form-buttons-wrapper">
+      <div class="buttonrow">
+        <div class="col-1 form-buttons-wrapper">
           <a href="CDC_ProductForm.php" >
             <button type="button" class="form-submit-button" >
-              New Ingredient
+              New Product
             </button>
           </a>
-         </div>
-       </div>
-    </li>
-    <li class="form-line" data-type="control_text">
-        <div class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="CDChome.php" >
-              <button type="button" class="form-submit-button" >
-                Home
-              </button>
-            </a>
         </div>
+      <div class="col-1 form-buttons-wrapper">
+         <a href="CDChome.php" >
+           <button type="button" class="form-submit-button" >
+             Home
+           </button>
+         </a>
        </div>
-    </li>
-    <li class="form-line" data-type="control_text">
-        <div class="form-input-wide">
-          <div style="margin-left:40px" class="form-buttons-wrapper">
-            <a href="includes/logout.php">
-              <button type="button" class="form-submit-button" >
-                Logout
-              </button>
-            </a>
-          </div>
+       <div class="col-1 form-buttons-wrapper">
+          <a href="includes/logout.php">
+            <button type="button" class="form-submit-button" >
+              Logout
+            </button>
+          </a>
         </div>
+      </div>
     </li>
   </ul>
 </div>
 </form>        
+       
 <?php else : ?>
 <form class="jotform-form" accept-charset="utf-8">
   <div class="form-all">
