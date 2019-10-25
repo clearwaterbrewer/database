@@ -1,7 +1,7 @@
 <?php
 require_once('includes/psl-configPDO.php'); //db info
 require_once('includes/functions.php'); //security functions
-$pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
+$pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$dbusern,$dbpassw);
 $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches WHERE CurrentBatch=1 ORDER by BatchNum DESC");
 $getBatchNum->execute();
 $getDestination = $pdo->prepare("SELECT DistributorsID, DistributorsName FROM Distributors");
