@@ -1,5 +1,5 @@
 <?php
-require_once('psl-config.php');
+include_once 'psl-config.php'; 
 
 try{
     $mysqli = new PDO('mysql:host='.HOST.';dbname='.DATABASE,USER,PASSWORD);
