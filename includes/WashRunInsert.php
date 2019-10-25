@@ -2,7 +2,7 @@
 require_once('psl-configPDO.php');
 
 if(!empty($_POST)){
-  $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$username,$password);
+  $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$dbusern,$dbpassw);
   $sql = "INSERT INTO WashRuns (DateTimeCode,  BatchNum,  WashName,  SourceAmount,  SourceContainer,  AlcByVol,  GallonsDistilled,  GallonsRemaining,  StartColl,  StopColl,  WGCollected,  ProofCollected,  PGCollected,  PGEfficiency,  Temp_C,  Distilled_pH,  StartProof,  StopProof,  DestinationProduct,  DestinationContainer,  WG_existing,  WG_resulting,  PG_existing,  PG_resulting,  Notes) 
                        VALUES (:DateTimeCode, :BatchNum, :WashName, :SourceAmount, :SourceContainer, :AlcByVol, :GallonsDistilled, :GallonsRemaining, :StartColl, :StopColl, :WGCollected, :ProofCollected, :PGCollected, :PGEfficiency, :Temp_C, :Distilled_pH, :StartProof, :StopProof, :DestinationProduct, :DestinationContainer, :WG_existing, :WG_resulting, :PG_existing, :PG_resulting, :Notes)";
   if($insertWashRun = $pdo->prepare($sql)){
