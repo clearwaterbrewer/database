@@ -31,7 +31,7 @@ div.ex3 {
     <li id="cid_1" class="form-input-wide" data-type="control_head">
       <div class="form-header-group ">
          <div class="header-text httal htvam">
-         <label style="font-weight:bold; font-size:28px;">CDC Batches</label>
+         <label style="font-weight:bold; font-size:28px;">CDC Products</label>
         </div>
         <div>
           <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
