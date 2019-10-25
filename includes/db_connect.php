@@ -1,12 +1,9 @@
 <?php
-require_once('psl-config.php');
-try{
-    $mysqli = new PDO('mysql:host='.HOST.';dbname='.DATABASE,USER,PASSWORD);
-                    $mysqli->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    die(json_encode(array('outcome' => true)));
-}
-catch(PDOException $ex){
-    die(json_encode(array('outcome' => false, 
-                          'message' => 'Unable to connect to '.HOST.':'.DATABASE.' with '.USER)));
+include_once 'psl-config.php';   // Needed because functions.php is not included
+$mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
+if ($mysqli->connect_error) {
+    header("Location: ../error.php?err=Unable to connect to MySQL");
+    exit();
 }
 ?>
+
