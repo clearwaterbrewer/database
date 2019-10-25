@@ -8,10 +8,10 @@ sec_session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="CDC Ingredients" >
-<meta property="og:description" content="View Ingredients.">
+<meta property="og:description" content="View Products.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="HandheldFriendly" content="true" />
-<title>CDC Ingredients</title>
+<title>CDC Products</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css"/>
 <style type="text/css" id="form-designer-style">
 .form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
@@ -24,13 +24,14 @@ div.ex3 {
 </style>
 </head>
 <body>
+<?php if (login_check($mysqli) == true) : ?>
 <form class="jotform-form" accept-charset="utf-8">
 <div class="form-all">
   <ul class="form-section page-section">        
     <li id="cid_1" class="form-input-wide" data-type="control_head">
       <div class="form-header-group ">
          <div class="header-text httal htvam">
-         <label style="font-weight:bold; font-size:28px;">CDC Batches</label>
+         <label style="font-weight:bold; font-size:28px;">CDC Ingredients</label>
         </div>
         <div>
           <label>Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
@@ -38,7 +39,7 @@ div.ex3 {
         </div>
 	<label><center><b>Ingredients</b></center></label>
     </li
-     <li>
+    <li>
       <div class="ex3">
 	      <div class="row">
 	        <div class="column">Name</div>
@@ -61,15 +62,14 @@ div.ex3 {
 		}
        ?>
     </li>	
-	
   </ul>
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text" >
       <div class="buttonrow">
         <div class="col-1 form-buttons-wrapper">
-          <a href="CDC_BatchForm.php" >
+          <a href="CDC_IngredientForm.php" >
             <button type="button" class="form-submit-button" >
-              New Batch
+              New Ingredient
             </button>
           </a>
         </div>
