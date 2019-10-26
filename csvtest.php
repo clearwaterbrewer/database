@@ -1,5 +1,11 @@
 <?php
-require_once('includes/psl-configPDO.php');
+$servername = "localhost";
+$dbusern = "distiller";
+$dbpassw = "qwer1234"; 
+$dbname = "CDCtest";
+
+$pdo = new PDO("mysql:host=$servername;dbname=$dbname", $dbusern, $dbpassw);
+
 $fileName = './RFB.csv';
 $table = 'RemovedFromBond';
  
