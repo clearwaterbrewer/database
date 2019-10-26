@@ -1,5 +1,5 @@
 <?php
- // from https://thisinterestsme.com/php-create-csv-file-mysql/
+// from https://thisinterestsme.com/php-create-csv-file-mysql/
 require_once('includes/psl-configPDO.php');
 $fileName = './RFB.csv';
 $table = 'RemovedFromBond';
