@@ -8,7 +8,7 @@ $table = 'RemovedFromBond';
  
  
 //Create our SQL query.
-$sql = "SELECT * FROM $table LIMIT 20";
+$sql = "SELECT * FROM $table WHERE DateTimeCode between (CURDATE() - INTERVAL 1 MONTH ) and NOW() ";
  
 //Prepare our SQL query.
 $statement = $dbh->prepare($sql);
