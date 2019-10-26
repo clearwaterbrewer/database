@@ -12,7 +12,7 @@ header('Content-Disposition: attachment; filename="' . $fileName . '"');
 $sql = "SELECT * FROM $table WHERE DateTimeCode between (CURDATE() - INTERVAL 1 MONTH ) and NOW() ";
  
 //Prepare our SQL query.
-$statement = $dbh->prepare($sql);
+$statement = $pdo->prepare($sql);
  
 //Executre our SQL query.
 $statement->execute();
