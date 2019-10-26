@@ -33,8 +33,10 @@ if(!empty($rows)){
 }
  
 //Set the Content-Type and Content-Disposition headers to force the download.
-header('Content-Type: application/excel');
+//header('Content-Type: application/excel');
 header('Content-Disposition: attachment; filename="' . $fileName . '"');
+header("Content-type: application/csv; charset=UTF-8");
+//header("Content-Disposition: attachment; filename=$filename.csv");
  
 //Open up a file pointer
 $fp = fopen('php://output', 'w');
