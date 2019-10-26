@@ -2,7 +2,7 @@
  // from https://thisinterestsme.com/php-create-csv-file-mysql/
 require_once('includes/psl-configPDO.php');
 
-$fileName = '../exports/RFB.csv';
+$fileName = 'RFB.csv';
 $table = 'RemovedFromBond';
  
  
