@@ -9,11 +9,6 @@ $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $dbusern, $dbpassw);
 $fileName = './RFB.csv';
 $table = 'RemovedFromBond';
  
-//Set the Content-Type and Content-Disposition headers to force the download.
-header('Content-Type: application/excel');
-header('Content-Disposition: attachment; filename="' . $fileName . '"');
- 
- 
 //Create our SQL query.
 $sql = "SELECT * FROM $table WHERE DateTimeCode between (CURDATE() - INTERVAL 1 MONTH ) and NOW() ";
  
@@ -37,6 +32,9 @@ if(!empty($rows)){
     }
 }
  
+//Set the Content-Type and Content-Disposition headers to force the download.
+header('Content-Type: application/excel');
+header('Content-Disposition: attachment; filename="' . $fileName . '"');
  
 //Open up a file pointer
 $fp = fopen('php://output', 'w');
