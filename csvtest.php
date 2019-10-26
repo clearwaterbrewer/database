@@ -1,5 +1,4 @@
 <?php
-// from https://thisinterestsme.com/php-create-csv-file-mysql/
 require_once('includes/psl-configPDO.php');
 $fileName = './RFB.csv';
 $table = 'RemovedFromBond';
@@ -31,11 +30,11 @@ if(!empty($rows)){
  
  
 //Set the Content-Type and Content-Disposition headers to force the download.
+header('Content-Type: application/excel');
+header('Content-Disposition: attachment; filename="' . $fileName . '"');
  
 //Open up a file pointer
 $fp = fopen('php://output', 'w');
-header('Content-Type: application/excel');
-header('Content-Disposition: attachment; filename="' . $fileName . '"');
 
 //Start off by writing the column names to the file.
 fputcsv($fp, $columnNames);
