@@ -6,7 +6,7 @@ $dbname = "CDCtest";
 
 $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $dbusern, $dbpassw);
 
-$fileName = './RFB.csv';
+$fileName = 'RFB.csv';
 $table = 'RemovedFromBond';
  
 //Create our SQL query.
