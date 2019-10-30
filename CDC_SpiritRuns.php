@@ -11,7 +11,7 @@ sec_session_start();
 <meta property="og:description" content="View Wash Runs.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="HandheldFriendly" content="true" />
-<title>CDC Wash Runs</title>
+<title>CDC Spirit Runs</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css"/>
 <style type="text/css" id="form-designer-style">
 .form-label.form-label-auto { display: block; float: none; text-align: left; width: inherit; } 
@@ -25,13 +25,13 @@ sec_session_start();
     <li id="cid_1" class="form-input-wide" data-type="control_head">
       <div class="form-header-group ">
         <div class="header-text httal htvam">
-         <label style="font-weight:bold; font-size:28px;">CDC Wash Runs</label>
+         <label style="font-weight:bold; font-size:28px;">CDC Spirit Runs</label>
         </div>
         <div>
           <label >Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
         </div>
       </div>
-	<label><center><b>Last 100 Wash Runs</b></center></label>
+	<label><center><b>Last 100 Spirit Runs</b></center></label>
     </li>
     <li>
       <div class="ex3">
@@ -39,7 +39,6 @@ sec_session_start();
 	  <div class="column">Date</div>
 	  <div class="column">Time</div>
 	  <div class="column">Batch</div>
-	  <div class="column">Wash Name</div>
 	  <div class="column">Source Amount</div>
 	  <div class="column">Source Container</div>
 	  <div class="column">Alc ByVol</div>
@@ -55,7 +54,7 @@ sec_session_start();
 	</div>
 <?php 
       	  $sql="SELECT * FROM 
-		 (SELECT * FROM WashRuns ORDER BY DateTimeCode DESC LIMIT 100) 
+		 (SELECT * FROM SpiritRuns ORDER BY DateTimeCode DESC LIMIT 100) 
 		  sub ORDER BY DateTimeCode DESC";
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
@@ -64,7 +63,6 @@ sec_session_start();
 	   	   	echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
 			echo '<div class=column>'.$row['BatchNum'].'</div>';
-			echo '<div class=column>'.$row['WashName'].'</div>';
 			echo '<div class=column>'.$row['SourceAmount'].'</div>';
 			echo '<div class=column>'.$row['SourceContainer'].'</div>';
 			echo '<div class=column>'.$row['AlcByVol'].'</div>';
@@ -88,9 +86,9 @@ sec_session_start();
     <li class="form-line" data-type="control_text">
       <div class="buttonrow">
         <div class="col-1 form-buttons-wrapper">
-          <a href="CDC_WashRunForm.php" >
+          <a href="CDC_SpiritRunForm.php" >
             <button type="button" class="form-submit-button" >
-              New Wash Run
+              New Spirit Run
             </button>
           </a>
          </div>
