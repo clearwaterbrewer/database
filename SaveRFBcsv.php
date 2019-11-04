@@ -5,7 +5,7 @@ $fileName = 'RFB.csv';
 $table = 'RemovedFromBond';
  
 //Create our SQL query.
-$sql = "SELECT * FROM $table WHERE DateTimeCode between (CURDATE() - INTERVAL 1 MONTH ) and NOW() ";
+$sql = "SELECT * FROM $table WHERE DateTimeCode between (CURDATE() - INTERVAL 2 MONTH ) and NOW() ";
  
 //Prepare our SQL query.
 $statement = $pdo->prepare($sql);
