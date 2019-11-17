@@ -116,6 +116,28 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div class="form-buttons-wrapper">
+            <a href="CDC_Barreling.php" >
+              <button type="button" class="form-submit-button" >
+                Barreling
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div class="form-buttons-wrapper">
+            <a href="CDC_unBarreling.php" >
+              <button type="button" class="form-submit-button" >
+                Un-Barreling
+              </button>
+            </a>
+           </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_8">
+        <div id="cid_8" class="form-input-wide">
+          <div class="form-buttons-wrapper">
             <a href="CDC_Bottling.php" >
               <button type="button" class="form-submit-button" >
                 Bottling
