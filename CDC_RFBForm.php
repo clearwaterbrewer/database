@@ -86,7 +86,7 @@ sec_session_start();
         <label for="InvoiceNumber">InvoiceNumber</label>
           <input type="text" class="form-control" id="InvoiceNumber" name="InvoiceNumber" value="" >
         </div>
-        <div>
+        <div class="form-input-wide">
         </div>
     </li>
     </li>
