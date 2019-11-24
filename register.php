@@ -50,11 +50,11 @@ include_once 'includes/functions.php';
                    onclick="return regformhash(this.form,
                                    this.form.username,
                                    this.form.email,
+                                   this.form.password,
+                                   this.form.confirmpwd,
                                    this.form.firstname,
                                    this.form.lastname,
-                                   this.form.initials,
-                                   this.form.password,
-                                   this.form.confirmpwd);" /> 
+                                   this.form.initials);" /> 
         </form>
         <p>Return to the <a href="index.php">login page</a>.</p>
     </body>
