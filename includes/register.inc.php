@@ -4,7 +4,7 @@ include_once 'psl-config.php';
 
 $error_msg = "";
 
-if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['firstname'], $_POST['lastname'], $_POST['initials'])) {
+if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $_POST['initials'], $_POST['p'])) {
     // Sanitize and validate the data passed in
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -13,11 +13,9 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['firstname'],
         // Not a valid email
         $error_msg .= '<p class="error">The email address you entered is not valid</p>';
     }
-    
-    $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
+        $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
     $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
     $initials = filter_input(INPUT_POST, 'initials', FILTER_SANITIZE_STRING);
-
     $password = filter_input(INPUT_POST, 'p', FILTER_SANITIZE_STRING);
     if (strlen($password) != 128) {
         // The hashed pwd should be 128 characters long.
@@ -29,8 +27,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['firstname'],
     // This should should be adequate as nobody gains any advantage from
     // breaking these rules.
     //
-    
-    $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
+        $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
     
     if ($stmt) {
@@ -55,9 +52,9 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['firstname'],
 
         // Insert the new user into the database 
         if ($insert_stmt = $mysqli->prepare("
-          INSERT INTO members (username, email, firstname, lastname, initials, password, salt) 
-          VALUES (?, ?, ?, ?, ?, ?, ?)")) {
-            $insert_stmt->bind_param('ssss', $username, $email, $firstname, $lastname, $initials, $password, $random_salt);
+          INSERT INTO members (username, email, password, salt) 
+          VALUES (?, ?, ?, ?)")) {
+            $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
