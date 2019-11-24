@@ -15,7 +15,7 @@ function formhash(form, password) {
     form.submit();
 }
 
-function regformhash(form, uid, email, firstname, lastname, initials, password, conf) {
+function regformhash(form, uid, email, password, conf, firstname, lastname, initials) {
     // Check each field has a value
     if (uid.value == '' || email.value == '' || firstname.value == '' || lastname.value == '' || initials.value == '' || password.value == '' || conf.value == '') {
         alert('You must provide all the requested details. Please try again');
