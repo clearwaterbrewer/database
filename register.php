@@ -36,6 +36,9 @@ include_once 'includes/functions.php';
         <form method="post" name="registration_form" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
             Username: <input type='text' name='username' id='username' /><br>
             Email: <input type="text" name="email" id="email" /><br>
+            First Name: <input type='text' name='firstname' id='firstname' /><br>
+            Last Name: <input type='text' name='lastname' id='lastname' /><br>
+            Initials: <input type='text' name='initials' id='initials' /><br>
             Password: <input type="password"
                              name="password" 
                              id="password"/><br>
@@ -47,6 +50,9 @@ include_once 'includes/functions.php';
                    onclick="return regformhash(this.form,
                                    this.form.username,
                                    this.form.email,
+                                   this.form.firstname,
+                                   this.form.lastname,
+                                   this.form.initials,
                                    this.form.password,
                                    this.form.confirmpwd);" /> 
         </form>
