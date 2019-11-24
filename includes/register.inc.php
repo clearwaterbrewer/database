@@ -53,13 +53,13 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
 
         // Insert the new user into the database 
      if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password, salt, lastname) VALUES (?, ?, ?, ?, ?)")) {
-         $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt, $lastname);
+         $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt, "lastname");
          // Execute the prepared query.
             if (! $insert_stmt->execute()) {
  //
-                var_dump ($insert_stmt);
-                var_dump ($username);
-                var_dump ($lastname);
+ //               var_dump ($insert_stmt);
+ //               var_dump ($username);
+                echo $lastname;
                 
                 //               header('Location: ../error.php?err=Registration failure: INSERT');
                 exit();
