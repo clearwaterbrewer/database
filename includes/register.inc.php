@@ -62,7 +62,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
                 exit();
             }
         }
-        header('Location: ./register_success.php');
+  //      header('Location: ./register_success.php');
         exit();
     }
 }
