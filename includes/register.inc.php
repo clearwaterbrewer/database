@@ -4,7 +4,7 @@ include_once 'psl-config.php';
 
 $error_msg = "";
 
-if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $_POST['initials'], $_POST['p'])) {
+if (isset($_POST['username'], $_POST['email'], $_POST['p'], $_POST['firstname'], $_POST['lastname'], $_POST['initials'])) {
     // Sanitize and validate the data passed in
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -54,7 +54,9 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
         $password = hash('sha512', $password . $random_salt);
 
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, firstname, lastname, initials, password, salt) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
+        if ($insert_stmt = $mysqli->prepare("
+          INSERT INTO members (username, email, firstname, lastname, initials, password, salt) 
+          VALUES (?, ?, ?, ?, ?, ?, ?)")) {
             $insert_stmt->bind_param('ssss', $username, $email, $firstname, $lastname, $initials, $password, $random_salt);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
