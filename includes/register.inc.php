@@ -14,7 +14,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
         $error_msg .= '<p class="error">The email address you entered is not valid</p>';
     }
         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
-    $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
+//    $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
+    $lastname = "lastname";
     $initials = filter_input(INPUT_POST, 'initials', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'p', FILTER_SANITIZE_STRING);
     if (strlen($password) != 128) {
@@ -53,7 +54,6 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
         // Insert the new user into the database 
      if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password, salt, lastname) VALUES (?, ?, ?, ?, ?)")) {
          $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt, $lastname);
-   var_dump ($insert_stmt);
          // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
