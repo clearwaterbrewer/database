@@ -28,11 +28,11 @@ function sec_session_start() {
 }
 
 function login($username, $password, $mysqli) {
-    if ($stmt = $mysqli->prepare("SELECT id, username, password, salt FROM members WHERE username = ? LIMIT 1")) {
+    if ($stmt = $mysqli->prepare("SELECT id, username, password, salt, initials FROM members WHERE username = ? LIMIT 1")) {
         $stmt->bind_param('s', $username);
 	$stmt->execute();
         $stmt->store_result();
-        $stmt->bind_result($user_id, $username, $db_password, $salt);
+        $stmt->bind_result($user_id, $username, $db_password, $salt, $initials);
         $stmt->fetch();
         $password = hash('sha512', $password . $salt);
         if ($stmt->num_rows == 1) {
@@ -46,6 +46,7 @@ function login($username, $password, $mysqli) {
                     $username = preg_replace("/[^a-zA-Z0-9_\-]+/", "", $username);
                     $_SESSION['username'] = $username;
                     $_SESSION['login_string'] = hash('sha512', $password . $user_browser);
+                    $_SESSION['initials'] = $initials;
                     return true;
                 } else {
                     $now = time();
