@@ -52,6 +52,7 @@ sec_session_start();
 	  <div class="column">Container</div>
 	  <div class="column">WG Resulting</div>
 	  <div class="column">PG Resulting</div>
+	  <div class="column">Initials</div>
 	</div>
 <?php 
       	  $sql="SELECT * FROM 
@@ -77,6 +78,7 @@ sec_session_start();
 			echo '<div class=column>'.$row['DestinationContainer'].'</div>';
 			echo '<div class=column>'.$row['WG_resulting'].'</div>';
 			echo '<div class=column>'.$row['PG_resulting'].'</div>';
+			echo '<div class=column>'.$row['Initials'].'</div>';
       			echo "</div>";
 		  }
 		}
