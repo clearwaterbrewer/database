@@ -88,6 +88,7 @@ sec_session_start();
         </div>
         <div class="form-input-wide">
          <label> - </label>
+	 <input type="hidden" value="<?php htmlentities($_SESSION['initials']); ?>">
        </div>
     </li>
     </li>
