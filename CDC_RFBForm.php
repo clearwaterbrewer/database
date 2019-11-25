@@ -88,7 +88,7 @@ sec_session_start();
         </div>
         <div class="form-input-wide">
          <label> - </label>
-	 <input type="hidden" id="Initials" name="Initials" value="<?php $_SESSION['initials']; ?>" >
+	 <input type="text" id="Initials" name="Initials" value="<?php $_SESSION['initials']; ?>" >
        </div>
     </li>
     </li>
