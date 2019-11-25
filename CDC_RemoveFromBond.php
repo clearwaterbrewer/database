@@ -28,7 +28,7 @@ sec_session_start();
          <label style="font-weight:bold; font-size:28px;">CDC Removals from Bond</label>
         </div>
         <div>
-          <label >Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
+          <label >Logged in as: <?php echo htmlentities($_SESSION['initials']); ?> </label>
         </div>
       </div>
 	<label><center><b>Last 60 Days Removals from Bond</b></center></label>
