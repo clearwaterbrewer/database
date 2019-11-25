@@ -32,6 +32,7 @@ if(!empty($_POST)){
       $PG_existing= $_POST[ 'PG_existing' ];                 
       $PG_resulting= $_POST[ 'PG_resulting' ];                 
       $Notes= $_POST[ 'Notes' ];                 
+      $Initials= $_POST[ 'Initials' ];                 
 
       $result = $insertWashRun->execute(array(':DateTimeCode'=>$DateTimeCode, ':BatchNum'=>$BatchNum, ':WashName'=>$WashName, ':SourceAmount'=>$SourceAmount, ':SourceContainer'=>$SourceContainer, ':AlcByVol'=>$AlcByVol, ':GallonsDistilled'=>$GallonsDistilled, ':GallonsRemaining'=>$GallonsRemaining, ':StartColl'=>$StartColl, ':StopColl'=>$StopColl, ':WGCollected'=>$WGCollected, ':ProofCollected'=>$ProofCollected, ':PGCollected'=>$PGCollected, ':PGEfficiency'=>$PGEfficiency, ':Temp_C'=>$Temp_C, ':Distilled_pH'=>$Distilled_pH, ':StartProof'=>$StartProof, ':StopProof'=>$StopProof, ':DestinationProduct'=>$DestinationProduct, ':DestinationContainer'=>$DestinationContainer, ':WG_existing'=>$WG_existing, ':WG_resulting'=>$WG_resulting, ':PG_existing'=>$PG_existing, ':PG_resulting'=>$PG_resulting, ':Notes'=>$Notes, ':Initials'=>$Initials));
 
