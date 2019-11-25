@@ -167,6 +167,10 @@ sec_session_start();
         <label for="Notes">Notes</label>
           <textarea id="Notes" name="Notes" ></textarea>
         </div>
+	<div class="form-input-wide">
+         <label> - </label>
+	 <input type="hidden" id="Initials" name="Initials" value="<?php echo $_SESSION['initials']; ?>" >
+        </div>
     </li>
   </ul>
   <ul class="form-section page-section" >
