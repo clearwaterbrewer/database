@@ -139,10 +139,10 @@ sec_session_start();
       $('#UPC').val(data.UPC);
     }
 
+   function CalculateBottles(CaseCount) {}
 //    $(document).ready(function() { 
 //	    $('#bottle-calc').on('change', function() { CalculateBottles( $(this).val() );	    
 //    });
-//    function CalculateBottles(CaseCount) {}
     
 	    
   </script>
