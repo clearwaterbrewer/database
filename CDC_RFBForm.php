@@ -66,11 +66,11 @@ sec_session_start();
         <label for="BottlesRemoved">Bottles Removed</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesRemoved" name="BottlesRemoved" value="" required >
         <label for="CaseCount">Case Count</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bottle-calc" name="CaseCount" value="" >
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="bottle-calc" id="CaseCount" name="CaseCount" value="" >
         <label for="BottleCount">Bottle Count</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bottle-calc" name="BottleCount" value="" >
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="bottle-calc" id="BottleCount" name="BottleCount" value="" >
         <label for="BottlesRemaining">Bottles Remaining</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesRemaining" name="BottlesRemaining" value="" required >
+          <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="bottle-calc" id="BottlesRemaining" name="BottlesRemaining" value="" required >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -114,10 +114,10 @@ sec_session_start();
     // monitor for changes in drop-down
     $(document).ready(function() { 
 	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) });
-	    $('#bottle-calc').on('change', function() { 
-		    var $casebottles = ('#CaseCount').val();
-		    var $bottles   = ('#BottleCount').val();
-		    var $BottlesRemaining = ($casebottles * 12) + ($bottles * 1);
+	    $('#bottle-calc').on('change', function CalculateBottles() { 
+		    var $val1 = ('#CaseCount').val() * 12;
+		    var $val2 = ('#BottleCount').val();
+		    var $BottlesRemaining = ($casebottles * 1) + ($bottles * 1);
 		    $('#BottlesRemaining').text($BottlesRemaining);
 		    });
     });
@@ -144,12 +144,7 @@ sec_session_start();
       $('#BottleProof').val(data.BottleProof);
       $('#UPC').val(data.UPC);
     }
-
-    function CalculateBottles(CaseCount) {
-      
-    }
    
-	    
   </script>
 
 <?php else : ?>
