@@ -114,7 +114,7 @@ sec_session_start();
     // monitor for changes in drop-down
     $(document).ready(function() { 
 	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) })
-	    $('#bottle-calc').on('change', function() { CalculateBottles( $(this).val() );
+//	    $('#bottle-calc').on('change', function() { CalculateBottles( $(this).val() );
     });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
@@ -140,8 +140,7 @@ sec_session_start();
       $('#UPC').val(data.UPC);
     }
 
-    function CalculateBottles(data) {
-    }
+ //   function CalculateBottles(data) {}
 	    
   </script>
 
