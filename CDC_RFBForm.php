@@ -115,9 +115,9 @@ sec_session_start();
     $(document).ready(function() { 
 	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) });
 	    $('#bottle-calc').on('change', function() { 
-		    var casebottles = $('CaseCount').val()*12;
-		    var bottles   = $('BottleCount').val();
-		    var BottlesRemaining = casebottles+bottles;
+		    var $casebottles = ('#CaseCount').val();
+		    var $bottles   = ('#BottleCount').val();
+		    var $BottlesRemaining = ($casebottles * 12) + ($bottles * 1);
 		    $('#BottlesRemaining').val($BottlesRemaining);
 		    });
     });
