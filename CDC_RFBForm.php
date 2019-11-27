@@ -117,7 +117,7 @@ sec_session_start();
 	    $('#CaseCount, #BottleCount').on('change', function() { 
 		    var value1 = $('#CaseCount').val();
 //		    var value2 = ('#BottleCount').val();
-		    $('#BottlesRemaining').val(value1 * 1);
+		    $('#BottlesRemaining').val(value1 * 12);
 		    });
     });
     // send batchNum via ajax
