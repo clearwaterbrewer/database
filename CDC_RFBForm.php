@@ -112,11 +112,7 @@ sec_session_start();
 
   <script>
     // monitor for changes in drop-down
-    $(document).ready(function() {  // technically not necessary if script is at the bottom, but I do it out of habit
-      $('#choose-batch').on('change', function() {
-        retrieveItem( $(this).val() );
-      })
-    });
+    $(document).ready(function() { $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) })  });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
       $.post(
@@ -139,12 +135,6 @@ sec_session_start();
       $('#BottleProof').val(data.BottleProof);
       $('#UPC').val(data.UPC);
     }
-   $(".bottle-calc").focusout(function() {
-    $("#BottlesRemaining").html('');
-    var CaseCount = 12 * $("#CaseCount").val();
-    var BottleCount = $("#BottleCount").val();
-    var BottlesRemaining = CaseCount + BottleCount;
-    $("#BottlesRemaining").html(BottlesRemaining);
 
   </script>
 
