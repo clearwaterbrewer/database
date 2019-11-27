@@ -139,6 +139,13 @@ sec_session_start();
       $('#BottleProof').val(data.BottleProof);
       $('#UPC').val(data.UPC);
     }
+   $(".bottle-calc").focusout(function() {
+    $("#BottlesRemaining").html('');
+    var CaseCount = 12 * $("#CaseCount").val();
+    var BottleCount = $("#BottleCount").val();
+    var BottlesRemaining = CaseCount + BottleCount;
+    $("#BottlesRemaining").html(BottlesRemaining);
+
   </script>
 
 <?php else : ?>
