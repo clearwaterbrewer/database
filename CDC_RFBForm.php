@@ -112,7 +112,9 @@ sec_session_start();
 
   <script>
     // monitor for changes in drop-down
-    $(document).ready(function() { $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) })  });
+    $(document).ready(function() { 
+	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) })  
+    });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
       $.post(
