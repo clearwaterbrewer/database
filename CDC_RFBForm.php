@@ -118,7 +118,7 @@ sec_session_start();
 		    var bottles = 0;
 		    var value1 = $('#CaseCount').val();
 		    var value2 = $('#BottleCount').val();
-		    var BottlesRemaining = (value1 * 12) + (value1 * 1);
+		    var BottlesRemaining = (value1 * 12) + (value2 * 1);
 		    $('#BottlesRemaining').val(BottlesRemaining);
 		    });
     });
