@@ -114,7 +114,12 @@ sec_session_start();
     // monitor for changes in drop-down
     $(document).ready(function() { 
 	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) });
-	    $('#bottle-calc').on('change', function() { var casebottles = $('CaseCount').val()*12 });
+	    $('#bottle-calc').on('change', function() { 
+		    var casebottles = $('CaseCount').val()*12;
+		    var bottles   = $('BottleCount').val();
+		    var BottlesRemaining = casebottles+casebottles;
+		    $('#BottlesRemaining').val(BottlesRemaining);
+		    });
     });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
