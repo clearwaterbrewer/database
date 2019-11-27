@@ -115,9 +115,9 @@ sec_session_start();
     $(document).ready(function() { 
 	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) });
 	    $('#CaseCount, #BottleCount').on('change', function() { 
-		    var value1 = ('#CaseCount').val();
+//		    var value1 = ('#CaseCount').val();
 //		    var value2 = ('#BottleCount').val();
-		    $('#BottlesRemaining').val(Value1);
+		    $('#BottlesRemaining').val('#CaseCount');
 		    });
     });
     // send batchNum via ajax
