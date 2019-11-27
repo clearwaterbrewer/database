@@ -113,7 +113,8 @@ sec_session_start();
   <script>
     // monitor for changes in drop-down
     $(document).ready(function() { 
-	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) })  
+	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) })
+	    $('#bottle-calc').on('change', function() { CalculateBottles( $(this).val() );
     });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
@@ -129,6 +130,7 @@ sec_session_start();
         }
       );
     }
+	    
     // put results into page
     function populateForm(data) {
       $('#BatchNum').val(data.BatchNum);
@@ -138,6 +140,9 @@ sec_session_start();
       $('#UPC').val(data.UPC);
     }
 
+    function CalculateBottles(data) {
+    }
+	    
   </script>
 
 <?php else : ?>
