@@ -114,7 +114,7 @@ sec_session_start();
     // monitor for changes in drop-down
     $(document).ready(function() { 
 	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) });
-	    $('#bottle-calc').on('change', function() {})
+	    $('#bottle-calc').on('change', function() {CalculateBottles( var casebottles = $('CaseCount').val()*12 )});
     });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
@@ -140,11 +140,10 @@ sec_session_start();
       $('#UPC').val(data.UPC);
     }
 
-   function CalculateBottles(CaseCount) {}
-//    $(document).ready(function() { 
-//	    $('#bottle-calc').on('change', function() { CalculateBottles( $(this).val() );	    
-//    });
-    
+    function CalculateBottles(CaseCount) {
+      
+    }
+   
 	    
   </script>
 
