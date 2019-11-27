@@ -66,9 +66,9 @@ sec_session_start();
         <label for="BottlesRemoved">Bottles Removed</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesRemoved" name="BottlesRemoved" value="" required >
         <label for="CaseCount">Case Count</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="bottle-calc" id="CaseCount" name="CaseCount" value="" >
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bottle-calc" name="CaseCount" value="" >
         <label for="BottleCount">Bottle Count</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="bottle-calc" id="BottleCount" name="BottleCount" value="" >
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bottle-calc" name="BottleCount" value="" >
         <label for="BottlesRemaining">Bottles Remaining</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesRemaining" name="BottlesRemaining" value="" required >
         </div>
@@ -139,7 +139,11 @@ sec_session_start();
       $('#UPC').val(data.UPC);
     }
 
- //   function CalculateBottles(data) {}
+    $(document).ready(function() { 
+	    $('#bottle-calc').on('change', function() { CalculateBottles( $(this).val() );	    
+    });
+    function CalculateBottles(CaseCount) {}
+    
 	    
   </script>
 
