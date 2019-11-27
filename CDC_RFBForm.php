@@ -118,7 +118,7 @@ sec_session_start();
 		    var $casebottles = ('#CaseCount').val();
 		    var $bottles   = ('#BottleCount').val();
 		    var $BottlesRemaining = ($casebottles * 12) + ($bottles * 1);
-		    $('#BottlesRemaining').val($BottlesRemaining);
+		    $('#BottlesRemaining').text($BottlesRemaining);
 		    });
     });
     // send batchNum via ajax
