@@ -110,18 +110,14 @@ sec_session_start();
 
   <script>
     // monitor for changes in drop-down
-    $(document).ready(function() {  // technically not necessary if script is at the bottom, but I do it out of habit
-      $('#choose-batch').on('change', function() {
-        retrieveItem( $(this).val() );
-      })
-    });
+    $(document).ready(function() {
+    // monitor for changes in drop-down
+      $('#choose-batch').on('change', function() { retrieveItem( $(this).val())})
     // monitor for changes in bottles
-    $(document).ready(function() {  // technically not necessary if script is at the bottom, but I do it out of habit
-      $('#BottlesRemaining').on('change', function() {
-        CalculateBottles( $(this).val() );
-      })
+      $('#BottlesRemaining').on('change', function() { CalculateBottles( $(this).val() );
     });
-    // send batchNum via ajax
+    // Ajax functions
+    // send batchNum to get item info
     function retrieveItem(BatchNumber) {
       $.post(
         "CDC_Ajax.php",               // where to send data
@@ -143,6 +139,7 @@ sec_session_start();
       $('#BottleProof').val(data.BottleProof);
       $('#UPC').val(data.UPC);
     }
+    // send cases and bottles to get bottle count
     function CalculateBottles(data) {
       $.post(
 	"CDC_Ajax.php",
