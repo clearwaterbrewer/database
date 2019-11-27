@@ -65,6 +65,8 @@ sec_session_start();
         <div class="form-input-wide">
         <label for="BottlesRemoved">Bottles Removed</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesRemoved" name="BottlesRemoved" value="" required >
+        <label for="CasesRemaining">Cases Remaining</label>
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="CasesRemaining" name="CasesRemaining" value="" required >
         <label for="BottlesRemaining">Bottles Remaining</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesRemaining" name="BottlesRemaining" value="" required >
         </div>
@@ -113,6 +115,12 @@ sec_session_start();
         retrieveItem( $(this).val() );
       })
     });
+    // monitor for changes in bottles
+    $(document).ready(function() {  // technically not necessary if script is at the bottom, but I do it out of habit
+      $('#BottlesRemaining').on('change', function() {
+        CalculateBottles( $(this).val() );
+      })
+    });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
       $.post(
@@ -129,6 +137,27 @@ sec_session_start();
     }
     // put results into page
     function populateForm(data) {
+      $('#BatchNum').val(data.BatchNum);
+      $('#BatchName').val(data.BatchName);
+      $('#ClassType').val(data.ClassType);
+      $('#BottleProof').val(data.BottleProof);
+      $('#UPC').val(data.UPC);
+    }
+    function CalculateBottles(data) {
+      $.post(
+	"CDC_Ajax.php",
+	{Cases: CasesRemaining, Bottles:BottlesRemaining},
+	function(result){
+	  if(result.status=='success') {
+	    populateBottles(result.data);
+	  } else { 
+	    alert ('oops, bottle calce failed');
+	  }
+        }
+      );
+    }
+    // put results into page
+    function populateBottles(data) {
       $('#BatchNum').val(data.BatchNum);
       $('#BatchName').val(data.BatchName);
       $('#ClassType').val(data.ClassType);
