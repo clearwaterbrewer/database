@@ -115,9 +115,11 @@ sec_session_start();
     $(document).ready(function() { 
 	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) });
 	    $('#CaseCount, #BottleCount').on('change', function() { 
+		    var bottles = 0;
 		    var value1 = $('#CaseCount').val();
 		    var value2 = $('#BottleCount').val();
-		    $('#BottlesRemaining').val((value1 * 12) + (value1 * 1));
+		    var BottlesRemaining = (value1 * 12) + (value1 * 1);
+		    $('#BottlesRemaining').val(BottlesRemaining);
 		    });
     });
     // send batchNum via ajax
