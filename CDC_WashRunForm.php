@@ -206,7 +206,7 @@ sec_session_start();
         $('#WG_resulting').on('focus', function() {
 		    var value1 = $('#WG_existing').val();
 		    var value2 = $('#WGCollected').val();
-		    var WG_resulting = (value1 + value2);
+		    var WG_resulting = ((value1 * 1) + (value2 * 1));
 	        $('#WG_resulting').val((WG_resulting).toFixed(1));
             });
         $('#PG_resulting').on('focus', function() {
