@@ -192,12 +192,14 @@ sec_session_start();
     $(document).ready(function() {
         $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) });
         $('#WGCollected, #ProofCollected').on('change', function() {
-            var PGCollected = $('#WGCollected').val() * $('#ProofCollected').val() /100);
-	    $('#PGCollected').val(PGCollected);
+		    var value1 = $('#WGCollected').val();
+		    var value2 = $('#ProofCollected').val();
+		    var PGCollected = (value1 * value2 / 100);
+	        $('#PGCollected').val(PGCollected);
             });
     });
 
-    // monitor for changes in SourceContainer
+	  // monitor for changes in SourceContainer
     //$(document).ready(function() {  
     //  $('#chooseSourceContainer').on('change', function() {
     //    retrieveContainer( $(this).val() );
