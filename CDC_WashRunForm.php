@@ -212,7 +212,7 @@ sec_session_start();
         $('#PG_resulting').on('focus', function() {
 		    var value1 = $('#PG_existing').val();
 		    var value2 = $('#PGCollected').val();
-		    var WG_resulting = ((value1 * 1) + (value2 * 1));
+		    var PG_resulting = ((value1 * 1) + (value2 * 1));
 	        $('#PG_resulting').val((PG_resulting).toFixed(1));
             });
     });
