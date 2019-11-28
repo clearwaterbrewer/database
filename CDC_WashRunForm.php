@@ -190,11 +190,10 @@ sec_session_start();
 
     // monitor for changes in BatchNum
     $(document).ready(function() {
-      $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) })
+      $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) });
       $ ('#WGCollected, #ProofCollected').on('change', function() {
            var PGCollected = $('#WGCollected').val() * $('#ProofCollected').val() /100);
 	   $('#PGCollected').val(PGCollected);
-      }
     });
 
     // monitor for changes in SourceContainer
