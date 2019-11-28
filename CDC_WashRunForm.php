@@ -203,6 +203,18 @@ sec_session_start();
 		    var PGEfficiency = (value1 / value2 );
 	        $('#PGEfficiency').val((PGEfficiency).toFixed(2));
             });
+        $('#WG_resulting').on('focus', function() {
+		    var value1 = $('#WG_existing').val();
+		    var value2 = $('#WGCollected').val();
+		    var WG_resulting = (value1 + value2);
+	        $('#WG_resulting').val((WG_resulting).toFixed(1));
+            });
+        $('#PG_resulting').on('focus', function() {
+		    var value1 = $('#PG_existing').val();
+		    var value2 = $('#PGCollected').val();
+		    var PG_resulting = (value1 + value2);
+	        $('#PG_resulting').val((PG_resulting).toFixed(1));
+            });
     });
 
 	  // monitor for changes in SourceContainer
