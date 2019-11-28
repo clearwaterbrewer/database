@@ -195,7 +195,7 @@ sec_session_start();
 		    var value1 = $('#WGCollected').val();
 		    var value2 = $('#ProofCollected').val();
 		    var PGCollected = (value1 * value2 / 100);
-	        $('#PGCollected').val(PGCollected).toFixed(2);
+	        $('#PGCollected').val((PGCollected).toFixed(2));
             });
     });
 
