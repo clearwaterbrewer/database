@@ -197,7 +197,7 @@ sec_session_start();
 		    var PGCollected = (value1 * value2 / 100);
 	        $('#PGCollected').val((PGCollected).toFixed(2));
             });
-        $('#SourceAmount, #PGCollected').on('change', function() {
+        $('#PGCollected').on('change', function() {
 		    var value1 = $('#SourceAmount').val();
 		    var value2 = $('#PGCollected').val();
 		    var PGEfficiency = (value1 / value2 );
