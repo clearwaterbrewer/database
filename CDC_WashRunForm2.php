@@ -35,7 +35,7 @@ $pdf->SetSubject('CDC Forms');
 $pdf->SetKeywords('Wash');
 
 // set default header data
-$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 014', PDF_HEADER_STRING);
+$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
 
 // set header and footer fonts
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -82,7 +82,7 @@ This name allows to manipulate them via JavaScript in order to perform some vali
 $pdf->setFormDefaultProp(array('lineWidth'=>1, 'borderStyle'=>'solid', 'fillColor'=>array(255, 255, 200), 'strokeColor'=>array(255, 128, 128)));
 
 $pdf->SetFont('helvetica', 'BI', 18);
-$pdf->Cell(0, 5, 'Example of Form', 0, 1, 'C');
+$pdf->Cell(0, 5, 'CDC Wash Run Form', 0, 1, 'C');
 $pdf->Ln(10);
 
 $pdf->SetFont('helvetica', '', 12);
