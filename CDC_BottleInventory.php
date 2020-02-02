@@ -24,7 +24,7 @@ sec_session_start();
 <?php if (login_check($mysqli) == true) : ?>
 
 	
-<form class="jotform-form" accept-charset="utf-8" id="RFBForm" name="RFBForm" action="includes/RFBInsert.php" method="POST">
+<form class="jotform-form" accept-charset="utf-8" id="RFBForm" name="RFBForm" action="includes/InventoryInsert.php" method="POST">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
@@ -61,20 +61,12 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
-        <label for="BottlesRemoved">Bottles Removed</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesRemoved" name="BottlesRemoved" value="" required >
         <label for="CaseCount">Case Count</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="CaseCount" name="CaseCount" value="" >
         <label for="BottleCount">Bottle Count</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="BottleCount" name="BottleCount" value="" >
-        <label for="BottlesRemaining">Bottles Remaining</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesRemaining" name="BottlesRemaining" value="" required >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <div class="form-input-wide">
-        <label for="CaseNumbers">CaseNumbers</label>
-          <input type="text" inputmode="numeric" class="form-control" id="CaseNumbers" name="CaseNumbers" value="" >
+        <label for="BottlesRemaining">Bottles Counted</label>
+          <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesCounted" name="BottlesCounted" value="" required >
         </div>
     </li>
     <li class="form-line" data-type="control_dropdown">
