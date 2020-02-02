@@ -2,7 +2,7 @@
 require_once('includes/psl-configPDO.php'); //db info
 require_once('includes/functions.php'); //security functions
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$dbusern,$dbpassw);
-$getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches WHERE CurrentBatch=1 ORDER by BatchNum DESC");
+$getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC");
 $getBatchNum->execute();
 sec_session_start();
 ?>
