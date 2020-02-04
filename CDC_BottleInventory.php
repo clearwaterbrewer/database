@@ -42,8 +42,7 @@ sec_session_start();
        </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-       <div class="ex3">
-	<div class="headrow">
+ 	<div class="form-input-wide"">
 	  <div class="column">Batch</div>
 	  <div class="column">Name</div>
 	  <div class="column">UPC</div>
@@ -52,25 +51,25 @@ sec_session_start();
 	  <div class="column">Bottle Count</div>
 	</div>
        <div class="form-input-wide">
-       <label for="choose-batch">Choose a Batch</label>
+       <label for="choose-batch"></label>
 	  <select class='form-dropdown' id='choose-batch' name="BatchNum">
           <?php while($row = $getBatchNum->fetchObject()): ?>
 	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
           <?php endwhile; ?>
           </select>
-        <label for="BatchName">Batch Name</label>
+        <label for="BatchName"></label>
           <input type='text' class='form-control' id="BatchName" name="BatchName" value="" />
-        <label for="UPC">UPC</label>
+        <label for="UPC"></label>
           <input type="text" class="form-control" id="UPC" name="UPC" value="" required >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
-        <label for="CaseCount">Case Count</label>
+        <label for="CaseCount"></label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="CaseCount" name="CaseCount" value="" >
-        <label for="BottleCount">Bottle Count</label>
+        <label for="BottleCount"></label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="BottleCount" name="BottleCount" value="" >
-        <label for="BottlesRemaining">Bottles Counted</label>
+        <label for="BottlesRemaining"></label>
           <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesCounted" name="BottlesCounted" value="" required >
         </div>
     </li>
