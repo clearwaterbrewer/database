@@ -51,10 +51,6 @@ sec_session_start();
           </select>
         <label for="BatchName">Batch Name</label>
           <input type='text' class='form-control' id="BatchName" name="BatchName" value="" />
-        <label for="ClassType">Class Type</label>
-          <input type="text" class="form-control" id="ClassType" name="ClassType" value="" required >
-        <label for="BottleProof">Proof</label>
-          <input type="text" class="form-control" id="BottleProof" name="BottleProof" value="" required >
         <label for="UPC">UPC</label>
           <input type="text" class="form-control" id="UPC" name="UPC" value="" required >
         </div>
