@@ -49,8 +49,6 @@ sec_session_start();
 	  <div class="column">Cases</div>
 	  <div class="column">Bottles</div>
 	  <div class="column">Count</div>
-	</div>
-       <div class="form-input-wide">
        <label for="choose-batch"></label>
 	  <select class='form-dropdown' id='choose-batch' name="BatchNum">
           <?php while($row = $getBatchNum->fetchObject()): ?>
