@@ -45,10 +45,12 @@ sec_session_start();
 	</div>
         <div class=row>
           <?php 
-          $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName, UPC FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC");
-          $getBatchNum->execute();
-	  if ($getBatchNum->num_rows > 0) {
-	    while ($row = $getBatchNum->fetch_assoc()) {
+
+		$sql="SELECT BatchNum, BatchName, UPC FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC";
+	      $result = $mysqli->query($sql);
+	if ($result->num_rows > 0) {
+	  while ($row = $result->fetch_assoc()) {
+		  
 		echo '<div class=row>';
 		echo '<div class=column>'.$row['BatchNum'].'</div>';
 		echo '<div class=column>'.$row['BatchName'].'</div>';
