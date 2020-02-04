@@ -43,12 +43,12 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
  	<div class="form-input-wide"">
-	  <div class="column">Batch</div>
-	  <div class="column">Name</div>
-	  <div class="column">UPC</div>
-	  <div class="column">Cases</div>
-	  <div class="column">Bottles</div>
-	  <div class="column">Bottle Count</div>
+	  <label>Batch</label>
+	  <label>Name</label>
+	  <label>UPC</label>
+	  <label>Cases</label>
+	  <label>Bottles</label>
+	  <label>Count</label>
 	</div>
        <div class="form-input-wide">
        <label for="choose-batch"></label>
