@@ -56,6 +56,7 @@ sec_session_start();
 		echo '<div class=column> <label for="CaseCount"></label><input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="CaseCount" name="CaseCount" value="" ></div>';
 		echo '<div class=column> <label for="BottleCount"></label><input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="BottleCount" name="BottleCount" value=""></div>';
 		echo '<div class=column> <label for="Counted"></label><input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="Counted" name="Counted" value="" required></div>';
+		echo "</div>";
 	    }
 	  }
 ?>	      
