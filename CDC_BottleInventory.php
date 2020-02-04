@@ -47,7 +47,7 @@ sec_session_start();
 	</div>
         <div class=row>
           <?php 
-            if ($result->num_rows > 0) {
+            if ($getBatchNum->num_rows > 0) {
               while($row = $getBatchNum->fetchObject()) {
 		echo '<div class=row>';
 		echo '<div class=column>'.$row['BatchNum'].'</div>';
