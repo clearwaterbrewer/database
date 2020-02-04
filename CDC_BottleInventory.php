@@ -2,8 +2,6 @@
 require_once('includes/psl-configPDO.php'); //db info
 require_once('includes/functions.php'); //security functions
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$dbusern,$dbpassw);
-$getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName, UPC FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC");
-$getBatchNum->execute();
 sec_session_start();
 ?>
 
@@ -47,8 +45,10 @@ sec_session_start();
 	</div>
         <div class=row>
           <?php 
-            if ($getBatchNum->num_rows > 0) {
-              while($row = $getBatchNum->fetchObject()) {
+          $getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName, UPC FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC");
+          $getBatchNum->execute();
+	  if ($getBatchNum->num_rows > 0) {
+	    while ($row = $getBatchNum->fetch_assoc()) {
 		echo '<div class=row>';
 		echo '<div class=column>'.$row['BatchNum'].'</div>';
 		echo '<div class=column>'.$row['BatchName'].'</div>';
@@ -62,8 +62,8 @@ sec_session_start();
 		echo '<div class=column> <label for="Counted"></label>
                       <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" 
 	              class="form-control" id="Counted" name="Counted" value="" required ></div>';
-		  }
-		}
+	    }
+	  }
 ?>	      
 
 	 </div>
