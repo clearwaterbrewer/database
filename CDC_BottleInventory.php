@@ -32,12 +32,13 @@ sec_session_start();
         <div class="header-text httal htvam">
           <h1>CDC Bottles in Bond Inventory</h2>
           <label class="form-label form-label-top form-label-auto">Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
-        </div>
+          <label class="form-label form-label-top form-label-auto">DateTimeCode: <?php echo date('Y-m-d H:i:s'); ?> </label>
+	</div>
       </div>
     </li>
     <li class="form-line" data-type="control_textbox">
        <div class="form-input-wide">
-       <label for="DateTimeCode">DateTimeCode: <?php echo date('Y-m-d H:i:s'); ?> </label>
+       
           <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
        </div>
     </li>
