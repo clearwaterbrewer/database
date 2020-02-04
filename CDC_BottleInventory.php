@@ -37,7 +37,7 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
        <div class="form-input-wide">
-       <label for="DateTimeCode">DateTimeCode</label>
+       <label for="DateTimeCode">DateTimeCode: <?php echo date('Y-m-d H:i:s'); ?> </label>
           <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
        </div>
     </li>
@@ -49,6 +49,8 @@ sec_session_start();
 	  <div class="column">Cases</div>
 	  <div class="column">Bottles</div>
 	  <div class="column">Count</div>
+	</div>
+       <div class="form-input-wide">
        <label for="choose-batch"></label>
 	  <select class='form-dropdown' id='choose-batch' name="BatchNum">
           <?php while($row = $getBatchNum->fetchObject()): ?>
