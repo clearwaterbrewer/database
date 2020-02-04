@@ -43,7 +43,7 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
  	<div class="form-input-wide"">
-	  <label>Batch        </label>
+	  <label>"Batch        "</label>
 	  <label>Name         </label>
 	  <label>UPC          </label>
 	  <label>Cases      </label>
