@@ -2,7 +2,7 @@
 require_once('includes/psl-configPDO.php'); //db info
 require_once('includes/functions.php'); //security functions
 $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$dbusern,$dbpassw);
-$getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC");
+$getBatchNum = $pdo->prepare("SELECT BatchNum, BatchName, UPC FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC");
 $getBatchNum->execute();
 sec_session_start();
 ?>
@@ -36,51 +36,37 @@ sec_session_start();
 	</div>
       </div>
     </li>
-    <li class="form-line" data-type="control_textbox">
-       <div class="form-input-wide">
-       
-          <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
-       </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
- 	<div class="form-input-wide"">
+      <div class="ex3">
+	<div class="headrow">
           <div class="column">Batch         </div>
 	  <div class="column">Name</div>
 	  <div class="column">UPC</div>
 	  <div class="column">Cases</div>
 	  <div class="column">Bottles</div>
-	  <div class="column">Count</div>
+	  <div class="column">Counted</div>
 	</div>
-       <div class="form-input-wide">
-       <label for="choose-batch"></label>
-	  <select class='form-dropdown' id='choose-batch' name="BatchNum">
-          <?php while($row = $getBatchNum->fetchObject()): ?>
-	  <option value="<?= $row->BatchNum ?>" ><?= $row->BatchNum." - ".$row->BatchName ?></option>
-          <?php endwhile; ?>
-          </select>
-        <label for="BatchName"></label>
-          <input type='text' class='form-control' id="BatchName" name="BatchName" value="" />
-        <label for="UPC"></label>
-          <input type="text" class="form-control" id="UPC" name="UPC" value="" required >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <div class="form-input-wide">
-        <label for="CaseCount"></label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="CaseCount" name="CaseCount" value="" >
-        <label for="BottleCount"></label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="BottleCount" name="BottleCount" value="" >
-        <label for="BottlesRemaining"></label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesCounted" name="BottlesCounted" value="" required >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_dropdown">
-        <div class="form-input-wide">
-         <label> - </label>
-	 <input type="hidden" id="Initials" name="Initials" value="<?php echo $_SESSION['initials']; ?>" >
-	 <input type="submit" id="createPDF" name="createPDF" value="Create PDF" >
-       </div>
-    </li>
+        <div class=row>
+          <?php 
+            if ($result->num_rows > 0) {
+              while($row = $getBatchNum->fetchObject()) {
+		echo '<div class=row>';
+		echo '<div class=column>'.$row['BatchNum'].'</div>';
+		echo '<div class=column>'.$row['BatchName'].'</div>';
+		echo '<div class=column>'.$row['UPC'].'</div>';
+		echo '<div class=column> <label for="CaseCount"></label>
+                      <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" 
+		      class="form-control" id="CaseCount" name="CaseCount" value="" > </div>';
+		echo '<div class=column> <label for="BottleCount"></label>
+                      <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" 
+		      class="form-control" id="BottleCount" name="BottleCount" value=""> </div>';
+		echo '<div class=column> <label for="Counted"></label>
+                      <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" 
+	              class="form-control" id="Counted" name="Counted" value="" required ></div>';
+		  }
+		}
+?>	      
+
+	 </div>
     </li>
   </ul>
   <ul class="form-section page-section" >
