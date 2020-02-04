@@ -42,7 +42,16 @@ sec_session_start();
        </div>
     </li>
     <li class="form-line" data-type="control_textbox">
-        <div class="form-input-wide">
+       <div class="ex3">
+	<div class="headrow">
+	  <div class="column">Batch</div>
+	  <div class="column">Name</div>
+	  <div class="column">UPC</div>
+	  <div class="column">Cases</div>
+	  <div class="column">Bottles</div>
+	  <div class="column">Bottle Count</div>
+	</div>
+       <div class="form-input-wide">
        <label for="choose-batch">Choose a Batch</label>
 	  <select class='form-dropdown' id='choose-batch' name="BatchNum">
           <?php while($row = $getBatchNum->fetchObject()): ?>
