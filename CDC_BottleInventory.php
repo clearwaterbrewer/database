@@ -22,7 +22,7 @@ sec_session_start();
 <?php if (login_check($mysqli) == true) : ?>
 
 	
-<form class="jotform-form" accept-charset="utf-8" id="RFBForm" name="RFBForm" action="includes/InventoryInsert.php" method="POST">
+<form accept-charset="utf-8" id="RFBForm" name="RFBForm" action="includes/InventoryInsert.php" method="POST">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
