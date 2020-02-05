@@ -29,7 +29,8 @@ sec_session_start();
       <div class="form-header-group ">
         <div class="header-text httal htvam">
           <h1>CDC Bottles in Bond Inventory</h2>
-          <label class="form-label form-label-top form-label-auto">Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
+          <label class="form-label form-label-top form-label-auto">Logged in as: 
+		  <?php echo htmlentities($_SESSION['username']); ?> </label>
           <label class="form-label form-label-top form-label-auto">DateTimeCode: <?php echo date('Y-m-d H:i:s'); ?> </label>
 	</div>
       </div>
