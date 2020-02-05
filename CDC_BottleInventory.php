@@ -128,7 +128,7 @@ sec_session_start();
         var value2 = $("#BottleCount" + i).val();
         var Counted5 = (value1 * 12) + (value2 * 1);
 //        this["Counted"+i] = (value1 * 12) + (value2 * 1);
-        $("#Counted"+i).val("Counted"+i);
+        $('#Counted+i').val("Counted"+i);
         });
     });
     // send batchNum via ajax
