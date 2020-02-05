@@ -85,6 +85,7 @@ sec_session_start();
   <script>
     // monitor for changes in drop-down
     var numrows = <?php echo $numrows ?>;
+    var i = 5;
     $(document).ready(function() { 
       $('#CaseCount0, #BottleCount0').on('input', function() { 
         var Counted0 = 0;
@@ -122,10 +123,10 @@ sec_session_start();
         $('#Counted4').val(Counted4);
         });
       $('#CaseCount5, #BottleCount5').on('input', function() { 
-        this["Counted"+"5"] = 0;
+        this["Counted"+i] = 0;
 	var value1 = $('#CaseCount5').val();
         var value2 = $('#BottleCount5').val();
-        this["Counted"+"5"] = (value1 * 12) + (value2 * 1);
+        this["Counted"+i] = (value1 * 12) + (value2 * 1);
         $('#Counted5').val(Counted5);
         });
     });
