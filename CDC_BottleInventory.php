@@ -129,9 +129,7 @@ sec_session_start();
         var Counted5 = (value1 * 12) + (value2 * 1);
 //        $("#Counted"+i).val(function(){return "Counted"+i;});
 //        $("#Counted"+i).val(Counted5);
-        $("#Counted"+i).val(function (index, currentvalue) {
-            return "Counted" + i;
-            });
+        $("#Counted"+i).val(Counted5);
         });
     });
     // send batchNum via ajax
