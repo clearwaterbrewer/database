@@ -93,7 +93,6 @@ sec_session_start();
         var Counted0 = (valuea0 * 12) + (valueb0 * 1);
         $('#Counted0').val(Counted0);
         });
-    });
       $('#CaseCount1, #BottleCount1').on('input', function() { 
         var Counted1 = 0;
         var value1 = $('#CaseCount1').val();
@@ -101,7 +100,6 @@ sec_session_start();
         var Counted1 = (value1 * 12) + (value2 * 1);
         $('#Counted1').val(Counted1);
         });
-    });
       $('#CaseCount2, #BottleCount2').on('input', function() { 
         var Counted2 = 0;
         var value1 = $('#CaseCount2').val();
