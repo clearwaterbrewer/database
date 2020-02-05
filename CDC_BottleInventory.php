@@ -50,14 +50,14 @@ sec_session_start();
 	      $result = $mysqli->query($sql);
 	if ($result->num_rows > 0) {
 	  while ($row = $result->fetch_assoc()) {
-		  
+		$row_cnt = $result->num_rows;  
 		echo '<div class=row>';
 		echo '<div class=column>'.$row['BatchNum'].'</div>';
 		echo '<div class=column>'.$row['BatchName'].'</div>';
 		echo '<div class=column>'.$row['UPC'].'</div>';
-		echo '<div class=column> <label for="CaseCount"></label><input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="CaseCount" name="CaseCount" value="" ></div>';
-		echo '<div class=column> <label for="BottleCount"></label><input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="BottleCount" name="BottleCount" value=""></div>';
-		echo '<div class=column> <label for="Counted"></label><input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="Counted" name="Counted" value="" required></div>';
+		echo '<div class=column> <label for="CaseCount"></label><input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="CaseCount'.$row_cnt.'" name="CaseCount'.$row_cnt.'" value="" ></div>';
+		echo '<div class=column> <label for="BottleCount"></label><input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="BottleCount'.$row_cnt.'" name="BottleCount'.$row_cnt.'" value=""></div>';
+		echo '<div class=column> <label for="Counted"></label><input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="Counted'.$row_cnt.'" name="Counted'.$row_cnt.'" value="" required></div>';
 		echo "</div>";
 	    }
 	  }
