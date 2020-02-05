@@ -84,46 +84,18 @@ sec_session_start();
 
   <script>
     // monitor for changes in drop-down
-    var numrows = <?php echo $numrows ?>;
-    var i = 5;
-    $(document).ready(function() { 
-      $('#CaseCount0, #BottleCount0').on('input', function() { 
-        var Counted0 = 0;
-        var value1 = $('#CaseCount0').val();
-        var value2 = $('#BottleCount0').val();
-        $('#Counted0').val((value1 * 12) + (value2 * 1));
-        });
-      $('#CaseCount1, #BottleCount1').on('input', function() { 
-        var Counted1 = 0;
-        var value1 = $('#CaseCount1').val();
-        var value2 = $('#BottleCount1').val();
-        $('#Counted1').val((value1 * 12) + (value2 * 1));
-        });
-      $('#CaseCount2, #BottleCount2').on('input', function() { 
-        var Counted2 = 0;
-        var value1 = $('#CaseCount2').val();
-        var value2 = $('#BottleCount2').val();
-        $('#Counted2').val((value1 * 12) + (value2 * 1));
-        });
-      $('#CaseCount3, #BottleCount3').on('input', function() { 
-        var Counted3 = 0;
-        var value1 = $('#CaseCount3').val();
-        var value2 = $('#BottleCount3').val();
-        $('#Counted3').val((value1 * 12) + (value2 * 1));
-        });
-      $('#CaseCount4, #BottleCount4').on('input', function() { 
-        var Counted4 = 0;
-        var value1 = $('#CaseCount4').val();
-        var value2 = $('#BottleCount4').val();
-        $('#Counted4').val((value1 * 12) + (value2 * 1));
-        });
-      $(["#CaseCount"+i, "#BottleCount"+i]).on('input', function() { 
-        this["Counted"+i] = 0;
-	var value1 = $("#CaseCount" + i).val();
-        var value2 = $("#BottleCount" + i).val();
-        $("#Counted"+i).val((value1 * 12)+(value2 * 1));
-        });
-    });
+   var numrows = <?php echo $numrows ?>;
+   for(var i = 0; i <= numrows; i++) {
+     $(document).ready(function() { 
+       $("#CaseCount"+i).on('input', function() { 
+//       $("#CaseCount"+i, "#BottleCount"+i).on('input', function() { 
+         this["Counted"+i] = 0;
+	 var value1 = $("#CaseCount" + i).val();
+         var value2 = $("#BottleCount" + i).val();
+         $("#Counted"+i).val((value1 * 12)+(value2 * 1));
+       });
+     });
+   }
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
       $.post(
