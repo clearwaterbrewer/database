@@ -91,44 +91,36 @@ sec_session_start();
         var Counted0 = 0;
         var value1 = $('#CaseCount0').val();
         var value2 = $('#BottleCount0').val();
-        var Counted0 = (value1 * 12) + (value2 * 1);
-        $('#Counted0').val(Counted0);
+        $('#Counted0').val((value1 * 12) + (value2 * 1));
         });
       $('#CaseCount1, #BottleCount1').on('input', function() { 
         var Counted1 = 0;
         var value1 = $('#CaseCount1').val();
         var value2 = $('#BottleCount1').val();
-        var Counted1 = (value1 * 12) + (value2 * 1);
-        $('#Counted1').val(Counted1);
+        $('#Counted1').val((value1 * 12) + (value2 * 1));
         });
       $('#CaseCount2, #BottleCount2').on('input', function() { 
         var Counted2 = 0;
         var value1 = $('#CaseCount2').val();
         var value2 = $('#BottleCount2').val();
-        var Counted2 = (value1 * 12) + (value2 * 1);
-        $('#Counted2').val(Counted2);
+        $('#Counted2').val((value1 * 12) + (value2 * 1));
         });
       $('#CaseCount3, #BottleCount3').on('input', function() { 
         var Counted3 = 0;
         var value1 = $('#CaseCount3').val();
         var value2 = $('#BottleCount3').val();
-        var Counted3 = (value1 * 12) + (value2 * 1);
-        $('#Counted3').val(Counted3);
+        $('#Counted3').val((value1 * 12) + (value2 * 1));
         });
       $('#CaseCount4, #BottleCount4').on('input', function() { 
         var Counted4 = 0;
         var value1 = $('#CaseCount4').val();
         var value2 = $('#BottleCount4').val();
-//        var Counted4 = (value1 * 12) + (value2 * 1);
         $('#Counted4').val((value1 * 12) + (value2 * 1));
         });
       $("#CaseCount"+i).on('input', function() { 
         this["Counted"+i] = 0;
 	var value1 = $("#CaseCount" + i).val();
         var value2 = $("#BottleCount" + i).val();
-//        var Counted5 = (value1 * 12) + (value2 * 1);
-////        $("#Counted"+i).val(function(){return "Counted"+i;});
-//        $("#Counted"+i).val(Counted5);
         $("#Counted"+i).val((value1 * 12)+(value2 * 1));
         });
     });
