@@ -123,9 +123,9 @@ sec_session_start();
         });
       $('#CaseCount5, #BottleCount5').on('input', function() { 
 //        var Counted5 = 0; // this works
-//        var ['Counted' + '5'] = 0; // this does not work
-        var [Counted + '5'] = 0;
-//        var ['Counted' + 5] = 0;
+//        var ['Counted' + '5'] = 0; // this does not work and breaks previous functions
+//        var [Counted + '5'] = 0; // this does not work and breaks previous functions
+        var ['Counted' + 5] = 0;
         var value1 = $('#CaseCount5').val();
         var value2 = $('#BottleCount5').val();
         var Counted5 = (value1 * 12) + (value2 * 1);
