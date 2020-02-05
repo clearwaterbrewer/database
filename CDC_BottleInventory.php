@@ -122,21 +122,13 @@ sec_session_start();
         $('#Counted4').val(Counted4);
         });
       $('#CaseCount5, #BottleCount5').on('input', function() { 
-        var Counted5 = 0;
+//        var Counted5 = 0;
+        var [Counted + 5] = 0;
         var value1 = $('#CaseCount5').val();
         var value2 = $('#BottleCount5').val();
         var Counted5 = (value1 * 12) + (value2 * 1);
         $('#Counted5').val(Counted5);
         });
-      var i = 6;
-      $('#CaseCount' + String(i) + ', #BottleCount' + String(i)).on('input', function() { 
-        var [Counted + String(i)] = 0;
-        var value1 = $('#CaseCount' + String(i)).val();
-        var value2 = $('#BottleCount' + String(i)).val();
-        var ['Counted' + String(i)] = (value1 * 12) + (value2 * 1);
-        $('#Counted' + String(i)).val(Counted + String(i));
-        });
-
     });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
