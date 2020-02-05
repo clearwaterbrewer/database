@@ -125,8 +125,9 @@ sec_session_start();
 //        var Counted5 = 0; // this works
 //        var ['Counted' + '5'] = 0; // this does not work and breaks previous functions
 //        var [Counted + '5'] = 0; // this does not work and breaks previous functions
-        var ['Counted' + 5] = 0;
-        var value1 = $('#CaseCount5').val();
+//        var ['Counted' + 5] = 0; // this does not work and breaks previous functions
+        var String('Counted' + '5') = 0; //
+	var value1 = $('#CaseCount5').val();
         var value2 = $('#BottleCount5').val();
         var Counted5 = (value1 * 12) + (value2 * 1);
         $('#Counted5').val(Counted5);
