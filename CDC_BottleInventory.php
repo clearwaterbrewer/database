@@ -127,7 +127,7 @@ sec_session_start();
 	var value1 = $("#CaseCount" + i).val();
         var value2 = $("#BottleCount" + i).val();
         var Counted5 = (value1 * 12) + (value2 * 1);
-        $('#Counted5').val(["Counted"+i]);
+        $('#Counted5').val('Counted+i');
         });
     });
     // send batchNum via ajax
