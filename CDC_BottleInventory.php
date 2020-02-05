@@ -119,8 +119,8 @@ sec_session_start();
         var Counted4 = 0;
         var value1 = $('#CaseCount4').val();
         var value2 = $('#BottleCount4').val();
-        var Counted4 = (value1 * 12) + (value2 * 1);
-        $('#Counted4').val(Counted4);
+//        var Counted4 = (value1 * 12) + (value2 * 1);
+        $('#Counted4').val((value1 * 12) + (value2 * 1));
         });
       $("#CaseCount"+i).on('input', function() { 
         this["Counted"+i] = 0;
