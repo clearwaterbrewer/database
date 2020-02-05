@@ -89,13 +89,14 @@ sec_session_start();
     i = 0;
     While (i < numrows) {
       $('#CaseCount' + i + ', #BottleCount' + i).on('input', function() { 
-      var bottles = 0;
-      var value1 = $('#CaseCount' + i).val();
-      var value2 = $('#BottleCount' + i).val();
-      var Counted0 = (value1 * 12) + (value2 * 1);
-      $('#Counted0').val(Counted0);
+        var bottles = 0;
+        var value1 = $('#CaseCount' + i).val();
+        var value2 = $('#BottleCount' + i).val();
+        var Counted0 = (value1 * 12) + (value2 * 1);
+        $('#Counted0').val(Counted0);
+        });
       i++;
-      });
+      }
     });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
