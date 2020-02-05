@@ -89,7 +89,7 @@ sec_session_start();
       var bottles = 0;
       var value1 = $('#CaseCount0').val();
       var value2 = $('#BottleCount0').val();
-      var Counted0 = (value1 * 12) + (value2 * 1);
+      var Counted0 = (value1 * 12) + (value2 * 1) + $numrows;
       $('#Counted0').val(Counted0);
       });
     });
