@@ -49,7 +49,6 @@ sec_session_start();
 		$sql="SELECT BatchNum, BatchName, UPC FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC";
 	      $result = $mysqli->query($sql);
 	if ($result->num_rows > 0) {
-	$numrows = $result->num_rows;
 	$row_cnt = 0;  
 	  while ($row = $result->fetch_assoc()) {
 		echo '<div class=row>';
@@ -84,12 +83,12 @@ sec_session_start();
   <script>
     // monitor for changes in drop-down
     $(document).ready(function() { 
-	    $('#CaseCount, #BottleCount').on('change', function() { 
+	    $('#CaseCount0, #BottleCount0').on('change', function() { 
 		    var bottles = 0;
-		    var value1 = $('#CaseCount').val();
-		    var value2 = $('#BottleCount').val();
-		    var BottlesRemaining = (value1 * 12) + (value2 * 1);
-		    $('#BottlesRemaining').val(BottlesRemaining);
+		    var value1 = $('#CaseCount0').val();
+		    var value2 = $('#BottleCount0').val();
+		    var Counted0 = (value1 * 12) + (value2 * 1);
+		    $('#Counted0').val(Counted0);
 		    });
     });
     // send batchNum via ajax
