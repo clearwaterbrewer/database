@@ -85,7 +85,7 @@ sec_session_start();
   <script>
     // monitor for changes in drop-down
     var numrows = <?php echo $numrows ?>;
-    var i = 4;
+    var i = 5;
     $(document).ready(function() { 
       $('#CaseCount0, #BottleCount0').on('input', function() { 
         var Counted0 = 0;
