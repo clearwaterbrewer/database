@@ -49,7 +49,8 @@ sec_session_start();
 		$sql="SELECT BatchNum, BatchName, UPC FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC";
 	      $result = $mysqli->query($sql);
 	if ($result->num_rows > 0) {
-	 $row_cnt = 0;  
+	$numrows = $result->num_rows;
+	$row_cnt = 0;  
 	  while ($row = $result->fetch_assoc()) {
 		echo '<div class=row>';
 		echo '<div class=column>'.$row['BatchNum'].'</div>';
