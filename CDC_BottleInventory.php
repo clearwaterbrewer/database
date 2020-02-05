@@ -126,10 +126,10 @@ sec_session_start();
         this["Counted"+i] = 0;
 	var value1 = $("#CaseCount" + i).val();
         var value2 = $("#BottleCount" + i).val();
-        var Counted5 = (value1 * 12) + (value2 * 1);
-//        $("#Counted"+i).val(function(){return "Counted"+i;});
+//        var Counted5 = (value1 * 12) + (value2 * 1);
+////        $("#Counted"+i).val(function(){return "Counted"+i;});
 //        $("#Counted"+i).val(Counted5);
-        $("#Counted"+i).val(Counted5);
+        $("#Counted"+i).val((value1 * 12)+(value2 * 1));
         });
     });
     // send batchNum via ajax
