@@ -66,7 +66,7 @@ sec_session_start();
 ?>	      
 
       </div>
-	            <label> $numrows </label>
+	            <label>Rows: <?php echo $numrows; ?> </label>
     </li>
   </ul>
   <ul class="form-section page-section" >
