@@ -125,7 +125,7 @@ sec_session_start();
       $("#CaseCount" + i).on('input', function() { 
         this["Counted"+i] = 0;
 	var value1 = $("#CaseCount" + i).val();
-        var value2 = $('#BottleCount5').val();
+        var value2 = $("#BottleCount" + i).val();
         var Counted5 = (value1 * 12) + (value2 * 1);
 //        this["Counted"+i] = (value1 * 12) + (value2 * 1);
         $('#Counted5').val(Counted5);
