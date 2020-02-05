@@ -130,10 +130,10 @@ sec_session_start();
         });
       var i = 6;
       $('#CaseCount' + String(i) + ', #BottleCount' + String(i)).on('input', function() { 
-        var Counted + String(i) = 0;
+        var [Counted + String(i)] = 0;
         var value1 = $('#CaseCount' + String(i)).val();
         var value2 = $('#BottleCount' + String(i)).val();
-        var 'Counted' + String(i) = (value1 * 12) + (value2 * 1);
+        var ['Counted' + String(i)] = (value1 * 12) + (value2 * 1);
         $('#Counted' + String(i)).val(Counted + String(i));
         });
 
