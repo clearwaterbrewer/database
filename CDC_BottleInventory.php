@@ -37,7 +37,7 @@ sec_session_start();
     </li>
       <div class="ex3">
 	<div class="headrow">
-          <div class="column">Batch         </div>
+          <div class="column">Batch</div>
 	  <div class="column">Name</div>
 	  <div class="column">UPC</div>
 	  <div class="column">Cases</div>
