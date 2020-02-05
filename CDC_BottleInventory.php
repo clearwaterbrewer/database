@@ -117,7 +117,7 @@ sec_session_start();
         var value2 = $('#BottleCount4').val();
         $('#Counted4').val((value1 * 12) + (value2 * 1));
         });
-      $("#CaseCount"+i, "#BottleCount"+i).on('input', function() { 
+      $(["#CaseCount"+i, "#BottleCount"+i]).on('input', function() { 
         this["Counted"+i] = 0;
 	var value1 = $("#CaseCount" + i).val();
         var value2 = $("#BottleCount" + i).val();
