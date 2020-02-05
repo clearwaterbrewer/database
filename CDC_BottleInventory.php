@@ -51,7 +51,6 @@ sec_session_start();
 	if ($result->num_rows > 0) {
 	 $row_cnt = 0;  
 	  while ($row = $result->fetch_assoc()) {
-		$row_cnt += 1;
 		echo '<div class=row>';
 		echo '<div class=column>'.$row['BatchNum'].'</div>';
 		echo '<div class=column>'.$row['BatchName'].'</div>';
@@ -59,6 +58,7 @@ sec_session_start();
 		echo '<div class=column> <label for="CaseCount"></label><input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="CaseCount'.$row_cnt.'" name="CaseCount'.$row_cnt.'" value="" ></div>';
 		echo '<div class=column> <label for="BottleCount"></label><input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="BottleCount'.$row_cnt.'" name="BottleCount'.$row_cnt.'" value=""></div>';
 		echo '<div class=column> <label for="Counted"></label><input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="Counted'.$row_cnt.'" name="Counted'.$row_cnt.'" value="" required></div>';
+		$row_cnt += 1;
 		echo "</div>";
 	    }
 	  }
@@ -83,7 +83,6 @@ sec_session_start();
   <script>
     // monitor for changes in drop-down
     $(document).ready(function() { 
-	    $('#choose-batch').on('change', function() { retrieveItem( $(this).val() ) });
 	    $('#CaseCount, #BottleCount').on('change', function() { 
 		    var bottles = 0;
 		    var value1 = $('#CaseCount').val();
