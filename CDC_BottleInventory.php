@@ -88,9 +88,9 @@ sec_session_start();
     $(document).ready(function() { 
       $('#CaseCount0, #BottleCount0').on('input', function() { 
         var Counted0 = 0;
-        var valuea0 = $('#CaseCount0').val();
-        var valueb0 = $('#BottleCount0').val();
-        var Counted0 = (valuea0 * 12) + (valueb0 * 1);
+        var value1 = $('#CaseCount0').val();
+        var value2 = $('#BottleCount0').val();
+        var Counted0 = (value1 * 12) + (value2 * 1);
         $('#Counted0').val(Counted0);
         });
       $('#CaseCount1, #BottleCount1').on('input', function() { 
