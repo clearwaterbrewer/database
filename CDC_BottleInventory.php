@@ -86,7 +86,6 @@ sec_session_start();
     // monitor for changes in drop-down
     var numrows = <?php echo $numrows ?>;
     $(document).ready(function() { 
-      var i = 4;
       $('#CaseCount0, #BottleCount0').on('input', function() { 
         var Counted0 = 0;
         var value1 = $('#CaseCount0').val();
@@ -101,12 +100,33 @@ sec_session_start();
         var Counted1 = (value1 * 12) + (value2 * 1);
         $('#Counted1').val(Counted1);
         });
-      $('#CaseCount' + i + ', #BottleCount' + i).on('input', function() { 
-        var Counted + i = 0;
-        var value1 = $('#CaseCount' + i).val();
-        var value2 = $('#BottleCount' + i).val();
-        var 'Counted' + i = (value1 * 12) + (value2 * 1);
-        $('#Counted' +1).val(Counted + 1);
+      $('#CaseCount2, #BottleCount2').on('input', function() { 
+        var Counted2 = 0;
+        var value1 = $('#CaseCount2').val();
+        var value2 = $('#BottleCount2').val();
+        var Counted2 = (value1 * 12) + (value2 * 1);
+        $('#Counted2').val(Counted2);
+        });
+      $('#CaseCount3, #BottleCount3').on('input', function() { 
+        var Counted3 = 0;
+        var value1 = $('#CaseCount3').val();
+        var value2 = $('#BottleCount3').val();
+        var Counted3 = (value1 * 12) + (value2 * 1);
+        $('#Counted3').val(Counted3);
+        });
+      $('#CaseCount4, #BottleCount4').on('input', function() { 
+        var Counted4 = 0;
+        var value1 = $('#CaseCount4').val();
+        var value2 = $('#BottleCount4').val();
+        var Counted4 = (value1 * 12) + (value2 * 1);
+        $('#Counted4').val(Counted4);
+        });
+      $('#CaseCount5, #BottleCount5').on('input', function() { 
+        var Counted5 = 0;
+        var value1 = $('#CaseCount5').val();
+        var value2 = $('#BottleCount5').val();
+        var Counted5 = (value1 * 12) + (value2 * 1);
+        $('#Counted5').val(Counted5);
         });
     });
     // send batchNum via ajax
