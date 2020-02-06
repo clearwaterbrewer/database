@@ -44,8 +44,8 @@ sec_session_start();
 	  <div class="column">Bottles</div>
 	  <div class="column">Counted</div>
 	</div>
-          <?php 
-
+<?php 
+        // grap all the pertinant entries from the database and create a row of entries for each one
 	$sql="SELECT BatchNum, BatchName, UPC FROM Batches WHERE CurrentBatch=1 AND UPC <> '' ORDER by BatchNum DESC";
 	$result = $mysqli->query($sql);
 	$numrows = $result->num_rows;
@@ -64,16 +64,14 @@ sec_session_start();
 	    }
 	  }
 ?>	      
-
       </div>
-	            <label>Rows: <?php echo $numrows; ?> </label>
+    <label>Rows: <?php echo $numrows; ?> </label>
     </li>
   </ul>
   <ul class="form-section page-section" >
     <li class="form-line" data-type="control_text" >
       <div class="buttonrow">
-            <button type="submit" class="form-submit-button" id="submit_form" name="submit" value="Submit">Submit</button>
-          <a href="CDC_RemoveFromBond.php"><button type="button" class="form-submit-button">Back to RFB</button></a>
+          <button type="submit" class="form-submit-button" id="submit_form" name="submit" value="Submit">Submit</button>
           <a href="CDChome.php"><button type="button" class="form-submit-button">Home</button></a>
           <a href="includes/logout.php"><button type="button" class="form-submit-button">Logout</button></a>
       </div>
@@ -83,6 +81,7 @@ sec_session_start();
 </form>        
 
   <script>
+    // monitor the case and bottle count and update the counted field.
     $(document).ready(function() { 
       $('#CaseCount0, #BottleCount0').on('input', function() { 
         var Counted0 = 0;
