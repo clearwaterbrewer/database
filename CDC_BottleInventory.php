@@ -22,7 +22,7 @@ sec_session_start();
 <?php if (login_check($mysqli) == true) : ?>
 
 	
-<form accept-charset="utf-8" id="RFBForm" name="RFBForm" action="includes/InventoryInsert.php" method="POST">
+<form accept-charset="utf-8" id="BottleInventoryForm" name="BottleInventoryForm" action="includes/BottleInventoryInsert.php" method="POST">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
@@ -83,9 +83,6 @@ sec_session_start();
 </form>        
 
   <script>
-    // monitor for changes in drop-down
-    var numrows = <?php echo $numrows ?>;
-    var i = 5;
     $(document).ready(function() { 
       $('#CaseCount0, #BottleCount0').on('input', function() { 
         var Counted0 = 0;
@@ -110,12 +107,12 @@ sec_session_start();
         });
     });
 	  
-	  // send batchNum via ajax
+  // send batchNum via ajax
     function retrieveItem(BatchNumber) {
       $.post(
         "CDC_Ajax.php",               // where to send data
-        {BatchNum: BatchNumber},  // parameters to send {varname: value}
-        function(result) {        // what to do with results
+        {BatchNum: BatchNumber},      // parameters to send {varname: value}
+        function(result) {            // what to do with results
           if(result.status=='success') {
             populateForm(result.data);
           } else {
