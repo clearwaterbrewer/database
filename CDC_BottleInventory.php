@@ -124,16 +124,6 @@ sec_session_start();
         }
       );
     }
-	    
-    // put results into page
-    function populateForm(data) {
-      $('#BatchNum').val(data.BatchNum);
-      $('#BatchName').val(data.BatchName);
-      $('#ClassType').val(data.ClassType);
-      $('#BottleProof').val(data.BottleProof);
-      $('#UPC').val(data.UPC);
-    }
-   
   </script>
 
 <?php else : ?>
