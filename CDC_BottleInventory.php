@@ -85,9 +85,9 @@ sec_session_start();
   <script>
     // monitor for changes in drop-down
    var numrows = <?php echo $numrows ?>;
-   var i;
+   var i = numrows;
    $(document).ready(function() { 
-     for(var i = 0; i <= numrows; i++) {
+//     for(var i = 0; i <= 20; i++) {
        $("#CaseCount"+i).on('input', function() { 
          this["Counted"+i] = 0;
 	 var value1 = $("#CaseCount" + i).val();
@@ -95,7 +95,7 @@ sec_session_start();
          $("#Counted"+i).val((value1 * 12)+(value2 * 1));
        });
      });
-   }
+//   }
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
       $.post(
