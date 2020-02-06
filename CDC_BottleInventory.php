@@ -84,18 +84,19 @@ sec_session_start();
 
   <script>
     // monitor for changes in drop-down
-   var numrows = <?php echo $numrows ?>;
-   var i = numrows-1;
-   $(document).ready(function() { 
-//     for(var i = 0; i <= 20; i++) {
+   var numrows = <?php echo $numrows ?>-1;
+//   var i = numrows;
+   $(document).ready(function() {
+     var i;   
+     for(var i = 0; i <= 27; i++) {
        $("#CaseCount"+i).on('input', function() { 
          this["Counted"+i] = 0;
 	 var value1 = $("#CaseCount" + i).val();
          var value2 = $("#BottleCount" + i).val();
          $("#Counted"+i).val((value1 * 12)+(value2 * 1));
        });
-     });
-//   }
+     }
+   });
     // send batchNum via ajax
     function retrieveItem(BatchNumber) {
       $.post(
