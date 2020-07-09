@@ -65,7 +65,7 @@ sec_session_start();
         <div class="form-input-wide">
         <label for="BottlesRemoved">Bottles Removed</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,8}$" size="8" class="form-control" id="BottlesRemoved" name="BottlesRemoved" value="" required >
-        <label for="CaseCount">Case Count</label>
+        <label for="CaseCount">6 Case Count</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="CaseCount" name="CaseCount" value="" >
         <label for="BottleCount">Bottle Count</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="BottleCount" name="BottleCount" value="" >
@@ -119,7 +119,7 @@ sec_session_start();
 		    var bottles = 0;
 		    var value1 = $('#CaseCount').val();
 		    var value2 = $('#BottleCount').val();
-		    var BottlesRemaining = (value1 * 12) + (value2 * 1);
+		    var BottlesRemaining = (value1 * 6) + (value2 * 1);
 		    $('#BottlesRemaining').val(BottlesRemaining);
 		    });
     });
