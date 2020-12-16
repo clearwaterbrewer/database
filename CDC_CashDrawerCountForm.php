@@ -114,6 +114,24 @@ sec_session_start();
 </div>
 </form>        
 
+  <script>
+    // monitor for changes in drop-down
+    $(document).ready(function() { 
+	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coins').on('change', function() { 
+		    var value100 = $('#bill_100').val();
+		    var value50 = $('#bill_50').val();
+		    var value20 = $('#bill_20').val();
+		    var value10 = $('#bill_10').val();
+		    var value5 = $('#bill_5').val();
+		    var value1 = $('#bill_1').val();
+		    var coins = $('#coins').val();
+		    var CountClose = (value100 * 100) + (value50 * 50) + (value20 * 20) + (value10 * 10) + (value5 * 5) + (value1 * 1) + (coins);
+		    $('#CountClose').val(CountClose);
+		    });
+    });
+   
+  </script>
+
 
 
 
