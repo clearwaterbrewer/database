@@ -124,7 +124,8 @@ sec_session_start();
 		    var coin10 = $('#coin_10').val();
 		    var coin5 = $('#coin_5').val();
 		    var coin1 = $('#coin_1').val();
-		    var coinTotal = (coin100) + (coin25 / 4) + (coin10 / 10) + (coin5 / 20) + (coin1 / 100);
+		    var pennies = (coin100 *100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1);
+		    var coinTotal = (pennies / 100);
 		    $('#coinTotal').val(coinTotal);
 		    });
         // monitor for changes in bills and coin total
