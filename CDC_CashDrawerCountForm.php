@@ -119,6 +119,8 @@ sec_session_start();
     $(document).ready(function() { 
         // monitor for changes in coins
 	$('#coin_100, #coin_25, #coin_10, #coin_5, #coin_1').on('change', function() { 
+		    var pennies = 0
+		    var coinTotal = 0
 		    var coin100 = $('#coin_100').val();
 		    var coin25 = $('#coin_25').val();
 		    var coin10 = $('#coin_10').val();
