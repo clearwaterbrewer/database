@@ -125,9 +125,9 @@ sec_session_start();
 		    var bill10 = $('#bill_10').val();
 		    var bill5 = $('#bill_5').val();
 		    var bill1 = $('#bill_1').val();
-//		    var coin = $('#coins').val();
-//		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coin);
-		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1);
+		    var coin = $('#coins').val();
+		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coin);
+//		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1);
 		    $('#CountClose').val(CountClose);
 		    });
     // monitor for changes in coins
@@ -137,8 +137,8 @@ sec_session_start();
 		    var coin10 = $('#coin_10').val();
 		    var coin5 = $('#coin_5').val();
 		    var coin1 = $('#coin_1').val();
-		    var coins = (coin100 * 100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
-		    $('#coins').val(coins);
+		    var coins = (coin100) + (coin25 / 4) + (coin10 / 10) + (coin5 / 20) + (coin1 / 100);
+		    $('#coins').val(coins.toFixed(2));
 		    });
     });
    
