@@ -31,7 +31,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
        <div class="form-input-wide">
        <label for="DateTimeCode">DateTimeCode</label>
-          <input type="number" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
+          <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
         <label for="CountOpen">Opening Count</label>
           <input type='number' inputmode="numeric" "(\d{3})([\.])(\d{2})" size="8"class='form-control' id="CountOpen" name="CountOpen" step='0.01' value='0.00' tabindex=1 >
        </div>
