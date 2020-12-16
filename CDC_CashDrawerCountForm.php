@@ -116,8 +116,8 @@ sec_session_start();
 </form>        
 
 <script>
-    // monitor for changes in bills and coins total
     $(document).ready(function() { 
+    // monitor for changes in bills and coins total
 	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coins').on('change', function() { 
 		    var bill100 = $('#bill_100').val();
 		    var bill50 = $('#bill_50').val();
@@ -130,10 +130,7 @@ sec_session_start();
 		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1);
 		    $('#CountClose').val(CountClose);
 		    });
-    });
-   
     // monitor for changes in coins
-    $(document).ready(function() { 
 	$('#coin_100, #coin25, #coin_10, #coin_5, #coin_1').on('change', function() { 
 		    var coin100 = $('#coin_100').val();
 		    var coin25 = $('#coin25').val();
