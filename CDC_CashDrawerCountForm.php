@@ -116,6 +116,20 @@ sec_session_start();
 </form>        
 
 <script>
+    // monitor for changes in bills and coins total
+    $(document).ready(function() { 
+	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coins').on('change', function() { 
+		    var bill100 = $('#bill_100').val();
+		    var bill50 = $('#bill_50').val();
+		    var bill20 = $('#bill_20').val();
+		    var bill10 = $('#bill_10').val();
+		    var bill5 = $('#bill_5').val();
+		    var bill1 = $('#bill_1').val();
+		    var coins = $('#coins').val();
+		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coins);
+		    $('#CountClose').val(CountClose);
+		    });
+    });
    
     // monitor for changes in coins
     $(document).ready(function() { 
@@ -125,7 +139,7 @@ sec_session_start();
 		    var coin10 = $('#coin_10').val();
 		    var coin5 = $('#coin_5').val();
 		    var coin1 = $('#coin_1').val();
-		    var coins = (coin100 * 100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
+		    var coins = (coin100 * 100);
 		    $('#coins').val(coins);
 		    });
     });
