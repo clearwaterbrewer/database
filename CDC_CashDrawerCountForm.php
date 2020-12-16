@@ -31,58 +31,58 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
        <div class="form-input-wide">
        <label for="DateTimeCode">DateTimeCode</label>
-          <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
+          <input type="number" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
         <label for="CountOpen">Opening Count</label>
-          <input type='text' inputmode="numeric" pattern="^\d{1,7}$" size="8"class='form-control' id="CountOpen" name="CountOpen" tabindex=1 value="" />
+          <input type='number' inputmode="numeric" pattern="^\d{1,7}$" size="8"class='form-control' id="CountOpen" name="CountOpen" tabindex=1 value="" />
        </div>
     </li>
 
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_100"> $100 bills</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_100" name="bill_100" tabindex=2 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_100" name="bill_100" tabindex=2 value="" >
         <label for="coin_100"> $1 coins</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_100" name="coin_100" tabindex=8 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_100" name="coin_100" tabindex=8 value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_50"> $50 bills</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_50" name="bill_50" tabindex=3 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_50" name="bill_50" tabindex=3 value="" >
         <label for="coin_25"> quarters</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_25" name="coin_25" tabindex=9 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_25" name="coin_25" tabindex=9 value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_20"> $20 bills</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_20" name="bill_20" tabindex=4 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_20" name="bill_20" tabindex=4 value="" >
         <label for="coin_10"> __dimes</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_10" name="coin_10" tabindex=10 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_10" name="coin_10" tabindex=10 value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_10"> $10 bills</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_10" name="bill_10" tabindex=5 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_10" name="bill_10" tabindex=5 value="" >
         <label for="coin_5"> _nickels</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_5" name="coin_5" tabindex=11 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_5" name="coin_5" tabindex=11 value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_5"> $5 bills_</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_5" name="bill_5" tabindex=6 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_5" name="bill_5" tabindex=6 value="" >
         <label for="coin_1"> pennies</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_1" name="coin_1" tabindex=12 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_1" name="coin_1" tabindex=12 value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_1"> $1 bills</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_1" name="bill_1" tabindex=7 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_1" name="bill_1" tabindex=7 value="" >
         <label for="coins"> coin total</label>
-          <input type="text" inputmode="numeric" size="8" class="form-control" id="coins" name="coins" value="" >
+          <input type="number" inputmode="numeric" size="8" class="form-control" id="coins" name="coins" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -94,11 +94,11 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="POS_Amount"> POS_Amount </label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=13 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=13 value="" >
         <label for="POS_Tip"> POS_Tip </label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Tip" name="POS_Tip" tabindex=14 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Tip" name="POS_Tip" tabindex=14 value="" >
         <label for="POS_Due"> POS_Due </label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Due" name="POS_Due" tabindex=15 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Due" name="POS_Due" tabindex=15 value="" >
         </div>
     </li>
   </ul>
@@ -139,7 +139,7 @@ sec_session_start();
 		    var coin10 = $('#coin_10').val();
 		    var coin5 = $('#coin_5').val();
 		    var coin1 = $('#coin_1').val();
-		    var coins = (coin100 / 1) + (coin25 / 4);
+		    var coins = (coin100 / 1) + (coin25 / 4) + (coin10 / 10) + (coin5 / 20) + (coin1 / 100);
 		    $('#coins').val(coins);
 		    });
     });
