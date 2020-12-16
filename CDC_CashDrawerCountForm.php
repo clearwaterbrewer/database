@@ -33,7 +33,7 @@ sec_session_start();
        <label for="DateTimeCode">DateTimeCode</label>
           <input type="number" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
         <label for="CountOpen">Opening Count</label>
-          <input type='number' inputmode="numeric" pattern="^\d{1,7}$" size="8"class='form-control' id="CountOpen" name="CountOpen" tabindex=1 value="" />
+          <input type='number' inputmode="numeric" "(\d{3})([\.])(\d{2})" size="8"class='form-control' id="CountOpen" name="CountOpen" step='0.01' value='0.00' tabindex=1 value="" />
        </div>
     </li>
 
