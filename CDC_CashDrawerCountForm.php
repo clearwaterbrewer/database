@@ -40,7 +40,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_100"> $100 bills</label>
-          <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_100" name="bill_100" tabindex=2 value="" >
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_100" name="bill_100" tabindex=2 value="" >
         <label for="coin_100"> $1 coins</label>
           <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_100" name="coin_100" tabindex=8 value="" >
         </div>
