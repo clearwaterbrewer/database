@@ -46,36 +46,40 @@ sec_session_start();
         <div class="form-input-wide">
         <label for="bill_50"> $50 bills</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_50" name="bill_50" value="" >
+        <label for="coin_100"> $1 coins</label>
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_100" name="coin_100" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_20"> $20 bills</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_20" name="bill_20" value="" >
+        <label for="coin_25"> quarters</label>
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_25" name="coin_25" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_10"> $10 bills</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_10" name="bill_10" value="" >
+        <label for="coin_10"> dimes</label>
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_10" name="coin_10" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_5"> $5 bills</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_5" name="bill_5" value="" >
-        </div>
-    </li>
-    <li class="form-line" data-type="control_textbox">
-        <div class="form-input-wide">
-        <label for="bill_2"> $2 bills</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_2" name="bill_2" value="" >
+        <label for="coin_5"> nickels</label>
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_5" name="coin_5" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="bill_1"> $1 bills</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_1" name="bill_1" value="" >
+        <label for="coin_1"> pennies</label>
+          <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_1" name="coin_1" value="" >
         </div>
     </li>
   </ul>
@@ -124,3 +128,4 @@ sec_session_start();
 <?php endif; ?>
 </body>
 </html>
+
