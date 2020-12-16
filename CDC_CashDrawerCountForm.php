@@ -127,7 +127,6 @@ sec_session_start();
 		    var bill1 = $('#bill_1').val();
 		    var coin = $('#coins').val();
 		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coin);
-//		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1);
 		    $('#CountClose').val(CountClose);
 		    });
     // monitor for changes in coins
