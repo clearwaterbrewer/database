@@ -40,7 +40,7 @@ sec_session_start();
         <div class="form-input-wide">
         <label for="bill_100"> $100 bills</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_100" name="bill_100" value="" >
-        <label > ________________ </label>
+        <label > ____________________ </label>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -63,7 +63,7 @@ sec_session_start();
         <div class="form-input-wide">
         <label for="bill_10"> $10 bills</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_10" name="bill_10" value="" >
-        <label for="coin_10"> dimes</label>
+        <label for="coin_10"> __dimes</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coin_10" name="coin_10" value="" >
         </div>
     </li>
