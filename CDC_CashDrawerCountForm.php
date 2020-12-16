@@ -40,7 +40,6 @@ sec_session_start();
         <div class="form-input-wide">
         <label for="bill_100"> $100 bills</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_100" name="bill_100" value="" >
-        </div>
         <label > </label>
         </div>
     </li>
