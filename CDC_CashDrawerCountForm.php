@@ -78,9 +78,9 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
-        <label for="bill_1"> $1 bills_</label>
+        <label for="bill_1"> $1 bills</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_1" name="bill_1" value="" >
-        <label for="coins"> coins</label>
+        <label for="coins"> coin total</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coins" name="coins" value="" >
         </div>
     </li>
