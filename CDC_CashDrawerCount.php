@@ -84,7 +84,7 @@ $sql="SELECT * FROM DrawerCounts
     <li class="form-line" data-type="control_text" >
       <div class="buttonrow">
         <div class="col-1 form-buttons-wrapper">
-          <a href="CDC_DrawerCountForm.php" >
+          <a href="CDC_CashDrawerCountForm.php" >
             <button type="button" class="form-submit-button" >
               New Drawer Count
             </button>
