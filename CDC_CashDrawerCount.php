@@ -44,7 +44,6 @@ sec_session_start();
 	        <div class="column">20</div>
 	        <div class="column">10</div>
 	        <div class="column">5</div>
-	        <div class="column">2</div>
 	        <div class="column">1</div>
 	        <div class="column">Coins</div>
 	        <div class="column">Close</div>
@@ -67,7 +66,6 @@ $sql="SELECT * FROM DrawerCounts
 			echo '<div class=column>'.$row['bill_20'].'</div>';
 			echo '<div class=column>'.$row['bill_10'].'</div>';
 			echo '<div class=column>'.$row['bill_5'].'</div>';
-			echo '<div class=column>'.$row['bill_2'].'</div>';
 			echo '<div class=column>'.$row['bill_1'].'</div>';
 			echo '<div class=column>'.$row['Coins'].'</div>';
 			echo '<div class=column>'.$row['CountClose'].'</div>';
