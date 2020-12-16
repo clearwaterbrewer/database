@@ -39,7 +39,7 @@ sec_session_start();
       <li class="form-line" data-type="control_text" id="id_8">
         <div id="cid_8" class="form-input-wide">
           <div class="form-buttons-wrapper">
-            <a href="CDC_CashDrawer.php" >
+            <a href="CDC_CashDrawerCount.php" >
               <button type="button" class="form-submit-button" >
                 Cash Drawer Counts
               </button>
