@@ -139,7 +139,7 @@ sec_session_start();
 		    var coin10 = $('#coin_10').val();
 		    var coin5 = $('#coin_5').val();
 		    var coin1 = $('#coin_1').val();
-		    var coins = (coin100 * 100);
+		    var coins = (coin100 / 1) + (coin25 / 4);
 		    $('#coins').val(coins);
 		    });
     });
