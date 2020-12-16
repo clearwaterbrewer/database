@@ -33,7 +33,7 @@ sec_session_start();
        <label for="DateTimeCode">DateTimeCode</label>
           <input type="number" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
         <label for="CountOpen">Opening Count</label>
-          <input type='number' inputmode="numeric" "(\d{3})([\.])(\d{2})" size="8"class='form-control' id="CountOpen" name="CountOpen" step='0.01' value='0.00' tabindex=1 value="" />
+          <input type='number' inputmode="numeric" "(\d{3})([\.])(\d{2})" size="8"class='form-control' id="CountOpen" name="CountOpen" step='0.01' value='0.00' tabindex=1 >
        </div>
     </li>
 
@@ -82,7 +82,7 @@ sec_session_start();
         <label for="bill_1"> $1 bills</label>
           <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_1" name="bill_1" tabindex=7 value="" >
         <label for="coins"> coin total</label>
-          <input type="number" inputmode="numeric" size="8" class="form-control" id="coins" name="coins" value="" >
+          <input type="number" inputmode="numeric" size="8" class="form-control" id="coins" name="coins" step='0.01' value='0.00' >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
