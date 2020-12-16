@@ -82,7 +82,7 @@ sec_session_start();
         <label for="bill_1"> $1 bills</label>
           <input type="number" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_1" name="bill_1" tabindex=7 value="" >
         <label for="coinTotal"> coin total</label>
-          <input type="number" inputmode="numeric" size="8" class="form-control" id="coinTotal" name="coinTotal" step='0.01' value='0.00' >
+          <input type="number" inputmode="numeric" size="8" class="form-control" id="coinTotal" name="coinTotal" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
