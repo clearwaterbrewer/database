@@ -12,6 +12,7 @@ sec_session_start();
 <meta name="HandheldFriendly" content="true" />
 <title>CDC Drawer Count Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
+<script src = includes/jquery.min.js></script>
 </head>
 
 <body>
