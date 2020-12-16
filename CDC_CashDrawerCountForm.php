@@ -131,15 +131,6 @@ sec_session_start();
 		    $('#CountClose').val(CountClose);
 		    });
     // monitor for changes in coins
-	$('#coin_100, #coin_25, #coin_10, #coin_5, #coin_1').on('change', function() { 
-		    var coin100 = $('#coin_100').val();
-		    var coin25 = $('#coin_25').val();
-		    var coin10 = $('#coin_10').val();
-		    var coin5 = $('#coin_5').val();
-		    var coin1 = $('#coin_1').val();
-		    var coinTotal = (coin100) + (coin25 / 4) + (coin10 / 10) + (coin5 / 20) + (coin1 / 100);
-		    $('#coins').val(coinTotal.toFixed(2));
-		    });
     });
    
 </script>
