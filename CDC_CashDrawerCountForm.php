@@ -80,7 +80,7 @@ sec_session_start();
         <div class="form-input-wide">
         <label for="bill_1"> $1 bills_</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="bill_1" name="bill_1" value="" >
-        <label for="coins"> all coins </label>
+        <label for="coins"> coins</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,3}$" size="4" class="form-control" id="coins" name="coins" value="" >
         </div>
     </li>
@@ -113,6 +113,10 @@ sec_session_start();
   </ul>
 </div>
 </form>        
+
+
+
+
 <?php else : ?>
 <form class="jotform-form" accept-charset="utf-8">
   <div class="form-all">
