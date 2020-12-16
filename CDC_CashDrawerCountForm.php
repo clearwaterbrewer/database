@@ -88,7 +88,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="CountClose"> Closing Count</label>
-          <input type="text" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="CountClose" name="CountClose" value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="CountClose" name="CountClose" value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -139,7 +139,7 @@ sec_session_start();
 		    var coin10 = $('#coin_10').val();
 		    var coin5 = $('#coin_5').val();
 		    var coin1 = $('#coin_1').val();
-		    var coins = (coin100 / 1) + (coin25 / 4) + (coin10 / 10) + (coin5 / 20) + (coin1 / 100);
+		    var coins = (coin100 / 1);
 		    $('#coins').val(coins);
 		    });
     });
