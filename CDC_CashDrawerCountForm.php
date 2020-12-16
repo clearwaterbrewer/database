@@ -118,7 +118,7 @@ sec_session_start();
 <script>
     // monitor for changes
     $(document).ready(function() { 
-	$('#bill_100, #bill_50).on('change', function() { 
+	$('#bill_100, #bill_50').on('change', function() { 
 		    var value100 = $('#bill_100').val();
 		    var value50 = $('#bill_50').val();
 		    var CountClose = (value100 * 100) + (value50 * 50);
