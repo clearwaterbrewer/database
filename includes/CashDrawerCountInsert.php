@@ -28,9 +28,9 @@ if(!empty($_POST)){
 
 //      header('Location: ../CDC_CashDrawerCount.php');
       $insertDrawerCount = null;
-		echo \n $_POST["DateTimeCode"]; 
-		echo \n $_POST["Initials"];
-		echo $_POST["CountOpen"];
+		echo $_POST["DateTimeCode"] . PHP_EOL; 
+		echo $_POST["Initials"] . PHP_EOL;
+		echo $_POST["CountOpen"] . PHP_EOL;
 		echo $_POST["bill_100"];
 		echo $_POST["bill_50"];
 		echo $_POST["bill_20"];
