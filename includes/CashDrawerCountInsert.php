@@ -24,7 +24,7 @@ if(!empty($_POST)){
       $POS_Tip = $_POST[ 'POS_Tip' ];                 
       $POS_Due = $_POST[ 'POS_Due' ];                 
   
-      $result = $DrawerCount->execute(array(':DateTimeCode'=>$DateTimeCode, ':Initials'=>$Initials, ':CountOpen'=>$CountOpen, ':bill_100'=>$bill_100, ':bill_50'=>$bill_50, ':bill_20'=>$bill_20, ':bill_10'=>$bill_10, ':bill_5'=>$bill_5, ':bill_1'=>$bill_1, ':coin_100'=>$coin_100, ':coin_25'=>$coin_25, ':coin_10'=>$coin_10, ':coin_5'=>$coin_5, ':coin_1'=>$coin_1, ':CountClose'=>$CountClose, ':CountDelta'=>$CountDelta, ':POS_Amount'=>$POS_Amount, ':POS_Tip'=>$POS_Tip, ':POS_Due'=>$POS_Due ));
+      $result = $insertDrawerCount->execute(array(':DateTimeCode'=>$DateTimeCode, ':Initials'=>$Initials, ':CountOpen'=>$CountOpen, ':bill_100'=>$bill_100, ':bill_50'=>$bill_50, ':bill_20'=>$bill_20, ':bill_10'=>$bill_10, ':bill_5'=>$bill_5, ':bill_1'=>$bill_1, ':coin_100'=>$coin_100, ':coin_25'=>$coin_25, ':coin_10'=>$coin_10, ':coin_5'=>$coin_5, ':coin_1'=>$coin_1, ':CountClose'=>$CountClose, ':CountDelta'=>$CountDelta, ':POS_Amount'=>$POS_Amount, ':POS_Tip'=>$POS_Tip, ':POS_Due'=>$POS_Due ));
 
       header('Location: ../CDC_CashDrawerCountForm.php');
       $insertDrawerCount = null;
