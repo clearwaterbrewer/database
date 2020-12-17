@@ -28,6 +28,7 @@ if(!empty($_POST)){
 
 //      header('Location: ../CDC_CashDrawerCount.php');
       $insertDrawerCount = null;
+      echo $result;
       echo "It seemed to work.";
       } 
   else{
