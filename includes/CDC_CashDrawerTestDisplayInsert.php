@@ -2,6 +2,7 @@
 <body>
 
 Date <?php echo $_GET["DateTimeCode"]; ?><br>
+Initials <?php echo $_GET["Initials"]; ?><br>
 CountOpen <?php echo $_GET["CountOpen"]; ?><br>
 bill_100 <?php echo $_GET["bill_100"]; ?><br>
  bill_50 <?php echo $_GET["bill_50"]; ?><br>
