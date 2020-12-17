@@ -88,17 +88,19 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="CountClose"> Closing Count</label>
-          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="CountClose" name="CountClose" value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="CountClose" name="CountClose" tabindex=13 value="" >
+        <label for="deltaCount"> Difference</label>
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="deltaCount" name="deltaCount" tabindex=14 value="" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="POS_Amount"> POS_Amount </label>
-          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=13 step="0.01" value="0.00" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=15 step="0.01" value="0.00" >
         <label for="POS_Tip"> POS_Tip </label>
-          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Tip" name="POS_Tip" tabindex=14 step="0.01" value="0.00" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Tip" name="POS_Tip" tabindex=16 step="0.01" value="0.00" >
         <label for="POS_Due"> POS_Due </label>
-          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Due" name="POS_Due" tabindex=15 step="0.01" value="0.00" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Due" name="POS_Due" tabindex=17 step="0.01" value="0.00" >
         </div>
     </li>
   </ul>
@@ -137,6 +139,13 @@ sec_session_start();
 //		    $('#CountClose').val(CountClose.toFixed(2));
 		    $('#CountClose').val(CountClose);
 		    $('#coinTotal').val(change.toFixed(2));
+		    });
+	$('#deltaCount').on('focus', function() { 
+		    var CountOpen = $('#CountOpen').val();
+		    var CountClose = $('#CountClose').val();
+		    var deltaCount = (CountClose - CountOpen);
+//		    $('#deltaCount').val(deltaCount.toFixed(2));
+		    $('#deltaCount').val(deltaCount);
 		    });
     });
    
