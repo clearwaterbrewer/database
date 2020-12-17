@@ -37,6 +37,7 @@ sec_session_start();
       <div class="ex3">
 	      <div class="headrow">
 	        <div class="column">Date</div>
+	        <div class="column">Time</div>
 	        <div class="column">Initials</div>
 	        <div class="column">Open</div>
 	        <div class="column">100</div>
@@ -59,7 +60,8 @@ $sql="SELECT * FROM DrawerCounts
 		  while ($row = $result->fetch_assoc()) {
     			echo '<div class=row>';
 			echo '<div class=column>'.DATE('Y m d', strtotime($row['DateTimeCode'])).'</div>';
-			echo '<div class=column>'.$row['Initials'].'</div>';
+                	echo '<div class=column>'.DATE('H:i:s', strtotime($row['DateTimeCode'])).'</div>';
+ 			echo '<div class=column>'.$row['Initials'].'</div>';
 			echo '<div class=column>'.$row['CountOpen'].'</div>';
 			echo '<div class=column>'.$row['bill_100'].'</div>';
 			echo '<div class=column>'.$row['bill_50'].'</div>';
