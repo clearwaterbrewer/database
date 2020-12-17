@@ -26,9 +26,9 @@ if(!empty($_POST)){
   
       $result = $insertDrawerCount->execute(array(':DateTimeCode'=>$DateTimeCode, ':Initials'=>$Initials, ':CountOpen'=>$CountOpen, ':bill_100'=>$bill_100, ':bill_50'=>$bill_50, ':bill_20'=>$bill_20, ':bill_10'=>$bill_10, ':bill_5'=>$bill_5, ':bill_1'=>$bill_1, ':coin_100'=>$coin_100, ':coin_25'=>$coin_25, ':coin_10'=>$coin_10, ':coin_5'=>$coin_5, ':coin_1'=>$coin_1, ':CountClose'=>$CountClose, ':CountDelta'=>$CountDelta, ':POS_Amount'=>$POS_Amount, ':POS_Tip'=>$POS_Tip, ':POS_Due'=>$POS_Due ));
 
-      header('Location: ../CDC_CashDrawerCount.php');
+//      header('Location: ../CDC_CashDrawerCount.php');
       $insertDrawerCount = null;
-//      echo "It seemed to work.";
+      echo "It seemed to work.";
       } 
   else{
       echo "ERROR: Could not prepare query: $sql. " . $pdo->error;
