@@ -33,7 +33,7 @@ sec_session_start();
        <label for="DateTimeCode">DateTimeCode</label>
           <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
         <label for="CountOpen">Opening Count</label>
-          <input type='number' inputmode="numeric" "(\d{3})([\.])(\d{2})" size="8"class='form-control' id="CountOpen" name="CountOpen" step='0.01' value='0.00' tabindex=1 >
+          <input type='number' inputmode="numeric" "(\d{3})([\.])(\d{2})" size="8"class='form-control' id="CountOpen" name="CountOpen" step="0.01" value="0.00" tabindex=1 >
        </div>
     </li>
 
@@ -94,11 +94,11 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="POS_Amount"> POS_Amount </label>
-          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=13 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=13 step="0.01" value="0.00" >
         <label for="POS_Tip"> POS_Tip </label>
-          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Tip" name="POS_Tip" tabindex=14 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Tip" name="POS_Tip" tabindex=14 step="0.01" value="0.00" >
         <label for="POS_Due"> POS_Due </label>
-          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Due" name="POS_Due" tabindex=15 value="" >
+          <input type="number" inputmode="numeric" pattern="^\d{1,7}$" size="8" class="form-control" id="POS_Due" name="POS_Due" tabindex=15 step="0.01" value="0.00" >
         </div>
     </li>
   </ul>
@@ -117,33 +117,26 @@ sec_session_start();
 
 <script>
     $(document).ready(function() { 
-        // monitor for changes in coins
-	$('#coin_100, #coin_25, #coin_10, #coin_5, #coin_1').on('change', function() { 
-//		    var pennies = 0;
-//		    var coinTotal = 0;
-		    var coin100 = $('#coin_100').val();
-		    var coin25 = $('#coin_25').val();
-		    var coin10 = $('#coin_10').val();
-		    var coin5 = $('#coin_5').val();
-		    var coin1 = $('#coin_1').val();
-		    var pennies = (coin100 *100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
-		    var coinTotal = (pennies / 100);
-		    $('#coinTotal').val(coinTotal.toFixed(2));
-		    });
-        // monitor for changes in bills and coin total
-	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coins').on('change', function() { 
-//		    var bills = 0;
+        // add bills and coins on focus of CountClose field
+	$('#CountClose').on('focus', function() { 
 		    var bill100 = $('#bill_100').val();
 		    var bill50 = $('#bill_50').val();
 		    var bill20 = $('#bill_20').val();
 		    var bill10 = $('#bill_10').val();
 		    var bill5 = $('#bill_5').val();
 		    var bill1 = $('#bill_1').val();
-		    var coins = $('#coinTotal').val();
-		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coinTotal * 1);
-//		    var bills = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1);
-//		    var CountClose = (coins + bills);
-		    $('#CountClose').val(CountClose.toFixed(2));
+		    var dollars = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1);
+		    var coin100 = $('#coin_100').val();
+		    var coin25 = $('#coin_25').val();
+		    var coin10 = $('#coin_10').val();
+		    var coin5 = $('#coin_5').val();
+		    var coin1 = $('#coin_1').val();
+		    var pennies = (coin100 *100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
+		    var change = (pennies / 100);
+		    var CountClose = (dollars + change);
+//		    $('#CountClose').val(CountClose.toFixed(2));
+		    $('#CountClose').val(CountClose);
+		    $('#coinTotal').val(coinTotal.toFixed(2));
 		    });
     });
    
