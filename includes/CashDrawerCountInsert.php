@@ -2,7 +2,8 @@
 require_once('psl-configPDO.php');
 if(!empty($_POST)){
   $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname,$dbusern,$dbpassw);
-  $sql = "INSERT INTO DrawerCounts (DateTimeCode, Initials, CountOpen, bill_100, bill_50, bill_20, bill_10, bill_5, bill_1, coin_100, coin_25, coin_10, coin_5, coin_1, CountClose, CountDelta, POS_Amount, POS_Tip, POS_Due)";
+  $sql = "INSERT INTO DrawerCounts ( DateTimeCode,  Initials,  CountOpen,  bill_100,  bill_50,  bill_20,  bill_10,  bill_5,  bill_1,  coin_100,  coin_25,  coin_10,  coin_5,  coin_1,  CountClose,  CountDelta,  POS_Amount,  POS_Tip,  POS_Due)
+	                    VALUES (:DateTimeCode, :Initials, :CountOpen, :bill_100, :bill_50, :bill_20, :bill_10, :bill_5, :bill_1, :coin_100, :coin_25, :coin_10, :coin_5, :coin_1, :CountClose, :CountDelta, :POS_Amount, :POS_Tip, :POS_Due)";
   if($insertDrawerCount = $pdo->prepare($sql)){
       $DateTimeCode = $_POST[ 'DateTimeCode' ];                    
       $Initials = $_POST['Initials' ];                 
