@@ -119,8 +119,8 @@ sec_session_start();
     $(document).ready(function() { 
         // monitor for changes in coins
 	$('#coin_100, #coin_25, #coin_10, #coin_5, #coin_1').on('change', function() { 
-		    var pennies = 0
-		    var coinTotal = 0
+		    var pennies = 0;
+		    var coinTotal = 0;
 		    var coin100 = $('#coin_100').val();
 		    var coin25 = $('#coin_25').val();
 		    var coin10 = $('#coin_10').val();
@@ -132,15 +132,16 @@ sec_session_start();
 		    });
         // monitor for changes in bills and coin total
 	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coins').on('change', function() { 
+		    var bills = 0;
 		    var bill100 = $('#bill_100').val();
 		    var bill50 = $('#bill_50').val();
 		    var bill20 = $('#bill_20').val();
 		    var bill10 = $('#bill_10').val();
 		    var bill5 = $('#bill_5').val();
 		    var bill1 = $('#bill_1').val();
-		    var coin = $('#coins').val();
-		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1);
-//		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coinTotal * 1);
+		    var coins = $('#coinTotal').val();
+		    var bills = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1);
+		    var CountClose = coins + bills;
 		    $('#CountClose').val(CountClose);
 		    });
     });
