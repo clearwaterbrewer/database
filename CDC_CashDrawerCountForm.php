@@ -136,7 +136,7 @@ sec_session_start();
 		    var CountClose = (dollars + change);
 //		    $('#CountClose').val(CountClose.toFixed(2));
 		    $('#CountClose').val(CountClose);
-		    $('#coinTotal').val(coinTotal.toFixed(2));
+		    $('#coinTotal').val(change.toFixed(2));
 		    });
     });
    
