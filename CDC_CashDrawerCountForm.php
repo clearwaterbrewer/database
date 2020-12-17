@@ -18,7 +18,7 @@ sec_session_start();
 
 <body>
 <?php if (login_check($mysqli) == true) : ?>
-<form class="jotform-form" accept-charset="utf-8" id="DrawerForm" name="Drawerform" action="includes/CashDrawerCountInsert.php" method="post">
+<form class="jotform-form" accept-charset="utf-8" id="DrawerForm" name="Drawerform" action="includes/CashDrawerCountInsert.php" method="POST">
 <div class="form-all">
   <ul class="form-section page-section">
     <li id="cid_1" class="form-input-wide" data-type="control_head">
