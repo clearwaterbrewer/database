@@ -20,7 +20,7 @@ VALUES
 <?php echo $_POST["coin_5"]; ?>, 
 <?php echo $_POST["coin_1"]; ?>, 
 <?php echo $_POST["CountClose"]; ?>, 
-<?php echo $_POST["deltaCount"]; ?>, 
+<?php echo $_POST["CountDelta"]; ?>, 
 <?php echo $_POST["POS_Amount"]; ?>, 
 <?php echo $_POST["POS_Tip"]; ?>, 
 <?php echo $_POST["POS_Due"]; ?> 
