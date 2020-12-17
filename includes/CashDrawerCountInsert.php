@@ -28,8 +28,25 @@ if(!empty($_POST)){
 
 //      header('Location: ../CDC_CashDrawerCount.php');
       $insertDrawerCount = null;
-      echo $result;
-      echo "It seemed to work.";
+		echo $_POST["DateTimeCode"]; 
+		echo $_POST["Initials"];
+		echo $_POST["CountOpen"];
+		echo $_POST["bill_100"];
+		echo $_POST["bill_50"];
+		echo $_POST["bill_20"];
+		echo $_POST["bill_10"];
+		echo $_POST["bill_5"];
+		echo $_POST["bill_1"]; 
+		echo $_POST["coin_100"];
+		echo $_POST["coin_25"];
+		echo $_POST["coin_10"];
+		echo $_POST["coin_5"]; 
+		echo $_POST["coin_1"];
+		echo $_POST["CountClose"];
+		echo $_POST["CountDelta"];
+		echo $_POST["POS_Amount"];
+		echo $_POST["POS_Tip"]; 
+		echo $_POST["POS_Due"];
       } 
   else{
       echo "ERROR: Could not prepare query: $sql. " . $pdo->error;
