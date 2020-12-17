@@ -26,6 +26,7 @@ sec_session_start();
         <div class="header-text httal htvam">
           <h1>CDC Drawer Count Entry</h2>
           <label class="form-label form-label-top form-label-auto">Logged in as: <?php echo htmlentities($_SESSION['username']); ?> </label>
+	  <input type="hidden" id="Initials" name="Initials" value="<?php echo $_SESSION['initials']; ?>" >
         </div>
       </div>
     </li>
