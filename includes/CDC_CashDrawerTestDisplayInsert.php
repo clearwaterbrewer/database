@@ -24,7 +24,7 @@ VALUES
 <?php echo $_POST["POS_Amount"]; ?>, 
 <?php echo $_POST["POS_Tip"]; ?>, 
 <?php echo $_POST["POS_Due"]; ?> 
-);<br>
+);<br><br>
 
 
 </body>
