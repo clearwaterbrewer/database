@@ -136,8 +136,8 @@ sec_session_start();
 		    var pennies = (coin100 *100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
 		    var change = (pennies / 100);
 		    var CountClose = (dollars + change);
-//		    $('#CountClose').val(CountClose.toFixed(2));
-		    $('#CountClose').val(CountClose);
+		    $('#CountClose').val(CountClose.toFixed(2));
+//		    $('#CountClose').val(CountClose);
 		    $('#coinTotal').val(change.toFixed(2));
 		    });
 	$('#deltaCount').on('focus', function() { 
