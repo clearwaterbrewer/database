@@ -91,8 +91,8 @@ sec_session_start();
         <div class="form-input-wide">
         <label for="CountClose"> Closing Count</label>
           <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountClose" name="CountClose"step="0.01"  tabindex=13 value="0.00" >
-        <label for="deltaCount"> Difference</label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="deltaCount" name="deltaCount"step="0.01"  tabindex=14 value="0.00" >
+        <label for="CountDelta"> Difference</label>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountDelta" name="CountDelta"step="0.01"  tabindex=14 value="0.00" >
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -139,15 +139,13 @@ sec_session_start();
 		    var change = (pennies / 100);
 		    var CountClose = (dollars + change);
 		    $('#CountClose').val(CountClose.toFixed(2));
-//		    $('#CountClose').val(CountClose);
 		    $('#coinTotal').val(change.toFixed(2));
 		    });
-	$('#deltaCount').on('focus', function() { 
+	$('#CountDelta').on('focus', function() { 
 		    var CountOpen = $('#CountOpen').val();
 		    var CountClose = $('#CountClose').val();
-		    var deltaCount = (CountClose - CountOpen);
-		    $('#deltaCount').val(deltaCount.toFixed(2));
-//		    $('#deltaCount').val(deltaCount);
+		    var CountDelta = (CountClose - CountOpen);
+		    $('#CountDelta').val(CountDelta.toFixed(2));
 		    });
     });
    
