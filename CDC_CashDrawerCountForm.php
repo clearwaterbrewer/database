@@ -10,9 +10,10 @@ sec_session_start();
 <meta property="og:description" content="Please click the link to complete this form.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="HandheldFriendly" content="true" />
-<title>CDC Drawer Count Entry</title>
 <link type="text/css" rel="stylesheet" href="styles/main.css" />
-<script src = includes/jquery.min.js></script>
+<head>
+ <title>CDC Drawer Count Entry</title>
+ <script src = includes/jquery.min.js></script>
 </head>
 
 <body>
