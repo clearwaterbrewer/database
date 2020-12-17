@@ -46,6 +46,7 @@ sec_session_start();
 	        <div class="column">10</div>
 	        <div class="column">5</div>
 	        <div class="column">1</div>
+	        <div class="column">Change</div>
 	        <div class="column">Close</div>
 	        <div class="column">Diff</div>
 	        <div class="column">POS</div>
@@ -69,6 +70,7 @@ $sql="SELECT * FROM DrawerCounts
 			echo '<div class=column>'.$row['bill_10'].'</div>';
 			echo '<div class=column>'.$row['bill_5'].'</div>';
 			echo '<div class=column>'.$row['bill_1'].'</div>';
+			echo '<div class=column>'.($row['coin_100'] + $row['coin_25'] + $row['coin_10'] + $row['coin_5'] + $row['coin_1']).'</div>';
 			echo '<div class=column>'.$row['CountClose'].'</div>';
 			echo '<div class=column>'.$row['CountDelta'].'</div>';
 			echo '<div class=column>'.$row['POS_Amount'].'</div>';
