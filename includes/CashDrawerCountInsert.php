@@ -31,22 +31,22 @@ if(!empty($_POST)){
 		echo $_POST["DateTimeCode"] . PHP_EOL; 
 		echo $_POST["Initials"] . PHP_EOL;
 		echo $_POST["CountOpen"] . PHP_EOL;
-		echo $_POST["bill_100"];
-		echo $_POST["bill_50"];
-		echo $_POST["bill_20"];
-		echo $_POST["bill_10"];
-		echo $_POST["bill_5"];
-		echo $_POST["bill_1"]; 
-		echo $_POST["coin_100"];
-		echo $_POST["coin_25"];
-		echo $_POST["coin_10"];
-		echo $_POST["coin_5"]; 
-		echo $_POST["coin_1"];
-		echo $_POST["CountClose"];
-		echo $_POST["CountDelta"];
-		echo $_POST["POS_Amount"];
-		echo $_POST["POS_Tip"]; 
-		echo $_POST["POS_Due"];
+		echo $_POST["bill_100"] . PHP_EOL;
+		echo $_POST["bill_50"] . PHP_EOL;
+		echo $_POST["bill_20"] . PHP_EOL;
+		echo $_POST["bill_10"] . PHP_EOL;
+		echo $_POST["bill_5"] . PHP_EOL;
+		echo $_POST["bill_1"] . PHP_EOL; 
+		echo $_POST["coin_100"] . PHP_EOL;
+		echo $_POST["coin_25"] . PHP_EOL;
+		echo $_POST["coin_10"] . PHP_EOL;
+		echo $_POST["coin_5"] . PHP_EOL; 
+		echo $_POST["coin_1"] . PHP_EOL;
+		echo $_POST["CountClose"] . PHP_EOL;
+		echo $_POST["CountDelta"] . PHP_EOL;
+		echo $_POST["POS_Amount"] . PHP_EOL;
+		echo $_POST["POS_Tip"] . PHP_EOL; 
+		echo $_POST["POS_Due"] . PHP_EOL;
       } 
   else{
       echo "ERROR: Could not prepare query: $sql. " . $pdo->error;
