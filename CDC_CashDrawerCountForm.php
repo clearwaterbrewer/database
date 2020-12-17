@@ -144,8 +144,8 @@ sec_session_start();
 		    var CountOpen = $('#CountOpen').val();
 		    var CountClose = $('#CountClose').val();
 		    var deltaCount = (CountClose - CountOpen);
-//		    $('#deltaCount').val(deltaCount.toFixed(2));
-		    $('#deltaCount').val(deltaCount);
+		    $('#deltaCount').val(deltaCount.toFixed(2));
+//		    $('#deltaCount').val(deltaCount);
 		    });
     });
    
