@@ -14,6 +14,11 @@ coin_100 <?php echo $_GET["coin_100"]; ?><br>
  coin_10 <?php echo $_GET["coin_10"]; ?><br>
   coin_5 <?php echo $_GET["coin_5"]; ?><br>
   coin_1 <?php echo $_GET["coin_1"]; ?><br>
+CountClose <?php echo $_GET["CountClose"]; ?><br>
+CountDelta <?php echo $_GET["CountDelta"]; ?><br>
+POS_Amount <?php echo $_GET["POS_Amount"]; ?><br>
+   POS_Tip <?php echo $_GET["POS_Tip"]; ?><br>
+   POS_Due <?php echo $_GET["POS_Due"]; ?><br>
 
 
 </body>
