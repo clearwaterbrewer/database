@@ -44,10 +44,10 @@ sec_session_start();
 	  <div class="column">Source Container</div>
 	  <div class="column">Alc ByVol</div>
 	  <div class="column">Gal Distilled</div>
-	  <div class="column">Gal Remaining</div>
-	  <div class="column">WG Collected</div>
+	  <div class="column">WG Coll</div>
 	  <div class="column">Proof</div>
-	  <div class="column">PG Collected</div>
+	  <div class="column">PG Coll</div>
+	  <div class="column">Eff.</div>
 	  <div class="column">Product</div>
 	  <div class="column">Container</div>
 	  <div class="column">WG Resulting</div>
@@ -70,10 +70,10 @@ sec_session_start();
 			echo '<div class=column>'.$row['SourceContainer'].'</div>';
 			echo '<div class=column>'.$row['AlcByVol'].'</div>';
 			echo '<div class=column>'.$row['GallonsDistilled'].'</div>';
-			echo '<div class=column>'.$row['GallonsRemaining'].'</div>';
 			echo '<div class=column>'.$row['WGCollected'].'</div>';
 			echo '<div class=column>'.$row['ProofCollected'].'</div>';
 			echo '<div class=column>'.$row['PGCollected'].'</div>';
+			echo '<div class=column>'.$row['PGEfficiency'].'</div>';
 			echo '<div class=column>'.$row['DestinationProduct'].'</div>';
 			echo '<div class=column>'.$row['DestinationContainer'].'</div>';
 			echo '<div class=column>'.$row['WG_resulting'].'</div>';
