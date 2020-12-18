@@ -66,7 +66,7 @@ sec_session_start();
         <div class="form-input-wide">
         <label for="WashName">Wash Name</label>
           <input type="text" class="form-control" id="WashName" name="WashName" value="" required>
-        <label for="SourceAmount">Source Amount</label>
+        <label for="SourceAmount">Source Amount in Lbs</label>
           <input type="text" inputmode="numeric" pattern="^\d{1,5}" size="6" class="form-control" id="SourceAmount" name="SourceAmount" value="" required>
         </div>
     </li>
