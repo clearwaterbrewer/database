@@ -49,9 +49,9 @@ sec_session_start();
 	        <div class="column">Change</div>
 	        <div class="column">Close</div>
 	        <div class="column">Diff</div>
-	        <div class="column">POS</div>
-	        <div class="column">Tips</div>
-	        <div class="column">Due</div>
+	        <div class="column">Cash Sales</div>
+	        <div class="column">Cash Tips</div>
+	        <div class="column">Cash Total</div>
       	</div>
 <?php 
 $sql="SELECT * FROM DrawerCounts
