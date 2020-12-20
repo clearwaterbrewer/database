@@ -50,7 +50,7 @@ sec_session_start();
 	        <div class="column">Close</div>
 	        <div class="column">Diff</div>
 	        <div class="column">Cash Sales</div>
-	        <div class="column">Cash Tips</div>
+	        <div class="column">Cash Tip</div>
 	        <div class="column">Cash Total</div>
       	</div>
 <?php 
