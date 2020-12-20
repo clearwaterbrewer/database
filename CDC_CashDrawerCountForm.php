@@ -97,11 +97,11 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
-        <label for="POS_Amount"> POS_Amount </label>
+        <label for="POS_Amount"> Cash Sales </label>
           <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=15 step="0.01" value="0.00" required>
-        <label for="POS_Tip"> POS_Tip </label>
+        <label for="POS_Tip"> Cash Tip </label>
           <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Tip" name="POS_Tip" tabindex=16 step="0.01" value="0.00" required>
-        <label for="POS_Due"> POS_Due </label>
+        <label for="POS_Due"> Cash Total </label>
           <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Due" name="POS_Due" tabindex=17 step="0.01" value="0.00" required>
         </div>
     </li>
