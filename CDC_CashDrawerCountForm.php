@@ -153,6 +153,7 @@ sec_session_start();
 		    var CountDelta = (CountClose - CountOpen + CashOut);
 		    $('#CountClose').val(CountClose.toFixed(2));
 		    $('#coinTotal').val(change.toFixed(2));
+		    $('#CountDelta').val(CountDelta.toFixed(2));
 		    });
 //	$('#CountDelta').on('focus', function() { 
 //		    var CountOpen = $('#CountOpen').val();
