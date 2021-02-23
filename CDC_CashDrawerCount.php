@@ -47,6 +47,7 @@ sec_session_start();
 	        <div class="column">5</div>
 	        <div class="column">1</div>
 	        <div class="column">Change</div>
+	        <div class="column">CashOut</div>
 	        <div class="column">Close</div>
 	        <div class="column">Diff</div>
 	        <div class="column">Cash Sales</div>
@@ -71,6 +72,7 @@ $sql="SELECT * FROM DrawerCounts
 			echo '<div class=column>'.$row['bill_5'].'</div>';
 			echo '<div class=column>'.$row['bill_1'].'</div>';
 			echo '<div class=column>'.((($row['coin_100'] * 100) + ($row['coin_25'] * 25) + ($row['coin_10'] * 10) + ($row['coin_5'] * 5) + $row['coin_1'])/100).'</div>';
+			echo '<div class=column>'.$row['CashOut'].'</div>';
 			echo '<div class=column>'.$row['CountClose'].'</div>';
 			echo '<div class=column>'.$row['CountDelta'].'</div>';
 			echo '<div class=column>'.$row['POS_Amount'].'</div>';
