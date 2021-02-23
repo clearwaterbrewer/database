@@ -147,20 +147,21 @@ sec_session_start();
 		    var pennies = (coin100 *100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
 		    var change = (pennies / 100);
 		    var DollarsPlusChange = (dollars + change);
+		    var CountOpen = $('#CountOpen').val();
 		    var CashOut = $('#CashOut').val();
 		    var CountClose = (DollarsPlusChange - CashOut);
+		    var CountDelta = (CountClose - CountOpen + CashOut);
 		    $('#CountClose').val(CountClose.toFixed(2));
 		    $('#coinTotal').val(change.toFixed(2));
 		    });
-	$('#CountDelta').on('focus', function() { 
-		    var CountOpen = $('#CountOpen').val();
-		    var CashOut = $('#CashOut').val();
+//	$('#CountDelta').on('focus', function() { 
+//		    var CountOpen = $('#CountOpen').val();
+//		    var CashOut = $('#CashOut').val();
 //		    var CashOut = 500.00;
-		    var CountClose = $('#CountClose').val();
+//		    var CountClose = $('#CountClose').val();
 //		    var CountDelta = (CountClose - CountOpen + CashOut);
-		    var CountDelta = (CashOut);
-		    $('#CountDelta').val(CountDelta.toFixed(2));
-		    });
+//		    $('#CountDelta').val(CountDelta.toFixed(2));
+//		    });
     });
    
 </script>
