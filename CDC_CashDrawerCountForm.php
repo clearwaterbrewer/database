@@ -89,16 +89,16 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
-        <label for="CashOut"> Cash Removed From Drawer for Bank Deposit</label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountClose" name="CountClose"step="0.01"  tabindex=13 value="0.00" required>
+        <label for="Cash_Out"> Cash Removed From Drawer for Bank Deposit</label>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="Cash_Out" name="Cash_Out" tabindex=13 value="0.00">
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="CountClose"> Closing Count</label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountClose" name="CountClose"step="0.01"  tabindex=13 value="0.00" required>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountClose" name="CountClose" step="0.01"  tabindex=14 value="0.00" required>
         <label for="CountDelta"> Difference</label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountDelta" name="CountDelta"step="0.01"  tabindex=14 value="0.00" required>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountDelta" name="CountDelta" step="0.01"  tabindex=15 value="0.00" required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -107,11 +107,11 @@ sec_session_start();
         </div>
         <div class="form-input-wide">
         <label for="POS_Amount"> Cash Sales </label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=15 step="0.01" value="0.00" required>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=16 step="0.01" value="0.00" required>
         <label for="POS_Tip"> Cash Tip </label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Tip" name="POS_Tip" tabindex=16 step="0.01" value="0.00" required>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Tip" name="POS_Tip" tabindex=17 step="0.01" value="0.00" required>
         <label for="POS_Due"> Cash Total </label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Due" name="POS_Due" tabindex=17 step="0.01" value="0.00" required>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Due" name="POS_Due" tabindex=18 step="0.01" value="0.00" required>
         </div>
     </li>
   </ul>
@@ -147,8 +147,8 @@ sec_session_start();
 		    var pennies = (coin100 *100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
 		    var change = (pennies / 100);
 		    var DollarsPlusChange = (dollars + change);
-		    var Cash_Out = $('#CashOut').val();
-		    var CountClose = (DollarsPlusChange - Cash_Out);
+		    var CashOut = $('#Cash_Out').val();
+		    var CountClose = (DollarsPlusChange - CashOut);
 		    $('#CountClose').val(CountClose.toFixed(2));
 		    $('#coinTotal').val(change.toFixed(2));
 		    });
