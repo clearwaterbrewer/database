@@ -154,7 +154,8 @@ sec_session_start();
 		    });
 	$('#CountDelta').on('focus', function() { 
 		    var CountOpen = $('#CountOpen').val();
-		    var CashOut = $('#CountOpen').val();
+//		    var CashOut = $('#CountOpen').val();
+		    var CashOut = 500.00;
 		    var CountClose = $('#CountClose').val();
 //		    var CountDelta = (CountClose - CountOpen + CashOut);
 		    var CountDelta = (CountClose - CountOpen);
