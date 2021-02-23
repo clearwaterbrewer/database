@@ -89,8 +89,8 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
-        <label for="Cash_Out"> Cash Removed From Drawer for Bank Deposit</label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="Cash_Out" name="Cash_Out" tabindex=13 value="0.00">
+        <label for="CashOut"> Cash Removed From Drawer for Bank Deposit</label>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CashOut" name="CashOut" tabindex=13 value="0.00">
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -147,7 +147,7 @@ sec_session_start();
 		    var pennies = (coin100 *100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
 		    var change = (pennies / 100);
 		    var DollarsPlusChange = (dollars + change);
-		    var CashOut = $('#Cash_Out').val();
+		    var CashOut = $('#CashOut').val();
 		    var CountClose = (DollarsPlusChange - CashOut);
 //		    var CountClose = (DollarsPlusChange);
 		    $('#CountClose').val(CountClose.toFixed(2));
@@ -155,7 +155,7 @@ sec_session_start();
 		    });
 	$('#CountDelta').on('focus', function() { 
 		    var CountOpen = $('#CountOpen').val();
-		    var CashOut = $('#Cash_Out').val();
+		    var CashOut = $('#CashOut').val();
 		    var CountClose = $('#CountClose').val();
 //		    var CountDelta = (CountClose - CountOpen + CashOut);
 		    var CountDelta = (CountClose - CountOpen);
