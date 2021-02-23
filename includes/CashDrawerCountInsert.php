@@ -19,7 +19,7 @@ if(!empty($_POST)){
       $coin_10 = $_POST[ 'coin_10' ];                 
       $coin_5 = $_POST[ 'coin_5' ];                 
       $coin_1 = $_POST[ 'coin_1' ];                 
-      $Cash_Out = $_POST[ 'CashOut' ];                 
+      $CashOut = $_POST[ 'CashOut' ];                 
       $CountClose = $_POST[ 'CountClose' ];                 
       $CountDelta = $_POST[ 'CountDelta' ];                 
       $POS_Amount = $_POST[ 'POS_Amount' ];                 
