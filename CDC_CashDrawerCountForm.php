@@ -89,6 +89,12 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
+        <label for="CashOut"> Cash Removed From Drawer for Bank Deposit</label>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountClose" name="CountClose"step="0.01"  tabindex=13 value="0.00" required>
+        </div>
+    </li>
+    <li class="form-line" data-type="control_textbox">
+        <div class="form-input-wide">
         <label for="CountClose"> Closing Count</label>
           <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountClose" name="CountClose"step="0.01"  tabindex=13 value="0.00" required>
         <label for="CountDelta"> Difference</label>
