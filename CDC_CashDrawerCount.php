@@ -47,7 +47,7 @@ sec_session_start();
 	        <div class="column">5</div>
 	        <div class="column">1</div>
 	        <div class="column">Change</div>
-	        <div class="column">CashOut</div>
+	        <div class="column">Cash Out</div>
 	        <div class="column">Close</div>
 	        <div class="column">Diff</div>
 	        <div class="column">Cash Sales</div>
