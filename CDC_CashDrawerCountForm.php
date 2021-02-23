@@ -153,14 +153,13 @@ sec_session_start();
 		    $('#coinTotal').val(change.toFixed(2));
 		    });
 	$('#CountDelta').on('focus', function() { 
-//		    var CountOpen = $('#CountOpen').val();
-//		    var CashOut = $('#CashOut').val();
-//		    var CountClose = $('#CountClose').val();
+		    var CountOpen = $('#CountOpen').val();
+		    var CashOut = $('#CashOut').val();
+		    var CountClose = $('#CountClose').val();
 //		    var CountDelta = (CountClose - CountOpen + CashOut);
-//		    var CountDelta = (CountClose - CountOpen);
+		    var CountDelta = (CountClose - CountOpen);
 //		    var CountDelta = $('#CashOut').val();
-//		    $('#CountDelta').val(CountDelta.toFixed(2));
-		    $('#CountDelta').val(CashOut.toFixed(2));
+		    $('#CountDelta').val(CountDelta.toFixed(2));
 		    });
     });
    
