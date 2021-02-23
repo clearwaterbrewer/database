@@ -35,7 +35,7 @@ sec_session_start();
        <label for="DateTimeCode">DateTimeCode</label>
           <input type="text" class="form-control" name="DateTimeCode" value="<?php echo date('Y-m-d H:i:s'); ?>" required>
         <label for="CountOpen">Opening Count</label>
-          <input type='number' inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8"class='form-control' id="CountOpen" name="CountOpen" step="0.01" value="0.00" tabindex=1 required>
+          <input type='number' inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class='form-control' id="CountOpen" name="CountOpen" step="0.01" value="0.00" tabindex=1 required>
        </div>
     </li>
 
@@ -90,7 +90,7 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="CashOut"> Cash Removed From Drawer for Bank Deposit</label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CashOut" name="CashOut" tabindex=13 value="0.00">
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CashOut" name="CashOut" step="0.01" value="0.00" tabindex=13 required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
@@ -158,7 +158,7 @@ sec_session_start();
 		    var CountClose = $('#CountClose').val();
 //		    var CountDelta = (CountClose - CountOpen + CashOut);
 //		    var CountDelta = (CountClose - CountOpen);
-		    var CountDelta = (CashOut);
+		    var CountDelta = (CountOpen);
 		    $('#CountDelta').val(CountDelta.toFixed(2));
 		    });
     });
