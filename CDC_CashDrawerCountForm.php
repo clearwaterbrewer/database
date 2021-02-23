@@ -154,10 +154,11 @@ sec_session_start();
 		    });
 	$('#CountDelta').on('focus', function() { 
 		    var CountOpen = $('#CountOpen').val();
-		    var CashOut2 = $('#CashOut').val();
-//		    var CashOut2 = 500.00;
+		    var CashOut = $('#CashOut').val();
+//		    var CashOut = 500.00;
 		    var CountClose = $('#CountClose').val();
-		    var CountDelta = (CountClose - CountOpen + CashOut2);
+//		    var CountDelta = (CountClose - CountOpen + CashOut);
+		    var CountDelta = (CashOut);
 		    $('#CountDelta').val(CountDelta.toFixed(2));
 		    });
     });
