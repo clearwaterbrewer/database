@@ -96,9 +96,9 @@ sec_session_start();
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
         <label for="CountClose"> Closing Count</label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountClose" name="CountClose" step="0.01"  tabindex=14 value="0.00" required>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountClose" name="CountClose" tabindex=14 value="0.00" required>
         <label for="CountDelta"> Difference</label>
-          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountDelta" name="CountDelta" step="0.01"  tabindex=15 value="0.00" required>
+          <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="CountDelta" name="CountDelta" tabindex=15 value="0.00" required>
         </div>
     </li>
     <li class="form-line" data-type="control_textbox">
