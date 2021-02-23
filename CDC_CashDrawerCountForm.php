@@ -97,6 +97,9 @@ sec_session_start();
     </li>
     <li class="form-line" data-type="control_textbox">
         <div class="form-input-wide">
+        <label > Please copy the below data from Arryved very carefully!!!! </label>
+        </div>
+        <div class="form-input-wide">
         <label for="POS_Amount"> Cash Sales </label>
           <input type="number" inputmode="numeric" pattern="(\d{3})([\.])(\d{2})" size="8" class="form-control" id="POS_Amount" name="POS_Amount" tabindex=15 step="0.01" value="0.00" required>
         <label for="POS_Tip"> Cash Tip </label>
