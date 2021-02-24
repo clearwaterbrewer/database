@@ -152,7 +152,7 @@ sec_session_start();
 		    var CashOut = parseFloat($('#CashOut').val());
 //		    var CashOut = $('#CashOut').val();
 		    var CountClose = (DollarsPlusChange - CashOut);
-		    var CountDelta = (DollarsPlusChange - CountOpen);
+		    var CountDelta = (CountClose - CountOpen);
 		    $('#CountClose').val(CountClose.toFixed(2));
 		    $('#coinTotal').val(change.toFixed(2));
 		    $('#CountDelta').val(CountDelta.toFixed(2));
