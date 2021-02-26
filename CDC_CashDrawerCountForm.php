@@ -134,7 +134,6 @@ sec_session_start();
 	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coin_100, #coin_25, #coin_10, #coin_5, #coin_1, #CashOut').on('change', function() { 
 		    var cents = 0
 		    var coinTotal = 0.00
-		    var CountTemp = 0.00
 		    var CountDelta = 0.00
 		    var CountOpen = $('#CountOpen').val();
 		    var bill100 = $('#bill_100').val();
@@ -152,8 +151,7 @@ sec_session_start();
 		    var cents = (coin100 *100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
 		    var coinTotal = (cents / 100);
 		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coinTotal) - (CashOut);
-//		    var CountTemp = (CountClose + CashOut - CountOpen);
-		    var CountDelta = (CountClose - CountOpen);
+		    var CountDelta = (CountClose * 1) + (CashOut * 1) - (CountOpen * 1);
 		    $('#coinTotal').val(coinTotal);
 		    $('#CountClose').val(CountClose.toFixed(2));
 		    $('#CountDelta').val(CountDelta.toFixed(2));
