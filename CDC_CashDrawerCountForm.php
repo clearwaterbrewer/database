@@ -150,7 +150,7 @@ sec_session_start();
 		    var cents = (coin100 *100) + (coin25 * 25) + (coin10 * 10) + (coin5 * 5) + (coin1 * 1);
 		    var coinTotal = (cents / 100);
 		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coinTotal) - (CashOut);
-		    var CountDelta = (CountClose - CountOpen);
+		    var CountDelta = (CountClose + CashOut - CountOpen);
 		    $('#coinTotal').val(coinTotal);
 		    $('#CountClose').val(CountClose.toFixed(2));
 		    $('#CountDelta').val(CountDelta.toFixed(2));
