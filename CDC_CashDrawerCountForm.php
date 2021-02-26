@@ -158,7 +158,7 @@ sec_session_start();
 		    var CashOut = parseFloat($('#CashOut').val());
 //		    var CashOut = $('#CashOut').val();
 		    var CountClose = $('#CountClose').val();
-		    var CountDelta = (CountClose + CashOut);
+		    var CountDelta = (CountClose + CountOpen);
 		    $('#CountDelta').val(CountDelta.toFixed(2));
 		    });
     });
