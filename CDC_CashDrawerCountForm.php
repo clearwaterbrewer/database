@@ -150,13 +150,13 @@ sec_session_start();
 		    var coinTotal = (cents / 100);
 		    $('#coinTotal').val(coinTotal);
 		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coinTotal) - (CashOut);
-		    $('#CountClose').val(CountClose);
+		    $('#CountClose').val(CountClose.toFixed(2));
 		    });
 	    
 	$('#CountClose').on('focus', function() { 
-		    var CountOpen = parseFloat($('#CountOpen').val());
-		    var CashOut = parseFloat($('#CashOut').val());
-		    var CountClose = parseFloat($('#CountClose').val());
+		    var CountOpen = $('#CountOpen').val();
+		    var CashOut = $('#CashOut').val();
+		    var CountClose = $('#CountClose').val();
 		    var CountDelta = (CountClose + CashOut - CountOpen);
 		    $('#CountDelta').val(CountDelta.toFixed(2));
 		    });
