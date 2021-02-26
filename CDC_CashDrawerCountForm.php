@@ -152,7 +152,7 @@ sec_session_start();
 		    var bill5 = $('#bill_5').val();
 		    var bill1 = $('#bill_1').val();
 		    var coin = $('#coins').val();
-		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coinTotal * 1);
+		    var CountClose = (bill100 * 100) + (bill50 * 50) + (bill20 * 20) + (bill10 * 10) + (bill5 * 5) + (bill1 * 1) + (coin * 1);
 		    $('#CountClose').val(CountClose);
 		    });
 	    
