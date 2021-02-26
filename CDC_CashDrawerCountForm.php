@@ -131,7 +131,7 @@ sec_session_start();
 <script>
     $(document).ready(function() { 
         // monitor for changes in bills and coins
-	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coin_100, #coin_25, #coin_10, #coin_5, #coin_1').on('change', function() { 
+	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coin_100, #coin_25, #coin_10, #coin_5, #coin_1', #CashOut).on('change', function() { 
 		    var pennies = 0
 		    var coinTotal = 0.00
 		    var bill100 = $('#bill_100').val();
@@ -153,7 +153,7 @@ sec_session_start();
 		    $('#CountClose').val(CountClose.toFixed(2));
 		    });
 	    
-	$('#CountClose').on('focus', function() { 
+	$('#CountDelta').on('focus', function() { 
 		    var CountOpen = $('#CountOpen').val();
 		    var CashOut = $('#CashOut').val();
 		    var CountClose = $('#CountClose').val();
