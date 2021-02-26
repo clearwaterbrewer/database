@@ -131,7 +131,7 @@ sec_session_start();
 <script>
     $(document).ready(function() { 
         // monitor for changes in bills and coins
-	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coin_100, #coin_25, #coin_10, #coin_5, #coin_1', #CashOut).on('change', function() { 
+	$('#bill_100, #bill_50, #bill_20, #bill_10, #bill_5, #bill_1, #coin_100, #coin_25, #coin_10, #coin_1', #CashOut).on('change', function() { 
 		    var pennies = 0
 		    var coinTotal = 0.00
 		    var bill100 = $('#bill_100').val();
