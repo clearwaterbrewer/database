@@ -57,8 +57,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
          // Execute the prepared query.
             if (! $insert_stmt->execute()) {
  //
- //               var_dump ($insert_stmt);
- //               var_dump ($username);
+                var_dump ($insert_stmt);
+                var_dump ($username);
                 echo $lastname;
                 
                 //               header('Location: ../error.php?err=Registration failure: INSERT');
