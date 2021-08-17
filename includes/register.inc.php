@@ -28,10 +28,10 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
     // This should should be adequate as nobody gains any advantage from
     // breaking these rules.
     //
-   echo $username<br>;
-   echo $email<br>;
-   echo $firstname<br>;
-   echo $lastname<br>;
+   echo $username;
+   echo $email;
+   echo $firstname;
+   echo $lastname;
 
     $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
