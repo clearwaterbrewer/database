@@ -1,6 +1,8 @@
 <?php
-include_once 'db_connect.php';
-include_once 'psl-config.php';
+//include_once 'db_connect.php';
+//include_once 'psl-config.php';
+require_once 'db_connect.php';
+require_once 'psl-config.php';
 
 $error_msg = "";
 
@@ -30,7 +32,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
     //
    // uncomment below to test if variables are coming through correct
    // echo $username . "<br>";
-   // echo $email . "<br>";
+    echo $email . "<br>";
    // echo $firstname . "<br>";
    // echo $lastname . "<br>";
    // echo $initials . "<br>";
@@ -42,7 +44,6 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
         $stmt->bind_param('s', $email);
         $stmt->execute();
         $stmt->store_result();
-        
         if ($stmt->num_rows == 1) {
             // A user with this email address already exists
             $error_msg .= '<p class="error">A user with this email address already exists.</p>';
@@ -50,9 +51,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
     } else {
         $error_msg .= '<p class="error">Database error</p>';
     }
-    echo $username . "<br>";
-    echo $stmt . "<br>";
-    if (empty($error_msg)) {
+     if (empty($error_msg)) {
         // Create a random salt
         $random_salt = hash('sha512', uniqid(openssl_random_pseudo_bytes(16), TRUE));
 
@@ -66,15 +65,11 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
             echo var_dump ($insert_stmt) . "<br>";
          // Execute the prepared query.
             if (! $insert_stmt->execute()) {
- //
-                var_dump ($username);
-                echo $lastname;
-                
-                //               header('Location: ../error.php?err=Registration failure: INSERT');
-                exit();
+              header('Location: ../error.php?err=Registration failure: INSERT');
+              exit();
             }
         }
- //       header('Location: ./register_success.php');
+       header('Location: ./register_success.php');
         exit();
     }
 }
