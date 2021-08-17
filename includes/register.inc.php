@@ -14,8 +14,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
         $error_msg .= '<p class="error">The email address you entered is not valid</p>';
     }
         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
-//    $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
-    $lastname = "lastname";
+    $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
+//    $lastname = "lastname";
     $initials = filter_input(INPUT_POST, 'initials', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'p', FILTER_SANITIZE_STRING);
     if (strlen($password) != 128) {
@@ -32,6 +32,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
    echo $email;
    echo $firstname;
    echo $lastname;
+   echo $initials;
+   echo $password;
 
     $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
