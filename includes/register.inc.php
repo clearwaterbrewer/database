@@ -38,9 +38,6 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
 
     $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
-    //  uncomment below to print the statement
-    echo $stmt . "<br>";
-
     if ($stmt) {
         $stmt->bind_param('s', $email);
         $stmt->execute();
@@ -53,7 +50,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
     } else {
         $error_msg .= '<p class="error">Database error</p>';
     }
-    
+    echo $username . "<br>";
+    echo $stmt . "<br>";
     if (empty($error_msg)) {
         // Create a random salt
         $random_salt = hash('sha512', uniqid(openssl_random_pseudo_bytes(16), TRUE));
