@@ -7,7 +7,6 @@ $error_msg = "";
 if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['lastname'], $_POST['initials'], $_POST['p'])) {
     // Sanitize and validate the data passed in
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-    echo $username;
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $email = filter_var($email, FILTER_VALIDATE_EMAIL);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -29,7 +28,12 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
     // This should should be adequate as nobody gains any advantage from
     // breaking these rules.
     //
-        $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
+   echo $username<br>;
+   echo $email<br>;
+   echo $firstname<br>;
+   echo $lastname<br>;
+
+    $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
     
     if ($stmt) {
