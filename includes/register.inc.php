@@ -52,7 +52,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
         $password = hash('sha512', $password . $random_salt);
 
         // Insert the new user into the database 
-    var_dump ($insert_stmt);
+    echo var_dump ($insert_stmt) . "<br>";
     if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password, salt, lastname) VALUES (?, ?, ?, ?, ?)")) {
          $insert_stmt->bind_param('sssss', $username, $email, $password, $random_salt, "lastname");
          // Execute the prepared query.
