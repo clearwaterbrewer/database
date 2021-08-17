@@ -32,7 +32,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
     //
    // uncomment below to test if variables are coming through correct
    // echo $username . "<br>";
-    echo $email . "<br>";
+   // echo $email . "<br>";
    // echo $firstname . "<br>";
    // echo $lastname . "<br>";
    // echo $initials . "<br>";
@@ -60,7 +60,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
 
         // Insert the new user into the database 
     if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password, salt, lastname) VALUES (?, ?, ?, ?, ?)")) {
-         $insert_stmt->bind_param('sssss', $username, $email, $password, $random_salt, "lastname");
+         $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt);
          // uncomment below line to print the insert statement
             echo var_dump ($insert_stmt) . "<br>";
          // Execute the prepared query.
