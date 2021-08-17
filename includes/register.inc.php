@@ -28,12 +28,13 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
     // This should should be adequate as nobody gains any advantage from
     // breaking these rules.
     //
-   echo $username . "<br>";
-   echo $email . "<br>";
-   echo $firstname . "<br>";
-   echo $lastname . "<br>";
-   echo $initials . "<br>";
-   echo $password . "<br>";
+   // uncomment below to test if variables are coming through correct
+    echo $username . "<br>";
+    echo $email . "<br>";
+    echo $firstname . "<br>";
+    echo $lastname . "<br>";
+    echo $initials . "<br>";
+    echo $password . "<br>";
 
     $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
@@ -59,9 +60,10 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
         $password = hash('sha512', $password . $random_salt);
 
         // Insert the new user into the database 
-    echo var_dump ($insert_stmt) . "<br>";
     if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password, salt, lastname) VALUES (?, ?, ?, ?, ?)")) {
          $insert_stmt->bind_param('sssss', $username, $email, $password, $random_salt, "lastname");
+         // uncomment below line to print the insert statement
+            echo var_dump ($insert_stmt) . "<br>";
          // Execute the prepared query.
             if (! $insert_stmt->execute()) {
  //
