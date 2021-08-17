@@ -29,16 +29,18 @@ if (isset($_POST['username'], $_POST['email'], $_POST['firstname'], $_POST['last
     // breaking these rules.
     //
    // uncomment below to test if variables are coming through correct
-    echo $username . "<br>";
-    echo $email . "<br>";
-    echo $firstname . "<br>";
-    echo $lastname . "<br>";
-    echo $initials . "<br>";
-    echo $password . "<br>";
+   // echo $username . "<br>";
+   // echo $email . "<br>";
+   // echo $firstname . "<br>";
+   // echo $lastname . "<br>";
+   // echo $initials . "<br>";
+   // echo $password . "<br>";
 
     $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
-    
+    //  uncomment below to print the statement
+    echo $stmt . "<br>";
+
     if ($stmt) {
         $stmt->bind_param('s', $email);
         $stmt->execute();
